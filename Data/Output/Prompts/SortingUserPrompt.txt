@@ -1,0 +1,178 @@
+Classify the provided image file into one of the following buckets, respond only with the string value from the bucket section below without the "- ".
+
+# Buckets
+
+-File Checklist 
+-Certifications  
+-Applications
+-Student Status
+-Income
+-Child Support
+-Assets
+-EIV
+-Expenses
+-Family Composition
+-Citizenship and Identity Documents 
+-Release and Consent
+-Demographics
+-VAWA
+-Property Management Documents
+-Other
+
+
+
+# Instructions
+
+- Analyze the content and context of the image file's text or metadata.
+- Match it to the most appropriate bucket in the list above, based on its description or provided examples.
+- Respond with only the exact string value corresponding to the Bucket Title (e.g., "Income").
+- If no match is possible, classify the document as "Other".
+
+# Examples of Each Bucket
+
+-File Checklist: A landscape document usually rotated 90 degrees from AZ housing titled "Arizona Income Housing TAX Credit Program - Imputed Incomes/Allowable Rents". Or any page resembling one of the following:
+	-Coversheets
+	-RightSource Checklist
+	-Communication Log  
+
+-Certifications: Any page that is titled:
+	-Income Calculation Worksheet
+	-50059
+	-Initial Notice
+	-TIC
+	-3560-8
+	-Exhibit D (Bond Properties)
+
+-Applications: Any of the following pages:
+  	-A page titled "Application for Rental Housing", marked "1 of 3".
+	-A page marked "2 of 3" displaying the application summary table detailing the household composition.
+	-A page marked "3 of 3" that has the member signature fields and details the penalties for missing the form.
+	-A page marked "1 of 4" titled "Income & Asset Questionnaire".
+	-A page marked "2 of 4" containing a table called "Income Sources".
+	-A page marked "3 of 4" containing a series of checkboxes in a table titled "Asset Checklist".
+	-A page marked "4 of 4" containing a table titled "Asset Sources".
+	-A page titled "Member Information Document".
+	-RightSource Application
+	-State Agency Applications/questionnaires
+	-Supplemental Applications
+	-Short Certification Application
+	-Extended Use Applications
+	-Household Eligibility Questionnaire
+	-Tenant Income Certification Questionnaire
+	-HUD-92006
+	-Tenant Occupancy Eligibility Questionnaire  
+
+- Student Status: Any of the following pages:
+	-A one page document titled "Student Certification" with a sub header "(For use with the LIHTC Program)".
+	-Any page titled "Affidavit of Student Financial Assistance".
+	-Student Status Certifications
+	-Student Status Verifications
+	-Financial Aid Verifications  
+
+-Income: Any page resembling any of the following:
+	-Non-employment Affidavits 
+	-Zero Income Certifications 
+	-Income Verifications
+	-Paystubs	
+	-Termination of Employment Verifications
+	-Self-Employment Affidavits
+	-Tax Returns
+	-Non-Filing of Self Employment Tax Return Affidavit
+	-Income Clarifications
+	-income Calculation Sheets
+	-Social Security Award Letters
+	-Regular Contributions Verification 
+	-Alimony Affidavit
+	-Alimony Support Documents  
+
+-Child Support: ANy page titled or resembling the following:
+	-Child Support Affidavit
+	-Child Support Supporting Documents
+	-Court Orders
+	-Agency Printouts
+	-Child Support Verification (payor)
+	-Child Support Verification (Enforcement Agency)  
+
+-Assets: Any page titled or resembling the following:
+	-Asset Self-Certification Form
+	-Asset Self-Certification Worksheet
+	-Under 5k
+	-Asset Verifications
+	-Bank Statements
+	-Bank Deposit Clarifications
+	-Clarifications related to assets
+	-Disposed of Asset Affidavits  
+-EIV: Any page titled or resembling the following:
+	-Tenant Consent to Disclose EIV Income Information
+	-Existing Tenant Search
+	-EIV Income Report  
+-Expenses: Any page titled or resembling the following:
+	-Over the Counter Receipts
+	-Medical Receipts Child Care Receipts  
+
+-Family Composition: Any page titled or resembling the following:
+	-Owners Summary
+	-Family Summary
+	-Adoption
+	-Newborn Child Affidavit
+	-Marital Separation
+	-Disability Status Verification 
+	-Anticipated Household Addition 
+
+-Citizenship and Identity Documents: Any page titled or resembling the following:
+	-Citizenship Declaration
+	-Social Security Cards
+	-Driver License
+	-Passports
+	-Birth Certificates
+	-SAVE Report
+	-Non-Citizen Verification of Consent  
+
+-Release and Consent: Any page titled or resembling the following:
+	-HUD 9887 and 9887A
+	-State Release and Consent  
+
+
+-Demographics: Any page titled or resembling the following:
+	-Race and Ethnicity
+	-Household Demographics  
+
+-VAWA: Any page titled or resembling the following:
+	-VAWA Acknowledgement of Receipt 
+ 
+-Property Management Documents: Any page titled or resembling the following:
+	-Lease
+	-Lease Addendum
+	-Acknowledgement of Receipt
+	-HCV and Housing Assistance Documents
+	-Screening Documents
+	-Background Checks
+	-Background Check Authorization
+	-504 Equal Access Statement
+	-Resident Selection policy
+	-Special Unit Requirements Questionnaire
+	-Reasonable Accommodation Requests
+	-Landlord Verification
+	-Transfer Request  
+
+-Other: Any additional or unclassified documents or any of the following documents: 
+ -VAWA Acknowledgement Pages without Signature (every page except last)
+ -Child Support Self Certification
+ -Dominium Release of Information
+ -Emergency Contact Form
+ -Housing Disclosure Form  
+ 
+
+  
+
+
+
+
+# Output Format
+
+- A single string value from the "Bucket Title" list. No additional text or formatting.
+
+# Notes
+
+- If an image contains multiple document types, prioritize the most specific category.
+- For ambiguous or incomplete documents, "Other" is acceptable.

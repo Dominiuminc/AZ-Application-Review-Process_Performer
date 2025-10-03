@@ -1,0 +1,112 @@
+Extract information from income calculation worksheet images to determine conditions and produce a JSON output following the provided schema.
+
+- **Task Overview**: Analyze the provided document images, and extract relevant data. Then format the results into the given JSON schema.
+
+## Steps to Complete the Task
+
+1. **Image Processing**:
+   - Recognize and extract text from the document images using OCR (Optical Character Recognition).
+
+
+2. **Data Extraction Criteria**:
+   -Identify all household members including their relationship, age, and student status.
+   -Identify all sources of income including the job name, the verification type, and each verification method used along with the associated columnar information.
+   -Identify all assets including their associated columnar information.
+
+3. **Business Logic Validation**:
+   -"all_children_5_18_FT_students": Boolean indicating whether all children between the ages of 5 and 18 (inclusive) are listed as full time students or there are no children between the ages of 5 and 18.
+   -"any_adult_is_student": Boolean indicating whether any adult is listed as student full or part time.
+   -"entire_household_FT_students": Boolean indicating whether all members of the household are full time students.
+   -"child_support_listed": Boolean indicating whether any income from child support is listed.
+   -"employee_wages_listed": Boolean indicating whether any income from employee wages are listed.
+   -"social_security_listed": Boolean indicating whether any income from social security is listed.
+   -"assets_over_51600": Boolean indicating whether the total assets are greater than $51,600.
+   -"tax_refund_0": Boolean listing whether federal tax refunds is equal to zero dollars.
+   -"annual_income_below_income_limit": Boolean indicating whether the total annual income is less than the income limit tax credit listed.
+
+
+
+## Output Format
+
+The output must adhere to the following JSON structure (**replacing placeholder values with actual extracted data**):
+
+```json
+{
+    "validation": {
+        "all_children_5_18_FT_students": true,
+        "any_adult_is_student": true,
+        "entire_household_FT_students": false,
+        "child_support_listed": false,
+        "employee_wages_listed": true,
+        "social_security_listed": false,
+        "assets_over_51600": false,
+        "tax_refund_0": false,
+        "annual_income_below_income_limit": true
+    },
+    "household_members": [
+        {
+            "member_name": "Courtney Smith",
+            "relationship": "Head of Household",
+            "age": 35,
+            "student": "Not Student"
+        },
+        {
+            "member_name": "Cori Smith",
+            "relationship": "Youth<18",
+            "age": 16,
+            "student": "F/T Student"
+        },
+        {
+            "member_name": "Camryn White",
+            "relationship": "Youth<18",
+            "age": 12,
+            "student": "F/T Student"
+        }
+    ],
+    "income": [
+        {
+            "member_name": "Courtney Smith",
+            "job_name": "Employment - Elara Caring Hospice",
+            "verification_type": "Rate of Pay",
+            "verification_methods": [
+                {
+                    "method": "Third Party Documents",
+                    "frequency": "Bi-Weekly",
+                    "amt/period": 1746.69,
+                    "number_of_periods": 26.0,
+                    "calculated_income": 45413.94
+                }
+            ],
+            "verified_income": 45413.94
+        }
+    ],
+    "total_income": 45413.94,
+    "assets": [
+        {
+            "member_name": "Courtney Smith",
+            "description": "Savings Account - Community Wide",
+            "divest_cost": 0,
+            "market_value": 20.00,
+            "interest_rate": 0,
+            "annual_income": 0
+        },
+        {
+            "member_name": "Courtney Smith",
+            "description": "Checking Account - Community Wide",
+            "divest_cost": 0,
+            "market_value": 400.00,
+            "interest_rate": 0,
+            "annual_income": 0
+        }
+    ],
+    "total_assets_value": 420.00,
+    "total_assets_income": 0,
+    "tax_information": {
+        "income_limit": 51900.00,
+        "tax_refund_amount": 0
+    }
+}
+```
+
+**Notes on Output**:
+- Include only this JSON output in the final response—no additional text or explanation.

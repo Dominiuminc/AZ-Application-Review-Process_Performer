@@ -1,0 +1,91 @@
+# Objective
+Extract all income and asset information from the Income & Asset Questionnaire document, including validation checks to ensure completeness and consistency between claimed items and detailed information provided.
+
+# Instructions
+
+1. **Image Processing**:
+   - Recognize and extract text from the document images using OCR (Optical Character Recognition).
+2. **Extraction**:
+   - Extract information from the document into the JSON format below.
+
+For the validation fields, mark them true or false as follows:
+    - "all_page1_fields_are_completed": true if all fields on page 1 are marked either "YES" or "NO"
+    - "all_incomes_described": true if all fields marked "YES" on page 1 have at least one corresponding entry under "INCOME SOURCES" on page 2
+    - "all_assets_described": true if all fields marked "YES" on page 3 have at least one corresponding entry under "ASSET SOURCES" on page 4
+    - "has_disposed_assets_answered": true if field 16 has a checkmark for either "HAVE" or "HAVE NOT"
+    - "described_disposed_assets_if_necessary": false if field 16 is marked "HAVE" and there are no assets listed under "If applicable". true otherwise.
+
+# JSON structure
+```json
+{
+  "document_metadata": {
+    "certification_effective_date": "string",
+    "household_member_selection": "Individual Member" | "All Members",
+    "document_signed": "boolean",
+    "signature_initials": ["string"]
+  },
+  "income_checklist": [
+    {
+      "income_type": "string",
+      "selected": "YES" | "NO" | "UNANSWERED"
+    }
+  ],
+  "income_sources": [
+    {
+      "member_name": "string",
+      "income_type": "string",
+      "income_source": "string",
+      "total_annual_income": "number",
+      "contact_info": {
+        "mailing_address": "string",
+        "phone_number": "string",
+        "fax_number": "string"
+      }
+    }
+  ],
+  "asset_checklist": [
+    {
+      "asset_type": "string",
+      "selected": "YES" | "NO" | "UNANSWERED"
+    }
+  ],
+  "assets_disposed": {
+    "has_disposed_assets": "HAVE" | "HAVE NOT" | "UNANSWERED",
+    "disposed_assets": [
+      {
+        "member_name": "string",
+        "asset_description": "string",
+        "market_value": "number",
+        "date_disposed": "string",
+        "amount_received": "number"
+      }
+    ]
+  },
+  "asset_sources": [
+    {
+      "member_name": "string",
+      "asset_type": "string",
+      "asset_source": "string",
+      "cash_value": "number",
+      "annual_income_from_asset": "number",
+      "jointly_owned": "boolean",
+      "joint_ownership_percentage": "number",
+      "other_owners_in_household": "boolean"
+    }
+  ],
+  "validation": {
+    "form_is_present": "boolean",
+    "all_page1_fields_are_completed": "boolean",
+    "all_incomes_described": "boolean",
+    "income_sources_match_checklist": "boolean",
+    "all_page3_fields_are_completed": "boolean",
+    "has_disposed_assets_answered": "boolean",
+    "described_disposed_assets_if_necessary": "boolean",
+    "all_assets_described": "boolean",
+    "asset_sources_match_checklist": "boolean",
+    "initials_match_adult_count": "boolean",
+    "has_signature": "boolean",
+    "has_date": "boolean"
+  }
+}
+```

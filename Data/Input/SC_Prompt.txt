@@ -1,0 +1,66 @@
+Extract information from Student Certification Form images to determine conditions and produce a JSON output following the provided schema.
+
+- **Task Overview**: Analyze the provided document images, extract relevant data, and evaluate the specified conditions. Then format the results into the given JSON schema.
+
+## Steps to Complete the Task
+
+1. **Image Processing**:
+   - Recognize and extract text from the document images using OCR (Optical Character Recognition).
+   - Ensure the single-page form with sub header "(For use with the LIHTC Program)" is processed.
+
+2. **Data Extraction Criteria**:
+   - Part A: Must answer one of the checkboxes (1, 2, or 3)
+   - If they answer 1, no further work required
+   - If they answer 2, they must list the students
+   - If they answer 3, complete Part B
+   - Confirm they signed and dated the bottom
+   - Required regardless of student status being documented in the ICW
+
+3. **Logic for Determining Outputs**:
+   - **IsPartAAnswered**: This should be `true` if one of the three checkboxes in Part A is answered.
+   - **AreStudentsListedIfRequired**: This should be `true` if option 2 is selected and students are listed, or if option 2 is not selected.
+   - **IsPartBCompletedIfRequired**: This should be `true` if option 3 is selected and Part B is completed, or if option 3 is not selected.
+   - **HasSignatureAndDate**: This should be `true` if the document has signature and date at the bottom.
+
+## Output Format
+
+The output must adhere to the following JSON structure (**replacing placeholder values with actual extracted data**):
+
+```json
+{
+  "validation": {
+    "form_is_present": "boolean",
+    "IsPartAAnswered": "boolean",
+    "AreStudentsListedIfRequired": "boolean",
+    "IsPartBCompletedIfRequired": "boolean", 
+    "HasSignature": "boolean",
+    "HasDate": "boolean"
+  },
+  "part_a": {
+    "option_selected": "1" | "2" | "3" | "UNANSWERED",
+    "option_1_no_students": "checked/unchecked",
+    "option_2_part_time_students": "checked/unchecked",
+    "option_3_full_time_students": "checked/unchecked"
+  },
+  "part_time_students": [
+    {
+      "student_name": "string"
+    }
+  ],
+  "part_b": {
+    "required": "boolean",
+    "completed": "boolean",
+    "details": "string"
+  },
+  "signature_section": {
+    "signature_present": "boolean",
+    "date_signed": "string",
+    "printed_name": "string"
+  }
+}
+```
+
+**Notes on Output**:
+- Ensure boolean fields (`true` or `false`) are accurately set based on the extracted data and conditions.
+- Include only this JSON output in the final response—no additional text or explanation.
+- This form is required regardless of student status being documented in the ICW.

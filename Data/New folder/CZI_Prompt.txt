@@ -1,0 +1,78 @@
+Extract information from Certification of Zero Income Form images to determine conditions and produce a JSON output following the provided schema.
+
+- **Task Overview**: Analyze the provided document images, extract relevant data, and evaluate the specified conditions. Then format the results into the given JSON schema.
+
+## Steps to Complete the Task
+
+1. **Image Processing**:
+   - Recognize and extract text from the document images using OCR (Optical Character Recognition).
+
+2. **Data Extraction Criteria**:
+   - Confirm all 16 questions in section A are answered
+   - Confirm all questions in section B are completed
+   - Rent, Utilities, and Food must have an amount and who is paying answered
+   - The rest can check N/A box if needed
+   - Confirm signature and date at the bottom
+
+3. **Logic for Determining Outputs**:
+   - **AreAll16QuestionsAnswered**: This should be `true` if all 16 questions in section A are answered.
+   - **AreSectionBQuestionsCompleted**: This should be `true` if all questions in section B are completed.
+   - **AreRentUtilitiesFoodCompleted**: This should be `true` if Rent, Utilities, and Food have amounts and who is paying is answered.
+   - **HasSignatureAndDate**: This should be `true` if the document has signature and date at the bottom.
+
+## Output Format
+
+The output must adhere to the following JSON schema:
+
+```json
+{
+  "validation": {
+    "section_a_all_questions_answered": "boolean",
+    "section_b_all_questions_completed": "boolean",
+    "rent_utilities_food_completed": "boolean",
+    "has_signature": "boolean",
+    "has_date": "boolean"
+  },
+  "section_a_questions": [
+    {
+      "question_number": "number",
+      "question_text": "string",
+      "answer": "string"
+    }
+  ],
+  "section_b_expenses": {
+    "rent": {
+      "monthly_amount": "string",
+      "who_pays": "string",
+      "na_checked": "boolean"
+    },
+    "utilities": {
+      "monthly_amount": "string",
+      "who_pays": "string",
+      "na_checked": "boolean"
+    },
+    "food": {
+      "monthly_amount": "string",
+      "who_pays": "string",
+      "na_checked": "boolean"
+    },
+    "other_expenses": [
+      {
+        "expense_type": "string",
+        "monthly_amount": "string",
+        "who_pays": "string",
+        "na_checked": "boolean"
+      }
+    ]
+  },
+  "signature_section": {
+    "signature_present": "boolean",
+    "date_signed": "string",
+    "printed_name": "string"
+  }
+}
+```
+
+**Notes on Output**:
+- Ensure boolean fields (`true` or `false`) are accurately set based on the extracted data and conditions.
+- Include only this JSON output in the final response—no additional text or explanation.
