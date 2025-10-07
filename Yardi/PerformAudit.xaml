@@ -5,11 +5,12 @@
     <x:Property Name="in_FindingType" Type="InArgument(x:String)" />
     <x:Property Name="in_FindingNotes" Type="InArgument(x:String)" />
     <x:Property Name="in_DTFindings" Type="InArgument(sd:DataTable)" />
+    <x:Property Name="in_DtClassificationResults" Type="InArgument(sd:DataTable)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1260,2186</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1260,2341</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>PerformAudit_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -55,6 +56,7 @@
       <x:String>System.Xml.Serialization</x:String>
       <x:String>System.Numerics</x:String>
       <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -123,9 +125,14 @@
       <AssemblyReference>System.Collections.Immutable</AssemblyReference>
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="PerformAudit" sap:VirtualizedContainerService.HintSize="1270,2121" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="PerformAudit" sap:VirtualizedContainerService.HintSize="1270,2276" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="htmlText" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_UniqueDocType" />
@@ -143,15 +150,16 @@
         <InArgument x:TypeArguments="sd:DataTable">[in_DTFindings.DefaultView.ToTable(True, "DocumentType")]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_UniqueDocType]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1208,1920" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_UniqueDocType]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1208,2075" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1174,1733" sap2010:WorkflowViewState.IdRef="Sequence_7">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1174,1888" sap2010:WorkflowViewState.IdRef="Sequence_7">
             <Sequence.Variables>
               <Variable x:TypeArguments="sd:DataTable" Name="dt_FindingsWithDocType" />
+              <Variable x:TypeArguments="sd:DataTable" Name="dt_FilteredClassificationResults" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -193,7 +201,42 @@
                 </scg:List>
               </ui:FilterDataTable.SelectColumns>
             </ui:FilterDataTable>
-            <Sequence sap:VirtualizedContainerService.HintSize="1112,1452" sap2010:WorkflowViewState.IdRef="Sequence_6">
+            <ui:FilterDataTable DataTable="[in_DtClassificationResults]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="1112,193" sap2010:WorkflowViewState.IdRef="FilterDataTable_2" OutputDataTable="[dt_FilteredClassificationResults]" SelectColumnsMode="Remove">
+              <ui:FilterDataTable.Filters>
+                <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
+                  <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
+                    <ui:FilterOperationArgument.Column>
+                      <InArgument x:TypeArguments="x:String">["RequiredClassificationResult"]</InArgument>
+                    </ui:FilterOperationArgument.Column>
+                    <ui:FilterOperationArgument.Operand>
+                      <InArgument x:TypeArguments="x:String">[CurrentRow("DocumentType").ToString]</InArgument>
+                    </ui:FilterOperationArgument.Operand>
+                  </ui:FilterOperationArgument>
+                  <ui:FilterOperationArgument BooleanOperator="And" Operator="STARTSWITH">
+                    <ui:FilterOperationArgument.Column>
+                      <InArgument x:TypeArguments="x:String">["RequiredClassificationResult"]</InArgument>
+                    </ui:FilterOperationArgument.Column>
+                    <ui:FilterOperationArgument.Operand>
+                      <InArgument x:TypeArguments="x:String">[CurrentRow("DocumentType").ToString]</InArgument>
+                    </ui:FilterOperationArgument.Operand>
+                  </ui:FilterOperationArgument>
+                  <ui:FilterOperationArgument BooleanOperator="And" Operator="ENDSWITH">
+                    <ui:FilterOperationArgument.Column>
+                      <InArgument x:TypeArguments="x:String">["RequiredClassificationResult"]</InArgument>
+                    </ui:FilterOperationArgument.Column>
+                    <ui:FilterOperationArgument.Operand>
+                      <InArgument x:TypeArguments="x:String">[CurrentRow("DocumentType").ToString]</InArgument>
+                    </ui:FilterOperationArgument.Operand>
+                  </ui:FilterOperationArgument>
+                </scg:List>
+              </ui:FilterDataTable.Filters>
+              <ui:FilterDataTable.SelectColumns>
+                <scg:List x:TypeArguments="InArgument" Capacity="4">
+                  <x:Null />
+                </scg:List>
+              </ui:FilterDataTable.SelectColumns>
+            </ui:FilterDataTable>
+            <Sequence sap:VirtualizedContainerService.HintSize="1112,1414" sap2010:WorkflowViewState.IdRef="Sequence_6">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -202,13 +245,13 @@
               </sap:WorkflowViewStateService.ViewState>
               <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1050,57" sap2010:WorkflowViewState.IdRef="CommentOut_1">
                 <ui:CommentOut.Body>
-                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="496,194" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="496,309" sap2010:WorkflowViewState.IdRef="Sequence_5">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Assign sap:VirtualizedContainerService.HintSize="434,106" sap2010:WorkflowViewState.IdRef="Assign_1">
+                    <Assign sap:VirtualizedContainerService.HintSize="434,115" sap2010:WorkflowViewState.IdRef="Assign_1">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:String">[htmlText]</OutArgument>
                       </Assign.To>
@@ -224,6 +267,18 @@
            "&lt;/ol&gt;"]</InArgument>
                       </Assign.Value>
                     </Assign>
+                    <Assign sap:VirtualizedContainerService.HintSize="434,106" sap2010:WorkflowViewState.IdRef="Assign_2">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[in_FindingNotes]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String" xml:space="preserve">["Document Type: "+dt_FindingsWithDocType.Rows(0)("DocumentType").ToString()+"" &amp; Environment.NewLine &amp; Environment.NewLine &amp;
+            "Page number:" &amp; Environment.NewLine &amp;
+            String.Join(Environment.NewLine, dt_FindingsWithDocType.Rows(0)("PageNumber").ToString().Split(","c).Select(Function(pn) pn.Trim())) &amp; Environment.NewLine &amp; Environment.NewLine &amp;
+            "Findings:" &amp; Environment.NewLine &amp;
+            String.Join(Environment.NewLine, dt_FindingsWithDocType.AsEnumerable().Select(Function(row, idx) (idx + 1).ToString() &amp; ". " &amp; row("Findings").ToString().Trim()))]</InArgument>
+                      </Assign.Value>
+                    </Assign>
                   </Sequence>
                 </ui:CommentOut.Body>
                 <sap:WorkflowViewStateService.ViewState>
@@ -233,15 +288,15 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:CommentOut>
-              <Assign sap:VirtualizedContainerService.HintSize="1050,115" sap2010:WorkflowViewState.IdRef="Assign_2">
+              <Assign DisplayName="Assign-FindingNotes" sap:VirtualizedContainerService.HintSize="1050,115" sap2010:WorkflowViewState.IdRef="Assign_4">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:String">[in_FindingNotes]</OutArgument>
                 </Assign.To>
                 <Assign.Value>
-                  <InArgument x:TypeArguments="x:String" xml:space="preserve">["Document Type: "+dt_FindingsWithDocType.Rows(0)("DocumentType").ToString()+"" &amp; Environment.NewLine &amp; Environment.NewLine &amp;
-            "Page number:" &amp; Environment.NewLine &amp;
-            String.Join(Environment.NewLine, dt_FindingsWithDocType.Rows(0)("PageNumber").ToString().Split(","c).Select(Function(pn) pn.Trim())) &amp; Environment.NewLine &amp; Environment.NewLine &amp;
-            "Findings:" &amp; Environment.NewLine &amp;
+                  <InArgument x:TypeArguments="x:String" xml:space="preserve">["Document Type: " + dt_FindingsWithDocType.Rows(0)("DocumentType").ToString() &amp; Environment.NewLine &amp; Environment.NewLine &amp; _
+            "PageNumber:" &amp; Environment.NewLine &amp; _
+			String.Join(Environment.NewLine, dt_FilteredClassificationResults.AsEnumerable().Select(Function(row) Split(Split(row("PDFFile").ToString,"_")(1),".")(0) &amp; "_Page" &amp; row("PageNumber").ToString()).Distinct().ToList()) &amp; Environment.NewLine &amp; Environment.NewLine &amp; _
+            "Findings:" &amp; Environment.NewLine &amp; _
             String.Join(Environment.NewLine, dt_FindingsWithDocType.AsEnumerable().Select(Function(row, idx) (idx + 1).ToString() &amp; ". " &amp; row("Findings").ToString().Trim()))]</InArgument>
                 </Assign.Value>
               </Assign>
@@ -283,19 +338,19 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:CommentOut>
-              <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Document View - Unit 601" sap:VirtualizedContainerService.HintSize="1050,939" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="b2a5ba4e-f8ad-48ee-883b-6b5483562c15" Version="V2">
+              <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Document View - Unit 601" sap:VirtualizedContainerService.HintSize="1050,901" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="b2a5ba4e-f8ad-48ee-883b-6b5483562c15" Version="V2">
                 <uix:NApplicationCard.Body>
                   <ActivityAction x:TypeArguments="x:Object">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1016,699" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1016,661" sap2010:WorkflowViewState.IdRef="Sequence_2">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <uix:NCheckState DisplayName="Check App State 'Create Finding'" sap:VirtualizedContainerService.HintSize="954,559" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="b2a5ba4e-f8ad-48ee-883b-6b5483562c15" Timeout="3" Version="V3">
+                      <uix:NCheckState DisplayName="Check App State 'Create Finding'" sap:VirtualizedContainerService.HintSize="954,521" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="b2a5ba4e-f8ad-48ee-883b-6b5483562c15" Timeout="3" Version="V3">
                         <uix:NCheckState.IfExists>
                           <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,105" sap2010:WorkflowViewState.IdRef="Sequence_9">
                             <sap:WorkflowViewStateService.ViewState>
@@ -306,7 +361,7 @@
                           </Sequence>
                         </uix:NCheckState.IfExists>
                         <uix:NCheckState.IfNotExists>
-                          <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,270" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                          <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,272" sap2010:WorkflowViewState.IdRef="Sequence_10">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>

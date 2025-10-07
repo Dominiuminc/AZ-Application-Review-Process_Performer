@@ -9,7 +9,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1290,3469</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1290,3425</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>TestSortPages_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -128,16 +128,16 @@
       <AssemblyReference>NPOI.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="TestSortPages" sap:VirtualizedContainerService.HintSize="1300,3404" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="TestSortPages" sap:VirtualizedContainerService.HintSize="1300,3360" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <If Condition="[in_IsTesting]" DisplayName="If-ItIsTesting" sap:VirtualizedContainerService.HintSize="1238,57" sap2010:WorkflowViewState.IdRef="If_2">
+    <If Condition="[Not in_DTSortingDetails.RowCount&gt;0]" DisplayName="If-ItIsTesting" sap:VirtualizedContainerService.HintSize="1238,472" sap2010:WorkflowViewState.IdRef="If_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
@@ -162,13 +162,13 @@
       </If.Else>
     </If>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1238,173" sap2010:WorkflowViewState.IdRef="LogMessage_5" Message="[&quot;SortPagesintoBuckets.xaml is Started&quot;]" />
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge Document View - Unit 517" sap:VirtualizedContainerService.HintSize="1238,2922" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="b7503d1b-f71b-4953-a099-733cfd49a00c" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge Document View - Unit 517" sap:VirtualizedContainerService.HintSize="1238,2463" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="b7503d1b-f71b-4953-a099-733cfd49a00c" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1204,2673" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1204,2214" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="str_UploadNumber" />
               <Variable x:TypeArguments="x:String" Name="str_DocumentInfo" />
@@ -181,44 +181,17 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="1142,117" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Can Bot click on Sort Pages&quot;]" />
-            <ui:Comment sap:VirtualizedContainerService.HintSize="1142,107" sap2010:WorkflowViewState.IdRef="Comment_2" Text="// Update later with removing testing condition" />
-            <If Condition="[in_IsTesting]" DisplayName="If-Testing" sap:VirtualizedContainerService.HintSize="1142,409" sap2010:WorkflowViewState.IdRef="If_3">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="5" DisplayName="Click 'Sort Pages'" sap:VirtualizedContainerService.HintSize="1142,57" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b7503d1b-f71b-4953-a099-733cfd49a00c" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/#/cert/review/1190758" CVScreenId="270e95dd-ad61-4513-b438-2694dc0de902" CvElementArea="57, 532, 83, 34" CvTextArea="67, 543, 64, 15" CvTextArgument="Sort Pages" CvType="Button" DesignTimeRectangle="59, 534, 80, 31" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='BUTTON' aaname='Sort Pages' innertext='Sort Pages' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' aaname='Sort Pages' innertext='Sort Pages' type='button' class='btn btn-sm btn-primary' check:text='Sort Pages' /&gt;" Guid="329917c6-4e7e-4499-8b7d-c43313445b60" InformativeScreenshot="b14189f6b6a3032095070870d3a33aac.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Document View*' /&gt;" SearchSteps="Selector, CV" Version="V4" Visibility="Interactive" />
+              </uix:NClick.Target>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <If.Then>
-                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,103" sap2010:WorkflowViewState.IdRef="Sequence_18">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                </Sequence>
-              </If.Then>
-              <If.Else>
-                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,136" sap2010:WorkflowViewState.IdRef="Sequence_19">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="5" DisplayName="Click 'Sort Pages'" sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b7503d1b-f71b-4953-a099-733cfd49a00c" Version="V3">
-                    <uix:NClick.Target>
-                      <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/#/cert/review/1190758" CVScreenId="270e95dd-ad61-4513-b438-2694dc0de902" CvElementArea="57, 532, 83, 34" CvTextArea="67, 543, 64, 15" CvTextArgument="Sort Pages" CvType="Button" DesignTimeRectangle="59, 534, 80, 31" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='BUTTON' aaname='Sort Pages' innertext='Sort Pages' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' aaname='Sort Pages' innertext='Sort Pages' type='button' class='btn btn-sm btn-primary' check:text='Sort Pages' /&gt;" Guid="329917c6-4e7e-4499-8b7d-c43313445b60" InformativeScreenshot="b14189f6b6a3032095070870d3a33aac.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Document View*' /&gt;" SearchSteps="Selector, CV" Version="V4" Visibility="Interactive" />
-                    </uix:NClick.Target>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </uix:NClick>
-                </Sequence>
-              </If.Else>
-            </If>
+            </uix:NClick>
             <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click-UnsortedThumbnail" sap:VirtualizedContainerService.HintSize="1142,189" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b7503d1b-f71b-4953-a099-733cfd49a00c" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/#/cert/review/1149808" CVScreenId="ec860cc3-ca9e-4894-99bf-8775623a4fd3" CvElementArea="932, 465, 21, 19" CvType="Icon" DesignTimeRectangle="936, 469, 14, 14" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl aria-label='Unsorted Thumbnails' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-label='Unsorted Thumbnails' tag='SPAN' type='' class='fa fa-th-large' aaname='' /&gt;" Guid="8ec999fc-91c9-47f0-a926-98fb22deca2a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACeSURBVDhP7ZGhDcMwEEW72q3gATxDBgjKDFkhKAMEHSoyCjIKMjLyAEE/l55RbVWValBFedJHX/+Buwca0V4UPYP5PQ5bkjJtcEUn8VHHQhY9MRCBKrFTQJhstSMaZKncoq9F52Nc+RVeEXcp94i16Bju9VIliwLmzsCYMv2SkJa+2plulqVy/WM3E3mMtnJMycdj21GWShb9zr+JgAPm3cJYGUZzngAAAABJRU5ErkJggg==" InformativeScreenshot="885e8c920cb70c259b82ff9494904232.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Document View*' /&gt;" SearchSteps="Selector, CV" Version="V4" Visibility="Visible" WaitForReadyArgument="Complete" />
