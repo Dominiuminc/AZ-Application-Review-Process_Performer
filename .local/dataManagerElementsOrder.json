@@ -1,0 +1,465 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "DT_ClassificationMatrix&StateMachine_1",
+        "TransactionItem&StateMachine_1",
+        "SystemException&StateMachine_1",
+        "BusinessException&StateMachine_1",
+        "TransactionNumber&StateMachine_1",
+        "Config&StateMachine_1",
+        "RetryNumber&StateMachine_1",
+        "TransactionField2&StateMachine_1",
+        "TransactionField1&StateMachine_1",
+        "TransactionID&StateMachine_1",
+        "dt_TransactionData&StateMachine_1",
+        "ConsecutiveSystemExceptions&StateMachine_1",
+        "ShouldStop&Sequence_25",
+        "str_ScreenshotPath&Sequence_34"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_OrchestratorQueueName",
+        "in_OrchestratorQueueFolder",
+        "in_IsTesting"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/Process.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_PropertyName&Sequence_1",
+        "str_State&Sequence_1",
+        "str_Status&Sequence_1",
+        "str_ManagerName&Sequence_1",
+        "str_Type&Sequence_1",
+        "str_SubmissionType&Sequence_1",
+        "str_CaseLink&Sequence_1",
+        "str_Reviewer&Sequence_1",
+        "ExtractDataTable&Sequence_1",
+        "str_Unit&Sequence_1",
+        "str_DueDate&Sequence_1",
+        "list_PDFFiles&Flowchart_1",
+        "dt_SortingData&Flowchart_1",
+        "bool_PDFsDownloadDone&Flowchart_1",
+        "bool_SortingAlreadyStarted&Flowchart_1",
+        "int_DownloadRetryCount&Flowchart_1",
+        "dt_AuditFindings&Flowchart_1",
+        "str_DownloadFolder&Flowchart_1",
+        "str_PromptsFolder&Sequence_13"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_DTClassificationMatrix",
+        "in_TransactionItem",
+        "in_Config",
+        "in_IsTesting"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/InitAllSettings.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_SettingsAndConstants&Sequence_5",
+        "dt_Assets&Sequence_6",
+        "AssetValue&Sequence_11"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_ConfigFile",
+        "in_ConfigSheets",
+        "out_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Yardi/PerformAudit.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_FilteredClassificationResults&Sequence_7",
+        "htmlText&Sequence_1",
+        "dt_UniqueDocType&Sequence_1",
+        "dt_FindingsWithDocType&Sequence_7"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_TransactionItem",
+        "in_DtClassificationResults",
+        "in_YardiDocReviewURL",
+        "in_Finding",
+        "in_FindingType",
+        "in_FindingNotes",
+        "in_DTFindings"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/InitAllApplications.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_PDFsFolder&Sequence_13",
+        "str_tempFolder&Sequence_9"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_DTClassificationMatrix",
+        "io_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Utilities/DownloadPromptsFromStorageBucket.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "arr_Files&Sequence_1",
+        "arr_PromptFiles&Sequence_1",
+        "iRes_Folder&Sequence_1",
+        "bool_PromptsFolderExists&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "io_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "LLM/ConvertPDFsToImages.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "int_Index&Sequence_1",
+        "str_RequiredDocPrompt&Sequence_1",
+        "str_RequiredDocPromptFile&Sequence_1",
+        "str_SortingUserPromptFile&Sequence_1",
+        "str_SortingUserPrompt&Sequence_1",
+        "str_SystemPrompt&Sequence_1",
+        "str_ClassificationResultsRe&Sequence_1",
+        "int_TotalPageCount&Sequence_2",
+        "int_PageCount&Sequence_2",
+        "str_ImagePath&Sequence_3",
+        "llm_Result&Sequence_3",
+        "str_RequiredDocumentType&Sequence_3"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_DTClassificationMatrix",
+        "in_PDFFiles",
+        "in_EndPoint",
+        "in_APIKey",
+        "in_DeploymentName",
+        "in_APIVersion",
+        "out_DtSortingDetails",
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Yardi/DownloadUploadDocuments.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_UploadsText&Sequence_2",
+        "arr_Uploads&Sequence_2",
+        "int_UploadsCount&Sequence_2",
+        "int_Index&Sequence_2",
+        "int_TotalPageCount&Sequence_6",
+        "str_UploadPDFFilePath&Sequence_6",
+        "int_PageCount&Sequence_6"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_DocumentReviewURL",
+        "in_CertDownloadURL",
+        "in_FolderToDownload",
+        "in_Unit",
+        "out_PDFDownloadFolder",
+        "out_DownloadedPDFFiles",
+        "out_DownloadPDFsDone",
+        "in_Config",
+        "out_SortingAlreadyStarted"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Yardi/SortPagesIntoBuckets.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_UploadNumber&Sequence_2",
+        "str_DocumentInfo&Sequence_2",
+        "str_ParentId&Sequence_2",
+        "bool_SortingComplete&Sequence_2",
+        "str_DocumentPageNum&Sequence_10",
+        "dt_FilteredBucketData&Sequence_10",
+        "str_BucketName&Sequence_10"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_DocumentReviewURL",
+        "in_DTSortingDetails",
+        "in_Unit",
+        "in_IsTesting",
+        "in_TransactionItem"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Yardi/ReassignCerts.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_TransactionItem",
+        "str_Reviewer",
+        "str_PropertyName",
+        "str_Unit",
+        "str_ManagerName",
+        "in_CertsURL",
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Yardi/YardiLogout.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "int_DataCount&Sequence_2",
+        "int_Index&Sequence_2",
+        "int_Count&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_YardiURL"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Utilities/AuditFindings.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_Employer&Sequence_576",
+        "dt_FilteredDocTypeData&Sequence_575",
+        "jObj_Validation&Sequence_576",
+        "jObj_ExtractionResults&Sequence_576",
+        "jObj_JSON&Sequence_576",
+        "str_Frequency&Sequence_576",
+        "str_GrossAmount&Sequence_576",
+        "str_EmployeeName&Sequence_576",
+        "str_Date&Sequence_576",
+        "str_OverTimeAmount&Sequence_576",
+        "str_ShiftDifferentialRate&Sequence_576",
+        "list_ImageFiles&Sequence_577",
+        "str_ShiftDifferentialRate&Sequence_524",
+        "str_OverTimeAmount&Sequence_524",
+        "str_EDCShiftPayAmount&Sequence_1",
+        "str_EDCTotalGrossPay&Sequence_1",
+        "str_EDCOverTimeAmount&Sequence_1",
+        "str_EDCOTRateTotalPerYear&Sequence_1",
+        "str_EDCShiftPayRateTotalPerYear&Sequence_1",
+        "jObj_ShiftPayRate&Sequence_541",
+        "jObj_OverTimeRate&Sequence_541",
+        "str_EDCRegularRateTotalPerYear&Sequence_1",
+        "str_EDCRegularRateAmount&Sequence_1",
+        "jObj_RegularRate&Sequence_541",
+        "str_Date&Sequence_524",
+        "str_EmployeeName&Sequence_524",
+        "str_GrossAmount&Sequence_524",
+        "str_Frequency&Sequence_524",
+        "str_EDCPayPeriodEndDate&Sequence_1",
+        "str_EDCPayPeriodStartDate&Sequence_1",
+        "dt_ICWIncomeData&Sequence_1",
+        "str_EDCPayScheduleOption&Sequence_1",
+        "str_EDCHighestCalculatedincomeValue&Sequence_1",
+        "dt_EDCPaystubs&Sequence_1",
+        "str_EDCPayYearEarnings&Sequence_1",
+        "str_EDCHouseholdMember&Sequence_1",
+        "str_EDCSourceOfIncome&Sequence_1",
+        "jObj_Validation&Sequence_540",
+        "jObj_JSON&Sequence_540",
+        "jObj_ExtractionResults&Sequence_543",
+        "list_ImageFiles&Sequence_543",
+        "dt_FilteredDocTypeData&Sequence_540",
+        "str_CompanyName&Sequence_524",
+        "dt_FilteredDocTypeData&Sequence_523",
+        "jObj_Validation&Sequence_524",
+        "jObj_ExtractionResults&Sequence_524",
+        "jObj_JSON&Sequence_524",
+        "list_ImageFiles&Sequence_525",
+        "arr_AS_MemNames&Sequence_1",
+        "dt_TaxRefund&Sequence_1",
+        "arr_ICWMemberNames&Sequence_1",
+        "arr_ICWIncomeSources&Sequence_1",
+        "arr_ICWAssets&Sequence_1",
+        "dt_ICWAssetsInfo&Sequence_1",
+        "str_MIDSSN&Sequence_1",
+        "str_MID_DOB&Sequence_1",
+        "str_PromptsFolder&Sequence_1",
+        "dt_FilteredICWData&Sequence_189",
+        "str_JSONExtResults&Sequence_189",
+        "jObj_ExtractionResults&Sequence_189",
+        "list_ImageFiles&Sequence_190",
+        "jObj_Validation&Sequence_2",
+        "jObj_JSON&Sequence_2",
+        "dt_FilteredAffidData&Sequence_9",
+        "dt_FilteredASData&Sequence_194",
+        "str_ASJsonText&Sequence_15",
+        "str_JSONExtResults&Sequence_15",
+        "jObj_ExtractionResults&Sequence_15",
+        "jObj_Validation&Sequence_15",
+        "jObj_JSON&Sequence_15",
+        "list_ImageFiles&Sequence_369",
+        "str_TaxRefund&Sequence_31",
+        "dt_FilteredICWtaxInfo&Sequence_359",
+        "dt_FilteredAStaxInfo&Sequence_360",
+        "dt_FilteredAStaxInfo&Sequence_361",
+        "dt_FilteredMIDData&Sequence_197",
+        "str_MIDJsonText&Sequence_34",
+        "jObj_Validation&Sequence_34",
+        "jObj_ExtractionResults&Sequence_34",
+        "jObj_JSON&Sequence_34",
+        "list_ImageFiles&Sequence_371",
+        "dt_FilteredIAQData&Sequence_219",
+        "str_IAQJsonText&Sequence_51",
+        "jObj_ExtractionResults&Sequence_51",
+        "jObj_Validation&Sequence_51",
+        "jObj_JSON&Sequence_51",
+        "arr_IncomeTypes&Sequence_51",
+        "list_ImageFiles&Sequence_373",
+        "str_IncomeSource&Sequence_354",
+        "dt_FilteredIncomeSrc&Sequence_354",
+        "str_MemName&Sequence_350",
+        "str_AssetSource&Sequence_350",
+        "dt_FilteredAssetSrc&Sequence_350",
+        "dt_FilteredDocTypeData&Sequence_377",
+        "str_SCNEJsonText&Sequence_425",
+        "jObj_Validation&Sequence_425",
+        "jObj_ExtractionResults&Sequence_425",
+        "jObj_JSON&Sequence_425",
+        "list_ImageFiles&Sequence_426",
+        "dt_FilteredDocTypeData&Sequence_241",
+        "str_ASCJsonText&Sequence_88",
+        "jObj_Validation&Sequence_88",
+        "jObj_ExtractionResults&Sequence_88",
+        "jObj_JSON&Sequence_88",
+        "list_ImageFiles&Sequence_460",
+        "str_TaxCredit&Sequence_142",
+        "arr_CheckingValues&Sequence_143",
+        "dt_FilteredSavingsAssets&Sequence_143",
+        "str_SavingsValue&Sequence_145",
+        "dt_FilteredDocTypeData&Sequence_395",
+        "str_ASFAJsonText&Sequence_461",
+        "jObj_Validation&Sequence_461",
+        "jObj_ExtractionResults&Sequence_461",
+        "jObj_JSON&Sequence_461",
+        "list_ImageFiles&Sequence_477",
+        "dt_FilteredDocTypeData&Sequence_282",
+        "str_SCJsonText&Sequence_119",
+        "jObj_Validation&Sequence_119",
+        "jObj_ExtractionResults&Sequence_119",
+        "jObj_JSON&Sequence_119",
+        "in_StudentCertificationJSONFile&Sequence_119",
+        "list_ImageFiles&Sequence_479",
+        "dt_FilteredDocTypeData&Sequence_397",
+        "str_CZIJsonText&Sequence_481",
+        "jObj_Validation&Sequence_481",
+        "jObj_ExtractionResults&Sequence_481",
+        "jObj_JSON&Sequence_481",
+        "in_CertificationOfZeroIncomeJSONFile&Sequence_481",
+        "list_ImageFiles&Sequence_490",
+        "dt_FilteredDocTypeData&Sequence_310",
+        "str_VAWAJsonText&Sequence_163",
+        "jObj_Validation&Sequence_163",
+        "jObj_ExtractionResults&Sequence_163",
+        "jObj_JSON&Sequence_163",
+        "list_ImageFiles&Sequence_519",
+        "dt_FilteredDocTypeData&Sequence_296",
+        "str_ScreeningReportJsonText&Sequence_172",
+        "jObj_Validation&Sequence_172",
+        "jObj_ExtractionResults&Sequence_172",
+        "jObj_JSON&Sequence_172",
+        "str_DOB&Sequence_172",
+        "str_Last4SSNNumbers&Sequence_172",
+        "list_ImageFiles&Sequence_514",
+        "str_Employer&Sequence_183",
+        "dt_FilteredAZLowIncomeData&Sequence_312"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config",
+        "in_ClassificationResultsData",
+        "out_DTAuditFindings"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Utilities/CleanTempFolder.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "arr_SubFolders&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_TempFolder",
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Yardi/Yardi_Login.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_TermsAndConditions&Sequence_2",
+        "str_Username&Sequence_2",
+        "sstr_Password&Sequence_2",
+        "str&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/SetTransactionStatus.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "QueueRetry&Sequence_17",
+        "ScreenshotPath&Sequence_17"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_BusinessException",
+        "in_TransactionField1",
+        "in_TransactionField2",
+        "in_TransactionID",
+        "in_SystemException",
+        "in_Config",
+        "in_TransactionItem",
+        "io_RetryNumber",
+        "io_TransactionNumber",
+        "io_ConsecutiveSystemExceptions"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Yardi/UpdateStatus.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_TransactionItem",
+        "in_YardiURL"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}

@@ -156,7 +156,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message Process Start" sap:VirtualizedContainerService.HintSize="600,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Started Process&quot;]" />
-    <Flowchart sap:VirtualizedContainerService.HintSize="600,648" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+    <Flowchart sap:VirtualizedContainerService.HintSize="1142,660" sap2010:WorkflowViewState.IdRef="Flowchart_1">
       <Flowchart.Variables>
         <Variable x:TypeArguments="scg:List(x:String)" Name="list_PDFFiles" />
         <Variable x:TypeArguments="sd:DataTable" Name="dt_SortingData" />
@@ -387,11 +387,12 @@
                                         <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="PerformAudit - Invoke Workflow File (PerformAudit.xaml)" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Yardi\PerformAudit.xaml">
                                           <ui:InvokeWorkflowFile.Arguments>
                                             <InArgument x:TypeArguments="x:String" x:Key="in_YardiDocReviewURL">[str_CaseLink]</InArgument>
-                                            <InArgument x:TypeArguments="x:String" x:Key="in_Finding">Incomplete</InArgument>
-                                            <InArgument x:TypeArguments="x:String" x:Key="in_FindingType">Weighted Finding</InArgument>
+                                            <InArgument x:TypeArguments="x:String" x:Key="in_Finding">[in_Config("YardiFinding").ToString]</InArgument>
+                                            <InArgument x:TypeArguments="x:String" x:Key="in_FindingType">[in_Config("YardiFindingType").ToString]</InArgument>
                                             <InArgument x:TypeArguments="x:String" x:Key="in_FindingNotes" />
                                             <InArgument x:TypeArguments="sd:DataTable" x:Key="in_DTFindings">[dt_AuditFindings]</InArgument>
                                             <InArgument x:TypeArguments="sd:DataTable" x:Key="in_DtClassificationResults">[dt_SortingData]</InArgument>
+                                            <InArgument x:TypeArguments="ui:QueueItem" x:Key="in_TransactionItem">[in_TransactionItem]</InArgument>
                                           </ui:InvokeWorkflowFile.Arguments>
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -400,7 +401,10 @@
                                           </sap:WorkflowViewStateService.ViewState>
                                         </ui:InvokeWorkflowFile>
                                         <FlowStep.Next>
-                                          <FlowDecision x:Name="__ReferenceID17" Condition="[in_IsTesting]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="59,59" sap2010:WorkflowViewState.IdRef="FlowDecision_7">
+                                          <FlowDecision x:Name="__ReferenceID17" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="59,59" sap2010:WorkflowViewState.IdRef="FlowDecision_7">
+                                            <FlowDecision.Condition>
+                                              <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="in_IsTesting Or (Not dt_AuditFindings.RowCount&gt;0)" />
+                                            </FlowDecision.Condition>
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -426,6 +430,7 @@
                                                     <InArgument x:TypeArguments="x:String" x:Key="str_ManagerName">[str_ManagerName]</InArgument>
                                                     <InArgument x:TypeArguments="x:String" x:Key="in_CertsURL">[in_Config("YardiCertsURL").ToString]</InArgument>
                                                     <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
+                                                    <InArgument x:TypeArguments="ui:QueueItem" x:Key="in_TransactionItem">[in_TransactionItem]</InArgument>
                                                   </ui:InvokeWorkflowFile.Arguments>
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -447,6 +452,7 @@
                                                 <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="UpdateStatus - Invoke Workflow File (UpdateStatus.xaml)" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Yardi\UpdateStatus.xaml">
                                                   <ui:InvokeWorkflowFile.Arguments>
                                                     <InArgument x:TypeArguments="x:String" x:Key="in_YardiURL">[str_CaseLink]</InArgument>
+                                                    <InArgument x:TypeArguments="ui:QueueItem" x:Key="in_TransactionItem">[in_TransactionItem]</InArgument>
                                                   </ui:InvokeWorkflowFile.Arguments>
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -722,7 +728,7 @@
                     <OutArgument x:TypeArguments="x:String">[str_DownloadFolder]</OutArgument>
                   </ui:AssignOperation.To>
                   <ui:AssignOperation.Value>
-                    <InArgument x:TypeArguments="x:String">[in_Config("TempFolder").ToString]</InArgument>
+                    <InArgument x:TypeArguments="x:String">[in_Config("LocalPDFsFolder").ToString]</InArgument>
                   </ui:AssignOperation.Value>
                 </ui:AssignOperation>
                 <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_42">
