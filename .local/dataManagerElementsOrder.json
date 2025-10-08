@@ -246,6 +246,24 @@
       "Path": "Utilities/AuditFindings.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "str_Status&Sequence_632",
+        "dt_FilteredDocTypeData&Sequence_631",
+        "jObj_Validation&Sequence_632",
+        "jObj_ExtractionResults&Sequence_632",
+        "jObj_JSON&Sequence_632",
+        "str_Employer&Sequence_632",
+        "str_Frequency&Sequence_632",
+        "str_GrossAmount&Sequence_632",
+        "str_EmployeeName&Sequence_632",
+        "str_Date&Sequence_632",
+        "str_OverTimeAmount&Sequence_632",
+        "str_ShiftDifferentialRate&Sequence_632",
+        "list_ImageFiles&Sequence_633",
+        "str_PayAmount&Sequence_634",
+        "jObj_EDCRegularRate&Sequence_1",
+        "str_PayAmount&Sequence_622",
+        "bool_PerYearEarningsNotPopulated&Sequence_1",
+        "bool_IsPropertyNameSafford&Sequence_1",
         "str_Employer&Sequence_576",
         "dt_FilteredDocTypeData&Sequence_575",
         "jObj_Validation&Sequence_576",
@@ -269,7 +287,6 @@
         "jObj_OverTimeRate&Sequence_541",
         "str_EDCRegularRateTotalPerYear&Sequence_1",
         "str_EDCRegularRateAmount&Sequence_1",
-        "jObj_RegularRate&Sequence_541",
         "str_Date&Sequence_524",
         "str_EmployeeName&Sequence_524",
         "str_GrossAmount&Sequence_524",
@@ -457,6 +474,37 @@
       "ArgumentsSectionElementsOrder": [
         "in_TransactionItem",
         "in_YardiURL"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/KillAllProcesses.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "LLM/GetLLMExtractionResultsForEachDoc.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_Imagepath&Sequence_1",
+        "str_UserPrompt&Sequence_1",
+        "llm_Result&Sequence_1",
+        "str_SystemPrompt&Sequence_1",
+        "JSONString&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_EndPoint",
+        "in_APIKey",
+        "in_DeploymentName",
+        "in_APIVersion",
+        "in_UserPromptTextFile",
+        "in_SystemPrompt",
+        "in_ImagePath",
+        "out_jObjExtractionResults"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
