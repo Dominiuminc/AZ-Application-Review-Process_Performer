@@ -1,18 +1,14 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="GetLLMExtractionResultsForEachDoc" this:GetLLMExtractionResultsForEachDoc.in_UserPromptTextFile="C:\Users\harika.malyala\Documents\UiPath\AZ-Application Review Process_Performer\Data\Input\Income Calculation Worksheet_Prompt.txt" this:GetLLMExtractionResultsForEachDoc.in_ImagePath="[New List(Of String) From {&quot;C:\Users\harika.malyala\Documents\UiPath\AZ-Application Review Process_Performer\Data\Output\Unit 545\Unit 545_Upload1Page1.jpg&quot;,&quot;C:\Users\harika.malyala\Documents\UiPath\AZ-Application Review Process_Performer\Data\Output\Unit 545\Unit 545_Upload1Page2.jpg&quot;}]" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:afa="clr-namespace:AshlingPartners.Foundry.Activities;assembly=AshlingPartners.Foundry.Activities" xmlns:am="clr-namespace:APIClient.Models;assembly=APIClient" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="in_EndPoint" Type="InArgument(x:String)" />
-    <x:Property Name="in_APIKey" Type="InArgument(x:String)" />
-    <x:Property Name="in_DeploymentName" Type="InArgument(x:String)" />
-    <x:Property Name="in_APIVersion" Type="InArgument(x:String)" />
     <x:Property Name="in_UserPromptTextFile" Type="InArgument(x:String)" />
-    <x:Property Name="in_SystemPrompt" Type="InArgument(x:String)" />
     <x:Property Name="in_ImagePath" Type="InArgument(scg:List(x:String))" />
     <x:Property Name="out_jObjExtractionResults" Type="OutArgument(njl:JObject)" />
+    <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1082,2299</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1082,2068</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GetLLMExtractionResultsForEachDoc_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -119,68 +115,64 @@
       <AssemblyReference>Microsoft.Extensions.DependencyModel</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="GetLLMExtractionResultsForEachDoc" sap:VirtualizedContainerService.HintSize="541,2034" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="GetLLMExtractionResultsForEachDoc" sap:VirtualizedContainerService.HintSize="541,2003" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="str_Imagepath" />
       <Variable x:TypeArguments="x:String" Name="str_UserPrompt" />
       <Variable x:TypeArguments="am:LlmResult" Name="llm_Result" />
       <Variable x:TypeArguments="x:String" Name="str_SystemPrompt" />
       <Variable x:TypeArguments="x:String" Name="JSONString" />
+      <Variable x:TypeArguments="x:String" Name="str_APIVersion" />
+      <Variable x:TypeArguments="x:String" Name="str_EndPoint" />
+      <Variable x:TypeArguments="x:String" Name="str_DeploymentName" />
+      <Variable x:TypeArguments="x:String" Name="str_APIKey" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="479,303" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="479,272" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
             <ui:AssignOperation.To>
-              <OutArgument x:TypeArguments="x:String">[in_EndPoint]</OutArgument>
+              <OutArgument x:TypeArguments="x:String">[str_EndPoint]</OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">https://dom-openai-service.openai.azure.com/</InArgument>
+              <InArgument x:TypeArguments="x:String">[in_Config("LLM_EndPoint").ToString]</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
             <ui:AssignOperation.To>
-              <OutArgument x:TypeArguments="x:String">[in_APIKey]</OutArgument>
+              <OutArgument x:TypeArguments="x:String">[str_APIKey]</OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">BAAeolOvpjWry38ISXyqRHQoARiYVHLPPto3Ugl7aDMhsHzvRDinJQQJ99BFACYeBjFXJ3w3AAABACOGze3e</InArgument>
+              <InArgument x:TypeArguments="x:String">[in_Config("LLM_APIKey").ToString]</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
             <ui:AssignOperation.To>
-              <OutArgument x:TypeArguments="x:String">[in_DeploymentName]</OutArgument>
+              <OutArgument x:TypeArguments="x:String">[str_DeploymentName]</OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">gpt-4.1-mini</InArgument>
+              <InArgument x:TypeArguments="x:String">[in_Config("LLM_DeploymentName").ToString]</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
             <ui:AssignOperation.To>
-              <OutArgument x:TypeArguments="x:String">[in_APIVersion]</OutArgument>
+              <OutArgument x:TypeArguments="x:String">[str_APIVersion]</OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">2024-12-01-preview</InArgument>
+              <InArgument x:TypeArguments="x:String">[in_Config("LLM_APIVersion").ToString]</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
             <ui:AssignOperation.To>
-              <OutArgument x:TypeArguments="x:String">[in_SystemPrompt]</OutArgument>
+              <OutArgument x:TypeArguments="x:String">[str_SystemPrompt]</OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">You are an application reviewer assistant tasked with reviewing documents and classifying the ones that are in-scope. In your responeses do not include unicode escape sequencing.</InArgument>
-            </ui:AssignOperation.Value>
-          </ui:AssignOperation>
-          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
-            <ui:AssignOperation.To>
-              <OutArgument x:TypeArguments="x:String">[str_Imagepath]</OutArgument>
-            </ui:AssignOperation.To>
-            <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">C:\Users\harika.malyala\Documents\UiPath\AZ-Application Review Process_Performer\Data\Output\Unit 610\Unit 610_Upload1Page1.jpg</InArgument>
+              <InArgument x:TypeArguments="x:String">[in_Config("LLM_SystemPrompt").ToString]</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
         </scg:List>
@@ -208,7 +200,7 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <afa:SendImage APIKey="[in_APIKey]" APIVersion="[in_APIVersion]" DeploymentName="[in_DeploymentName]" DisplayName="Send Image-ReqDocLLMCall" EndPoint="[in_EndPoint]" sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="SendImage_5" ImagePath="[str_Imagepath]" MaxReturnTokens="20000" Result="[llm_Result]" RetryCount="3" SystemPrompt="[str_SystemPrompt]" Timeout="120" UserPrompt="[str_UserPrompt]">
+          <afa:SendImage APIKey="[str_APIKey]" APIVersion="[str_APIVersion]" DeploymentName="[str_DeploymentName]" DisplayName="Send Image-ReqDocLLMCall" EndPoint="[str_EndPoint]" sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="SendImage_5" ImagePath="[str_Imagepath]" MaxReturnTokens="20000" Result="[llm_Result]" RetryCount="3" SystemPrompt="[str_SystemPrompt]" Timeout="120" UserPrompt="[str_UserPrompt]">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -225,7 +217,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <afa:SendImages APIKey="[in_APIKey]" APIVersion="[in_APIVersion]" DeploymentName="[in_DeploymentName]" DisplayName="Send Images" EndPoint="[in_EndPoint]" sap:VirtualizedContainerService.HintSize="479,581" sap2010:WorkflowViewState.IdRef="SendImages_6" ImagePath="[in_ImagePath]" MaxReturnTokens="20000" Result="[llm_Result]" RetryCount="3" SystemPrompt="[in_SystemPrompt]" Timeout="120" UserPrompt="[str_UserPrompt]">
+    <afa:SendImages APIKey="[str_APIKey]" APIVersion="[str_APIVersion]" DeploymentName="[str_DeploymentName]" DisplayName="Send Images" EndPoint="[str_EndPoint]" sap:VirtualizedContainerService.HintSize="479,581" sap2010:WorkflowViewState.IdRef="SendImages_6" ImagePath="[in_ImagePath]" MaxReturnTokens="20000" Result="[llm_Result]" RetryCount="3" SystemPrompt="[str_SystemPrompt]" Timeout="120" UserPrompt="[str_UserPrompt]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>

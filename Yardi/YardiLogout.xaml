@@ -1,11 +1,11 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="YardiLogout" this:YardiLogout.in_YardiURL="https://dominium.certenant.com/#/dashboard/" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="YardiLogout" this:YardiLogout.in_YardiURL="https://dominium.certenant.com/#/dashboard/" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_YardiURL" Type="InArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1082,1346</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1082,694</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>YardiLogout_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -50,6 +50,7 @@
       <x:String>UiPath.Shared.Activities</x:String>
       <x:String>UiPath.Platform.ObjectLibrary</x:String>
       <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Linq.Expressions</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -96,15 +97,24 @@
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="YardiLogout" sap:VirtualizedContainerService.HintSize="512,1281" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="YardiLogout" sap:VirtualizedContainerService.HintSize="416,482" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="IfOpenedByAppBrowser" DisplayName="Edge Dashboard - Auditor" sap:VirtualizedContainerService.HintSize="450,1193" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="d6dc13a4-65e9-416b-b52c-9907459ff280" Version="V2">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;YardiLogout.xaml is started&quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="IfOpenedByAppBrowser" DisplayName="Edge Dashboard - Auditor" sap:VirtualizedContainerService.HintSize="354,57" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="d6dc13a4-65e9-416b-b52c-9907459ff280" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -131,12 +141,12 @@
                 <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/#/dashboard/" CVScreenId="47e468c0-9b9f-4a28-b7e7-5af6c761fa58" CvElementArea="1099, 254, 99, 38" CvTextArea="1111, 266, 74, 13" CvTextArgument="I'm still here" CvType="Button" DesignTimeRectangle="1100, 256, 97, 35" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='I*m*still here' tag='BUTTON' innertext='I*m*still here' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='I*m*still here' tag='BUTTON' innertext='I*m*still here' type='button' class='btn ng-binding btn-primary' check:text='I&amp;apos;m still here' /&gt;" Guid="0753b42d-297b-4de6-9afe-73d0f20ac089" InformativeScreenshot="01232e20bb3a7454d03be01b202fd384.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Dashboard*' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Harika Malyala'" sap:VirtualizedContainerService.HintSize="354,189" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d6dc13a4-65e9-416b-b52c-9907459ff280" Version="V3">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'UserName'" sap:VirtualizedContainerService.HintSize="354,189" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d6dc13a4-65e9-416b-b52c-9907459ff280" Version="V3">
               <uix:NClick.Target>
-                <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/#/dashboard/" CVScreenId="d2f30f99-b2d0-4703-b16d-25e3b4f0581a" CvElementArea="1873, 93, 18, 18" CvTextArea="1785, 97, 87, 16" CvTextArgument="Harika Malyala" CvType="ArrowButton" DesignTimeRectangle="1771, 82, 130, 45" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl id='navbarUserDropdown' tag='A' aria-role='button' /&gt;" FuzzySelectorArgument="&lt;webctrl id='navbarUserDropdown' tag='A' aria-role='button' type='' class='nav-link dropdown-toggle ng-binding' aaname='Harika Malyala ' check:text='Harika Malyala' /&gt;" Guid="34b01563-42ba-4bdb-a730-2c15be760a52" InformativeScreenshot="086e138e39e44bf9224f19adfbc7be5c.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Dashboard*' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/#/dashboard/" CVScreenId="d2f30f99-b2d0-4703-b16d-25e3b4f0581a" CvElementArea="1873, 93, 18, 18" CvTextArea="1785, 97, 87, 16" CvTextArgument="Harika Malyala" CvType="ArrowButton" DesignTimeRectangle="1764, 82, 137, 45" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl id='navbarUserDropdown' tag='A' aria-role='button' /&gt;" FuzzySelectorArgument="&lt;webctrl id='navbarUserDropdown' tag='A' aria-role='button' type='' class='nav-link dropdown-toggle ng-binding' aaname='UI Path Bot Dev  ' /&gt;" Guid="34b01563-42ba-4bdb-a730-2c15be760a52" InformativeScreenshot="8cf0708353420897ce3078d6bd866c88.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Dashboard*' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
                     <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                      <uix:Target CVScreenId="ebe94041-2442-4588-a72d-0540dd5b201c" CvTextArea="1597, 98, 33, 12" CvTextArgument="Certs" CvType="Text" DesignTimeRectangle="1584, 82, 60, 45" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Certs' class='nav-link' parentid='navbar' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Certs' class='nav-link' parentid='navbar' tag='A' type='' check:innerText='Certs' /&gt;" Guid="738cde89-f5fd-4a1f-b8ae-21c6943d5e07" SearchSteps="FuzzySelector" />
+                      <uix:Target CVScreenId="ebe94041-2442-4588-a72d-0540dd5b201c" CvTextArea="1597, 98, 33, 12" CvTextArgument="Certs" CvType="Text" DesignTimeRectangle="1577, 82, 60, 45" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Certs' class='nav-link' parentid='navbar' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Certs' class='nav-link' parentid='navbar' tag='A' type='' check:innerText='Certs' /&gt;" Guid="738cde89-f5fd-4a1f-b8ae-21c6943d5e07" SearchSteps="FuzzySelector" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
                 </uix:TargetAnchorable>
@@ -156,10 +166,11 @@
       </uix:NApplicationCard.TargetApp>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,164" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;YardiLogout.xaml is ended&quot;]" />
   </Sequence>
 </Activity>
