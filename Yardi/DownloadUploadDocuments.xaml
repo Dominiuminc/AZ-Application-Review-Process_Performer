@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="TestClickingUploads" this:TestClickingUploads.in_DocumentReviewURL="https://dominium.certenant.com/#/cert/review/*" this:TestClickingUploads.in_CertDownloadURL="https://dominium.certenant.com/3.0/cert/download/*" this:TestClickingUploads.in_Unit="Unit 601" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:upap="clr-namespace:UiPath.PDF.Activities.PDF;assembly=UiPath.PDF.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="TestClickingUploads" this:TestClickingUploads.in_DocumentReviewURL="https://dominium.certenant.com/#/cert/review/*" this:TestClickingUploads.in_CertDownloadURL="https://dominium.certenant.com/3.0/cert/download/*" this:TestClickingUploads.in_Unit="Unit 601" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_DocumentReviewURL" Type="InArgument(x:String)" />
     <x:Property Name="in_CertDownloadURL" Type="InArgument(x:String)" />
@@ -13,7 +13,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1822,2091</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>2082,7286</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>TestClickingUploads_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -144,14 +144,14 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="DownloadUploadDocuments" sap:VirtualizedContainerService.HintSize="1832,2026" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="DownloadUploadDocuments" sap:VirtualizedContainerService.HintSize="2092,7221" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1770,173" sap2010:WorkflowViewState.IdRef="LogMessage_5" Message="[&quot;DownloadUploadDocuments.xaml is Started&quot;]" />
-    <Assign sap:VirtualizedContainerService.HintSize="1770,114" sap2010:WorkflowViewState.IdRef="Assign_8">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="2030,173" sap2010:WorkflowViewState.IdRef="LogMessage_5" Message="[&quot;DownloadUploadDocuments.xaml is Started&quot;]" />
+    <Assign DisplayName="Assign-out_DownloadPDFsDoneInit" sap:VirtualizedContainerService.HintSize="2030,114" sap2010:WorkflowViewState.IdRef="Assign_8">
       <Assign.To>
         <OutArgument x:TypeArguments="x:Boolean">[out_DownloadPDFsDone]</OutArgument>
       </Assign.To>
@@ -159,13 +159,13 @@
         <InArgument x:TypeArguments="x:Boolean">False</InArgument>
       </Assign.Value>
     </Assign>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: Document View - Unit Number" sap:VirtualizedContainerService.HintSize="1770,1487" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="dec90190-ea99-4cc4-8c56-81490e7ef5c3" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: Document View - Unit Number" sap:VirtualizedContainerService.HintSize="2030,6682" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="dec90190-ea99-4cc4-8c56-81490e7ef5c3" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1736,1238" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1996,6433" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="str_UploadsText" />
               <Variable x:TypeArguments="s:String[]" Name="arr_Uploads" />
@@ -177,15 +177,15 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NCheckState DisplayName="Check App State 'Sort Pages'" sap:VirtualizedContainerService.HintSize="1674,1148" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="dec90190-ea99-4cc4-8c56-81490e7ef5c3" Timeout="10" Version="V3">
+            <uix:NCheckState DisplayName="Check App State 'Sort Pages'" sap:VirtualizedContainerService.HintSize="1934,6343" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="dec90190-ea99-4cc4-8c56-81490e7ef5c3" Timeout="10" Version="V3">
               <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="512,311" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="772,6101" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;Sort pages exists, now download Upload documents&quot;]">
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="710,57" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;Sort pages exists, now download Upload documents&quot;]">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -193,29 +193,29 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:LogMessage>
-                  <Sequence DisplayName="SequenceToDownloadPDFs" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                  <Sequence DisplayName="SequenceToDownloadPDFs" sap:VirtualizedContainerService.HintSize="710,5847" sap2010:WorkflowViewState.IdRef="Sequence_12">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NGetText DisplayName="Get Text Uploads" sap:VirtualizedContainerService.HintSize="648,57" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="dec90190-ea99-4cc4-8c56-81490e7ef5c3" TextString="[str_UploadsText]" Version="V3">
+                    <uix:NGetText DisplayName="Get Text Uploads" sap:VirtualizedContainerService.HintSize="648,189" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="dec90190-ea99-4cc4-8c56-81490e7ef5c3" TextString="[str_UploadsText]" Version="V3">
                       <uix:NGetText.Target>
                         <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/#/cert/review/1187098" DesignTimeRectangle="59, 671, 271, 147" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl parentid='workarea' tag='DIV' innertext='Uploads*' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='workarea' tag='DIV' type='' class='' aaname='' /&gt;" Guid="b2a12678-71a1-4996-9fc4-810f7c6ff7bc" InformativeScreenshot="4418f8b672ede0b18afcce8115c14e12.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Document View*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
                       </uix:NGetText.Target>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NGetText>
-                    <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="UploadsInfo.txt" sap:VirtualizedContainerService.HintSize="648,57" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[str_UploadsText]">
+                    <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text UploadFile" FileName="UploadsInfo.txt" sap:VirtualizedContainerService.HintSize="648,165" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[str_UploadsText]">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:WriteTextFile>
@@ -241,7 +241,7 @@
                         <InArgument x:TypeArguments="x:Int32">[arr_Uploads.Length-2]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <If Condition="[Not int_UploadsCount&gt;0]" DisplayName="If-UploadsExist" sap:VirtualizedContainerService.HintSize="648,647" sap2010:WorkflowViewState.IdRef="If_3">
+                    <If Condition="[Not int_UploadsCount&gt;0]" DisplayName="If-UploadsExist" sap:VirtualizedContainerService.HintSize="648,649" sap2010:WorkflowViewState.IdRef="If_3">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -249,14 +249,14 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <If.Then>
-                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,374" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,376" sap2010:WorkflowViewState.IdRef="Sequence_17">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,173" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Error" Message="[&quot;No Uploads to download for the Application: &quot;+in_Unit]" />
-                          <Throw Exception="[New BusinessRuleException(in_Config(&quot;BE_003&quot;).ToString)]" sap:VirtualizedContainerService.HintSize="354,113" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,175" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Error" Message="[&quot;No Uploads to download for the Application: &quot;+in_Unit]" />
+                          <Throw DisplayName="Throw-NoUploads" Exception="[New BusinessRuleException(in_Config(&quot;BE_003&quot;).ToString)]" sap:VirtualizedContainerService.HintSize="354,113" sap2010:WorkflowViewState.IdRef="Throw_1" />
                         </Sequence>
                       </If.Then>
                       <If.Else>
@@ -269,7 +269,7 @@
                         </Sequence>
                       </If.Else>
                     </If>
-                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="648,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Uplods count: &quot;+(int_UploadsCount).ToString]">
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="648,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Uplods count: &quot;+(int_UploadsCount).ToString]">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -294,9 +294,9 @@
                       </Assign.Value>
                     </Assign>
                     <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder-PDFDownloadFolder" sap:VirtualizedContainerService.HintSize="648,112" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" Path="[out_PDFDownloadFolder]" />
-                    <ui:InterruptibleWhile Condition="[int_UploadsCount &gt; int_Index]" CurrentIndex="[int_Index]" DisplayName="While" sap:VirtualizedContainerService.HintSize="648,3446" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+                    <ui:InterruptibleWhile Condition="[int_UploadsCount &gt; int_Index]" CurrentIndex="[int_Index]" DisplayName="While-UploadsCountDonotExceed" sap:VirtualizedContainerService.HintSize="648,3332" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
                       <ui:InterruptibleWhile.Body>
-                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="614,3300" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="614,3186" sap2010:WorkflowViewState.IdRef="Sequence_6">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="x:Int32" Name="int_TotalPageCount" />
                             <Variable x:TypeArguments="x:String" Name="str_UploadPDFFilePath" />
@@ -339,7 +339,7 @@
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="354,103" sap2010:WorkflowViewState.IdRef="DeleteFileX_1" Path="[str_UploadPDFFilePath]" />
+                                <ui:DeleteFileX DisplayName="Delete UploadPDFFile" sap:VirtualizedContainerService.HintSize="354,103" sap2010:WorkflowViewState.IdRef="DeleteFileX_1" Path="[str_UploadPDFFilePath]" />
                               </Sequence>
                             </If.Then>
                             <If.Else>
@@ -352,13 +352,13 @@
                               </Sequence>
                             </If.Else>
                           </If>
-                          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Edge: CertDownloadPage" sap:VirtualizedContainerService.HintSize="552,2094" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="df70876c-4dee-470d-b433-494b59854045" Version="V2">
+                          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Edge: CertDownloadPage" sap:VirtualizedContainerService.HintSize="552,2037" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="df70876c-4dee-470d-b433-494b59854045" Version="V2">
                             <uix:NApplicationCard.Body>
                               <ActivityAction x:TypeArguments="x:Object">
                                 <ActivityAction.Argument>
                                   <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                                 </ActivityAction.Argument>
-                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="518,1845" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="518,1788" sap2010:WorkflowViewState.IdRef="Sequence_3">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -375,7 +375,7 @@
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                   </uix:NClick>
-                                  <TryCatch DisplayName="Try Catch-Typefilename" sap:VirtualizedContainerService.HintSize="456,1398" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                                  <TryCatch DisplayName="Try Catch-Typefilename" sap:VirtualizedContainerService.HintSize="456,1341" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                                     <TryCatch.Try>
                                       <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into Filename" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="HardwareEvents" ScopeIdentifier="df70876c-4dee-470d-b433-494b59854045" Text="[str_UploadPDFFilePath + &quot;[k(Enter)]&quot;]" Timeout="5" Version="V3">
                                         <uix:NTypeInto.Target>
@@ -390,10 +390,10 @@
                                       </uix:NTypeInto>
                                     </TryCatch.Try>
                                     <TryCatch.Catches>
-                                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="422,838" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="422,781" sap2010:WorkflowViewState.IdRef="Catch`1_1">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
@@ -401,7 +401,7 @@
                                           <ActivityAction.Argument>
                                             <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                                           </ActivityAction.Argument>
-                                          <Sequence sap:VirtualizedContainerService.HintSize="416,768" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                                          <Sequence sap:VirtualizedContainerService.HintSize="416,711" sap2010:WorkflowViewState.IdRef="Sequence_13">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -412,24 +412,6 @@
                                                 <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/3.0/cert/download/cert-doc/5848431" DesignTimeRectangle="1622, 86, 37, 32" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;ctrl name='PDF bar' role='tool bar' /&gt;&lt;ctrl name='Print (Ctrl+P)' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='PDF bar' role='tool bar' /&gt;&lt;ctrl name='Print (Ctrl+P)' role='push button' automationid='' /&gt;" Guid="b44f13ac-0065-44bc-acc8-e7f0ec7664e7" InformativeScreenshot="736e74c3ce7269b80ec7fab7d2645c49.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='*Microsoft​ Edge*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive" />
                                               </uix:NClick.Target>
                                             </uix:NClick>
-                                            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="354,57" sap2010:WorkflowViewState.IdRef="CommentOut_2">
-                                              <ui:CommentOut.Body>
-                                                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,290" sap2010:WorkflowViewState.IdRef="Sequence_14">
-                                                  <sap:WorkflowViewStateService.ViewState>
-                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                    </scg:Dictionary>
-                                                  </sap:WorkflowViewStateService.ViewState>
-                                                  <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="354,202" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][d(ctrl)][u(ctrl)][u(hk)][d(hk)]p[u(hk)]" Version="V3" />
-                                                </Sequence>
-                                              </ui:CommentOut.Body>
-                                              <sap:WorkflowViewStateService.ViewState>
-                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
-                                                </scg:Dictionary>
-                                              </sap:WorkflowViewStateService.ViewState>
-                                            </ui:CommentOut>
                                             <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Print'" sap:VirtualizedContainerService.HintSize="354,189" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="df70876c-4dee-470d-b433-494b59854045" Version="V3">
                                               <uix:NClick.Target>
                                                 <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/3.0/cert/download/cert-doc/5848431" CVScreenId="d2e7e001-c75d-4b9e-bba3-89a3455c43cd" CvElementArea="55, 847, 126, 35" CvTextArea="102, 858, 32, 13" CvTextArgument="Print" CvType="Button" DesignTimeRectangle="57, 849, 122, 32" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;ctrl name='Print' role='push button' text='Print' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Print' role='push button' text='Print' automationid='' check:text='Print' /&gt;" Guid="b0c0fda3-77ce-4906-9153-047fd7c9295e" InformativeScreenshot="fe4e77dd88bb3568f1121c2a49dcda17.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome*' title='*Microsoft​ Edge*' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
@@ -472,42 +454,6 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </uix:NApplicationCard>
-                          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="552,57" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-                            <ui:CommentOut.Body>
-                              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,228" sap2010:WorkflowViewState.IdRef="Sequence_9">
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                                <upap:GetPDFPageCount DisplayName="Get PDF Page Count" FileName="[str_UploadPDFFilePath]" sap:VirtualizedContainerService.HintSize="354,92" sap2010:WorkflowViewState.IdRef="GetPDFPageCount_1" PageCount="[int_TotalPageCount]" />
-                                <ui:InterruptibleWhile Condition="[int_TotalPageCount&gt;=int_PageCount+1]" CurrentIndex="[int_PageCount]" DisplayName="While" sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_3">
-                                  <ui:InterruptibleWhile.Body>
-                                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,199" sap2010:WorkflowViewState.IdRef="Sequence_8">
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                      <upap:ExportPDFPageAsImage DisplayName="Export PDF Page As Image" FileName="[str_UploadPDFFilePath]" sap:VirtualizedContainerService.HintSize="354,111" sap2010:WorkflowViewState.IdRef="ExportPDFPageAsImage_2" ImageDpi="150" OutputFileName="[str_UploadPDFFilePath.Replace(&quot;.pdf&quot;,&quot;Page-&quot;+(int_PageCount+1).ToString+&quot;.jpg&quot;)]" PageNumber="[int_PageCount+1]" />
-                                    </Sequence>
-                                  </ui:InterruptibleWhile.Body>
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                </ui:InterruptibleWhile>
-                              </Sequence>
-                            </ui:CommentOut.Body>
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                <x:Boolean x:Key="IsPinned">True</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                          </ui:CommentOut>
                           <Assign DisplayName="Assign-out_DownloadedPDFFiles" sap:VirtualizedContainerService.HintSize="552,105" sap2010:WorkflowViewState.IdRef="Assign_7">
                             <Assign.To>
                               <OutArgument x:TypeArguments="scg:List(x:String)">[out_DownloadedPDFFiles]</OutArgument>
@@ -525,12 +471,12 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:InterruptibleWhile>
-                    <If sap2010:Annotation.AnnotationText="Check if all Upload File downloads are done" Condition="[out_DownloadedPDFFiles.Count=int_UploadsCount]" DisplayName="If PDFFilescountmatchesUploadsCount" sap:VirtualizedContainerService.HintSize="648,90" sap2010:WorkflowViewState.IdRef="If_1">
+                    <If sap2010:Annotation.AnnotationText="Check if all Upload File downloads are done" Condition="[out_DownloadedPDFFiles.Count=int_UploadsCount]" DisplayName="If PDFFilescountmatchesUploadsCount" sap:VirtualizedContainerService.HintSize="648,647" sap2010:WorkflowViewState.IdRef="If_1">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <If.Then>
@@ -544,18 +490,18 @@
                         </Sequence>
                       </If.Then>
                       <If.Else>
-                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,167" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,201" sap2010:WorkflowViewState.IdRef="Sequence_11">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:Comment sap:VirtualizedContainerService.HintSize="354,79" sap2010:WorkflowViewState.IdRef="Comment_2" Text="// Add Throw" />
+                          <Throw DisplayName="Throw-UploadNotDownloaded" Exception="[New BusinessRuleException(&quot;All Uploads were not downloaded from Yardi&quot;)]" sap:VirtualizedContainerService.HintSize="354,113" sap2010:WorkflowViewState.IdRef="Throw_2" />
                         </Sequence>
                       </If.Else>
                     </If>
                   </Sequence>
-                  <Assign sap:VirtualizedContainerService.HintSize="450,107" sap2010:WorkflowViewState.IdRef="Assign_9">
+                  <Assign DisplayName="Assign-out_DownloadPDFsDone1" sap:VirtualizedContainerService.HintSize="710,107" sap2010:WorkflowViewState.IdRef="Assign_9">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:Boolean">[out_DownloadPDFsDone]</OutArgument>
                     </Assign.To>
@@ -566,7 +512,7 @@
                 </Sequence>
               </uix:NCheckState.IfExists>
               <uix:NCheckState.IfNotExists>
-                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="1108,906" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="1108,940" sap2010:WorkflowViewState.IdRef="Sequence_5">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -606,7 +552,7 @@
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <Assign sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="Assign_11">
+                        <Assign DisplayName="Assign-out_DownloadPDFsDone3" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="Assign_11">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:Boolean">[out_DownloadPDFsDone]</OutArgument>
                           </Assign.To>
@@ -620,7 +566,7 @@
                       <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/#/cert/review/1190758" CVScreenId="a2d8d5c7-10fe-4e46-97da-aa05572e9d22" CvTextArea="979, 246, 132, 15" CvTextArgument="Source Document" CvType="Text" DesignTimeRectangle="980, 244, 130, 21" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='workarea' aaname='Source Document' innertext='Source Document' tag='H*' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='workarea' aaname='Source Document' innertext='Source Document' tag='H*' type='' class='mb-0' check:text='Source Document' /&gt;" Guid="3bc3c264-8989-4dc4-a831-4cbda7c7fca7" InformativeScreenshot="bdf69a50ad8e0d5fe9c59053d3a349c1.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Document View*' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
                     </uix:NCheckState.Target>
                   </uix:NCheckState>
-                  <ui:Comment DisplayName="Comment-Throw" sap:VirtualizedContainerService.HintSize="1046,81" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// &quot;Sort pages doesn't exist&quot;" />
+                  <Throw DisplayName="Throw-SortpageDoesNotexist" Exception="[New SystemException(&quot;Sort Pages Button does not exist&quot;)]" sap:VirtualizedContainerService.HintSize="1046,115" sap2010:WorkflowViewState.IdRef="Throw_3" />
                 </Sequence>
               </uix:NCheckState.IfNotExists>
               <uix:NCheckState.Target>
@@ -652,6 +598,6 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1372,164" sap2010:WorkflowViewState.IdRef="LogMessage_7" Message="[&quot;DownloadUploadDocuments.xaml is Complete&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="2030,164" sap2010:WorkflowViewState.IdRef="LogMessage_7" Message="[&quot;DownloadUploadDocuments.xaml is Complete&quot;]" />
   </Sequence>
 </Activity>

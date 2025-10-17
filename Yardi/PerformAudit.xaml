@@ -12,7 +12,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1082,2654</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1294,4808</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>PerformAudit_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -137,7 +137,7 @@
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="PerformAudit" sap:VirtualizedContainerService.HintSize="846,2589" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="PerformAudit" sap:VirtualizedContainerService.HintSize="1304,4743" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="htmlText" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_UniqueDocType" />
@@ -147,8 +147,8 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="784,173" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[&quot;PerformAudit.xaml is Started&quot;]" />
-    <If Condition="[in_DTFindings.RowCount&gt;0]" DisplayName="If-FindingsExist" sap:VirtualizedContainerService.HintSize="784,2164" sap2010:WorkflowViewState.IdRef="If_1">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1242,173" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[&quot;PerformAudit.xaml is Started&quot;]" />
+    <If Condition="[in_DTFindings.RowCount&gt;0]" DisplayName="If-FindingsExist" sap:VirtualizedContainerService.HintSize="1242,4318" sap2010:WorkflowViewState.IdRef="If_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -156,13 +156,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="750,1969" sap2010:WorkflowViewState.IdRef="Sequence_16">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="1208,4123" sap2010:WorkflowViewState.IdRef="Sequence_16">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <TryCatch DisplayName="Try Catch-SetTransactionProgress" sap:VirtualizedContainerService.HintSize="688,57" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+          <TryCatch DisplayName="Try Catch-SetTransactionProgress" sap:VirtualizedContainerService.HintSize="1146,57" sap2010:WorkflowViewState.IdRef="TryCatch_1">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -189,7 +189,7 @@
               </Catch>
             </TryCatch.Catches>
           </TryCatch>
-          <Assign sap:VirtualizedContainerService.HintSize="688,114" sap2010:WorkflowViewState.IdRef="Assign_3">
+          <Assign DisplayName="Assign-dt_UniqueDocType" sap:VirtualizedContainerService.HintSize="1146,114" sap2010:WorkflowViewState.IdRef="Assign_3">
             <Assign.To>
               <OutArgument x:TypeArguments="sd:DataTable">[dt_UniqueDocType]</OutArgument>
             </Assign.To>
@@ -197,25 +197,25 @@
               <InArgument x:TypeArguments="sd:DataTable">[in_DTFindings.DefaultView.ToTable(True, "DocumentType")]</InArgument>
             </Assign.Value>
           </Assign>
-          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: Document View - Unit 601" sap:VirtualizedContainerService.HintSize="688,1662" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="b2a5ba4e-f8ad-48ee-883b-6b5483562c15" Version="V2">
+          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: Document View - Unit 601" sap:VirtualizedContainerService.HintSize="1146,3468" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="b2a5ba4e-f8ad-48ee-883b-6b5483562c15" Version="V2">
             <uix:NApplicationCard.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="654,1373" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1112,3219" sap2010:WorkflowViewState.IdRef="Sequence_15">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_UniqueDocType]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="592,1283" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_UniqueDocType]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1050,3129" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                     <ui:ForEachRow.Body>
                       <ActivityAction x:TypeArguments="sd:DataRow">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="558,1094" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1016,2940" sap2010:WorkflowViewState.IdRef="Sequence_7">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="sd:DataTable" Name="dt_FindingsWithDocType" />
                             <Variable x:TypeArguments="sd:DataTable" Name="dt_FilteredClassificationResults" />
@@ -225,7 +225,7 @@
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:FilterDataTable DataTable="[in_DTFindings]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="496,193" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[dt_FindingsWithDocType]" SelectColumnsMode="Remove">
+                          <ui:FilterDataTable DataTable="[in_DTFindings]" DisplayName="FilterDTFindings Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="954,193" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[dt_FindingsWithDocType]" SelectColumnsMode="Remove">
                             <ui:FilterDataTable.Filters>
                               <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
                                 <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
@@ -260,7 +260,7 @@
                               </scg:List>
                             </ui:FilterDataTable.SelectColumns>
                           </ui:FilterDataTable>
-                          <ui:FilterDataTable DataTable="[in_DtClassificationResults]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="496,193" sap2010:WorkflowViewState.IdRef="FilterDataTable_2" OutputDataTable="[dt_FilteredClassificationResults]" SelectColumnsMode="Remove">
+                          <ui:FilterDataTable DataTable="[in_DtClassificationResults]" DisplayName="Filter DtClassificationResultsTable" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="954,193" sap2010:WorkflowViewState.IdRef="FilterDataTable_2" OutputDataTable="[dt_FilteredClassificationResults]" SelectColumnsMode="Remove">
                             <ui:FilterDataTable.Filters>
                               <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
                                 <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
@@ -295,27 +295,20 @@
                               </scg:List>
                             </ui:FilterDataTable.SelectColumns>
                           </ui:FilterDataTable>
-                          <Sequence sap:VirtualizedContainerService.HintSize="496,620" sap2010:WorkflowViewState.IdRef="Sequence_6">
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="434,57" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-                              <ui:CommentOut.Body>
-                                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="496,309" sap2010:WorkflowViewState.IdRef="Sequence_5">
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                  <Assign sap:VirtualizedContainerService.HintSize="434,115" sap2010:WorkflowViewState.IdRef="Assign_1">
-                                    <Assign.To>
-                                      <OutArgument x:TypeArguments="x:String">[htmlText]</OutArgument>
-                                    </Assign.To>
-                                    <Assign.Value>
-                                      <InArgument x:TypeArguments="x:String" xml:space="preserve">["&lt;p&gt;&lt;strong&gt;Document Type:&lt;/strong&gt; "+in_DTFindings.Rows(0)("DocumentType").ToString()+"&lt;/p&gt;" &amp; Environment.NewLine &amp;
+                          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="954,57" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                            <ui:CommentOut.Body>
+                              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="496,309" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Assign sap:VirtualizedContainerService.HintSize="434,115" sap2010:WorkflowViewState.IdRef="Assign_1">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:String">[htmlText]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:String" xml:space="preserve">["&lt;p&gt;&lt;strong&gt;Document Type:&lt;/strong&gt; "+in_DTFindings.Rows(0)("DocumentType").ToString()+"&lt;/p&gt;" &amp; Environment.NewLine &amp;
            "&lt;p&gt;&lt;strong&gt;Page number:&lt;/strong&gt;&lt;/p&gt;" &amp; Environment.NewLine &amp;
            "&lt;ul&gt;" &amp; Environment.NewLine &amp;
            String.Join(Environment.NewLine, in_DTFindings.Rows(0)("PageNumber").ToString().Split(","c).Select(Function(pn) "&lt;li&gt;" &amp; pn.Trim() &amp; "&lt;/li&gt;")) &amp; Environment.NewLine &amp;
@@ -324,244 +317,206 @@
            "&lt;ol&gt;" &amp; Environment.NewLine &amp;
            String.Join(Environment.NewLine, in_DTFindings.AsEnumerable().Select(Function(row) "&lt;li&gt;" &amp; row("Findings").ToString().Trim() &amp; "&lt;/li&gt;")) &amp; Environment.NewLine &amp;
            "&lt;/ol&gt;"]</InArgument>
-                                    </Assign.Value>
-                                  </Assign>
-                                  <Assign sap:VirtualizedContainerService.HintSize="434,106" sap2010:WorkflowViewState.IdRef="Assign_2">
-                                    <Assign.To>
-                                      <OutArgument x:TypeArguments="x:String">[in_FindingNotes]</OutArgument>
-                                    </Assign.To>
-                                    <Assign.Value>
-                                      <InArgument x:TypeArguments="x:String" xml:space="preserve">["Document Type: "+dt_FindingsWithDocType.Rows(0)("DocumentType").ToString()+"" &amp; Environment.NewLine &amp; Environment.NewLine &amp;
+                                  </Assign.Value>
+                                </Assign>
+                                <Assign sap:VirtualizedContainerService.HintSize="434,106" sap2010:WorkflowViewState.IdRef="Assign_2">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:String">[in_FindingNotes]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:String" xml:space="preserve">["Document Type: "+dt_FindingsWithDocType.Rows(0)("DocumentType").ToString()+"" &amp; Environment.NewLine &amp; Environment.NewLine &amp;
             "Page number:" &amp; Environment.NewLine &amp;
             String.Join(Environment.NewLine, dt_FindingsWithDocType.Rows(0)("PageNumber").ToString().Split(","c).Select(Function(pn) pn.Trim())) &amp; Environment.NewLine &amp; Environment.NewLine &amp;
             "Findings:" &amp; Environment.NewLine &amp;
             String.Join(Environment.NewLine, dt_FindingsWithDocType.AsEnumerable().Select(Function(row, idx) (idx + 1).ToString() &amp; ". " &amp; row("Findings").ToString().Trim()))]</InArgument>
-                                    </Assign.Value>
-                                  </Assign>
-                                </Sequence>
-                              </ui:CommentOut.Body>
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                            </ui:CommentOut>
-                            <Assign DisplayName="Assign-FindingNotes" sap:VirtualizedContainerService.HintSize="434,115" sap2010:WorkflowViewState.IdRef="Assign_4">
-                              <Assign.To>
-                                <OutArgument x:TypeArguments="x:String">[in_FindingNotes]</OutArgument>
-                              </Assign.To>
-                              <Assign.Value>
-                                <InArgument x:TypeArguments="x:String" xml:space="preserve">["Document Type: " + in_Config(CurrentRow("DocumentType").ToString).ToString() &amp; Environment.NewLine &amp; Environment.NewLine &amp; _
+                                  </Assign.Value>
+                                </Assign>
+                              </Sequence>
+                            </ui:CommentOut.Body>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:CommentOut>
+                          <Assign DisplayName="Assign-FindingNotes" sap:VirtualizedContainerService.HintSize="954,115" sap2010:WorkflowViewState.IdRef="Assign_4">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[in_FindingNotes]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String" xml:space="preserve">["Document Type: " + in_Config(CurrentRow("DocumentType").ToString).ToString() &amp; Environment.NewLine &amp; Environment.NewLine &amp; _
             "PageNumber:" &amp; Environment.NewLine &amp; _
 			String.Join(Environment.NewLine, dt_FilteredClassificationResults.AsEnumerable().Select(Function(row) Split(Split(row("PDFFile").ToString,"_")(1),".")(0) &amp; "_Page" &amp; row("PageNumber").ToString()).Distinct().ToList()) &amp; Environment.NewLine &amp; Environment.NewLine &amp; _
             "Findings:" &amp; Environment.NewLine &amp; _
             String.Join(Environment.NewLine, dt_FindingsWithDocType.AsEnumerable().Select(Function(row, idx) (idx + 1).ToString() &amp; ". " &amp; row("Findings").ToString().Trim()))]</InArgument>
-                              </Assign.Value>
-                            </Assign>
-                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[in_FindingNotes]" />
-                            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="434,57" sap2010:WorkflowViewState.IdRef="CommentOut_2">
-                              <ui:CommentOut.Body>
-                                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="541,227" sap2010:WorkflowViewState.IdRef="Sequence_8">
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                  <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="479,139" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
-                                    <ui:MultipleAssign.AssignOperations>
-                                      <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
-                                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
-                                          <ui:AssignOperation.To>
-                                            <OutArgument x:TypeArguments="x:String">[in_FindingType]</OutArgument>
-                                          </ui:AssignOperation.To>
-                                          <ui:AssignOperation.Value>
-                                            <InArgument x:TypeArguments="x:String">[CurrentRow("DocumentType").ToString]</InArgument>
-                                          </ui:AssignOperation.Value>
-                                        </ui:AssignOperation>
-                                      </scg:List>
-                                    </ui:MultipleAssign.AssignOperations>
-                                    <sap:WorkflowViewStateService.ViewState>
-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                      </scg:Dictionary>
-                                    </sap:WorkflowViewStateService.ViewState>
-                                  </ui:MultipleAssign>
-                                </Sequence>
-                              </ui:CommentOut.Body>
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                            </ui:CommentOut>
-                            <uix:NCheckState DisplayName="Check App State 'Create Finding'" sap:VirtualizedContainerService.HintSize="434,57" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="b2a5ba4e-f8ad-48ee-883b-6b5483562c15" Timeout="3" Version="V3">
-                              <uix:NCheckState.IfExists>
-                                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,105" sap2010:WorkflowViewState.IdRef="Sequence_9">
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                </Sequence>
-                              </uix:NCheckState.IfExists>
-                              <uix:NCheckState.IfNotExists>
-                                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,272" sap2010:WorkflowViewState.IdRef="Sequence_10">
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Start Audit'" sap:VirtualizedContainerService.HintSize="388,182" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b2a5ba4e-f8ad-48ee-883b-6b5483562c15" Version="V3">
-                                    <uix:NClick.Target>
-                                      <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/#/cert/review/1190758" CVScreenId="1e6e4510-b641-4718-9af7-568c7a187b30" CvElementArea="57, 659, 83, 33" CvTextArea="67, 669, 64, 13" CvTextArgument="Start Audit" CvType="Button" DesignTimeRectangle="59, 661, 80, 31" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='Start Audit' parentid='workarea' tag='BUTTON' innertext='Start Audit' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Start Audit' parentid='workarea' tag='BUTTON' innertext='Start Audit' type='button' class='btn btn-primary btn-sm' check:text='Start Audit' /&gt;" Guid="b6386aa0-e430-4226-bc11-8759f7686a93" InformativeScreenshot="c3cf74755fab70aa8d0a2d55f33f726d.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Document View*' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
-                                        <uix:TargetAnchorable.Anchors>
-                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                            <uix:Target CVScreenId="2e71d2c7-e22e-4043-a28a-f88529c4db3f" CvTextArea="57, 611, 35, 13" CvTextArgument="Audit" CvType="Text" DesignTimeRectangle="59, 608, 32, 24" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Audit' parentid='workarea' tag='DIV' innertext='Audit' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Audit' parentid='workarea' tag='DIV' innertext='Audit' type='' class='dv-step-title' check:text='Audit' /&gt;" Guid="895e9397-624f-44e1-abcb-6b8ff8be24f0" SearchSteps="FuzzySelector" />
-                                          </scg:List>
-                                        </uix:TargetAnchorable.Anchors>
-                                      </uix:TargetAnchorable>
-                                    </uix:NClick.Target>
-                                  </uix:NClick>
-                                </Sequence>
-                              </uix:NCheckState.IfNotExists>
-                              <uix:NCheckState.Target>
-                                <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/#/cert/review/1190758" CVScreenId="0adf04da-d20e-4d1d-96ef-d3ea6427ec2f" CvElementArea="1579, 289, 323, 53" CvTextArea="1697, 309, 88, 16" CvTextArgument="Create Finding" CvType="Button" DesignTimeRectangle="1696, 305, 90, 23" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='Create Finding' parentid='finding_form' tag='BUTTON' innertext='Create Finding' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Create Finding' parentid='finding_form' tag='BUTTON' innertext='Create Finding' type='' class='btn btn-link font-weight-bold' check:text='Create Finding' /&gt;" Guid="9db3d1a9-e9f7-43d6-ad95-a005e60f1aed" InformativeScreenshot="8f63d22e1735494eca66d24ab34d9244.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Document View*' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
-                                  <uix:TargetAnchorable.Anchors>
-                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                      <uix:Target CVScreenId="00840a09-c89e-4c3d-81dc-289bb8191be8" CvTextArea="1580, 209, 41, 15" CvTextArgument="Audit" CvType="Text" DesignTimeRectangle="1582, 207, 39, 21" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='workarea' tag='H4' aaname='Audit' innertext='Audit' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='workarea' tag='H4' aaname='Audit' innertext='Audit' type='' class='mb-0' check:text='Audit' /&gt;" Guid="55911db7-50d0-4df2-8efd-30b4e83e1465" SearchSteps="FuzzySelector" />
+                            </Assign.Value>
+                          </Assign>
+                          <ui:LogMessage DisplayName="Log Message-FindingNotes" sap:VirtualizedContainerService.HintSize="954,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[in_FindingNotes]" />
+                          <uix:NCheckState DisplayName="Check App State 'Create Finding'" sap:VirtualizedContainerService.HintSize="954,561" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="b2a5ba4e-f8ad-48ee-883b-6b5483562c15" Timeout="3" Version="V3">
+                            <uix:NCheckState.IfExists>
+                              <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,105" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </Sequence>
+                            </uix:NCheckState.IfExists>
+                            <uix:NCheckState.IfNotExists>
+                              <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,272" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Start Audit'" sap:VirtualizedContainerService.HintSize="388,182" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b2a5ba4e-f8ad-48ee-883b-6b5483562c15" Version="V3">
+                                  <uix:NClick.Target>
+                                    <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/#/cert/review/1190758" CVScreenId="1e6e4510-b641-4718-9af7-568c7a187b30" CvElementArea="57, 659, 83, 33" CvTextArea="67, 669, 64, 13" CvTextArgument="Start Audit" CvType="Button" DesignTimeRectangle="59, 661, 80, 31" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='Start Audit' parentid='workarea' tag='BUTTON' innertext='Start Audit' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Start Audit' parentid='workarea' tag='BUTTON' innertext='Start Audit' type='button' class='btn btn-primary btn-sm' check:text='Start Audit' /&gt;" Guid="b6386aa0-e430-4226-bc11-8759f7686a93" InformativeScreenshot="c3cf74755fab70aa8d0a2d55f33f726d.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Document View*' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                      <uix:TargetAnchorable.Anchors>
+                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                          <uix:Target CVScreenId="2e71d2c7-e22e-4043-a28a-f88529c4db3f" CvTextArea="57, 611, 35, 13" CvTextArgument="Audit" CvType="Text" DesignTimeRectangle="59, 608, 32, 24" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Audit' parentid='workarea' tag='DIV' innertext='Audit' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Audit' parentid='workarea' tag='DIV' innertext='Audit' type='' class='dv-step-title' check:text='Audit' /&gt;" Guid="895e9397-624f-44e1-abcb-6b8ff8be24f0" SearchSteps="FuzzySelector" />
+                                        </scg:List>
+                                      </uix:TargetAnchorable.Anchors>
+                                    </uix:TargetAnchorable>
+                                  </uix:NClick.Target>
+                                </uix:NClick>
+                              </Sequence>
+                            </uix:NCheckState.IfNotExists>
+                            <uix:NCheckState.Target>
+                              <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/#/cert/review/1190758" CVScreenId="0adf04da-d20e-4d1d-96ef-d3ea6427ec2f" CvElementArea="1579, 289, 323, 53" CvTextArea="1697, 309, 88, 16" CvTextArgument="Create Finding" CvType="Button" DesignTimeRectangle="1696, 305, 90, 23" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='Create Finding' parentid='finding_form' tag='BUTTON' innertext='Create Finding' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Create Finding' parentid='finding_form' tag='BUTTON' innertext='Create Finding' type='' class='btn btn-link font-weight-bold' check:text='Create Finding' /&gt;" Guid="9db3d1a9-e9f7-43d6-ad95-a005e60f1aed" InformativeScreenshot="8f63d22e1735494eca66d24ab34d9244.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Document View*' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target CVScreenId="00840a09-c89e-4c3d-81dc-289bb8191be8" CvTextArea="1580, 209, 41, 15" CvTextArgument="Audit" CvType="Text" DesignTimeRectangle="1582, 207, 39, 21" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='workarea' tag='H4' aaname='Audit' innertext='Audit' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='workarea' tag='H4' aaname='Audit' innertext='Audit' type='' class='mb-0' check:text='Audit' /&gt;" Guid="55911db7-50d0-4df2-8efd-30b4e83e1465" SearchSteps="FuzzySelector" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NCheckState.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NCheckState>
+                          <uix:NCheckState DisplayName="Check App State 'Create Finding1'" sap:VirtualizedContainerService.HintSize="954,1558" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="b2a5ba4e-f8ad-48ee-883b-6b5483562c15" Version="V3">
+                            <uix:NCheckState.IfExists>
+                              <Sequence DisplayName="Target appears1" sap:VirtualizedContainerService.HintSize="450,1278" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Create Finding'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b2a5ba4e-f8ad-48ee-883b-6b5483562c15" Version="V3">
+                                  <uix:NClick.Target>
+                                    <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/#/cert/review/1190758" CVScreenId="b2c1abee-d005-49cd-8dfa-0befc1f19d2f" CvElementArea="1579, 289, 323, 53" CvTextArea="1697, 309, 88, 16" CvTextArgument="Create Finding" CvType="Button" DesignTimeRectangle="1696, 305, 90, 23" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='Create Finding' parentid='finding_form' tag='BUTTON' innertext='Create Finding' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Create Finding' parentid='finding_form' tag='BUTTON' innertext='Create Finding' type='' class='btn btn-link font-weight-bold' check:text='Create Finding' /&gt;" Guid="71027967-6975-45db-9634-b0961c712408" InformativeScreenshot="62c3b9fb799103e8ad97b1f6e8642f0d.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Document View*' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
+                                  </uix:NClick.Target>
+                                </uix:NClick>
+                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Incomplete'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b2a5ba4e-f8ad-48ee-883b-6b5483562c15" Version="V3">
+                                  <uix:NClick.Target>
+                                    <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/#/cert/review/1190758" CVScreenId="342eea7c-1c5c-4e6c-afb7-835b5131d271" CvTextArea="1602, 477, 66, 16" CvTextArgument="Incomplete" CvType="Text" DesignTimeRectangle="1602, 474, 66, 21" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Incomplete' aria-role='presentation' innertext='Incomplete' parentid='finding_form' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Incomplete' aria-role='presentation' innertext='Incomplete' parentid='finding_form' tag='A' type='' class='ng-binding' check:text='Incomplete' /&gt;" Guid="b0ad06a2-a99f-4e1e-b316-d48b65eca611" InformativeScreenshot="1de08dca785e3fda167659e6096e51d1.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Document View*' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
+                                  </uix:NClick.Target>
+                                </uix:NClick>
+                                <uix:NSelectItem DisplayName="Select Item 'Finding'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="[in_Finding]" ScopeIdentifier="b2a5ba4e-f8ad-48ee-883b-6b5483562c15" Version="V3">
+                                  <uix:NSelectItem.Items>
+                                    <scg:List x:TypeArguments="x:String" Capacity="9">
+                                      <x:String>Clarification is needed</x:String>
+                                      <x:String>FYI</x:String>
+                                      <x:String>Incomplete</x:String>
+                                      <x:String>Incorrect calculation</x:String>
+                                      <x:String>Missing</x:String>
+                                      <x:String>Missing signatures and/or dates</x:String>
+                                      <x:String>Need to show work</x:String>
+                                      <x:String>Paperwork is expired</x:String>
+                                      <x:String>Whiteout was used</x:String>
                                     </scg:List>
-                                  </uix:TargetAnchorable.Anchors>
-                                </uix:TargetAnchorable>
-                              </uix:NCheckState.Target>
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                            </uix:NCheckState>
-                            <uix:NCheckState DisplayName="Check App State 'Create Finding1'" sap:VirtualizedContainerService.HintSize="434,48" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="b2a5ba4e-f8ad-48ee-883b-6b5483562c15" Version="V3">
-                              <uix:NCheckState.IfExists>
-                                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,1278" sap2010:WorkflowViewState.IdRef="Sequence_3">
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Create Finding'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b2a5ba4e-f8ad-48ee-883b-6b5483562c15" Version="V3">
-                                    <uix:NClick.Target>
-                                      <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/#/cert/review/1190758" CVScreenId="b2c1abee-d005-49cd-8dfa-0befc1f19d2f" CvElementArea="1579, 289, 323, 53" CvTextArea="1697, 309, 88, 16" CvTextArgument="Create Finding" CvType="Button" DesignTimeRectangle="1696, 305, 90, 23" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='Create Finding' parentid='finding_form' tag='BUTTON' innertext='Create Finding' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Create Finding' parentid='finding_form' tag='BUTTON' innertext='Create Finding' type='' class='btn btn-link font-weight-bold' check:text='Create Finding' /&gt;" Guid="71027967-6975-45db-9634-b0961c712408" InformativeScreenshot="62c3b9fb799103e8ad97b1f6e8642f0d.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Document View*' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
-                                    </uix:NClick.Target>
-                                  </uix:NClick>
-                                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Incomplete'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b2a5ba4e-f8ad-48ee-883b-6b5483562c15" Version="V3">
-                                    <uix:NClick.Target>
-                                      <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/#/cert/review/1190758" CVScreenId="342eea7c-1c5c-4e6c-afb7-835b5131d271" CvTextArea="1602, 477, 66, 16" CvTextArgument="Incomplete" CvType="Text" DesignTimeRectangle="1602, 474, 66, 21" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Incomplete' aria-role='presentation' innertext='Incomplete' parentid='finding_form' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Incomplete' aria-role='presentation' innertext='Incomplete' parentid='finding_form' tag='A' type='' class='ng-binding' check:text='Incomplete' /&gt;" Guid="b0ad06a2-a99f-4e1e-b316-d48b65eca611" InformativeScreenshot="1de08dca785e3fda167659e6096e51d1.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Document View*' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
-                                    </uix:NClick.Target>
-                                  </uix:NClick>
-                                  <uix:NSelectItem DisplayName="Select Item 'Finding'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="[in_Finding]" ScopeIdentifier="b2a5ba4e-f8ad-48ee-883b-6b5483562c15" Version="V3">
-                                    <uix:NSelectItem.Items>
-                                      <scg:List x:TypeArguments="x:String" Capacity="9">
-                                        <x:String>Clarification is needed</x:String>
-                                        <x:String>FYI</x:String>
-                                        <x:String>Incomplete</x:String>
-                                        <x:String>Incorrect calculation</x:String>
-                                        <x:String>Missing</x:String>
-                                        <x:String>Missing signatures and/or dates</x:String>
-                                        <x:String>Need to show work</x:String>
-                                        <x:String>Paperwork is expired</x:String>
-                                        <x:String>Whiteout was used</x:String>
-                                      </scg:List>
-                                    </uix:NSelectItem.Items>
-                                    <uix:NSelectItem.Target>
-                                      <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/#/cert/review/1190758" CVScreenId="8df483a5-dfa9-4a9b-a2c9-0412589b4eda" CvElementArea="1597, 415, 274, 36" CvType="InputBox" DesignTimeRectangle="1598, 416, 271, 35" DesignTimeScaleFactor="1" ElementType="DropDown" FullSelectorArgument="&lt;webctrl id='create_finding' tag='SELECT' aaname='Finding:' name='finding_name' /&gt;" FuzzySelectorArgument="&lt;webctrl id='create_finding' tag='SELECT' aaname='Finding:' name='finding_name' type='' class='form-control ng-pristine ng-untouched ng-valid ng-valid-required ng-not-empty' /&gt;" Guid="fed03987-ce81-408d-9f4d-461b5e6138c7" InformativeScreenshot="e54fb5bfaf022302b48dd873722637f3.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Document View*' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
-                                        <uix:TargetAnchorable.Anchors>
-                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                            <uix:Target CVScreenId="8df483a5-dfa9-4a9b-a2c9-0412589b4eda" CvTextArea="1597, 393, 50, 16" CvTextArgument="Finding:" CvType="Text" DesignTimeRectangle="1598, 390, 49, 21" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Finding:' parentid='finding_form' tag='LABEL' innertext='Finding:' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Finding:' parentid='finding_form' tag='LABEL' innertext='Finding:' type='' class='' check:text='Finding:' /&gt;" Guid="a8f96ec9-aff8-40bd-9a34-e5ecab3d4f42" SearchSteps="FuzzySelector" />
-                                          </scg:List>
-                                        </uix:TargetAnchorable.Anchors>
-                                      </uix:TargetAnchorable>
-                                    </uix:NSelectItem.Target>
-                                  </uix:NSelectItem>
-                                  <uix:NSelectItem DisplayName="Select Item 'Finding Type'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NSelectItem_2" Item="[in_FindingType]" ScopeIdentifier="b2a5ba4e-f8ad-48ee-883b-6b5483562c15" Version="V3">
-                                    <uix:NSelectItem.Items>
-                                      <scg:List x:TypeArguments="x:String" Capacity="24">
-                                        <x:String>Select a Finding Type...</x:String>
-                                        <x:String>Administrative Findings</x:String>
-                                        <x:String>Application</x:String>
-                                        <x:String>Application Summary</x:String>
-                                        <x:String>Asset</x:String>
-                                        <x:String>Child Support Affidavit</x:String>
-                                        <x:String>Child Support Verification</x:String>
-                                        <x:String>Family</x:String>
-                                        <x:String>HAP Contract</x:String>
-                                        <x:String>Income</x:String>
-                                        <x:String>Income &amp; Asset Questionnaire</x:String>
-                                        <x:String>Income Calculation Worksheet</x:String>
-                                        <x:String>Lease</x:String>
-                                        <x:String>Lease Addendum</x:String>
-                                        <x:String>Lease Addendum - State Specific</x:String>
-                                        <x:String>Lease Addendum - Tax Credit</x:String>
-                                        <x:String>Member Information Document</x:String>
-                                        <x:String>RSC Approved Calculations</x:String>
-                                        <x:String>Screening</x:String>
-                                        <x:String>Student Financial Aid Cert</x:String>
-                                        <x:String>Student Financial Aid Verification</x:String>
-                                        <x:String>TIC</x:String>
-                                        <x:String>VAWA</x:String>
-                                        <x:String>Weighted Finding</x:String>
-                                      </scg:List>
-                                    </uix:NSelectItem.Items>
-                                    <uix:NSelectItem.Target>
-                                      <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/#/cert/review/1190758" CVScreenId="9f0f31e4-5d11-402b-8ec3-aa106fe48f1c" CvElementArea="1597, 492, 273, 37" CvType="InputBox" DesignTimeRectangle="1598, 493, 271, 35" DesignTimeScaleFactor="1" ElementType="DropDown" FullSelectorArgument="&lt;webctrl tag='SELECT' aaname='Finding Type:' name='finding_type' parentid='finding_form' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SELECT' aaname='Finding Type:' name='finding_type' parentid='finding_form' type='' class='form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required' /&gt;" Guid="d8f70e67-e73e-483e-9b73-baa5f5e5cc19" InformativeScreenshot="9b6f14c120535541e04e2f2239c6edfe.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Document View*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Visible" WaitForReadyArgument="Complete">
-                                        <uix:TargetAnchorable.Anchors>
-                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                            <uix:Target CVScreenId="9f0f31e4-5d11-402b-8ec3-aa106fe48f1c" CvTextArea="1597, 471, 82, 15" CvTextArgument="Finding Type:" CvType="Text" DesignTimeRectangle="1598, 467, 81, 21" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Finding Type:' parentid='finding_form' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Finding Type:' parentid='finding_form' tag='LABEL' type='' class='' check:text='Finding Type:' /&gt;" Guid="f421da67-ab20-44e1-a38c-f14571ae1c44" SearchSteps="FuzzySelector" />
-                                          </scg:List>
-                                        </uix:TargetAnchorable.Anchors>
-                                      </uix:TargetAnchorable>
-                                    </uix:NSelectItem.Target>
-                                  </uix:NSelectItem>
-                                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'DIV finding_type_notes_…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,250" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="b2a5ba4e-f8ad-48ee-883b-6b5483562c15" Text="[in_FindingNotes]" Version="V3">
-                                    <uix:NTypeInto.Target>
-                                      <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/#/cert/review/1190758" CVScreenId="6ce55fd0-0d8d-43f2-990b-54e47d66892a" CvElementArea="1598, 721, 271, 152" CvType="InputBox" DesignTimeRectangle="1598, 722, 271, 150" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl tag='DIV' aria-role='textbox' parentid='finding_form' id='finding_type_notes_create' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='DIV' aria-role='textbox' parentid='finding_form' id='finding_type_notes_create' type='' class='fake-form editable findings-notes ng-pristine ng-untouched ng-valid ng-empty' aaname='' /&gt;" Guid="814a8937-e79b-4679-b58d-8ea7f4139eca" InformativeScreenshot="c8808fa96295cc43f28a79bec7ea215d.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Document View*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
-                                    </uix:NTypeInto.Target>
-                                  </uix:NTypeInto>
-                                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Save'" sap:VirtualizedContainerService.HintSize="388,182" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b2a5ba4e-f8ad-48ee-883b-6b5483562c15" Version="V3">
-                                    <uix:NClick.Target>
-                                      <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/#/cert/review/1198878" CVScreenId="7b75c230-2ca1-4433-bd29-b3b4c3b94e65" CvElementArea="1653, 700, 57, 37" CvTextArea="1667, 712, 30, 12" CvTextArgument="Save" CvType="Button" DesignTimeRectangle="1655, 701, 54, 35" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='Save' parentid='finding_form' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Save' parentid='finding_form' tag='BUTTON' type='' class='btn btn-primary' check:innerText='Save' /&gt;" Guid="f1afc235-a71d-4049-8712-d7c2808bcab5" InformativeScreenshot="48452438a134d92986628af3cf7eabb8.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Document View*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
-                                    </uix:NClick.Target>
-                                  </uix:NClick>
-                                </Sequence>
-                              </uix:NCheckState.IfExists>
-                              <uix:NCheckState.IfNotExists>
-                                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,105" sap2010:WorkflowViewState.IdRef="Sequence_4">
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                </Sequence>
-                              </uix:NCheckState.IfNotExists>
-                              <uix:NCheckState.Target>
-                                <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/#/cert/review/1190758" CVScreenId="0adf04da-d20e-4d1d-96ef-d3ea6427ec2f" CvElementArea="1579, 289, 323, 53" CvTextArea="1697, 309, 88, 16" CvTextArgument="Create Finding" CvType="Button" DesignTimeRectangle="1696, 305, 90, 23" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='Create Finding' parentid='finding_form' tag='BUTTON' innertext='Create Finding' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Create Finding' parentid='finding_form' tag='BUTTON' innertext='Create Finding' type='' class='btn btn-link font-weight-bold' check:text='Create Finding' /&gt;" Guid="9db3d1a9-e9f7-43d6-ad95-a005e60f1aed" InformativeScreenshot="8f63d22e1735494eca66d24ab34d9244.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Document View*' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
-                                  <uix:TargetAnchorable.Anchors>
-                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                      <uix:Target CVScreenId="00840a09-c89e-4c3d-81dc-289bb8191be8" CvTextArea="1580, 209, 41, 15" CvTextArgument="Audit" CvType="Text" DesignTimeRectangle="1582, 207, 39, 21" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='workarea' tag='H4' aaname='Audit' innertext='Audit' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='workarea' tag='H4' aaname='Audit' innertext='Audit' type='' class='mb-0' check:text='Audit' /&gt;" Guid="55911db7-50d0-4df2-8efd-30b4e83e1465" SearchSteps="FuzzySelector" />
+                                  </uix:NSelectItem.Items>
+                                  <uix:NSelectItem.Target>
+                                    <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/#/cert/review/1190758" CVScreenId="8df483a5-dfa9-4a9b-a2c9-0412589b4eda" CvElementArea="1597, 415, 274, 36" CvType="InputBox" DesignTimeRectangle="1598, 416, 271, 35" DesignTimeScaleFactor="1" ElementType="DropDown" FullSelectorArgument="&lt;webctrl id='create_finding' tag='SELECT' aaname='Finding:' name='finding_name' /&gt;" FuzzySelectorArgument="&lt;webctrl id='create_finding' tag='SELECT' aaname='Finding:' name='finding_name' type='' class='form-control ng-pristine ng-untouched ng-valid ng-valid-required ng-not-empty' /&gt;" Guid="fed03987-ce81-408d-9f4d-461b5e6138c7" InformativeScreenshot="e54fb5bfaf022302b48dd873722637f3.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Document View*' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                                      <uix:TargetAnchorable.Anchors>
+                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                          <uix:Target CVScreenId="8df483a5-dfa9-4a9b-a2c9-0412589b4eda" CvTextArea="1597, 393, 50, 16" CvTextArgument="Finding:" CvType="Text" DesignTimeRectangle="1598, 390, 49, 21" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Finding:' parentid='finding_form' tag='LABEL' innertext='Finding:' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Finding:' parentid='finding_form' tag='LABEL' innertext='Finding:' type='' class='' check:text='Finding:' /&gt;" Guid="a8f96ec9-aff8-40bd-9a34-e5ecab3d4f42" SearchSteps="FuzzySelector" />
+                                        </scg:List>
+                                      </uix:TargetAnchorable.Anchors>
+                                    </uix:TargetAnchorable>
+                                  </uix:NSelectItem.Target>
+                                </uix:NSelectItem>
+                                <uix:NSelectItem DisplayName="Select Item 'Finding Type'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NSelectItem_2" Item="[in_FindingType]" ScopeIdentifier="b2a5ba4e-f8ad-48ee-883b-6b5483562c15" Version="V3">
+                                  <uix:NSelectItem.Items>
+                                    <scg:List x:TypeArguments="x:String" Capacity="24">
+                                      <x:String>Select a Finding Type...</x:String>
+                                      <x:String>Administrative Findings</x:String>
+                                      <x:String>Application</x:String>
+                                      <x:String>Application Summary</x:String>
+                                      <x:String>Asset</x:String>
+                                      <x:String>Child Support Affidavit</x:String>
+                                      <x:String>Child Support Verification</x:String>
+                                      <x:String>Family</x:String>
+                                      <x:String>HAP Contract</x:String>
+                                      <x:String>Income</x:String>
+                                      <x:String>Income &amp; Asset Questionnaire</x:String>
+                                      <x:String>Income Calculation Worksheet</x:String>
+                                      <x:String>Lease</x:String>
+                                      <x:String>Lease Addendum</x:String>
+                                      <x:String>Lease Addendum - State Specific</x:String>
+                                      <x:String>Lease Addendum - Tax Credit</x:String>
+                                      <x:String>Member Information Document</x:String>
+                                      <x:String>RSC Approved Calculations</x:String>
+                                      <x:String>Screening</x:String>
+                                      <x:String>Student Financial Aid Cert</x:String>
+                                      <x:String>Student Financial Aid Verification</x:String>
+                                      <x:String>TIC</x:String>
+                                      <x:String>VAWA</x:String>
+                                      <x:String>Weighted Finding</x:String>
                                     </scg:List>
-                                  </uix:TargetAnchorable.Anchors>
-                                </uix:TargetAnchorable>
-                              </uix:NCheckState.Target>
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                            </uix:NCheckState>
-                          </Sequence>
+                                  </uix:NSelectItem.Items>
+                                  <uix:NSelectItem.Target>
+                                    <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/#/cert/review/1190758" CVScreenId="9f0f31e4-5d11-402b-8ec3-aa106fe48f1c" CvElementArea="1597, 492, 273, 37" CvType="InputBox" DesignTimeRectangle="1598, 493, 271, 35" DesignTimeScaleFactor="1" ElementType="DropDown" FullSelectorArgument="&lt;webctrl tag='SELECT' aaname='Finding Type:' name='finding_type' parentid='finding_form' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SELECT' aaname='Finding Type:' name='finding_type' parentid='finding_form' type='' class='form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required' /&gt;" Guid="d8f70e67-e73e-483e-9b73-baa5f5e5cc19" InformativeScreenshot="9b6f14c120535541e04e2f2239c6edfe.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Document View*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Visible" WaitForReadyArgument="Complete">
+                                      <uix:TargetAnchorable.Anchors>
+                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                          <uix:Target CVScreenId="9f0f31e4-5d11-402b-8ec3-aa106fe48f1c" CvTextArea="1597, 471, 82, 15" CvTextArgument="Finding Type:" CvType="Text" DesignTimeRectangle="1598, 467, 81, 21" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Finding Type:' parentid='finding_form' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Finding Type:' parentid='finding_form' tag='LABEL' type='' class='' check:text='Finding Type:' /&gt;" Guid="f421da67-ab20-44e1-a38c-f14571ae1c44" SearchSteps="FuzzySelector" />
+                                        </scg:List>
+                                      </uix:TargetAnchorable.Anchors>
+                                    </uix:TargetAnchorable>
+                                  </uix:NSelectItem.Target>
+                                </uix:NSelectItem>
+                                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'DIV finding_type_notes_…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,250" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="b2a5ba4e-f8ad-48ee-883b-6b5483562c15" Text="[in_FindingNotes]" Version="V3">
+                                  <uix:NTypeInto.Target>
+                                    <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/#/cert/review/1190758" CVScreenId="6ce55fd0-0d8d-43f2-990b-54e47d66892a" CvElementArea="1598, 721, 271, 152" CvType="InputBox" DesignTimeRectangle="1598, 722, 271, 150" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl tag='DIV' aria-role='textbox' parentid='finding_form' id='finding_type_notes_create' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='DIV' aria-role='textbox' parentid='finding_form' id='finding_type_notes_create' type='' class='fake-form editable findings-notes ng-pristine ng-untouched ng-valid ng-empty' aaname='' /&gt;" Guid="814a8937-e79b-4679-b58d-8ea7f4139eca" InformativeScreenshot="c8808fa96295cc43f28a79bec7ea215d.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Document View*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                                  </uix:NTypeInto.Target>
+                                </uix:NTypeInto>
+                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Save'" sap:VirtualizedContainerService.HintSize="388,182" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b2a5ba4e-f8ad-48ee-883b-6b5483562c15" Version="V3">
+                                  <uix:NClick.Target>
+                                    <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/#/cert/review/1198878" CVScreenId="7b75c230-2ca1-4433-bd29-b3b4c3b94e65" CvElementArea="1653, 700, 57, 37" CvTextArea="1667, 712, 30, 12" CvTextArgument="Save" CvType="Button" DesignTimeRectangle="1655, 701, 54, 35" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='Save' parentid='finding_form' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Save' parentid='finding_form' tag='BUTTON' type='' class='btn btn-primary' check:innerText='Save' /&gt;" Guid="f1afc235-a71d-4049-8712-d7c2808bcab5" InformativeScreenshot="48452438a134d92986628af3cf7eabb8.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Document View*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                                  </uix:NClick.Target>
+                                </uix:NClick>
+                              </Sequence>
+                            </uix:NCheckState.IfExists>
+                            <uix:NCheckState.IfNotExists>
+                              <Sequence DisplayName="Target does not appear1" sap:VirtualizedContainerService.HintSize="450,105" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </Sequence>
+                            </uix:NCheckState.IfNotExists>
+                            <uix:NCheckState.Target>
+                              <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/#/cert/review/1190758" CVScreenId="0adf04da-d20e-4d1d-96ef-d3ea6427ec2f" CvElementArea="1579, 289, 323, 53" CvTextArea="1697, 309, 88, 16" CvTextArgument="Create Finding" CvType="Button" DesignTimeRectangle="1696, 305, 90, 23" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='Create Finding' parentid='finding_form' tag='BUTTON' innertext='Create Finding' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Create Finding' parentid='finding_form' tag='BUTTON' innertext='Create Finding' type='' class='btn btn-link font-weight-bold' check:text='Create Finding' /&gt;" Guid="9db3d1a9-e9f7-43d6-ad95-a005e60f1aed" InformativeScreenshot="8f63d22e1735494eca66d24ab34d9244.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Document View*' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target CVScreenId="00840a09-c89e-4c3d-81dc-289bb8191be8" CvTextArea="1580, 209, 41, 15" CvTextArgument="Audit" CvType="Text" DesignTimeRectangle="1582, 207, 39, 21" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='workarea' tag='H4' aaname='Audit' innertext='Audit' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='workarea' tag='H4' aaname='Audit' innertext='Audit' type='' class='mb-0' check:text='Audit' /&gt;" Guid="55911db7-50d0-4df2-8efd-30b4e83e1465" SearchSteps="FuzzySelector" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NCheckState.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NCheckState>
                         </Sequence>
                       </ActivityAction>
                     </ui:ForEachRow.Body>
@@ -585,21 +540,21 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </uix:NApplicationCard>
-          <TryCatch DisplayName="Try Catch-SetTransactionProgress" sap:VirtualizedContainerService.HintSize="688,48" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+          <TryCatch DisplayName="Try Catch-SetTransactionProgress" sap:VirtualizedContainerService.HintSize="1146,396" sap2010:WorkflowViewState.IdRef="TryCatch_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <TryCatch.Try>
-              <ui:SetTransactionProgress TimeoutMS="{x:Null}" DisplayName="Set Transaction Progress" sap:VirtualizedContainerService.HintSize="334,192" sap2010:WorkflowViewState.IdRef="SetTransactionProgress_3" Progress="Audit Completed" TransactionItem="[in_TransactionItem]" />
+              <ui:SetTransactionProgress TimeoutMS="{x:Null}" DisplayName="Set Transaction Progress-1" sap:VirtualizedContainerService.HintSize="334,192" sap2010:WorkflowViewState.IdRef="SetTransactionProgress_3" Progress="Audit Completed" TransactionItem="[in_TransactionItem]" />
             </TryCatch.Try>
             <TryCatch.Catches>
-              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,22" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,211" sap2010:WorkflowViewState.IdRef="Catch`1_3">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
@@ -607,7 +562,7 @@
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                   </ActivityAction.Argument>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,141" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Warn" Message="[&quot;Failed to set the transaction progress to Audit Completed&quot;]" />
+                  <ui:LogMessage DisplayName="Log Message1" sap:VirtualizedContainerService.HintSize="334,141" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Warn" Message="[&quot;Failed to set the transaction progress to Audit Completed&quot;]" />
                 </ActivityAction>
               </Catch>
             </TryCatch.Catches>
@@ -652,6 +607,6 @@
         </Sequence>
       </If.Else>
     </If>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="784,164" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;PerformAudit.xaml is Ended&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1242,164" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;PerformAudit.xaml is Ended&quot;]" />
   </Sequence>
 </Activity>
