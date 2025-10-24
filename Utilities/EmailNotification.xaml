@@ -9,7 +9,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1082,2552</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>917,2552</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>EmailNotification_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -128,6 +128,7 @@
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
       <AssemblyReference>UiPath.CodedWorkflows</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="EmailNotification" sap:VirtualizedContainerService.HintSize="512,2487" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -152,7 +153,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <ui:PathExists Exists="{x:Null}" DisplayName="Path Exists" sap:VirtualizedContainerService.HintSize="354,147" sap2010:WorkflowViewState.IdRef="PathExists_1" Path="[in_Attachment]" PathType="File" Resource="[AttachmentResource]" />
-          <umam:SendMailConnections ArgumentAttachmentPaths="{x:Null}" AttachmentList="{x:Null}" AttachmentPaths="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" Mailbox="{x:Null}" MailboxBackup="{x:Reference __ReferenceID0}" ReplyTo="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="Existing" Attachments="[{AttachmentResource}]" AuthScopesInvalid="False" Body="[string.Format(&quot;&lt;P&gt;&lt;SPAN&gt;in_EmailBody&lt;/SPAN&gt;&lt;/P&gt;&quot;)]" ConnectionId="7aea9608-410a-44ee-b558-6605be86360b" DisplayName="Send Email With Attachment" sap:VirtualizedContainerService.HintSize="354,525" sap2010:WorkflowViewState.IdRef="SendMailConnections_2" Importance="Normal" InputType="HTML" SaveAsDraft="True" Subject="[in_Subject]" To="[in_EmailRecipients.Split(&quot;,&quot;c).AsEnumerable()]" UseConnectionService="True" UseSharedMailbox="False">
+          <umam:SendMailConnections ArgumentAttachmentPaths="{x:Null}" AttachmentList="{x:Null}" ConnectionAccountName="{x:Null}" MailboxBackup="{x:Reference __ReferenceID0}" AttachmentInputMode="Existing" AttachmentPaths="{x:Null}" Attachments="[{AttachmentResource}]" AuthScopesInvalid="False" Bcc="{x:Null}" Body="[in_EmailBody]" Cc="{x:Null}" ConnectionId="7aea9608-410a-44ee-b558-6605be86360b" ContinueOnError="{x:Null}" DisplayName="Send Email With Attachment" sap:VirtualizedContainerService.HintSize="354,525" sap2010:WorkflowViewState.IdRef="SendMailConnections_2" Importance="Normal" InputType="HTML" Mailbox="{x:Null}" ReplyTo="{x:Null}" SaveAsDraft="False" SingleAttachment="{x:Null}" Subject="[in_Subject]" TextBody="{x:Null}" To="[in_EmailRecipients.Split(&quot;,&quot;c).AsEnumerable()]" UseConnectionService="True" UseSharedMailbox="False">
             <umam:SendMailConnections.AttachmentsBackup>
               <usau:BackupSlot x:TypeArguments="umame:AttachmentInputMode" StoredValue="Existing">
                 <usau:BackupSlot.BackupValues>
@@ -188,7 +189,7 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <umam:SendMailConnections ArgumentAttachmentPaths="{x:Null}" AttachmentList="{x:Null}" AttachmentPaths="{x:Null}" Attachments="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" Mailbox="{x:Null}" MailboxBackup="{x:Reference __ReferenceID1}" ReplyTo="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="Existing" AuthScopesInvalid="False" Body="[string.Format(&quot;&lt;P&gt;&lt;SPAN&gt;in_EmailBody&lt;/SPAN&gt;&lt;/P&gt;&quot;)]" ConnectionId="7aea9608-410a-44ee-b558-6605be86360b" DisplayName="Send Email Without Attachment" sap:VirtualizedContainerService.HintSize="354,525" sap2010:WorkflowViewState.IdRef="SendMailConnections_1" Importance="Normal" InputType="HTML" SaveAsDraft="True" Subject="[in_Subject]" To="[in_EmailRecipients.Split(&quot;,&quot;c).AsEnumerable()]" UseConnectionService="True" UseSharedMailbox="False">
+          <umam:SendMailConnections ArgumentAttachmentPaths="{x:Null}" AttachmentList="{x:Null}" AttachmentPaths="{x:Null}" Attachments="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" Mailbox="{x:Null}" MailboxBackup="{x:Reference __ReferenceID1}" ReplyTo="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="Existing" AuthScopesInvalid="False" Body="[in_EmailBody]" ConnectionId="7aea9608-410a-44ee-b558-6605be86360b" DisplayName="Send Email Without Attachment" sap:VirtualizedContainerService.HintSize="354,525" sap2010:WorkflowViewState.IdRef="SendMailConnections_1" Importance="Normal" InputType="HTML" SaveAsDraft="False" Subject="[in_Subject]" To="[in_EmailRecipients.Split(&quot;,&quot;c).AsEnumerable()]" UseConnectionService="True" UseSharedMailbox="False">
             <umam:SendMailConnections.AttachmentsBackup>
               <usau:BackupSlot x:TypeArguments="umame:AttachmentInputMode" StoredValue="Existing">
                 <usau:BackupSlot.BackupValues>
@@ -199,7 +200,12 @@
             <umam:SendMailConnections.InputTypeBackup>
               <usau:BackupSlot x:TypeArguments="umame:BodyInputType" StoredValue="HTML">
                 <usau:BackupSlot.BackupValues>
-                  <scg:Dictionary x:TypeArguments="umame:BodyInputType, scg:List(x:Object)" />
+                  <scg:List x:TypeArguments="x:Object" x:Key="HTML" Capacity="1">
+                    <InArgument x:TypeArguments="x:String">[string.Format("&lt;P&gt;&lt;SPAN&gt;in_EmailBody&lt;/SPAN&gt;&lt;/P&gt;")]</InArgument>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:Object" x:Key="TEXT" Capacity="1">
+                    <InArgument x:TypeArguments="x:String">[in_EmailBody]</InArgument>
+                  </scg:List>
                 </usau:BackupSlot.BackupValues>
               </usau:BackupSlot>
             </umam:SendMailConnections.InputTypeBackup>

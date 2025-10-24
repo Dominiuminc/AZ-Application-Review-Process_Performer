@@ -10,7 +10,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1290,6918</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1290,6675</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>TestSortPages_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -129,7 +129,7 @@
       <AssemblyReference>NPOI.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="SortPages" sap:VirtualizedContainerService.HintSize="1300,6853" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="SortPages" sap:VirtualizedContainerService.HintSize="1300,6610" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -180,13 +180,13 @@
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1238,173" sap2010:WorkflowViewState.IdRef="LogMessage_5" Message="[&quot;SortPagesintoBuckets.xaml is Started&quot;]" />
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Edge Document View - Unit 517" sap:VirtualizedContainerService.HintSize="1238,6371" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="b7503d1b-f71b-4953-a099-733cfd49a00c" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Edge Document View - Unit 517" sap:VirtualizedContainerService.HintSize="1238,6128" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="b7503d1b-f71b-4953-a099-733cfd49a00c" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1204,6082" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1204,5879" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="str_UploadNumber" />
               <Variable x:TypeArguments="x:String" Name="str_DocumentInfo" />
@@ -198,6 +198,16 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click 'I'm back'" sap:VirtualizedContainerService.HintSize="1142,189" sap2010:WorkflowViewState.IdRef="NClick_15" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b7503d1b-f71b-4953-a099-733cfd49a00c" Timeout="3" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/#/dashboard/" CVScreenId="6c4bb421-01a1-40ba-8c50-a250a5ccf3fa" CvElementArea="1120, 254, 78, 38" CvTextArea="1133, 266, 52, 13" CvTextArgument="I'm back" CvType="Button" DesignTimeRectangle="1122, 256, 75, 35" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='I*m*back' tag='BUTTON' innertext='I*m*back' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='I*m*back' tag='BUTTON' innertext='I*m*back' type='button' class='btn ng-binding btn-primary' check:text='I&amp;apos;m back' /&gt;" Guid="c6ea431b-d036-49b7-9195-744257ffad5d" InformativeScreenshot="94c4e64f0ece0c6e00503ca8097d5139.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Document View*' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click 'I'm still here'" sap:VirtualizedContainerService.HintSize="1142,189" sap2010:WorkflowViewState.IdRef="NClick_16" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b7503d1b-f71b-4953-a099-733cfd49a00c" Timeout="3" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/#/dashboard/" CVScreenId="47e468c0-9b9f-4a28-b7e7-5af6c761fa58" CvElementArea="1099, 254, 99, 38" CvTextArea="1111, 266, 74, 13" CvTextArgument="I'm still here" CvType="Button" DesignTimeRectangle="1100, 256, 97, 35" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='I*m*still here' tag='BUTTON' innertext='I*m*still here' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='I*m*still here' tag='BUTTON' innertext='I*m*still here' type='button' class='btn ng-binding btn-primary' check:text='I&amp;apos;m still here' /&gt;" Guid="0753b42d-297b-4de6-9afe-73d0f20ac089" InformativeScreenshot="01232e20bb3a7454d03be01b202fd384.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Document View*' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
             <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="5" DisplayName="Click 'Sort Pages'" sap:VirtualizedContainerService.HintSize="1142,189" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b7503d1b-f71b-4953-a099-733cfd49a00c" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/#/cert/review/1190758" CVScreenId="270e95dd-ad61-4513-b438-2694dc0de902" CvElementArea="57, 532, 83, 34" CvTextArea="67, 543, 64, 15" CvTextArgument="Sort Pages" CvType="Button" DesignTimeRectangle="59, 534, 80, 31" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='BUTTON' aaname='Sort Pages' innertext='Sort Pages' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' aaname='Sort Pages' innertext='Sort Pages' type='button' class='btn btn-sm btn-primary' check:text='Sort Pages' /&gt;" Guid="329917c6-4e7e-4499-8b7d-c43313445b60" InformativeScreenshot="b14189f6b6a3032095070870d3a33aac.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Document View*' /&gt;" SearchSteps="Selector, CV" Version="V4" Visibility="Visible" WaitForReadyArgument="Complete" />
@@ -209,7 +219,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NClick>
-            <uix:NCheckState DisplayName="Check App State 'Sort Pages'" sap:VirtualizedContainerService.HintSize="1142,561" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="b7503d1b-f71b-4953-a099-733cfd49a00c" Timeout="5" Version="V3">
+            <uix:NCheckState DisplayName="Check App State 'Sort Pages'" sap:VirtualizedContainerService.HintSize="1142,521" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="b7503d1b-f71b-4953-a099-733cfd49a00c" Timeout="5" Version="V3">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,272" sap2010:WorkflowViewState.IdRef="Sequence_22">
                   <sap:WorkflowViewStateService.ViewState>
@@ -249,9 +259,9 @@
                 <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/#/cert/review/1149808" CVScreenId="ec860cc3-ca9e-4894-99bf-8775623a4fd3" CvElementArea="932, 465, 21, 19" CvType="Icon" DesignTimeRectangle="936, 328, 14, 14" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl aria-label='Unsorted Thumbnails' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-label='Unsorted Thumbnails' tag='SPAN' type='' class='fa fa-th-large' aaname='' /&gt;" Guid="8ec999fc-91c9-47f0-a926-98fb22deca2a" InformativeScreenshot="32aaa88782a107c13ef8e5eedff434ac.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Document View*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Visible" WaitForReadyArgument="Complete" />
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NCheckState DisplayName="Check App State 'Sorting Complete'" sap:VirtualizedContainerService.HintSize="1142,1042" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="b7503d1b-f71b-4953-a099-733cfd49a00c" Version="V3">
+            <uix:NCheckState DisplayName="Check App State 'Sorting Complete'" sap:VirtualizedContainerService.HintSize="1142,851" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="b7503d1b-f71b-4953-a099-733cfd49a00c" Version="V3">
               <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="496,793" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="496,602" sap2010:WorkflowViewState.IdRef="Sequence_8">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -270,7 +280,7 @@
                       <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/#/cert/review/1190758" CVScreenId="a94f6622-aa49-4028-9f98-d11190f737d2" CvElementArea="1805, 283, 97, 35" CvTextArea="1814, 293, 78, 16" CvTextArgument="Done Sorting" CvType="Button" DesignTimeRectangle="1806, 285, 94, 31" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='Done Sorting' name='button' parentid='bucket-list' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Done Sorting' name='button' parentid='bucket-list' tag='BUTTON' type='button' class='btn btn-primary btn-sm ng-binding' check:text='Done Sorting' /&gt;" Guid="2fa7101d-3d38-4b09-ab04-5b44ecad9ebf" InformativeScreenshot="51e2c66aaead4cbf56b2f5d903510ec3.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Document View*' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
                     </uix:NClick.Target>
                   </uix:NClick>
-                  <TryCatch DisplayName="Try Catch-SetTransactionProgress" sap:VirtualizedContainerService.HintSize="434,400" sap2010:WorkflowViewState.IdRef="TryCatch_6">
+                  <TryCatch DisplayName="Try Catch-SetTransactionProgress" sap:VirtualizedContainerService.HintSize="434,209" sap2010:WorkflowViewState.IdRef="TryCatch_6">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -281,10 +291,10 @@
                       <ui:SetTransactionProgress TimeoutMS="{x:Null}" DisplayName="Set Transaction Progress" sap:VirtualizedContainerService.HintSize="334,192" sap2010:WorkflowViewState.IdRef="SetTransactionProgress_3" Progress="Sorting has already been completed" TransactionItem="[in_TransactionItem]" />
                     </TryCatch.Try>
                     <TryCatch.Catches>
-                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,213" sap2010:WorkflowViewState.IdRef="Catch`1_6">
+                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,22" sap2010:WorkflowViewState.IdRef="Catch`1_6">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
@@ -331,15 +341,15 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NCheckState>
-            <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[Not bool_SortingComplete]" DisplayName="While-SortingNotComplete" sap:VirtualizedContainerService.HintSize="1142,3836" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+            <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[Not bool_SortingComplete]" DisplayName="While-SortingNotComplete" sap:VirtualizedContainerService.HintSize="1142,3486" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
               <ui:InterruptibleWhile.Body>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1108,3697" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1108,3347" sap2010:WorkflowViewState.IdRef="Sequence_5">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Sequence DisplayName="PerformSorting" sap:VirtualizedContainerService.HintSize="1046,2576" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                  <Sequence DisplayName="PerformSorting" sap:VirtualizedContainerService.HintSize="1046,2226" sap2010:WorkflowViewState.IdRef="Sequence_10">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="str_DocumentPageNum" />
                       <Variable x:TypeArguments="sd:DataTable" Name="dt_FilteredBucketData" />
@@ -370,8 +380,6 @@
                         <InArgument x:TypeArguments="x:String">[Split(str_DocumentInfo,str_UploadNumber)(1)]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <ui:LogMessage DisplayName="Log Message4" sap:VirtualizedContainerService.HintSize="530,175" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[&quot;Document page number: &quot;+str_DocumentPageNum]" />
-                    <ui:LogMessage DisplayName="Log Message3" sap:VirtualizedContainerService.HintSize="530,175" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[str_DocumentInfo]" />
                     <ui:FilterDataTable DataTable="[in_DTSortingDetails]" DisplayName="Filter SortingData Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="530,193" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[dt_FilteredBucketData]" SelectColumnsMode="Remove">
                       <ui:FilterDataTable.Filters>
                         <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">

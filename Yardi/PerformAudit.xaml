@@ -12,7 +12,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1294,4808</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1294,1958</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>PerformAudit_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -137,7 +137,7 @@
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="PerformAudit" sap:VirtualizedContainerService.HintSize="1304,4743" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="PerformAudit" sap:VirtualizedContainerService.HintSize="1304,1893" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="htmlText" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_UniqueDocType" />
@@ -148,7 +148,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1242,173" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[&quot;PerformAudit.xaml is Started&quot;]" />
-    <If Condition="[in_DTFindings.RowCount&gt;0]" DisplayName="If-FindingsExist" sap:VirtualizedContainerService.HintSize="1242,4318" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[in_DTFindings.RowCount&gt;0]" DisplayName="If-FindingsExist" sap:VirtualizedContainerService.HintSize="1242,1468" sap2010:WorkflowViewState.IdRef="If_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -156,13 +156,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="1208,4123" sap2010:WorkflowViewState.IdRef="Sequence_16">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="512,1273" sap2010:WorkflowViewState.IdRef="Sequence_16">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <TryCatch DisplayName="Try Catch-SetTransactionProgress" sap:VirtualizedContainerService.HintSize="1146,57" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+          <TryCatch DisplayName="Try Catch-SetTransactionProgress" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="TryCatch_1">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -189,7 +189,7 @@
               </Catch>
             </TryCatch.Catches>
           </TryCatch>
-          <Assign DisplayName="Assign-dt_UniqueDocType" sap:VirtualizedContainerService.HintSize="1146,114" sap2010:WorkflowViewState.IdRef="Assign_3">
+          <Assign DisplayName="Assign-dt_UniqueDocType" sap:VirtualizedContainerService.HintSize="450,114" sap2010:WorkflowViewState.IdRef="Assign_3">
             <Assign.To>
               <OutArgument x:TypeArguments="sd:DataTable">[dt_UniqueDocType]</OutArgument>
             </Assign.To>
@@ -197,19 +197,29 @@
               <InArgument x:TypeArguments="sd:DataTable">[in_DTFindings.DefaultView.ToTable(True, "DocumentType")]</InArgument>
             </Assign.Value>
           </Assign>
-          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: Document View - Unit 601" sap:VirtualizedContainerService.HintSize="1146,3468" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="b2a5ba4e-f8ad-48ee-883b-6b5483562c15" Version="V2">
+          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: Document View - Unit 601" sap:VirtualizedContainerService.HintSize="450,807" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="b2a5ba4e-f8ad-48ee-883b-6b5483562c15" Version="V2">
             <uix:NApplicationCard.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1112,3219" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,518" sap2010:WorkflowViewState.IdRef="Sequence_15">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_UniqueDocType]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1050,3129" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                  <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click 'I'm back'" sap:VirtualizedContainerService.HintSize="354,189" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b2a5ba4e-f8ad-48ee-883b-6b5483562c15" Timeout="3" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/#/dashboard/" CVScreenId="6c4bb421-01a1-40ba-8c50-a250a5ccf3fa" CvElementArea="1120, 254, 78, 38" CvTextArea="1133, 266, 52, 13" CvTextArgument="I'm back" CvType="Button" DesignTimeRectangle="1122, 256, 75, 35" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='I*m*back' tag='BUTTON' innertext='I*m*back' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='I*m*back' tag='BUTTON' innertext='I*m*back' type='button' class='btn ng-binding btn-primary' check:text='I&amp;apos;m back' /&gt;" Guid="c6ea431b-d036-49b7-9195-744257ffad5d" InformativeScreenshot="94c4e64f0ece0c6e00503ca8097d5139.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Document View*' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click 'I'm still here'" sap:VirtualizedContainerService.HintSize="354,189" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b2a5ba4e-f8ad-48ee-883b-6b5483562c15" Timeout="3" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/#/dashboard/" CVScreenId="47e468c0-9b9f-4a28-b7e7-5af6c761fa58" CvElementArea="1099, 254, 99, 38" CvTextArea="1111, 266, 74, 13" CvTextArgument="I'm still here" CvType="Button" DesignTimeRectangle="1100, 256, 97, 35" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='I*m*still here' tag='BUTTON' innertext='I*m*still here' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='I*m*still here' tag='BUTTON' innertext='I*m*still here' type='button' class='btn ng-binding btn-primary' check:text='I&amp;apos;m still here' /&gt;" Guid="0753b42d-297b-4de6-9afe-73d0f20ac089" InformativeScreenshot="01232e20bb3a7454d03be01b202fd384.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Document View*' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_UniqueDocType]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="354,50" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                     <ui:ForEachRow.Body>
                       <ActivityAction x:TypeArguments="sd:DataRow">
                         <ActivityAction.Argument>
@@ -522,7 +532,7 @@
                     </ui:ForEachRow.Body>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
@@ -540,7 +550,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </uix:NApplicationCard>
-          <TryCatch DisplayName="Try Catch-SetTransactionProgress" sap:VirtualizedContainerService.HintSize="1146,396" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+          <TryCatch DisplayName="Try Catch-SetTransactionProgress" sap:VirtualizedContainerService.HintSize="450,207" sap2010:WorkflowViewState.IdRef="TryCatch_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -551,10 +561,10 @@
               <ui:SetTransactionProgress TimeoutMS="{x:Null}" DisplayName="Set Transaction Progress-1" sap:VirtualizedContainerService.HintSize="334,192" sap2010:WorkflowViewState.IdRef="SetTransactionProgress_3" Progress="Audit Completed" TransactionItem="[in_TransactionItem]" />
             </TryCatch.Try>
             <TryCatch.Catches>
-              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,211" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,22" sap2010:WorkflowViewState.IdRef="Catch`1_3">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>

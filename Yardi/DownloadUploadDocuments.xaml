@@ -4,7 +4,7 @@
     <x:Property Name="in_CertDownloadURL" Type="InArgument(x:String)" />
     <x:Property Name="in_FolderToDownload" Type="InArgument(x:String)" />
     <x:Property Name="in_Unit" Type="InArgument(x:String)" />
-    <x:Property Name="out_PDFDownloadFolder" Type="InArgument(x:String)" />
+    <x:Property Name="out_PDFDownloadFolder" Type="OutArgument(x:String)" />
     <x:Property Name="out_DownloadedPDFFiles" Type="OutArgument(scg:List(x:String))" />
     <x:Property Name="out_DownloadPDFsDone" Type="OutArgument(x:Boolean)" />
     <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
@@ -165,7 +165,7 @@
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1996,6433" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1338,6433" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="str_UploadsText" />
               <Variable x:TypeArguments="s:String[]" Name="arr_Uploads" />
@@ -177,7 +177,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NCheckState DisplayName="Check App State 'Sort Pages'" sap:VirtualizedContainerService.HintSize="1934,6343" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="dec90190-ea99-4cc4-8c56-81490e7ef5c3" Timeout="10" Version="V3">
+            <uix:NCheckState DisplayName="Check App State 'Sort Pages'" sap:VirtualizedContainerService.HintSize="1276,6343" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="dec90190-ea99-4cc4-8c56-81490e7ef5c3" Timeout="10" Version="V3">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="772,6101" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <sap:WorkflowViewStateService.ViewState>
@@ -377,7 +377,7 @@
                                   </uix:NClick>
                                   <TryCatch DisplayName="Try Catch-Typefilename" sap:VirtualizedContainerService.HintSize="456,1341" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                                     <TryCatch.Try>
-                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into Filename" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="HardwareEvents" ScopeIdentifier="df70876c-4dee-470d-b433-494b59854045" Text="[str_UploadPDFFilePath + &quot;[k(Enter)]&quot;]" Timeout="5" Version="V3">
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into Filename" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="HardwareEvents" ScopeIdentifier="df70876c-4dee-470d-b433-494b59854045" Text="[str_UploadPDFFilePath + &quot;[k(Enter)]&quot;]" Timeout="2" Version="V3">
                                         <uix:NTypeInto.Target>
                                           <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/3.0/cert/download/cert-doc/5848431" CVScreenId="3f513770-6b02-4bfc-b264-4b141b7768e8" CvElementArea="129, 365, 814, 24" CvType="InputBox" DesignTimeRectangle="136, 369, 787, 17" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' /&gt;&lt;wnd aaname='File name:' cls='Edit' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' /&gt;&lt;wnd aaname='File name:' cls='Edit' /&gt;" Guid="85ad549d-d696-4038-9aa0-7386e05f15c5" InformativeScreenshot="9de99e404982165842b2f18b73c49d2a.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' title='Save As' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive" />
                                         </uix:NTypeInto.Target>
@@ -393,7 +393,7 @@
                                       <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="422,781" sap2010:WorkflowViewState.IdRef="Catch`1_1">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
@@ -512,10 +512,11 @@
                 </Sequence>
               </uix:NCheckState.IfExists>
               <uix:NCheckState.IfNotExists>
-                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="1108,940" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,25" sap2010:WorkflowViewState.IdRef="Sequence_5">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1046,175" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Error" Message="[&quot;Sort pages doesn't exist&quot;]" />
