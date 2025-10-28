@@ -118,10 +118,10 @@
         <OutArgument x:TypeArguments="x:String">[strDate]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="x:String">10/5/25</InArgument>
+        <InArgument x:TypeArguments="x:String">2025-08-29</InArgument>
       </Assign.Value>
     </Assign>
-    <If Condition="[CDate(strDate)&gt;DateTime.Now.AddDays(-10)]" sap:VirtualizedContainerService.HintSize="450,674" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[CDate(strDate)&gt;DateTime.Now.AddDays(-120)]" sap:VirtualizedContainerService.HintSize="450,674" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Then>
         <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,252" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
