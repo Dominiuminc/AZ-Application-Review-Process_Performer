@@ -8,7 +8,7 @@
     <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
     <x:Property sap2010:Annotation.AnnotationText="Transaction item to be processed." Name="in_TransactionItem" Type="InArgument(ui:QueueItem)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>1102,3616</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1102,3656</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -118,22 +118,24 @@
       <AssemblyReference>mscorlib</AssemblyReference>
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
       <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ReassignCerts" sap:VirtualizedContainerService.HintSize="1112,3551" sap2010:WorkflowViewState.IdRef="Sequence_12">
+  <Sequence DisplayName="ReassignCerts" sap:VirtualizedContainerService.HintSize="1112,3591" sap2010:WorkflowViewState.IdRef="Sequence_12">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1050,173" sap2010:WorkflowViewState.IdRef="LogMessage_6" Message="[&quot;ReassignCerts.xaml is Started&quot;]" />
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="ReassignCertifications" sap:VirtualizedContainerService.HintSize="1050,2674" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="e97e61f2-91d5-4f4d-8ac4-da626244c917" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="ReassignCertifications" sap:VirtualizedContainerService.HintSize="1050,2714" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="e97e61f2-91d5-4f4d-8ac4-da626244c917" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1016,2385" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1016,2425" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -178,7 +180,7 @@
                 <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/#/certifications" ContentHash="f4daJLQJqk6H8qvSnEcqEA" DesignTimeRectangle="796, 260, 239, 38" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='INPUT' parentname='cert_assign_form' placeholder='Filter' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' parentname='cert_assign_form' placeholder='Filter' type='text' class='form-control ng-pristine ng-untouched ng-valid ng-empty' aaname='' /&gt;" Guid="f7261a9a-dac1-44ce-9646-9fa1e7ba0a4e" InformativeScreenshot="a813475eac8f2af1f56e3d5726eab541.png" Reference="_EVOEAIp2Ui16OrarTbFUw/LxixYxLlNUqbC86Lp8RVUQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Certifications' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <uix:NCheckState DisplayName="Check App State 'Click ManagerName'" sap:VirtualizedContainerService.HintSize="954,710" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="e97e61f2-91d5-4f4d-8ac4-da626244c917" Version="V3">
+            <uix:NCheckState DisplayName="Check App State 'Click ManagerName'" sap:VirtualizedContainerService.HintSize="954,750" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="e97e61f2-91d5-4f4d-8ac4-da626244c917" Version="V3">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,461" sap2010:WorkflowViewState.IdRef="Sequence_13">
                   <sap:WorkflowViewStateService.ViewState>
@@ -188,7 +190,7 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click ManagerName" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e97e61f2-91d5-4f4d-8ac4-da626244c917" Version="V3">
                     <uix:NClick.Target>
-                      <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/#/certifications" ContentHash="dH3S6QDguUuTiUlPbvkU_Q" DesignTimeRectangle="790, 311, 99, 20" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="[&quot;&lt;webctrl tag='SPAN' innertext='&quot;+str_ManagerName+&quot;' parentname='cert_assign_form' /&gt;&quot;]" FuzzySelectorArgument="&lt;webctrl tag='SPAN' innertext='Sheila Robidas' parentname='cert_assign_form' type='' class='ng-binding' aaname='Sheila Robidas' check:text='Sheila Robidas' /&gt;" Guid="7a63b38d-241e-4bda-9beb-59f4597209fb" InformativeScreenshot="26342cfe1b28cc7d7828cf4f2fbf0597.png" Reference="_EVOEAIp2Ui16OrarTbFUw/4BylXEvOXkyXk-7LvFgm7w" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Certifications' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                      <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/#/certifications" ContentHash="-Xi6rKliIUqSOZMzHUXqew" DesignTimeRectangle="790, 311, 99, 20" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="[&quot;&lt;webctrl tag='SPAN' innertext='&quot;+str_ManagerName+&quot;' parentname='cert_assign_form' /&gt;&quot;]" FuzzySelectorArgument="[&quot;&lt;webctrl tag='SPAN' innertext='&quot;+str_ManagerName+&quot;' parentname='cert_assign_form' type='' class='ng-binding' aaname='&quot;+str_ManagerName+&quot;' check:text='&quot;+str_ManagerName+&quot;' /&gt;&quot;]" Guid="7a63b38d-241e-4bda-9beb-59f4597209fb" InformativeScreenshot="26342cfe1b28cc7d7828cf4f2fbf0597.png" Reference="_EVOEAIp2Ui16OrarTbFUw/4BylXEvOXkyXk-7LvFgm7w" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Certifications' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
                     </uix:NClick.Target>
                   </uix:NClick>
                   <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Save'" sap:VirtualizedContainerService.HintSize="388,182" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e97e61f2-91d5-4f4d-8ac4-da626244c917" Version="V3">
@@ -210,7 +212,7 @@
                 </Sequence>
               </uix:NCheckState.IfNotExists>
               <uix:NCheckState.Target>
-                <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/#/certifications" ContentHash="dH3S6QDguUuTiUlPbvkU_Q" DesignTimeRectangle="790, 311, 99, 20" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="[&quot;&lt;webctrl tag='SPAN' innertext='&quot;+str_ManagerName+&quot;' parentname='cert_assign_form' /&gt;&quot;]" FuzzySelectorArgument="&lt;webctrl tag='SPAN' innertext='Sheila Robidas' parentname='cert_assign_form' type='' class='ng-binding' aaname='Sheila Robidas' check:text='Sheila Robidas' /&gt;" Guid="7a63b38d-241e-4bda-9beb-59f4597209fb" InformativeScreenshot="26342cfe1b28cc7d7828cf4f2fbf0597.png" Reference="_EVOEAIp2Ui16OrarTbFUw/4BylXEvOXkyXk-7LvFgm7w" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Certifications' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/#/certifications" ContentHash="-Xi6rKliIUqSOZMzHUXqew" DesignTimeRectangle="790, 311, 99, 20" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="[&quot;&lt;webctrl tag='SPAN' innertext='&quot;+str_ManagerName+&quot;' parentname='cert_assign_form' /&gt;&quot;]" FuzzySelectorArgument="[&quot;&lt;webctrl tag='SPAN' innertext='&quot;+str_ManagerName+&quot;' parentname='cert_assign_form' type='' class='ng-binding' aaname='&quot;+str_ManagerName+&quot;' check:text='&quot;+str_ManagerName+&quot;' /&gt;&quot;]" Guid="7a63b38d-241e-4bda-9beb-59f4597209fb" InformativeScreenshot="26342cfe1b28cc7d7828cf4f2fbf0597.png" Reference="_EVOEAIp2Ui16OrarTbFUw/4BylXEvOXkyXk-7LvFgm7w" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Certifications' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
               </uix:NCheckState.Target>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
