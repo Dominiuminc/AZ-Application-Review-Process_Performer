@@ -8,7 +8,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1047,999</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1047,879</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Main2_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -328,7 +328,7 @@
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="ui:BusinessRuleException" Name="Exception" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Handle Business Exception" sap:VirtualizedContainerService.HintSize="500,409" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                        <Sequence DisplayName="Handle Business Exception" sap:VirtualizedContainerService.HintSize="500,625" sap2010:WorkflowViewState.IdRef="Sequence_29">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -397,7 +397,7 @@
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="s:Exception" Name="Exception" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Handle System Exception" sap:VirtualizedContainerService.HintSize="500,581" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                        <Sequence DisplayName="Handle System Exception" sap:VirtualizedContainerService.HintSize="500,625" sap2010:WorkflowViewState.IdRef="Sequence_30">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -473,7 +473,7 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <Transition.Condition>[SystemException IsNot Nothing]</Transition.Condition>
                   <Transition.To>
-                    <State x:Name="__ReferenceID3" sap2010:Annotation.AnnotationText="Read configuration file and initialize applications used in the process." DisplayName="Initialization" sap:VirtualizedContainerService.HintSize="596,3237" sap2010:WorkflowViewState.IdRef="State_2">
+                    <State x:Name="__ReferenceID3" sap2010:Annotation.AnnotationText="Read configuration file and initialize applications used in the process." DisplayName="Initialization" sap:VirtualizedContainerService.HintSize="254,104" sap2010:WorkflowViewState.IdRef="State_2">
                       <State.Entry>
                         <TryCatch DisplayName="Try initializing settings and applications" sap:VirtualizedContainerService.HintSize="550,2818" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                           <sap:WorkflowViewStateService.ViewState>
@@ -703,7 +703,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <Transition.To>
-                            <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="End process and close all applications used." DisplayName="End Process" sap:VirtualizedContainerService.HintSize="144,120" sap2010:WorkflowViewState.IdRef="State_1" IsFinal="True">
+                            <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="End process and close all applications used." DisplayName="End Process" sap:VirtualizedContainerService.HintSize="872,2372" sap2010:WorkflowViewState.IdRef="State_1" IsFinal="True">
                               <State.Entry>
                                 <TryCatch DisplayName="Try to close all aplications" sap:VirtualizedContainerService.HintSize="826,2227" sap2010:WorkflowViewState.IdRef="TryCatch_4">
                                   <sap:WorkflowViewStateService.ViewState>
@@ -873,6 +873,7 @@
                                                               <InArgument x:TypeArguments="x:String" x:Key="in_UnitFolder">[str_UnitFolderName]</InArgument>
                                                               <InArgument x:TypeArguments="s:String[]" x:Key="in_ArrFiles">[arr_Files]</InArgument>
                                                               <InArgument x:TypeArguments="x:String" x:Key="in_SPParentFolderPath">[Config("Sharepoint_ParentFolderPath").ToString]</InArgument>
+                                                              <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[Config]</InArgument>
                                                             </ui:InvokeWorkflowFile.Arguments>
                                                           </ui:InvokeWorkflowFile>
                                                         </Sequence>
