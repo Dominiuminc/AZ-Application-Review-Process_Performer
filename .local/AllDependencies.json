@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     "net8.0-windows7.0": {
-      "APIClient/1.5.0": {
+      "APIClient/1.6.0": {
         "type": "package",
         "compile": {
           "lib/net6.0-windows7.0/_._": {}
@@ -11,10 +11,11 @@
           "lib/net6.0-windows7.0/APIClient.dll": {}
         }
       },
-      "AshlingPartners.Foundry.Activities/1.18.0": {
+      "AshlingPartners.Foundry.Activities/1.22.0": {
         "type": "package",
         "dependencies": {
-          "APIClient": "1.2.0"
+          "APIClient": "1.6.0",
+          "System.Activities.ViewModels": "1.20251103.2"
         },
         "compile": {
           "lib/net6.0-windows7.0/_._": {}
@@ -2020,7 +2021,7 @@
           }
         }
       },
-      "System.Activities.ViewModels/1.0.0-20250814.2": {
+      "System.Activities.ViewModels/1.20251103.2": {
         "type": "package",
         "compile": {
           "lib/net6.0-windows7.0/_._": {}
@@ -6046,7 +6047,7 @@
       }
     },
     "net8.0-windows7.0/win-x64": {
-      "APIClient/1.5.0": {
+      "APIClient/1.6.0": {
         "type": "package",
         "compile": {
           "lib/net6.0-windows7.0/_._": {}
@@ -6055,10 +6056,11 @@
           "lib/net6.0-windows7.0/APIClient.dll": {}
         }
       },
-      "AshlingPartners.Foundry.Activities/1.18.0": {
+      "AshlingPartners.Foundry.Activities/1.22.0": {
         "type": "package",
         "dependencies": {
-          "APIClient": "1.2.0"
+          "APIClient": "1.6.0",
+          "System.Activities.ViewModels": "1.20251103.2"
         },
         "compile": {
           "lib/net6.0-windows7.0/_._": {}
@@ -8139,7 +8141,7 @@
           }
         }
       },
-      "System.Activities.ViewModels/1.0.0-20250814.2": {
+      "System.Activities.ViewModels/1.20251103.2": {
         "type": "package",
         "compile": {
           "lib/net6.0-windows7.0/_._": {}
@@ -11962,24 +11964,24 @@
     }
   },
   "libraries": {
-    "APIClient/1.5.0": {
-      "sha512": "vlDvl3Fo42T0lbvHUe57H7/oNGE3yEvC3gBI/pwzF9VJR1piJuyCXMn6kYLfv/Mw5TdP8VJlNveSk9dICLoWVw==",
+    "APIClient/1.6.0": {
+      "sha512": "0yVoqGC3pf/gJeT3xHF8/CuRV9ZylyZMx00J5kRd3BkXi8GtrV5SmFyYbQXekIgTAaAsJQ0//aklAWXH8lfUhQ==",
       "type": "package",
-      "path": "apiclient/1.5.0",
+      "path": "apiclient/1.6.0",
       "files": [
         ".nupkg.metadata",
-        "apiclient.1.5.0.nupkg.sha512",
+        "apiclient.1.6.0.nupkg.sha512",
         "apiclient.nuspec",
         "lib/net6.0-windows7.0/APIClient.dll"
       ]
     },
-    "AshlingPartners.Foundry.Activities/1.18.0": {
-      "sha512": "2XHh/9ufXTZ2bvzdJQbbHzzHqU4UJcxg8poOnWqa6LLr7uGcRouJLN9Edi8yW09UO/uaX4u/VY/rR3YWMXuHpw==",
+    "AshlingPartners.Foundry.Activities/1.22.0": {
+      "sha512": "oVR/45yB8dWw2w0HQONtkFcsULoU8rwk1Q4Qk1wgJ4ozuJLP4+RSNigT2U39iIOIY9DW1gEkRC79pfZL0ySvrA==",
       "type": "package",
-      "path": "ashlingpartners.foundry.activities/1.18.0",
+      "path": "ashlingpartners.foundry.activities/1.22.0",
       "files": [
         ".nupkg.metadata",
-        "ashlingpartners.foundry.activities.1.18.0.nupkg.sha512",
+        "ashlingpartners.foundry.activities.1.22.0.nupkg.sha512",
         "ashlingpartners.foundry.activities.nuspec",
         "lib/net6.0-windows7.0/AshlingPartners.Foundry.Activities.dll"
       ]
@@ -15620,10 +15622,10 @@
         "sixlabors.imagesharp.nuspec"
       ]
     },
-    "System.Activities.ViewModels/1.0.0-20250814.2": {
-      "sha512": "LCkLTLtiO3NVG8WPzO2boghCWGm7SVvgfYP066UnhWW/WmOOwdZvuWgFnpU5iB/sk46Qm0quBg0ospIxcAWwHA==",
+    "System.Activities.ViewModels/1.20251103.2": {
+      "sha512": "6F7OIIM/wpYGUDMdUXvQ/CU1gVgPX47vJZddFY0MJ51wD0v4mfwf0gXmnnvVP1LqhbsSb/PnvkMskH+FcRuXdw==",
       "type": "package",
-      "path": "system.activities.viewmodels/1.0.0-20250814.2",
+      "path": "system.activities.viewmodels/1.20251103.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -15653,7 +15655,7 @@
         "lib/net6.0/tr/System.Activities.ViewModels.resources.dll",
         "lib/net6.0/zh-CN/System.Activities.ViewModels.resources.dll",
         "lib/net6.0/zh-TW/System.Activities.ViewModels.resources.dll",
-        "system.activities.viewmodels.1.0.0-20250814.2.nupkg.sha512",
+        "system.activities.viewmodels.1.20251103.2.nupkg.sha512",
         "system.activities.viewmodels.nuspec"
       ]
     },
@@ -22789,8 +22791,8 @@
   "projectFileDependencyGroups": {
     "": [],
     "net8.0-windows7.0": [
-      "APIClient >= 1.5.0 <= 1.5.0",
-      "AshlingPartners.Foundry.Activities >= 1.18.0 <= 1.18.0",
+      "APIClient >= 1.6.0 <= 1.6.0",
+      "AshlingPartners.Foundry.Activities >= 1.22.0 <= 1.22.0",
       "UiPath.Excel.Activities >= 3.2.1 <= 3.2.1",
       "UiPath.MicrosoftOffice365.Activities >= 3.5.10 <= 3.5.10",
       "UiPath.PDF.Activities >= 3.10.2 <= 3.10.2",
@@ -22821,12 +22823,12 @@
           "APIClient": {
             "include": "Runtime",
             "target": "Package",
-            "version": "[1.5.0, 1.5.0]"
+            "version": "[1.6.0, 1.6.0]"
           },
           "AshlingPartners.Foundry.Activities": {
             "include": "Runtime",
             "target": "Package",
-            "version": "[1.18.0, 1.18.0]"
+            "version": "[1.22.0, 1.22.0]"
           },
           "UiPath.Excel.Activities": {
             "include": "Runtime",
