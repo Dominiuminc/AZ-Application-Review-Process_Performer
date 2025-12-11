@@ -12,6 +12,18 @@
     },
     {
       "Package": {
+        "Id": "AshlingPartners.Foundry.Activities",
+        "Version": "1.22.0"
+      },
+      "Assemblies": [
+        "C:\\Users\\harika.malyala\\.nuget\\packages\\apiclient\\1.6.0\\lib/net6.0-windows7.0/APIClient.dll",
+        "C:\\Users\\harika.malyala\\.nuget\\packages\\ashlingpartners.foundry.activities\\1.22.0\\lib/net6.0-windows7.0/AshlingPartners.Foundry.Activities.dll",
+        "C:\\Users\\harika.malyala\\.nuget\\packages\\system.activities.viewmodels\\1.20251103.2\\lib/net6.0-windows7.0/System.Activities.ViewModels.dll"
+      ],
+      "Path": "C:\\Users\\harika.malyala\\.nuget\\packages\\ashlingpartners.foundry.activities\\1.22.0"
+    },
+    {
+      "Package": {
         "Id": "UiPath.Excel.Activities",
         "Version": "3.2.1"
       },
@@ -330,15 +342,24 @@
     },
     {
       "Package": {
-        "Id": "AshlingPartners.Foundry.Activities",
-        "Version": "1.22.0"
+        "Id": "AshlingPartners.UiPath.PDF.Activities",
+        "Version": "1.9.8"
       },
       "Assemblies": [
-        "C:\\Users\\harika.malyala\\.nuget\\packages\\apiclient\\1.6.0\\lib/net6.0-windows7.0/APIClient.dll",
-        "C:\\Users\\harika.malyala\\.nuget\\packages\\ashlingpartners.foundry.activities\\1.22.0\\lib/net6.0-windows7.0/AshlingPartners.Foundry.Activities.dll",
-        "C:\\Users\\harika.malyala\\.nuget\\packages\\system.activities.viewmodels\\1.20251103.2\\lib/net6.0-windows7.0/System.Activities.ViewModels.dll"
+        "C:\\Users\\harika.malyala\\.nuget\\packages\\ashlingpartners.pdf\\1.8.4\\lib/net6.0-windows7.0/AshlingPartners.PDF.dll",
+        "C:\\Users\\harika.malyala\\.nuget\\packages\\ashlingpartners.pdf\\1.8.4\\lib/net6.0-windows7.0/pdfium.dll",
+        "C:\\Users\\harika.malyala\\.nuget\\packages\\ashlingpartners.uipath.pdf.activities\\1.9.8\\lib/net6.0-windows7.0/AshlingPartners.PDF.dll",
+        "C:\\Users\\harika.malyala\\.nuget\\packages\\ashlingpartners.uipath.pdf.activities\\1.9.8\\lib/net6.0-windows7.0/AshlingPartners.UiPath.PDF.Activities.dll",
+        "C:\\Users\\harika.malyala\\.nuget\\packages\\ashlingpartners.uipath.pdf.activities\\1.9.8\\lib/net6.0-windows7.0/libSkiaSharp.dll",
+        "C:\\Users\\harika.malyala\\.nuget\\packages\\ashlingpartners.uipath.pdf.activities\\1.9.8\\lib/net6.0-windows7.0/pdfium.dll",
+        "C:\\Users\\harika.malyala\\.nuget\\packages\\pdfsharpcore\\1.3.67\\lib/net8.0/PdfSharpCore.dll",
+        "C:\\Users\\harika.malyala\\.nuget\\packages\\pdftoimage\\5.2.0\\lib/net8.0/PDFtoImage.dll",
+        "C:\\Users\\harika.malyala\\.nuget\\packages\\sharpziplib\\1.4.2\\lib/net6.0/ICSharpCode.SharpZipLib.dll",
+        "C:\\Users\\harika.malyala\\.nuget\\packages\\sixlabors.fonts\\1.0.1\\lib/netcoreapp3.1/SixLabors.Fonts.dll",
+        "C:\\Users\\harika.malyala\\.nuget\\packages\\sixlabors.imagesharp\\2.1.10\\lib/netcoreapp3.1/SixLabors.ImageSharp.dll",
+        "C:\\Users\\harika.malyala\\.nuget\\packages\\skiasharp\\3.119.1\\lib/net8.0/SkiaSharp.dll"
       ],
-      "Path": "C:\\Users\\harika.malyala\\.nuget\\packages\\ashlingpartners.foundry.activities\\1.22.0"
+      "Path": "C:\\Users\\harika.malyala\\.nuget\\packages\\ashlingpartners.uipath.pdf.activities\\1.9.8"
     }
   ],
   "Conflicts": [],
@@ -359,6 +380,38 @@
         {
           "Item1": "System.Activities.ViewModels",
           "Item2": "[1.20251103.2, )"
+        }
+      ]
+    },
+    "AshlingPartners.PDF": {
+      "Id": "AshlingPartners.PDF",
+      "Version": "1.8.4",
+      "Dependencies": [
+        {
+          "Item1": "PDFium.x64",
+          "Item2": "[4648.0.0, )"
+        },
+        {
+          "Item1": "PDFtoImage",
+          "Item2": "[5.2.0, )"
+        },
+        {
+          "Item1": "PdfSharpCore",
+          "Item2": "[1.3.67, )"
+        },
+        {
+          "Item1": "SkiaSharp",
+          "Item2": "[3.119.1, )"
+        }
+      ]
+    },
+    "AshlingPartners.UiPath.PDF.Activities": {
+      "Id": "AshlingPartners.UiPath.PDF.Activities",
+      "Version": "1.9.8",
+      "Dependencies": [
+        {
+          "Item1": "AshlingPartners.PDF",
+          "Item2": "[1.8.4, )"
         }
       ]
     },
@@ -422,6 +475,21 @@
           "Item2": "[4.5.2, )"
         }
       ]
+    },
+    "bblanchon.PDFium.Linux": {
+      "Id": "bblanchon.PDFium.Linux",
+      "Version": "139.0.7215",
+      "Dependencies": []
+    },
+    "bblanchon.PDFium.macOS": {
+      "Id": "bblanchon.PDFium.macOS",
+      "Version": "139.0.7215",
+      "Dependencies": []
+    },
+    "bblanchon.PDFium.Win32": {
+      "Id": "bblanchon.PDFium.Win32",
+      "Version": "139.0.7215",
+      "Dependencies": []
     },
     "BitMiracle.Docotic.Pdf": {
       "Id": "BitMiracle.Docotic.Pdf",
@@ -1798,6 +1866,71 @@
       "Version": "0.3.65",
       "Dependencies": []
     },
+    "PDFium.x64": {
+      "Id": "PDFium.x64",
+      "Version": "4648.0.0",
+      "Dependencies": []
+    },
+    "PdfSharpCore": {
+      "Id": "PdfSharpCore",
+      "Version": "1.3.67",
+      "Dependencies": [
+        {
+          "Item1": "SharpZipLib",
+          "Item2": "[1.4.2, )"
+        },
+        {
+          "Item1": "SixLabors.Fonts",
+          "Item2": "[1.0.0-beta17, )"
+        },
+        {
+          "Item1": "SixLabors.ImageSharp",
+          "Item2": "[1.0.4, )"
+        }
+      ]
+    },
+    "PDFtoImage": {
+      "Id": "PDFtoImage",
+      "Version": "5.2.0",
+      "Dependencies": [
+        {
+          "Item1": "SkiaSharp",
+          "Item2": "[3.119.1, )"
+        },
+        {
+          "Item1": "SkiaSharp.NativeAssets.Linux.NoDependencies",
+          "Item2": "[3.119.1, )"
+        },
+        {
+          "Item1": "SkiaSharp.NativeAssets.WebAssembly",
+          "Item2": "[3.119.1, )"
+        },
+        {
+          "Item1": "SkiaSharp.NativeAssets.Win32",
+          "Item2": "[3.119.1, )"
+        },
+        {
+          "Item1": "SkiaSharp.NativeAssets.macOS",
+          "Item2": "[3.119.1, )"
+        },
+        {
+          "Item1": "Sungaila.PDFium.BlazorWebAssembly",
+          "Item2": "[134.0.6982, )"
+        },
+        {
+          "Item1": "bblanchon.PDFium.Linux",
+          "Item2": "[139.0.7215, )"
+        },
+        {
+          "Item1": "bblanchon.PDFium.Win32",
+          "Item2": "[139.0.7215, )"
+        },
+        {
+          "Item1": "bblanchon.PDFium.macOS",
+          "Item2": "[139.0.7215, )"
+        }
+      ]
+    },
     "Polly": {
       "Id": "Polly",
       "Version": "7.1.0",
@@ -2073,6 +2206,45 @@
           "Item2": "[5.0.0, )"
         }
       ]
+    },
+    "SkiaSharp": {
+      "Id": "SkiaSharp",
+      "Version": "3.119.1",
+      "Dependencies": [
+        {
+          "Item1": "SkiaSharp.NativeAssets.macOS",
+          "Item2": "[3.119.1, )"
+        },
+        {
+          "Item1": "SkiaSharp.NativeAssets.Win32",
+          "Item2": "[3.119.1, )"
+        }
+      ]
+    },
+    "SkiaSharp.NativeAssets.Linux.NoDependencies": {
+      "Id": "SkiaSharp.NativeAssets.Linux.NoDependencies",
+      "Version": "3.119.1",
+      "Dependencies": []
+    },
+    "SkiaSharp.NativeAssets.macOS": {
+      "Id": "SkiaSharp.NativeAssets.macOS",
+      "Version": "3.119.1",
+      "Dependencies": []
+    },
+    "SkiaSharp.NativeAssets.WebAssembly": {
+      "Id": "SkiaSharp.NativeAssets.WebAssembly",
+      "Version": "3.119.1",
+      "Dependencies": []
+    },
+    "SkiaSharp.NativeAssets.Win32": {
+      "Id": "SkiaSharp.NativeAssets.Win32",
+      "Version": "3.119.1",
+      "Dependencies": []
+    },
+    "Sungaila.PDFium.BlazorWebAssembly": {
+      "Id": "Sungaila.PDFium.BlazorWebAssembly",
+      "Version": "134.0.6982",
+      "Dependencies": []
     },
     "System.Activities.ViewModels": {
       "Id": "System.Activities.ViewModels",
@@ -5157,6 +5329,30 @@
     },
     {
       "Package": {
+        "Id": "AshlingPartners.PDF",
+        "Version": "1.8.4"
+      },
+      "Assemblies": [
+        "C:\\Users\\harika.malyala\\.nuget\\packages\\ashlingpartners.pdf\\1.8.4\\lib\\net6.0-windows7.0\\AshlingPartners.PDF.dll",
+        "C:\\Users\\harika.malyala\\.nuget\\packages\\ashlingpartners.pdf\\1.8.4\\lib\\net6.0-windows7.0\\pdfium.dll"
+      ],
+      "Path": "C:\\Users\\harika.malyala\\.nuget\\packages\\ashlingpartners.pdf\\1.8.4"
+    },
+    {
+      "Package": {
+        "Id": "AshlingPartners.UiPath.PDF.Activities",
+        "Version": "1.9.8"
+      },
+      "Assemblies": [
+        "C:\\Users\\harika.malyala\\.nuget\\packages\\ashlingpartners.uipath.pdf.activities\\1.9.8\\lib\\net6.0-windows7.0\\AshlingPartners.PDF.dll",
+        "C:\\Users\\harika.malyala\\.nuget\\packages\\ashlingpartners.uipath.pdf.activities\\1.9.8\\lib\\net6.0-windows7.0\\AshlingPartners.UiPath.PDF.Activities.dll",
+        "C:\\Users\\harika.malyala\\.nuget\\packages\\ashlingpartners.uipath.pdf.activities\\1.9.8\\lib\\net6.0-windows7.0\\libSkiaSharp.dll",
+        "C:\\Users\\harika.malyala\\.nuget\\packages\\ashlingpartners.uipath.pdf.activities\\1.9.8\\lib\\net6.0-windows7.0\\pdfium.dll"
+      ],
+      "Path": "C:\\Users\\harika.malyala\\.nuget\\packages\\ashlingpartners.uipath.pdf.activities\\1.9.8"
+    },
+    {
+      "Package": {
         "Id": "AutoMapper",
         "Version": "9.0.0"
       },
@@ -5184,6 +5380,36 @@
         "C:\\Users\\harika.malyala\\.nuget\\packages\\azure.core\\1.18.0\\lib\\net5.0\\Azure.Core.dll"
       ],
       "Path": "C:\\Users\\harika.malyala\\.nuget\\packages\\azure.core\\1.18.0"
+    },
+    {
+      "Package": {
+        "Id": "bblanchon.PDFium.Linux",
+        "Version": "139.0.7215"
+      },
+      "Assemblies": [
+        "C:\\Users\\harika.malyala\\.nuget\\packages\\bblanchon.pdfium.linux\\139.0.7215\\lib\\netstandard1.0\\_._"
+      ],
+      "Path": "C:\\Users\\harika.malyala\\.nuget\\packages\\bblanchon.pdfium.linux\\139.0.7215"
+    },
+    {
+      "Package": {
+        "Id": "bblanchon.PDFium.macOS",
+        "Version": "139.0.7215"
+      },
+      "Assemblies": [
+        "C:\\Users\\harika.malyala\\.nuget\\packages\\bblanchon.pdfium.macos\\139.0.7215\\lib\\netstandard1.0\\_._"
+      ],
+      "Path": "C:\\Users\\harika.malyala\\.nuget\\packages\\bblanchon.pdfium.macos\\139.0.7215"
+    },
+    {
+      "Package": {
+        "Id": "bblanchon.PDFium.Win32",
+        "Version": "139.0.7215"
+      },
+      "Assemblies": [
+        "C:\\Users\\harika.malyala\\.nuget\\packages\\bblanchon.pdfium.win32\\139.0.7215\\lib\\netstandard2.0\\_._"
+      ],
+      "Path": "C:\\Users\\harika.malyala\\.nuget\\packages\\bblanchon.pdfium.win32\\139.0.7215"
     },
     {
       "Package": {
@@ -6025,6 +6251,34 @@
     },
     {
       "Package": {
+        "Id": "PDFium.x64",
+        "Version": "4648.0.0"
+      },
+      "Assemblies": [],
+      "Path": "C:\\Users\\harika.malyala\\.nuget\\packages\\pdfium.x64\\4648.0.0"
+    },
+    {
+      "Package": {
+        "Id": "PdfSharpCore",
+        "Version": "1.3.67"
+      },
+      "Assemblies": [
+        "C:\\Users\\harika.malyala\\.nuget\\packages\\pdfsharpcore\\1.3.67\\lib\\net8.0\\PdfSharpCore.dll"
+      ],
+      "Path": "C:\\Users\\harika.malyala\\.nuget\\packages\\pdfsharpcore\\1.3.67"
+    },
+    {
+      "Package": {
+        "Id": "PDFtoImage",
+        "Version": "5.2.0"
+      },
+      "Assemblies": [
+        "C:\\Users\\harika.malyala\\.nuget\\packages\\pdftoimage\\5.2.0\\lib\\net8.0\\PDFtoImage.dll"
+      ],
+      "Path": "C:\\Users\\harika.malyala\\.nuget\\packages\\pdftoimage\\5.2.0"
+    },
+    {
+      "Package": {
         "Id": "Polly",
         "Version": "7.1.0"
       },
@@ -6540,6 +6794,66 @@
         "C:\\Users\\harika.malyala\\.nuget\\packages\\sixlabors.imagesharp\\2.1.10\\lib\\netcoreapp3.1\\SixLabors.ImageSharp.dll"
       ],
       "Path": "C:\\Users\\harika.malyala\\.nuget\\packages\\sixlabors.imagesharp\\2.1.10"
+    },
+    {
+      "Package": {
+        "Id": "SkiaSharp",
+        "Version": "3.119.1"
+      },
+      "Assemblies": [
+        "C:\\Users\\harika.malyala\\.nuget\\packages\\skiasharp\\3.119.1\\lib\\net8.0\\SkiaSharp.dll"
+      ],
+      "Path": "C:\\Users\\harika.malyala\\.nuget\\packages\\skiasharp\\3.119.1"
+    },
+    {
+      "Package": {
+        "Id": "SkiaSharp.NativeAssets.Linux.NoDependencies",
+        "Version": "3.119.1"
+      },
+      "Assemblies": [
+        "C:\\Users\\harika.malyala\\.nuget\\packages\\skiasharp.nativeassets.linux.nodependencies\\3.119.1\\lib\\net8.0\\_._"
+      ],
+      "Path": "C:\\Users\\harika.malyala\\.nuget\\packages\\skiasharp.nativeassets.linux.nodependencies\\3.119.1"
+    },
+    {
+      "Package": {
+        "Id": "SkiaSharp.NativeAssets.macOS",
+        "Version": "3.119.1"
+      },
+      "Assemblies": [
+        "C:\\Users\\harika.malyala\\.nuget\\packages\\skiasharp.nativeassets.macos\\3.119.1\\lib\\net8.0\\_._"
+      ],
+      "Path": "C:\\Users\\harika.malyala\\.nuget\\packages\\skiasharp.nativeassets.macos\\3.119.1"
+    },
+    {
+      "Package": {
+        "Id": "SkiaSharp.NativeAssets.WebAssembly",
+        "Version": "3.119.1"
+      },
+      "Assemblies": [
+        "C:\\Users\\harika.malyala\\.nuget\\packages\\skiasharp.nativeassets.webassembly\\3.119.1\\lib\\net8.0\\_._"
+      ],
+      "Path": "C:\\Users\\harika.malyala\\.nuget\\packages\\skiasharp.nativeassets.webassembly\\3.119.1"
+    },
+    {
+      "Package": {
+        "Id": "SkiaSharp.NativeAssets.Win32",
+        "Version": "3.119.1"
+      },
+      "Assemblies": [
+        "C:\\Users\\harika.malyala\\.nuget\\packages\\skiasharp.nativeassets.win32\\3.119.1\\lib\\net8.0\\_._"
+      ],
+      "Path": "C:\\Users\\harika.malyala\\.nuget\\packages\\skiasharp.nativeassets.win32\\3.119.1"
+    },
+    {
+      "Package": {
+        "Id": "Sungaila.PDFium.BlazorWebAssembly",
+        "Version": "134.0.6982"
+      },
+      "Assemblies": [
+        "C:\\Users\\harika.malyala\\.nuget\\packages\\sungaila.pdfium.blazorwebassembly\\134.0.6982\\lib\\net8.0\\_._"
+      ],
+      "Path": "C:\\Users\\harika.malyala\\.nuget\\packages\\sungaila.pdfium.blazorwebassembly\\134.0.6982"
     },
     {
       "Package": {

@@ -13,7 +13,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1568,9283</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1568,4339</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>TestClickingUploads_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -144,14 +144,14 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="DownloadUploadDocuments" sap:VirtualizedContainerService.HintSize="1578,9218" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="DownloadUploadDocuments" sap:VirtualizedContainerService.HintSize="1578,4274" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1516,173" sap2010:WorkflowViewState.IdRef="LogMessage_5" Message="[&quot;DownloadUploadDocuments.xaml is Started&quot;]" />
-    <Assign DisplayName="Assign-out_DownloadPDFsDoneInit" sap:VirtualizedContainerService.HintSize="1516,113" sap2010:WorkflowViewState.IdRef="Assign_8">
+    <Assign DisplayName="Assign-out_DownloadPDFsDoneInit" sap:VirtualizedContainerService.HintSize="1516,114" sap2010:WorkflowViewState.IdRef="Assign_8">
       <Assign.To>
         <OutArgument x:TypeArguments="x:Boolean">[out_DownloadPDFsDone]</OutArgument>
       </Assign.To>
@@ -159,22 +159,22 @@
         <InArgument x:TypeArguments="x:Boolean">False</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="1516,8680" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="3" RetryInterval="[New TimeSpan(0, 0, 5)]">
+    <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="1516,3735" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="3" RetryInterval="[New TimeSpan(0, 0, 5)]">
       <ui:RetryScope.ActivityBody>
         <ActivityAction>
-          <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="1474,8473" sap2010:WorkflowViewState.IdRef="Sequence_22">
+          <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="1474,3528" sap2010:WorkflowViewState.IdRef="Sequence_22">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: Document View - Unit Number" sap:VirtualizedContainerService.HintSize="1412,8385" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="dec90190-ea99-4cc4-8c56-81490e7ef5c3" Version="V2">
+            <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: Document View - Unit Number" sap:VirtualizedContainerService.HintSize="1412,3440" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="dec90190-ea99-4cc4-8c56-81490e7ef5c3" Version="V2">
               <uix:NApplicationCard.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1378,8105" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1378,3160" sap2010:WorkflowViewState.IdRef="Sequence_2">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="str_UploadsText" />
                       <Variable x:TypeArguments="s:String[]" Name="arr_Uploads" />
@@ -186,9 +186,9 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NCheckState DisplayName="Check App State 'Sort Pages'" sap:VirtualizedContainerService.HintSize="1316,8015" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="dec90190-ea99-4cc4-8c56-81490e7ef5c3" Timeout="10" Version="V3">
+                    <uix:NCheckState DisplayName="Check App State 'Sort Pages'" sap:VirtualizedContainerService.HintSize="1316,3070" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="dec90190-ea99-4cc4-8c56-81490e7ef5c3" Timeout="10" Version="V3">
                       <uix:NCheckState.IfExists>
-                        <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="812,7773" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                        <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="812,2828" sap2010:WorkflowViewState.IdRef="Sequence_4">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -202,14 +202,14 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </ui:LogMessage>
-                          <Sequence DisplayName="SequenceToDownloadPDFs" sap:VirtualizedContainerService.HintSize="750,7519" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                          <Sequence DisplayName="SequenceToDownloadPDFs" sap:VirtualizedContainerService.HintSize="750,2574" sap2010:WorkflowViewState.IdRef="Sequence_12">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <uix:NGetText DisplayName="Get Text Uploads" sap:VirtualizedContainerService.HintSize="688,189" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="dec90190-ea99-4cc4-8c56-81490e7ef5c3" TextString="[str_UploadsText]" Version="V3">
+                            <uix:NGetText DisplayName="Get Text Uploads" sap:VirtualizedContainerService.HintSize="450,189" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="dec90190-ea99-4cc4-8c56-81490e7ef5c3" TextString="[str_UploadsText]" Version="V3">
                               <uix:NGetText.Target>
                                 <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/#/cert/review/1187098" DesignTimeRectangle="59, 671, 271, 147" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl parentid='workarea' tag='DIV' innertext='Uploads*' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='workarea' tag='DIV' type='' class='' aaname='' /&gt;" Guid="b2a12678-71a1-4996-9fc4-810f7c6ff7bc" InformativeScreenshot="4418f8b672ede0b18afcce8115c14e12.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Document View*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
                               </uix:NGetText.Target>
@@ -220,7 +220,7 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </uix:NGetText>
-                            <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text UploadFile" FileName="UploadsInfo.txt" sap:VirtualizedContainerService.HintSize="688,165" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[str_UploadsText]">
+                            <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text UploadFile" FileName="UploadsInfo.txt" sap:VirtualizedContainerService.HintSize="450,165" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[str_UploadsText]">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -228,7 +228,7 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </ui:WriteTextFile>
-                            <Assign DisplayName="Assign-arr_Uploads" sap:VirtualizedContainerService.HintSize="688,114" sap2010:WorkflowViewState.IdRef="Assign_1">
+                            <Assign DisplayName="Assign-arr_Uploads" sap:VirtualizedContainerService.HintSize="450,114" sap2010:WorkflowViewState.IdRef="Assign_1">
                               <Assign.To>
                                 <OutArgument x:TypeArguments="s:String[]">[arr_Uploads]</OutArgument>
                               </Assign.To>
@@ -242,7 +242,7 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </Assign>
-                            <Assign DisplayName="Assign-int_UploadsCount" sap:VirtualizedContainerService.HintSize="688,114" sap2010:WorkflowViewState.IdRef="Assign_2">
+                            <Assign DisplayName="Assign-int_UploadsCount" sap:VirtualizedContainerService.HintSize="450,114" sap2010:WorkflowViewState.IdRef="Assign_2">
                               <Assign.To>
                                 <OutArgument x:TypeArguments="x:Int32">[int_UploadsCount]</OutArgument>
                               </Assign.To>
@@ -250,7 +250,7 @@
                                 <InArgument x:TypeArguments="x:Int32">[arr_Uploads.Length-2]</InArgument>
                               </Assign.Value>
                             </Assign>
-                            <If Condition="[Not int_UploadsCount&gt;0]" DisplayName="If-UploadsExist" sap:VirtualizedContainerService.HintSize="688,649" sap2010:WorkflowViewState.IdRef="If_3">
+                            <If Condition="[Not int_UploadsCount&gt;0]" DisplayName="If-UploadsExist" sap:VirtualizedContainerService.HintSize="450,649" sap2010:WorkflowViewState.IdRef="If_3">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -278,7 +278,7 @@
                                 </Sequence>
                               </If.Else>
                             </If>
-                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="688,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Uplods count: &quot;+(int_UploadsCount).ToString]">
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Uplods count: &quot;+(int_UploadsCount).ToString]">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -286,7 +286,7 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </ui:LogMessage>
-                            <Assign DisplayName="Assign-PDFDownloadedFolder" sap:VirtualizedContainerService.HintSize="688,114" sap2010:WorkflowViewState.IdRef="Assign_5">
+                            <Assign DisplayName="Assign-PDFDownloadedFolder" sap:VirtualizedContainerService.HintSize="450,114" sap2010:WorkflowViewState.IdRef="Assign_5">
                               <Assign.To>
                                 <OutArgument x:TypeArguments="x:String">[out_PDFDownloadFolder]</OutArgument>
                               </Assign.To>
@@ -294,7 +294,7 @@
                                 <InArgument x:TypeArguments="x:String">[in_FolderToDownload+in_Unit]</InArgument>
                               </Assign.Value>
                             </Assign>
-                            <Assign DisplayName="Assign-Init out_DownloadedPDFFiles" sap:VirtualizedContainerService.HintSize="688,114" sap2010:WorkflowViewState.IdRef="Assign_6">
+                            <Assign DisplayName="Assign-Init out_DownloadedPDFFiles" sap:VirtualizedContainerService.HintSize="450,114" sap2010:WorkflowViewState.IdRef="Assign_6">
                               <Assign.To>
                                 <OutArgument x:TypeArguments="scg:List(x:String)">[out_DownloadedPDFFiles]</OutArgument>
                               </Assign.To>
@@ -302,10 +302,10 @@
                                 <InArgument x:TypeArguments="scg:List(x:String)">[New List(of String)]</InArgument>
                               </Assign.Value>
                             </Assign>
-                            <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder-PDFDownloadFolder" sap:VirtualizedContainerService.HintSize="688,112" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" Path="[out_PDFDownloadFolder]" />
-                            <ui:InterruptibleWhile Condition="[int_UploadsCount &gt; int_Index]" CurrentIndex="[int_Index]" DisplayName="While-UploadsCountDonotExceed" sap:VirtualizedContainerService.HintSize="688,5002" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+                            <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder-PDFDownloadFolder" sap:VirtualizedContainerService.HintSize="450,112" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" Path="[out_PDFDownloadFolder]" />
+                            <ui:InterruptibleWhile Condition="[int_UploadsCount &gt; int_Index]" CurrentIndex="[int_Index]" DisplayName="While-UploadsCountDonotExceed" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
                               <ui:InterruptibleWhile.Body>
-                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="654,4856" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="512,1074" sap2010:WorkflowViewState.IdRef="Sequence_6">
                                   <Sequence.Variables>
                                     <Variable x:TypeArguments="x:Int32" Name="int_TotalPageCount" />
                                     <Variable x:TypeArguments="x:String" Name="str_UploadPDFFilePath" />
@@ -316,12 +316,18 @@
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Upload No'" sap:VirtualizedContainerService.HintSize="592,189" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="dec90190-ea99-4cc4-8c56-81490e7ef5c3" Version="V3">
+                                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Upload No'" sap:VirtualizedContainerService.HintSize="450,189" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="dec90190-ea99-4cc4-8c56-81490e7ef5c3" Version="V3">
                                     <uix:NClick.Target>
                                       <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/#/cert/review/1187098" CVScreenId="b7021f45-9a09-4c3f-b6a4-57214f2d1515" CvTextArea="78, 695, 54, 16" CvTextArgument="Upload 1" CvType="Text" DesignTimeRectangle="79, 714, 52, 18" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Upload 2' class='ng-binding' parentid='workarea' tag='A' innertext='Upload 2' /&gt;" FuzzySelectorArgument="[&quot;&lt;webctrl aaname='Upload &quot;+(int_Index+1).ToString+&quot;' class='ng-binding' parentid='workarea' tag='A' innertext='Upload &quot;+(int_Index+1).ToString+&quot;' type='' /&gt;&quot;]" Guid="53a517cc-a042-459b-99c9-d3369383e730" InformativeScreenshot="bb0a0b637afed49f6610c15a5cd93bcf.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Document View*' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
                                     </uix:NClick.Target>
                                   </uix:NClick>
-                                  <TryCatch DisplayName="Try Catch-ClickPDFIcon" sap:VirtualizedContainerService.HintSize="592,726" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+                                  <TryCatch DisplayName="Try Catch-ClickPDFIcon" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
                                     <TryCatch.Try>
                                       <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'PDFIcon'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="dec90190-ea99-4cc4-8c56-81490e7ef5c3" Timeout="20" Version="V3">
                                         <uix:NClick.Target>
@@ -345,7 +351,7 @@
                                             <uix:NClick.Target>
                                               <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/#/cert/review/1190758" CVScreenId="8380ab6e-4550-4eec-951a-15a97ef16832" CvElementArea="1523, 545, 43, 38" CvType="Button" DesignTimeRectangle="1540, 558, 10, 14" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl aria-label='View PDF' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-label='View PDF' tag='SPAN' type='' class='far fa-file-pdf' aaname='' /&gt;" Guid="42eec32f-e34e-4e26-bad8-50dd50911cc1" InformativeScreenshot="16ad8fe47748a4f08fd1976b32201d9d.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Document View*' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
                                                 <uix:TargetAnchorable.Anchors>
-                                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                                     <uix:Target CVScreenId="ce82567a-f35b-4ff6-b8df-ca790abf1f5d" CvTextArea="1677, 514, 127, 19" CvTextArgument="Findings Pending" CvType="Text" DesignTimeRectangle="1678, 512, 126, 21" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='finding_form' aaname='Findings Pending' innertext='Findings Pending' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='finding_form' aaname='Findings Pending' innertext='Findings Pending' tag='H4' type='' class='text-muted mb-0 mt-2 ng-binding' /&gt;" Guid="d88b6883-1ef1-4030-a954-c3539630b25c" SearchSteps="FuzzySelector" />
                                                   </scg:List>
                                                 </uix:TargetAnchorable.Anchors>
@@ -356,7 +362,7 @@
                                       </Catch>
                                     </TryCatch.Catches>
                                   </TryCatch>
-                                  <Assign DisplayName="Assign-str_UploadPDFFilePath" sap:VirtualizedContainerService.HintSize="592,114" sap2010:WorkflowViewState.IdRef="Assign_4">
+                                  <Assign DisplayName="Assign-str_UploadPDFFilePath" sap:VirtualizedContainerService.HintSize="450,114" sap2010:WorkflowViewState.IdRef="Assign_4">
                                     <Assign.To>
                                       <OutArgument x:TypeArguments="x:String">[str_UploadPDFFilePath]</OutArgument>
                                     </Assign.To>
@@ -364,7 +370,7 @@
                                       <InArgument x:TypeArguments="x:String">[out_PDFDownloadFolder+"\" + in_Unit + "_Upload" + (int_Index + 1).ToString()+ ".pdf"]</InArgument>
                                     </Assign.Value>
                                   </Assign>
-                                  <If Condition="[Path.Exists(str_UploadPDFFilePath)]" DisplayName="If-PDFAlreadyExists" sap:VirtualizedContainerService.HintSize="592,464" sap2010:WorkflowViewState.IdRef="If_2">
+                                  <If Condition="[Path.Exists(str_UploadPDFFilePath)]" DisplayName="If-PDFAlreadyExists" sap:VirtualizedContainerService.HintSize="450,464" sap2010:WorkflowViewState.IdRef="If_2">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -391,51 +397,176 @@
                                       </Sequence>
                                     </If.Else>
                                   </If>
-                                  <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Edge: CertDownloadPage" sap:VirtualizedContainerService.HintSize="592,3170" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="df70876c-4dee-470d-b433-494b59854045" Version="V2">
+                                  <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Edge: CertDownloadPage" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="df70876c-4dee-470d-b433-494b59854045" Version="V2">
                                     <uix:NApplicationCard.Body>
                                       <ActivityAction x:TypeArguments="x:Object">
                                         <ActivityAction.Argument>
                                           <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                                         </ActivityAction.Argument>
-                                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="558,2921" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="518,763" sap2010:WorkflowViewState.IdRef="Sequence_3">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click Save" sap:VirtualizedContainerService.HintSize="496,189" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="df70876c-4dee-470d-b433-494b59854045" Version="V3">
-                                            <uix:NClick.Target>
-                                              <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/3.0/cert/download/cert-doc/5848431" DesignTimeRectangle="1780, 86, 36, 32" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;ctrl name='PDF bar' role='tool bar' /&gt;&lt;ctrl name='Save (Ctrl+S)' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='PDF bar' role='tool bar' /&gt;&lt;ctrl name='Save (Ctrl+S)' role='push button' automationid='' /&gt;" Guid="50b44bd8-3467-4404-991f-9bafec354a62" InformativeScreenshot="4826f42c6adeb4aaf7ac356896f38284.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Visible" WaitForReadyArgument="Complete" />
-                                            </uix:NClick.Target>
-                                            <sap:WorkflowViewStateService.ViewState>
-                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                              </scg:Dictionary>
-                                            </sap:WorkflowViewStateService.ViewState>
-                                          </uix:NClick>
-                                          <TryCatch DisplayName="Try Catch-Typefilename" sap:VirtualizedContainerService.HintSize="496,2474" sap2010:WorkflowViewState.IdRef="TryCatch_1">
-                                            <sap:WorkflowViewStateService.ViewState>
-                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                              </scg:Dictionary>
-                                            </sap:WorkflowViewStateService.ViewState>
+                                          <TryCatch DisplayName="Try Catch-DownloadButtons" sap:VirtualizedContainerService.HintSize="456,507" sap2010:WorkflowViewState.IdRef="TryCatch_4">
                                             <TryCatch.Try>
-                                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into Filename" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="HardwareEvents" ScopeIdentifier="df70876c-4dee-470d-b433-494b59854045" Text="[str_UploadPDFFilePath + &quot;[k(Enter)]&quot;]" Timeout="2" Version="V3">
-                                                <uix:NTypeInto.Target>
-                                                  <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/3.0/cert/download/cert-doc/5848431" CVScreenId="3f513770-6b02-4bfc-b264-4b141b7768e8" CvElementArea="129, 365, 814, 24" CvType="InputBox" DesignTimeRectangle="136, 369, 787, 17" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' /&gt;&lt;wnd aaname='File name:' cls='Edit' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' /&gt;&lt;wnd aaname='File name:' cls='Edit' /&gt;" Guid="85ad549d-d696-4038-9aa0-7386e05f15c5" InformativeScreenshot="9de99e404982165842b2f18b73c49d2a.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' title='Save As' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive" />
-                                                </uix:NTypeInto.Target>
+                                              <Sequence DisplayName="TryWithSaveButton" sap:VirtualizedContainerService.HintSize="416,25" sap2010:WorkflowViewState.IdRef="Sequence_23">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                              </uix:NTypeInto>
+                                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click Save" sap:VirtualizedContainerService.HintSize="354,189" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="df70876c-4dee-470d-b433-494b59854045" Timeout="20" Version="V3">
+                                                  <uix:NClick.Target>
+                                                    <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/3.0/cert/download/cert-doc/5848431" DesignTimeRectangle="1780, 86, 36, 32" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;ctrl name='PDF bar' role='tool bar' /&gt;&lt;ctrl name='Save (Ctrl+S)' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='PDF bar' role='tool bar' /&gt;&lt;ctrl name='Save (Ctrl+S)' role='push button' automationid='' /&gt;" Guid="50b44bd8-3467-4404-991f-9bafec354a62" InformativeScreenshot="4826f42c6adeb4aaf7ac356896f38284.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Visible" WaitForReadyArgument="Complete" />
+                                                  </uix:NClick.Target>
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                </uix:NClick>
+                                                <TryCatch DisplayName="Try Catch-Typefilename" sap:VirtualizedContainerService.HintSize="354,50" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <TryCatch.Try>
+                                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into Filename" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="HardwareEvents" ScopeIdentifier="df70876c-4dee-470d-b433-494b59854045" Text="[str_UploadPDFFilePath + &quot;[k(Enter)]&quot;]" Timeout="2" Version="V3">
+                                                      <uix:NTypeInto.Target>
+                                                        <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/3.0/cert/download/cert-doc/5848431" CVScreenId="3f513770-6b02-4bfc-b264-4b141b7768e8" CvElementArea="129, 365, 814, 24" CvType="InputBox" DesignTimeRectangle="136, 369, 787, 17" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' /&gt;&lt;wnd aaname='File name:' cls='Edit' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' /&gt;&lt;wnd aaname='File name:' cls='Edit' /&gt;" Guid="85ad549d-d696-4038-9aa0-7386e05f15c5" InformativeScreenshot="9de99e404982165842b2f18b73c49d2a.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' title='Save As' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive" />
+                                                      </uix:NTypeInto.Target>
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                    </uix:NTypeInto>
+                                                  </TryCatch.Try>
+                                                  <TryCatch.Catches>
+                                                    <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,105" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                      <ActivityAction x:TypeArguments="s:Exception">
+                                                        <ActivityAction.Argument>
+                                                          <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                                        </ActivityAction.Argument>
+                                                        <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                                                          <sap:WorkflowViewStateService.ViewState>
+                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                              <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                                            </scg:Dictionary>
+                                                          </sap:WorkflowViewStateService.ViewState>
+                                                          <TryCatch.Try>
+                                                            <Sequence DisplayName="TryingtoDownloadWithPrintButton" sap:VirtualizedContainerService.HintSize="416,25" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                                                              <sap:WorkflowViewStateService.ViewState>
+                                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                                                </scg:Dictionary>
+                                                              </sap:WorkflowViewStateService.ViewState>
+                                                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,57" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="Warn" Message="[&quot;Save didn't work to enter file name so trying with Print Button &quot;]">
+                                                                <sap:WorkflowViewStateService.ViewState>
+                                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                                                  </scg:Dictionary>
+                                                                </sap:WorkflowViewStateService.ViewState>
+                                                              </ui:LogMessage>
+                                                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'push button'" sap:VirtualizedContainerService.HintSize="354,189" sap2010:WorkflowViewState.IdRef="NClick_5" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="df70876c-4dee-470d-b433-494b59854045" Version="V3">
+                                                                <uix:NClick.Target>
+                                                                  <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/3.0/cert/download/cert-doc/5848431" DesignTimeRectangle="1622, 86, 37, 32" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;ctrl name='PDF bar' role='tool bar' /&gt;&lt;ctrl name='Print (Ctrl+P)' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='PDF bar' role='tool bar' /&gt;&lt;ctrl name='Print (Ctrl+P)' role='push button' automationid='' /&gt;" Guid="b44f13ac-0065-44bc-acc8-e7f0ec7664e7" InformativeScreenshot="736e74c3ce7269b80ec7fab7d2645c49.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='*Microsoft​ Edge*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive" />
+                                                                </uix:NClick.Target>
+                                                              </uix:NClick>
+                                                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Print'" sap:VirtualizedContainerService.HintSize="354,189" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="df70876c-4dee-470d-b433-494b59854045" Version="V3">
+                                                                <uix:NClick.Target>
+                                                                  <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/3.0/cert/download/cert-doc/5848431" CVScreenId="d2e7e001-c75d-4b9e-bba3-89a3455c43cd" CvElementArea="55, 847, 126, 35" CvTextArea="102, 858, 32, 13" CvTextArgument="Print" CvType="Button" DesignTimeRectangle="57, 849, 122, 32" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;ctrl name='Print' role='push button' text='Print' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Print' role='push button' text='Print' automationid='' check:text='Print' /&gt;" Guid="b0c0fda3-77ce-4906-9153-047fd7c9295e" InformativeScreenshot="fe4e77dd88bb3568f1121c2a49dcda17.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome*' title='*Microsoft​ Edge*' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                                                                </uix:NClick.Target>
+                                                              </uix:NClick>
+                                                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'File name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="354,243" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="HardwareEvents" ScopeIdentifier="df70876c-4dee-470d-b433-494b59854045" Text="[str_UploadPDFFilePath + &quot;[k(Enter)]&quot;]" Version="V3">
+                                                                <uix:NTypeInto.Target>
+                                                                  <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/3.0/cert/download/cert-doc/5848431" CVScreenId="8175d708-3f6b-4e66-aaaf-8016f4d350b8" CvElementArea="134, 365, 810, 24" CvType="InputBox" DesignTimeRectangle="133, 366, 810, 23" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' /&gt;" Guid="375804c0-f707-49cc-abc0-0dd90d73511c" InformativeScreenshot="efd9cfce65150c54cd2a35ee6069b9e6.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='#32770' title='Save*As' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                                                    <uix:TargetAnchorable.Anchors>
+                                                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                                        <uix:Target CVScreenId="8175d708-3f6b-4e66-aaaf-8016f4d350b8" CvTextArea="73, 371, 55, 12" CvTextArgument="File name:" CvType="Text" DesignTimeRectangle="18, 366, 115, 23" ElementType="Text" FullSelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;ctrl name='File name:' role='text' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;ctrl name='File name:' role='text' automationid='' check:text='File name:' /&gt;" Guid="e0f34eb2-4642-4096-986b-7de47be51228" SearchSteps="Selector, FuzzySelector, CV" />
+                                                                      </scg:List>
+                                                                    </uix:TargetAnchorable.Anchors>
+                                                                  </uix:TargetAnchorable>
+                                                                </uix:NTypeInto.Target>
+                                                              </uix:NTypeInto>
+                                                            </Sequence>
+                                                          </TryCatch.Try>
+                                                          <TryCatch.Catches>
+                                                            <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="422,105" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+                                                              <sap:WorkflowViewStateService.ViewState>
+                                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                </scg:Dictionary>
+                                                              </sap:WorkflowViewStateService.ViewState>
+                                                              <ActivityAction x:TypeArguments="s:Exception">
+                                                                <ActivityAction.Argument>
+                                                                  <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                                                </ActivityAction.Argument>
+                                                                <Sequence DisplayName="TryingToDownloadWithCtrlP" sap:VirtualizedContainerService.HintSize="416,25" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                                                                  <sap:WorkflowViewStateService.ViewState>
+                                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                                                    </scg:Dictionary>
+                                                                  </sap:WorkflowViewStateService.ViewState>
+                                                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,175" sap2010:WorkflowViewState.IdRef="LogMessage_13" Message="[&quot;Print Button Failed so trying with Ctrl P&quot;]" />
+                                                                  <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts 'Minimize Restore'" sap:VirtualizedContainerService.HintSize="354,231" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" ScopeIdentifier="df70876c-4dee-470d-b433-494b59854045" Shortcuts="[d(hk)][d(ctrl)]p[u(ctrl)][u(hk)]" Version="V3">
+                                                                    <uix:NKeyboardShortcuts.Target>
+                                                                      <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/3.0/cert/download/cert-doc/6362994" DesignTimeRectangle="8, 8, 1912, 914" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;ctrl name='*Microsoft Edge' role='pane' /&gt;" FuzzySelectorArgument="&lt;ctrl name='*Microsoft Edge' role='pane' automationid='' /&gt;" Guid="2ccbe209-92f8-4c58-aa57-136e9d41506b" InformativeScreenshot="147a5abddb2e155336e19724a27eec6b.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin*' title='*Microsoft​ Edge' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive" />
+                                                                    </uix:NKeyboardShortcuts.Target>
+                                                                    <sap:WorkflowViewStateService.ViewState>
+                                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                      </scg:Dictionary>
+                                                                    </sap:WorkflowViewStateService.ViewState>
+                                                                  </uix:NKeyboardShortcuts>
+                                                                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Print'" sap:VirtualizedContainerService.HintSize="354,189" sap2010:WorkflowViewState.IdRef="NClick_7" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="df70876c-4dee-470d-b433-494b59854045" Version="V3">
+                                                                    <uix:NClick.Target>
+                                                                      <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/3.0/cert/download/cert-doc/5848431" CVScreenId="d2e7e001-c75d-4b9e-bba3-89a3455c43cd" CvElementArea="55, 847, 126, 35" CvTextArea="102, 858, 32, 13" CvTextArgument="Print" CvType="Button" DesignTimeRectangle="57, 849, 122, 32" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;ctrl name='Print' role='push button' text='Print' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Print' role='push button' text='Print' automationid='' check:text='Print' /&gt;" Guid="b0c0fda3-77ce-4906-9153-047fd7c9295e" InformativeScreenshot="fe4e77dd88bb3568f1121c2a49dcda17.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome*' title='*Microsoft​ Edge*' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                                                                    </uix:NClick.Target>
+                                                                  </uix:NClick>
+                                                                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'File name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="354,243" sap2010:WorkflowViewState.IdRef="NTypeInto_3" InteractionMode="HardwareEvents" ScopeIdentifier="df70876c-4dee-470d-b433-494b59854045" Text="[str_UploadPDFFilePath + &quot;[k(Enter)]&quot;]" Version="V3">
+                                                                    <uix:NTypeInto.Target>
+                                                                      <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/3.0/cert/download/cert-doc/5848431" CVScreenId="8175d708-3f6b-4e66-aaaf-8016f4d350b8" CvElementArea="134, 365, 810, 24" CvType="InputBox" DesignTimeRectangle="133, 366, 810, 23" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' /&gt;" Guid="375804c0-f707-49cc-abc0-0dd90d73511c" InformativeScreenshot="efd9cfce65150c54cd2a35ee6069b9e6.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='#32770' title='Save*As' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                                                        <uix:TargetAnchorable.Anchors>
+                                                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                                            <uix:Target CVScreenId="8175d708-3f6b-4e66-aaaf-8016f4d350b8" CvTextArea="73, 371, 55, 12" CvTextArgument="File name:" CvType="Text" DesignTimeRectangle="18, 366, 115, 23" ElementType="Text" FullSelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;ctrl name='File name:' role='text' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;ctrl name='File name:' role='text' automationid='' check:text='File name:' /&gt;" Guid="e0f34eb2-4642-4096-986b-7de47be51228" SearchSteps="Selector, FuzzySelector, CV" />
+                                                                          </scg:List>
+                                                                        </uix:TargetAnchorable.Anchors>
+                                                                      </uix:TargetAnchorable>
+                                                                    </uix:NTypeInto.Target>
+                                                                  </uix:NTypeInto>
+                                                                </Sequence>
+                                                              </ActivityAction>
+                                                            </Catch>
+                                                          </TryCatch.Catches>
+                                                        </TryCatch>
+                                                      </ActivityAction>
+                                                    </Catch>
+                                                  </TryCatch.Catches>
+                                                </TryCatch>
+                                              </Sequence>
                                             </TryCatch.Try>
                                             <TryCatch.Catches>
-                                              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="462,1914" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                                              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="422,105" sap2010:WorkflowViewState.IdRef="Catch`1_4">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -446,94 +577,54 @@
                                                   <ActivityAction.Argument>
                                                     <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                                                   </ActivityAction.Argument>
-                                                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="456,1844" sap2010:WorkflowViewState.IdRef="TryCatch_2">
-                                                    <TryCatch.Try>
-                                                      <Sequence sap:VirtualizedContainerService.HintSize="416,711" sap2010:WorkflowViewState.IdRef="Sequence_13">
-                                                        <sap:WorkflowViewStateService.ViewState>
-                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                          </scg:Dictionary>
-                                                        </sap:WorkflowViewStateService.ViewState>
-                                                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'push button'" sap:VirtualizedContainerService.HintSize="354,189" sap2010:WorkflowViewState.IdRef="NClick_5" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="df70876c-4dee-470d-b433-494b59854045" Version="V3">
-                                                          <uix:NClick.Target>
-                                                            <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/3.0/cert/download/cert-doc/5848431" DesignTimeRectangle="1622, 86, 37, 32" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;ctrl name='PDF bar' role='tool bar' /&gt;&lt;ctrl name='Print (Ctrl+P)' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='PDF bar' role='tool bar' /&gt;&lt;ctrl name='Print (Ctrl+P)' role='push button' automationid='' /&gt;" Guid="b44f13ac-0065-44bc-acc8-e7f0ec7664e7" InformativeScreenshot="736e74c3ce7269b80ec7fab7d2645c49.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='*Microsoft​ Edge*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive" />
-                                                          </uix:NClick.Target>
-                                                        </uix:NClick>
-                                                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Print'" sap:VirtualizedContainerService.HintSize="354,189" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="df70876c-4dee-470d-b433-494b59854045" Version="V3">
-                                                          <uix:NClick.Target>
-                                                            <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/3.0/cert/download/cert-doc/5848431" CVScreenId="d2e7e001-c75d-4b9e-bba3-89a3455c43cd" CvElementArea="55, 847, 126, 35" CvTextArea="102, 858, 32, 13" CvTextArgument="Print" CvType="Button" DesignTimeRectangle="57, 849, 122, 32" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;ctrl name='Print' role='push button' text='Print' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Print' role='push button' text='Print' automationid='' check:text='Print' /&gt;" Guid="b0c0fda3-77ce-4906-9153-047fd7c9295e" InformativeScreenshot="fe4e77dd88bb3568f1121c2a49dcda17.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome*' title='*Microsoft​ Edge*' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
-                                                          </uix:NClick.Target>
-                                                        </uix:NClick>
-                                                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'File name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="354,243" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="HardwareEvents" ScopeIdentifier="df70876c-4dee-470d-b433-494b59854045" Text="[str_UploadPDFFilePath + &quot;[k(Enter)]&quot;]" Version="V3">
-                                                          <uix:NTypeInto.Target>
-                                                            <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/3.0/cert/download/cert-doc/5848431" CVScreenId="8175d708-3f6b-4e66-aaaf-8016f4d350b8" CvElementArea="134, 365, 810, 24" CvType="InputBox" DesignTimeRectangle="133, 366, 810, 23" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' /&gt;" Guid="375804c0-f707-49cc-abc0-0dd90d73511c" InformativeScreenshot="efd9cfce65150c54cd2a35ee6069b9e6.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='#32770' title='Save*As' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
-                                                              <uix:TargetAnchorable.Anchors>
-                                                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                                                  <uix:Target CVScreenId="8175d708-3f6b-4e66-aaaf-8016f4d350b8" CvTextArea="73, 371, 55, 12" CvTextArgument="File name:" CvType="Text" DesignTimeRectangle="18, 366, 115, 23" ElementType="Text" FullSelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;ctrl name='File name:' role='text' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;ctrl name='File name:' role='text' automationid='' check:text='File name:' /&gt;" Guid="e0f34eb2-4642-4096-986b-7de47be51228" SearchSteps="Selector, FuzzySelector, CV" />
-                                                                </scg:List>
-                                                              </uix:TargetAnchorable.Anchors>
-                                                            </uix:TargetAnchorable>
-                                                          </uix:NTypeInto.Target>
-                                                        </uix:NTypeInto>
-                                                      </Sequence>
-                                                    </TryCatch.Try>
-                                                    <TryCatch.Catches>
-                                                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="422,823" sap2010:WorkflowViewState.IdRef="Catch`1_2">
-                                                        <sap:WorkflowViewStateService.ViewState>
-                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                          </scg:Dictionary>
-                                                        </sap:WorkflowViewStateService.ViewState>
-                                                        <ActivityAction x:TypeArguments="s:Exception">
-                                                          <ActivityAction.Argument>
-                                                            <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
-                                                          </ActivityAction.Argument>
-                                                          <Sequence sap:VirtualizedContainerService.HintSize="416,753" sap2010:WorkflowViewState.IdRef="Sequence_21">
-                                                            <sap:WorkflowViewStateService.ViewState>
-                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                              </scg:Dictionary>
-                                                            </sap:WorkflowViewStateService.ViewState>
-                                                            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts 'Minimize Restore'" sap:VirtualizedContainerService.HintSize="354,231" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" ScopeIdentifier="df70876c-4dee-470d-b433-494b59854045" Shortcuts="[d(hk)][d(ctrl)]p[u(ctrl)][u(hk)]" Version="V3">
-                                                              <uix:NKeyboardShortcuts.Target>
-                                                                <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/3.0/cert/download/cert-doc/6362994" DesignTimeRectangle="8, 8, 1912, 914" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;ctrl name='*Microsoft Edge' role='pane' /&gt;" FuzzySelectorArgument="&lt;ctrl name='*Microsoft Edge' role='pane' automationid='' /&gt;" Guid="2ccbe209-92f8-4c58-aa57-136e9d41506b" InformativeScreenshot="147a5abddb2e155336e19724a27eec6b.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin*' title='*Microsoft​ Edge' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive" />
-                                                              </uix:NKeyboardShortcuts.Target>
-                                                              <sap:WorkflowViewStateService.ViewState>
-                                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                                </scg:Dictionary>
-                                                              </sap:WorkflowViewStateService.ViewState>
-                                                            </uix:NKeyboardShortcuts>
-                                                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Print'" sap:VirtualizedContainerService.HintSize="354,189" sap2010:WorkflowViewState.IdRef="NClick_7" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="df70876c-4dee-470d-b433-494b59854045" Version="V3">
-                                                              <uix:NClick.Target>
-                                                                <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/3.0/cert/download/cert-doc/5848431" CVScreenId="d2e7e001-c75d-4b9e-bba3-89a3455c43cd" CvElementArea="55, 847, 126, 35" CvTextArea="102, 858, 32, 13" CvTextArgument="Print" CvType="Button" DesignTimeRectangle="57, 849, 122, 32" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;ctrl name='Print' role='push button' text='Print' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Print' role='push button' text='Print' automationid='' check:text='Print' /&gt;" Guid="b0c0fda3-77ce-4906-9153-047fd7c9295e" InformativeScreenshot="fe4e77dd88bb3568f1121c2a49dcda17.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome*' title='*Microsoft​ Edge*' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
-                                                              </uix:NClick.Target>
-                                                            </uix:NClick>
-                                                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'File name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="354,243" sap2010:WorkflowViewState.IdRef="NTypeInto_3" InteractionMode="HardwareEvents" ScopeIdentifier="df70876c-4dee-470d-b433-494b59854045" Text="[str_UploadPDFFilePath + &quot;[k(Enter)]&quot;]" Version="V3">
-                                                              <uix:NTypeInto.Target>
-                                                                <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/3.0/cert/download/cert-doc/5848431" CVScreenId="8175d708-3f6b-4e66-aaaf-8016f4d350b8" CvElementArea="134, 365, 810, 24" CvType="InputBox" DesignTimeRectangle="133, 366, 810, 23" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' /&gt;" Guid="375804c0-f707-49cc-abc0-0dd90d73511c" InformativeScreenshot="efd9cfce65150c54cd2a35ee6069b9e6.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='#32770' title='Save*As' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
-                                                                  <uix:TargetAnchorable.Anchors>
-                                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                                                      <uix:Target CVScreenId="8175d708-3f6b-4e66-aaaf-8016f4d350b8" CvTextArea="73, 371, 55, 12" CvTextArgument="File name:" CvType="Text" DesignTimeRectangle="18, 366, 115, 23" ElementType="Text" FullSelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;ctrl name='File name:' role='text' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;ctrl name='File name:' role='text' automationid='' check:text='File name:' /&gt;" Guid="e0f34eb2-4642-4096-986b-7de47be51228" SearchSteps="Selector, FuzzySelector, CV" />
-                                                                    </scg:List>
-                                                                  </uix:TargetAnchorable.Anchors>
-                                                                </uix:TargetAnchorable>
-                                                              </uix:NTypeInto.Target>
-                                                            </uix:NTypeInto>
-                                                          </Sequence>
-                                                        </ActivityAction>
-                                                      </Catch>
-                                                    </TryCatch.Catches>
-                                                  </TryCatch>
+                                                  <Sequence DisplayName="TryingToDownloadWithCtrlP" sap:VirtualizedContainerService.HintSize="416,25" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                        <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,175" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Warn" Message="[&quot;Save button Failed trying with Ctrl P&quot;]">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                    </ui:LogMessage>
+                                                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts 'Minimize Restore'" sap:VirtualizedContainerService.HintSize="354,231" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_2" ScopeIdentifier="df70876c-4dee-470d-b433-494b59854045" Shortcuts="[d(hk)][d(ctrl)]p[u(ctrl)][u(hk)]" Version="V3">
+                                                      <uix:NKeyboardShortcuts.Target>
+                                                        <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/3.0/cert/download/cert-doc/6362994" DesignTimeRectangle="8, 8, 1912, 914" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;ctrl name='*Microsoft Edge' role='pane' /&gt;" FuzzySelectorArgument="&lt;ctrl name='*Microsoft Edge' role='pane' automationid='' /&gt;" Guid="2ccbe209-92f8-4c58-aa57-136e9d41506b" InformativeScreenshot="147a5abddb2e155336e19724a27eec6b.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin*' title='*Microsoft​ Edge' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive" />
+                                                      </uix:NKeyboardShortcuts.Target>
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                    </uix:NKeyboardShortcuts>
+                                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Print'" sap:VirtualizedContainerService.HintSize="354,189" sap2010:WorkflowViewState.IdRef="NClick_9" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="df70876c-4dee-470d-b433-494b59854045" Version="V3">
+                                                      <uix:NClick.Target>
+                                                        <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/3.0/cert/download/cert-doc/5848431" CVScreenId="d2e7e001-c75d-4b9e-bba3-89a3455c43cd" CvElementArea="55, 847, 126, 35" CvTextArea="102, 858, 32, 13" CvTextArgument="Print" CvType="Button" DesignTimeRectangle="57, 849, 122, 32" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;ctrl name='Print' role='push button' text='Print' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Print' role='push button' text='Print' automationid='' check:text='Print' /&gt;" Guid="b0c0fda3-77ce-4906-9153-047fd7c9295e" InformativeScreenshot="fe4e77dd88bb3568f1121c2a49dcda17.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome*' title='*Microsoft​ Edge*' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                                                      </uix:NClick.Target>
+                                                    </uix:NClick>
+                                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'File name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="354,243" sap2010:WorkflowViewState.IdRef="NTypeInto_4" InteractionMode="HardwareEvents" ScopeIdentifier="df70876c-4dee-470d-b433-494b59854045" Text="[str_UploadPDFFilePath + &quot;[k(Enter)]&quot;]" Version="V3">
+                                                      <uix:NTypeInto.Target>
+                                                        <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/3.0/cert/download/cert-doc/5848431" CVScreenId="8175d708-3f6b-4e66-aaaf-8016f4d350b8" CvElementArea="134, 365, 810, 24" CvType="InputBox" DesignTimeRectangle="133, 366, 810, 23" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' /&gt;" Guid="375804c0-f707-49cc-abc0-0dd90d73511c" InformativeScreenshot="efd9cfce65150c54cd2a35ee6069b9e6.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='#32770' title='Save*As' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                                          <uix:TargetAnchorable.Anchors>
+                                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                              <uix:Target CVScreenId="8175d708-3f6b-4e66-aaaf-8016f4d350b8" CvTextArea="73, 371, 55, 12" CvTextArgument="File name:" CvType="Text" DesignTimeRectangle="18, 366, 115, 23" ElementType="Text" FullSelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;ctrl name='File name:' role='text' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;ctrl name='File name:' role='text' automationid='' check:text='File name:' /&gt;" Guid="e0f34eb2-4642-4096-986b-7de47be51228" SearchSteps="Selector, FuzzySelector, CV" />
+                                                            </scg:List>
+                                                          </uix:TargetAnchorable.Anchors>
+                                                        </uix:TargetAnchorable>
+                                                      </uix:NTypeInto.Target>
+                                                    </uix:NTypeInto>
+                                                  </Sequence>
                                                 </ActivityAction>
                                               </Catch>
                                             </TryCatch.Catches>
                                           </TryCatch>
-                                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="496,168" sap2010:WorkflowViewState.IdRef="LogMessage_4" Message="[in_Unit + &quot;_Upload&quot; + (int_Index + 1).ToString() +&quot;.pdf is downloaded&quot;]">
+                                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="456,168" sap2010:WorkflowViewState.IdRef="LogMessage_4" Message="[in_Unit + &quot;_Upload&quot; + (int_Index + 1).ToString() +&quot;.pdf is downloaded&quot;]">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -549,12 +640,12 @@
                                     </uix:NApplicationCard.TargetApp>
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                   </uix:NApplicationCard>
-                                  <Assign DisplayName="Assign-out_DownloadedPDFFiles" sap:VirtualizedContainerService.HintSize="592,105" sap2010:WorkflowViewState.IdRef="Assign_7">
+                                  <Assign DisplayName="Assign-out_DownloadedPDFFiles" sap:VirtualizedContainerService.HintSize="450,105" sap2010:WorkflowViewState.IdRef="Assign_7">
                                     <Assign.To>
                                       <OutArgument x:TypeArguments="scg:List(x:String)">[out_DownloadedPDFFiles]</OutArgument>
                                     </Assign.To>
@@ -566,12 +657,12 @@
                               </ui:InterruptibleWhile.Body>
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </ui:InterruptibleWhile>
-                            <If sap2010:Annotation.AnnotationText="Check if all Upload File downloads are done" Condition="[out_DownloadedPDFFiles.Count=int_UploadsCount]" DisplayName="If PDFFilescountmatchesUploadsCount" sap:VirtualizedContainerService.HintSize="688,649" sap2010:WorkflowViewState.IdRef="If_1">
+                            <If sap2010:Annotation.AnnotationText="Check if all Upload File downloads are done" Condition="[out_DownloadedPDFFiles.Count=int_UploadsCount]" DisplayName="If PDFFilescountmatchesUploadsCount" sap:VirtualizedContainerService.HintSize="450,649" sap2010:WorkflowViewState.IdRef="If_1">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
