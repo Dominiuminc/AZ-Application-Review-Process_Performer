@@ -400,6 +400,19 @@
       "Path": "Utilities/AuditFindings.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "dt_FilteredPaystubFindings&Sequence_2800",
+        "int_PaystubsMatchCount&Sequence_714",
+        "int_PaystubsCount&Sequence_714",
+        "bool_HighestCalcFinding&Sequence_1586",
+        "bool_GrossPayFinding&Sequence_1586",
+        "bool_EndDateFinding&Sequence_1586",
+        "bool_StartDateFinding&Sequence_1586",
+        "bool_PerYearEarningsFinding&Sequence_1586",
+        "bool_EmployeeFinding&Sequence_1586",
+        "bool_FrequencyFinding&Sequence_1586",
+        "dt_PaystubsFindings&Sequence_714",
+        "int_NumberPayPeriods&Sequence_1901",
+        "int_NumberPayPeriods&Sequence_2583",
         "arr_IncomeSourcesFromICW&Sequence_1814",
         "list_ICWMatchedResults&Sequence_1814",
         "list_ICWMatchedResults&Sequence_1002",
@@ -1334,6 +1347,7 @@
       "Path": "Utilities/Sharepoint_UploadFile.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "bool_FolderCreated&Sequence_20",
         "str_SharepointTenantID&Sequence_1",
         "str_SharePointAppID&Sequence_1",
         "sstr_SharepointSecret&Sequence_1",
@@ -1348,13 +1362,13 @@
         "iRes_ParentFolderResource&Sequence_20"
       ],
       "ArgumentsSectionElementsOrder": [
-        "in_Config",
-        "in_SPParentFolderPath",
-        "in_ArrFiles",
         "in_str_Subfolder",
         "in_DriveName",
         "in_SiteURL",
-        "in_UnitFolder"
+        "in_UnitFolder",
+        "in_ArrFiles",
+        "in_SPParentFolderPath",
+        "in_Config"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
@@ -1397,6 +1411,19 @@
         "in_MemNameToCheck",
         "in_ArrEDCMemNames",
         "in_ArrICWMemNames"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Utilities/PaystubsEDCFindings.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "io_DTAuditFindings",
+        "out_BoolPerYearEarningsChecked",
+        "in_Config",
+        "in_DtPaystubsFindings"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
