@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1344,3862</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1282,4236</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Yardi_Login_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -119,15 +119,15 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Yardi_Login" sap:VirtualizedContainerService.HintSize="1354,3797" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Yardi_Login" sap:VirtualizedContainerService.HintSize="1292,4171" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1292,173" sap2010:WorkflowViewState.IdRef="LogMessage_4" Message="[&quot;Yardi_Login.xaml is Started&quot;]" />
-    <TryCatch DisplayName="Try Catch-Login-YardiRightSource" sap:VirtualizedContainerService.HintSize="1292,3372" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1230,173" sap2010:WorkflowViewState.IdRef="LogMessage_4" Message="[&quot;Yardi_Login.xaml is Started&quot;]" />
+    <TryCatch DisplayName="Try Catch-Login-YardiRightSource" sap:VirtualizedContainerService.HintSize="1230,3746" sap2010:WorkflowViewState.IdRef="TryCatch_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -135,17 +135,17 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <ui:RetryScope DisplayName="Retry Scope-YardiLogin" sap:VirtualizedContainerService.HintSize="1192,2870" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="3" RetryInterval="[New TimeSpan(0, 0, 5)]">
+        <ui:RetryScope DisplayName="Retry Scope-YardiLogin" sap:VirtualizedContainerService.HintSize="1192,3244" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="3" RetryInterval="[New TimeSpan(0, 0, 5)]">
           <ui:RetryScope.ActivityBody>
             <ActivityAction>
-              <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="1150,2695" sap2010:WorkflowViewState.IdRef="Sequence_14">
+              <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="1150,3069" sap2010:WorkflowViewState.IdRef="Sequence_14">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <TryCatch DisplayName="Try Catch-LoginToYardiRightSource" sap:VirtualizedContainerService.HintSize="1088,2607" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                <TryCatch DisplayName="Try Catch-LoginToYardiRightSource" sap:VirtualizedContainerService.HintSize="1088,2981" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -153,13 +153,13 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <TryCatch.Try>
-                    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Edge RightSource(1)" sap:VirtualizedContainerService.HintSize="1050,2011" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="2520956b-a72b-4fea-a4a6-d9383dc62abe" Version="V2" WindowResize="Maximize">
+                    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Edge RightSource(1)" sap:VirtualizedContainerService.HintSize="1050,2385" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="2520956b-a72b-4fea-a4a6-d9383dc62abe" Version="V2" WindowResize="Maximize">
                       <uix:NApplicationCard.Body>
                         <ActivityAction x:TypeArguments="x:Object">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                           </ActivityAction.Argument>
-                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1016,1794" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1016,2128" sap2010:WorkflowViewState.IdRef="Sequence_2">
                             <Sequence.Variables>
                               <Variable x:TypeArguments="x:String" Name="str_TermsAndConditions" />
                               <Variable x:TypeArguments="x:String" Name="str_Username" />
@@ -199,9 +199,9 @@
                                 <uix:TargetAnchorable BrowserURL="https://dominium.certenant.com/#/" CVScreenId="b9902ef2-31ed-4e5a-8ddb-c707d751c9a2" ContentHash="3LEBaVh2qEqo_Ahz8-pfZA" CvElementArea="668, 289, 578, 44" CvType="InputBox" DesignTimeRectangle="700, 301, 137, 21" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Sign in with YardiOne' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SPAN' type='' class='' /&gt;" Guid="ca7b8d0f-ef0c-4388-92d0-1076e85bdc3e" ImageBase64="" InformativeScreenshot="f1289016bd6911dbdf4a6ebdc6411ebc.png" Reference="N1pVCWfJn0a95dtdHAvGAw/mFR_jQk0dkCW38Q-88Bt9Q" ScopeSelectorArgument="&lt;html app='msedge.exe' title='RightSource' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
                               </uix:NCheckState.Target>
                             </uix:NCheckState>
-                            <uix:NCheckState DisplayName="Check App State 'okta'" sap:VirtualizedContainerService.HintSize="954,1133" sap2010:WorkflowViewState.IdRef="NCheckState_7" ScopeIdentifier="2520956b-a72b-4fea-a4a6-d9383dc62abe" Version="V3">
+                            <uix:NCheckState DisplayName="Check App State 'okta'" sap:VirtualizedContainerService.HintSize="954,977" sap2010:WorkflowViewState.IdRef="NCheckState_7" ScopeIdentifier="2520956b-a72b-4fea-a4a6-d9383dc62abe" Version="V3">
                               <uix:NCheckState.IfExists>
-                                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,844" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,728" sap2010:WorkflowViewState.IdRef="Sequence_18">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -242,7 +242,14 @@
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                   </uix:NApplicationCard>
-                                  <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="Yardi_Credentials" CacheStrategy="None" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="388,175" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[sstr_Password]" Username="[str_Username]" />
+                                  <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="Yardi_Credentials" CacheStrategy="None" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[sstr_Password]" Username="[str_Username]">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ui:GetRobotCredential>
                                   <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Username'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="2520956b-a72b-4fea-a4a6-d9383dc62abe" Text="[str_Username]" Version="V3">
                                     <uix:NTypeInto.Target>
                                       <uix:TargetAnchorable BrowserURL="https://dominiuminc.okta.com/login/agentlessDsso/idx?stateToken=ckVsbFdINnI0aTRmWTRoVE1tamdFMmhaUFRxM3c1VGNES21pWXZTZ1JXdldNbERsYzMwZVJiWmZiWTRjL2dzMQ&amp;precheckFailure=true&amp;redirectFromAdsso=true" CVScreenId="d6342a95-fabc-4870-b5b9-74eecbde1aba" ContentHash="59ZmrbWl3024XnVQyVU8sQ" CvElementArea="805, 471, 317, 42" CvType="InputBox" DesignTimeRectangle="807, 473, 314, 38" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='input28' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='input28' tag='INPUT' type='text' class='' aaname='Username ' /&gt;" Guid="33bff573-e281-465a-9e50-c6b961061e80" InformativeScreenshot="3e309c7862b0783a51dde06305f85b0c.png" IsResponsive="True" Reference="N1pVCWfJn0a95dtdHAvGAw/EhHhEjHcmEKBu4b2UlL4Gg" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Dominium - Prod - Sign In' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
@@ -474,7 +481,7 @@
                                 <uix:TargetAnchorable BrowserURL="https://dominium31024.yardione.com/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fstate%3D27b7c125362218bc8824fd5d7f33a1ea%26scope%3Dopenid%2520profile%26response_type%3Dcode%26approval_prompt%3Dauto%26redirect_uri%3Dhttps%253A%252F%252Fdominium.certenant.com%252Fauth%252Fyardione%252Fcallback%26client_id%3Ddominium31024_rightsource" CVScreenId="3a11e705-4cf0-4857-bc4a-ca17d44acd44" CvElementArea="782, 266, 362, 58" CvTextArea="943, 288, 40, 12" CvTextArgument="OKTA" CvType="Button" DesignTimeRectangle="784, 269, 360, 50" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='*okta*' tag='A' innertext='*okta*' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='*okta*' tag='A' innertext='*okta*' type='' class='btn btn-primary btn-block btn-shadow mb-4' check:text='okta' /&gt;" Guid="c8f8e9e4-254d-4a46-80f4-f2a1226a7681" InformativeScreenshot="f93d69dc86aa22f1710f3d4e27ae5f63.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='YardiOne*' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
                               </uix:NCheckState.Target>
                             </uix:NCheckState>
-                            <uix:NCheckState DisplayName="Check App State 'Dashboard'" sap:VirtualizedContainerService.HintSize="954,50" sap2010:WorkflowViewState.IdRef="NCheckState_5" ScopeIdentifier="2520956b-a72b-4fea-a4a6-d9383dc62abe" Version="V3">
+                            <uix:NCheckState DisplayName="Check App State 'Dashboard'" sap:VirtualizedContainerService.HintSize="954,540" sap2010:WorkflowViewState.IdRef="NCheckState_5" ScopeIdentifier="2520956b-a72b-4fea-a4a6-d9383dc62abe" Version="V3">
                               <uix:NCheckState.IfExists>
                                 <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,258" sap2010:WorkflowViewState.IdRef="Sequence_12">
                                   <sap:WorkflowViewStateService.ViewState>
@@ -500,8 +507,8 @@
                               </uix:NCheckState.Target>
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </uix:NCheckState>
@@ -523,7 +530,7 @@
                     <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="1054,263" sap2010:WorkflowViewState.IdRef="Catch`1_1">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
@@ -531,7 +538,7 @@
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                         </ActivityAction.Argument>
-                        <Sequence sap:VirtualizedContainerService.HintSize="416,193" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                        <Sequence DisplayName="Sequence Throw" sap:VirtualizedContainerService.HintSize="416,193" sap2010:WorkflowViewState.IdRef="Sequence_15">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -560,10 +567,10 @@
         </ui:RetryScope>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="1258,160" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="1196,160" sap2010:WorkflowViewState.IdRef="Catch`1_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
@@ -576,6 +583,6 @@
         </Catch>
       </TryCatch.Catches>
     </TryCatch>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1292,164" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[&quot;Yardi_Login.xaml is Ended&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1230,164" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[&quot;Yardi_Login.xaml is Ended&quot;]" />
   </Sequence>
 </Activity>
