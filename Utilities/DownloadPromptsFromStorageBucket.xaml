@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1082,1131</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1030,1831</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>DownloadPromptsFromStorageBucket_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -90,7 +90,7 @@
       <AssemblyReference>UiPath.CodedWorkflows</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="DownloadPromptsFromStorageBucket" sap:VirtualizedContainerService.HintSize="496,1026" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="DownloadPromptsFromStorageBucket" sap:VirtualizedContainerService.HintSize="512,1766" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="arr_Files" />
       <Variable x:TypeArguments="s:String[]" Name="arr_PromptFiles" />
@@ -102,8 +102,8 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,173" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;DownloadPromptsFromStorageBucket.xaml is Started&quot;]" />
-    <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,173" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;DownloadPromptsFromStorageBucket.xaml is Started&quot;]" />
+    <Assign DisplayName="Assign-arr_PromptFiles" sap:VirtualizedContainerService.HintSize="450,114" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="s:String[]">[arr_PromptFiles]</OutArgument>
       </Assign.To>
@@ -111,7 +111,7 @@
         <InArgument x:TypeArguments="s:String[]">[io_Config("ExtractionPromptFiles").ToString.Split(","c)]</InArgument>
       </Assign.Value>
     </Assign>
-    <Assign DisplayName="Assign-LocalPromptsFolder" sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_2">
+    <Assign DisplayName="Assign-LocalPromptsFolder" sap:VirtualizedContainerService.HintSize="450,114" sap2010:WorkflowViewState.IdRef="Assign_2">
       <Assign.To>
         <OutArgument x:TypeArguments="x:Object">[io_Config("LocalPromptsFolder")]</OutArgument>
       </Assign.To>
@@ -125,11 +125,11 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </Assign>
-    <ui:PathExists Resource="{x:Null}" DisplayName="Path Exists" Exists="[bool_PromptsFolderExists]" sap:VirtualizedContainerService.HintSize="434,147" sap2010:WorkflowViewState.IdRef="PathExists_1" Path="[io_Config(&quot;LocalPromptsFolder&quot;).ToString]" PathType="Folder" />
-    <If Condition="[bool_PromptsFolderExists]" DisplayName="If-PromptsFolderExists" sap:VirtualizedContainerService.HintSize="434,57" sap2010:WorkflowViewState.IdRef="If_1">
+    <ui:PathExists Resource="{x:Null}" DisplayName="LocalPromptsFolder Exists" Exists="[bool_PromptsFolderExists]" sap:VirtualizedContainerService.HintSize="450,147" sap2010:WorkflowViewState.IdRef="PathExists_1" Path="[io_Config(&quot;LocalPromptsFolder&quot;).ToString]" PathType="Folder" />
+    <If Condition="[bool_PromptsFolderExists]" DisplayName="If-PromptsFolderExists" sap:VirtualizedContainerService.HintSize="450,464" sap2010:WorkflowViewState.IdRef="If_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
@@ -140,7 +140,7 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:DeleteFolderX DisplayName="Delete Folder" sap:VirtualizedContainerService.HintSize="354,103" sap2010:WorkflowViewState.IdRef="DeleteFolderX_2" Path="[io_Config(&quot;LocalPromptsFolder&quot;).ToString]" Recursive="True" />
+          <ui:DeleteFolderX DisplayName="Delete LocalPromptsFolder" sap:VirtualizedContainerService.HintSize="354,103" sap2010:WorkflowViewState.IdRef="DeleteFolderX_2" Path="[io_Config(&quot;LocalPromptsFolder&quot;).ToString]" Recursive="True" />
         </Sequence>
       </If.Then>
       <If.Else>
@@ -153,8 +153,8 @@
         </Sequence>
       </If.Else>
     </If>
-    <ui:CreateDirectory Output="{x:Null}" ContinueOnError="True" DisplayName="Create Folder-PromptsFolder" sap:VirtualizedContainerService.HintSize="434,112" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" Path="[io_Config(&quot;LocalPromptsFolder&quot;).ToString]" />
-    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each currentTextFile" sap:VirtualizedContainerService.HintSize="434,57" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[arr_PromptFiles]">
+    <ui:CreateDirectory Output="{x:Null}" ContinueOnError="True" DisplayName="Create Folder-PromptsFolder" sap:VirtualizedContainerService.HintSize="450,112" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" Path="[io_Config(&quot;LocalPromptsFolder&quot;).ToString]" />
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each currentTextFile" sap:VirtualizedContainerService.HintSize="450,390" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[arr_PromptFiles]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="x:String">
           <ActivityAction.Argument>
@@ -172,11 +172,11 @@
       </ui:ForEach.Body>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEach>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,164" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;DownloadPromptsFromStorageBucket.xaml is Ended&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,164" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;DownloadPromptsFromStorageBucket.xaml is Ended&quot;]" />
   </Sequence>
 </Activity>
