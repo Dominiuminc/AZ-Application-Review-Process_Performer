@@ -163,13 +163,13 @@
       <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="1000,4984" sap2010:WorkflowViewState.IdRef="Sequence_11">
+  <Sequence sap:VirtualizedContainerService.HintSize="874,4974" sap2010:WorkflowViewState.IdRef="Sequence_11">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch-UploadToSharePoint" sap:VirtualizedContainerService.HintSize="938,4896" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch-UploadToSharePoint" sap:VirtualizedContainerService.HintSize="874,4951" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -177,7 +177,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Upload_Worksheet" sap:VirtualizedContainerService.HintSize="900,4645" sap2010:WorkflowViewState.IdRef="Sequence_1">
+        <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Upload_Worksheet" sap:VirtualizedContainerService.HintSize="872,4593" sap2010:WorkflowViewState.IdRef="Sequence_1">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:String" Name="str_SecretAssetName" />
             <Variable x:TypeArguments="ss:SecureString" Name="sstr_SharepointSecret" />
@@ -191,14 +191,14 @@
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke InitAllSettings workflow" sap:VirtualizedContainerService.HintSize="838,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Framework\InitAllSettings.xaml">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke InitAllSettings workflow" sap:VirtualizedContainerService.HintSize="838,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Framework\InitAllSettings.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <InArgument x:TypeArguments="x:String" x:Key="in_ConfigFile">Data\Config.xlsx</InArgument>
               <InArgument x:TypeArguments="s:String[]" x:Key="in_ConfigSheets">[{"Settings", "Constants","Findings"}]</InArgument>
               <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="out_Config">[in_Config]</OutArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
-          <Assign sap:VirtualizedContainerService.HintSize="838,114" sap2010:WorkflowViewState.IdRef="Assign_1">
+          <Assign sap:VirtualizedContainerService.HintSize="838,115" sap2010:WorkflowViewState.IdRef="Assign_1">
             <Assign.To>
               <OutArgument x:TypeArguments="x:String">[str_SecretAssetName]</OutArgument>
             </Assign.To>
@@ -206,7 +206,7 @@
               <InArgument x:TypeArguments="x:String">[in_Config("Sharepoint_SecretID").ToString]</InArgument>
             </Assign.Value>
           </Assign>
-          <ui:MultipleAssign DisplayName="Multiple Assign-SharepointAuthenticationValues" sap:VirtualizedContainerService.HintSize="838,210" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+          <ui:MultipleAssign DisplayName="Multiple Assign-SharepointAuthenticationValues" sap:VirtualizedContainerService.HintSize="838,211" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
             <ui:MultipleAssign.AssignOperations>
               <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                 <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -397,7 +397,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:CommentOut>
-          <uma:Office365ApplicationScope ApplicationSecret="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemFullPath="{x:Null}" BrowserItemId="{x:Null}" BrowserParentItemId="{x:Null}" BrowserRuntimeItemFriendlyName="{x:Null}" BrowserRuntimeItemFullPath="{x:Null}" BrowserRuntimeItemId="{x:Null}" BrowserRuntimeParentItemId="{x:Null}" CertificateAsBase64="{x:Null}" CertificatePassword="{x:Null}" ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" Connector="{x:Null}" ContinueOnError="{x:Null}" EmailAddress="{x:Null}" Folder="{x:Null}" ImpersonatedUserEmailAddress="{x:Null}" ManualRuntimeItemFullPath="{x:Null}" Password="{x:Null}" SecurePassword="{x:Null}" Timeout="{x:Null}" Username="{x:Null}" Account="Please select an account." ApplicationId="[str_SharePointAppID]" AuthenticationType="ApplicationIdAndSecret" ConfigLocation="PropertiesPanel" DataStoreLocation="DISK" DisplayName="Microsoft Office 365 Scope" Environment="Default" sap:VirtualizedContainerService.HintSize="838,3725" sap2010:WorkflowViewState.IdRef="Office365ApplicationScope_8" OAuthApplication="UiPath" RuntimeItemInputMode="Browse" SecureApplicationSecret="[sstr_SharepointSecret]" TenantId="[str_SharepointTenantID]" UseConnectionService="False">
+          <uma:Office365ApplicationScope ApplicationSecret="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemFullPath="{x:Null}" BrowserItemId="{x:Null}" BrowserParentItemId="{x:Null}" BrowserRuntimeItemFriendlyName="{x:Null}" BrowserRuntimeItemFullPath="{x:Null}" BrowserRuntimeItemId="{x:Null}" BrowserRuntimeParentItemId="{x:Null}" CertificateAsBase64="{x:Null}" CertificatePassword="{x:Null}" ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" Connector="{x:Null}" ContinueOnError="{x:Null}" EmailAddress="{x:Null}" Folder="{x:Null}" ImpersonatedUserEmailAddress="{x:Null}" ManualRuntimeItemFullPath="{x:Null}" Password="{x:Null}" SecurePassword="{x:Null}" Timeout="{x:Null}" Username="{x:Null}" Account="Please select an account." ApplicationId="[str_SharePointAppID]" AuthenticationType="ApplicationIdAndSecret" ConfigLocation="PropertiesPanel" DataStoreLocation="DISK" DisplayName="Microsoft Office 365 Scope" Environment="Default" sap:VirtualizedContainerService.HintSize="838,3691" sap2010:WorkflowViewState.IdRef="Office365ApplicationScope_8" OAuthApplication="UiPath" RuntimeItemInputMode="Browse" SecureApplicationSecret="[sstr_SharepointSecret]" TenantId="[str_SharepointTenantID]" UseConnectionService="False">
             <uma:Office365ApplicationScope.AuthenticationScopes>
               <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
                 <InArgument x:TypeArguments="x:String">Sites.ReadWrite.All</InArgument>
@@ -408,7 +408,7 @@
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="ParentScope" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="804,3488" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="776,3464" sap2010:WorkflowViewState.IdRef="Sequence_20">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="mg:DriveItem" Name="folder" />
                     <Variable x:TypeArguments="mg:DriveItem[]" Name="results" />
@@ -421,7 +421,7 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <umaf:CreateFolderConnections BrowserDriveName="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" BrowserParentItemId="{x:Null}" BrowserSiteUrl="{x:Null}" ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" ItemIdBackup="{x:Reference __ReferenceID1}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntrySiteUrl="{x:Null}" AuthScopesInvalid="False" ConflictResolution="Fail" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="742,224" sap2010:WorkflowViewState.IdRef="CreateFolderConnections_2" ItemSelectionMode="ItemUrl" ManualEntryItemUrl="[in_SPParentfolderpath]" NewFolderName="[in_UnitFolder]" Result="[destFolder]" UseConnectionService="False">
+                  <umaf:CreateFolderConnections BrowserDriveName="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" BrowserParentItemId="{x:Null}" BrowserSiteUrl="{x:Null}" ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" ItemIdBackup="{x:Reference __ReferenceID1}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntrySiteUrl="{x:Null}" AuthScopesInvalid="False" ConflictResolution="Fail" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="742,227" sap2010:WorkflowViewState.IdRef="CreateFolderConnections_2" ItemSelectionMode="ItemUrl" ManualEntryItemUrl="[in_SPParentfolderpath]" NewFolderName="[in_UnitFolder]" Result="[destFolder]" UseConnectionService="False">
                     <umaf:CreateFolderConnections.DriveItemArgument>
                       <umafm:DriveItemArgument BrowserDriveId="{x:Null}" BrowserDriveName="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" BrowserParentDriveId="{x:Null}" BrowserParentDriveName="{x:Null}" BrowserParentItemFriendlyName="{x:Null}" BrowserParentItemId="{x:Null}" BrowserParentPath="{x:Null}" BrowserSiteUrl="{x:Null}" BrowserSpecificUrl="{x:Null}" ConnectionDescriptor="{x:Null}" FullPathHint="{x:Null}" Item="{x:Null}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntrySiteUrl="{x:Null}" ReferenceId="{x:Null}" ConnectionKey="eyJBY2NvdW50IjoiVWlQYXRoQm90QGRvbWluaXVtaW5jLmNvbSIsIk9BdXRoQXBwRGF0YSI6eyJBcHBsaWNhdGlvbklkIjoiIiwiVGVuYW50SWQiOiIifSwiQ2xpZW50U2VjcmV0IjpudWxsLCJQYXNzd29yZCI6bnVsbCwiVXNlck5hbWUiOiJVaVBhdGhCb3RAZG9taW5pdW1pbmMuY29tIiwiQ2VydGlmaWNhdGVBc0Jhc2U2NCI6bnVsbCwiQ2VydGlmaWNhdGVQYXNzd29yZCI6bnVsbCwiRW52aXJvbm1lbnQiOjEsIk1vZGUiOjAsIlNjb3BlcyI6WyJTaXRlcy5SZWFkV3JpdGUuQWxsIl0sIlRpbWVvdXRNcyI6NjAwMDAsIkVtYWlsQWRkcmVzcyI6bnVsbCwiQ29ubmVjdGlvblNlcnZpY2VEYXRhIjp7IkNvbm5lY3Rpb25BY2NvdW50TmFtZSI6bnVsbCwiQ29ubmVjdGlvbklkIjpudWxsLCJDb25uZWN0b3IiOm51bGx9LCJTdG9yZUtleSI6IkRJU0s6b2ZmaWNlMzY1LnRva2Vucy5tc2FsY2FjaGUuYmluMyIsIlN0b3JhZ2UiOnsiRmlsZVBhdGgiOiJvZmZpY2UzNjUudG9rZW5zLm1zYWxjYWNoZS5iaW4zIiwiTG9jYXRpb24iOjB9fQ==" ItemSelectionMode="ItemUrl" ManualEntryItemUrl="[in_SPParentfolderpath]" ParentFullPathHint="">
                         <umafm:DriveItemArgument.ItemIdBackup>
@@ -458,7 +458,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </umaf:CreateFolderConnections>
-                  <Assign DisplayName="Assign-bool_FolderCreated" sap:VirtualizedContainerService.HintSize="742,114" sap2010:WorkflowViewState.IdRef="Assign_2">
+                  <Assign DisplayName="Assign-bool_FolderCreated" sap:VirtualizedContainerService.HintSize="742,115" sap2010:WorkflowViewState.IdRef="Assign_2">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:Boolean">[bool_FolderCreated]</OutArgument>
                     </Assign.To>
@@ -695,6 +695,9 @@
           </ActivityAction>
         </Catch>
       </TryCatch.Catches>
+      <TryCatch.Finally>
+        <Sequence DisplayName="Finally" sap2010:WorkflowViewState.IdRef="Sequence_41" />
+      </TryCatch.Finally>
     </TryCatch>
   </Sequence>
 </Activity>
