@@ -1,0 +1,38 @@
+{
+  "version": "2.0",
+  "resources": [
+    {
+      "activityDisplayName": "Send Email With Attachment",
+      "activityId": "SendMailConnections_2",
+      "resource": "Connection",
+      "key": "7aea9608-410a-44ee-b558-6605be86360b",
+      "id": "Connection7aea9608-410a-44ee-b558-6605be86360b7aea9608-410a-44ee-b558-6605be86360bFalse",
+      "value": {
+        "ConnectionId": {
+          "defaultValue": "7aea9608-410a-44ee-b558-6605be86360b",
+          "isExpression": false,
+          "displayName": "Connection",
+          "description": "The connection to be used"
+        }
+      },
+      "metadata": {
+        "BindingsVersion": "2.2",
+        "Connector": "uipath-microsoft-outlook365",
+        "UseConnectionService": "True"
+      }
+    },
+    {
+      "activityDisplayName": "Get Credential",
+      "activityId": "GetRobotCredential_1",
+      "resource": "asset",
+      "id": "assetYardi_CredentialsFalse",
+      "value": {
+        "name": {
+          "defaultValue": "Yardi_Credentials",
+          "isExpression": false
+        }
+      },
+      "metadata": {}
+    }
+  ]
+}
