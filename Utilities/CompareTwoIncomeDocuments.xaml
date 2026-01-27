@@ -8,7 +8,7 @@
     <x:Property Name="in_DocumentType1" Type="InArgument(x:String)" />
     <x:Property Name="in_DocumentType2" Type="InArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>1137,2588</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1079,2703</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -49,6 +49,7 @@
       <x:String>GlobalVariablesNamespace</x:String>
       <x:String>GlobalConstantsNamespace</x:String>
       <x:String>System.Linq.Expressions</x:String>
+      <x:String>AshlingPartners.UiPath.StringMatching.Activities</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -132,22 +133,24 @@
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="784,2523" sap2010:WorkflowViewState.IdRef="Sequence_2915">
+  <Sequence sap:VirtualizedContainerService.HintSize="784,2638" sap2010:WorkflowViewState.IdRef="Sequence_2915">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[in_DtIncomeDocDetails1]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="722,2435" sap2010:WorkflowViewState.IdRef="ForEachRow_14">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[in_DtIncomeDocDetails1]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="722,2550" sap2010:WorkflowViewState.IdRef="ForEachRow_14">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="688,2248" sap2010:WorkflowViewState.IdRef="Sequence_2908">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="688,2363" sap2010:WorkflowViewState.IdRef="Sequence_2908">
             <Sequence.Variables>
               <Variable x:TypeArguments="s:String[]" Name="arr_Employees" />
               <Variable x:TypeArguments="scg:List(ausam:NameMatchResult)" Name="list_Matchedresults" />
+              <Variable x:TypeArguments="scg:List(ausam:CompanyMatchResult)" Name="list_MatchedCompanyResults" />
+              <Variable x:TypeArguments="s:String[]" Name="arr_Employers" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -162,6 +165,21 @@
               <Assign.Value>
                 <InArgument x:TypeArguments="s:String[]" xml:space="preserve">[in_DtIncomeDocDetails2.AsEnumerable().
    Select(Function(r) r("Employee").ToString).
+   ToArray()]</InArgument>
+              </Assign.Value>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </Assign>
+            <Assign DisplayName="Assign-arr_Employers" sap:VirtualizedContainerService.HintSize="626,115" sap2010:WorkflowViewState.IdRef="Assign_651">
+              <Assign.To>
+                <OutArgument x:TypeArguments="s:String[]">[arr_Employers]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="s:String[]" xml:space="preserve">[in_DtIncomeDocDetails2.AsEnumerable().
+   Select(Function(r) r("Employer").ToString).
    ToArray()]</InArgument>
               </Assign.Value>
               <sap:WorkflowViewStateService.ViewState>
@@ -192,14 +210,8 @@
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ausas:FindAllMatches Candidates="[arr_Employees]" DisplayName="Find All Matches" sap:VirtualizedContainerService.HintSize="530,275" sap2010:WorkflowViewState.IdRef="FindAllMatches_10" MinThreshold="[CDec(in_Config(&quot;FindAllMatches_Threshold&quot;).ToString)]" Query="[CurrentRow(&quot;Employer&quot;).ToString]" Result="[list_Matchedresults]">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </ausas:FindAllMatches>
-                  <If Condition="[list_Matchedresults.Count&gt;0]" DisplayName="If-EmployerMatch" sap:VirtualizedContainerService.HintSize="530,1143" sap2010:WorkflowViewState.IdRef="If_873">
+                  <ausas:FindAllCompanyMatches Candidates="[arr_Employers]" DisplayName="Find All Company Matches" sap:VirtualizedContainerService.HintSize="530,275" sap2010:WorkflowViewState.IdRef="FindAllCompanyMatches_3" MinThreshold="[CDec(in_Config(&quot;FindAllMatches_Threshold&quot;).ToString)]" Query="[CurrentRow(&quot;Employer&quot;).ToString]" Result="[list_MatchedCompanyResults]" />
+                  <If Condition="[list_MatchedCompanyResults.Count&gt;0]" DisplayName="If-EmployerMatch" sap:VirtualizedContainerService.HintSize="530,1143" sap2010:WorkflowViewState.IdRef="If_873">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
