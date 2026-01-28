@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="GetLLMExtractionResultsForEachDoc" this:GetLLMExtractionResultsForEachDoc.in_UserPromptTextFile="C:\Users\raluca.ilinca.AzureAI-Jump2\Documents\AZApplicationReview\Prompts\ICW_Prompt.txt" this:GetLLMExtractionResultsForEachDoc.in_ImagePath="[New List(Of String) From {&quot;C:\Users\raluca.ilinca.AzureAI-Jump2\Documents\AZApplicationReview\PDFs\Unit 512\Unit 512_Upload1Page25.jpg&quot;}]" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:afa="clr-namespace:AshlingPartners.Foundry.Activities;assembly=AshlingPartners.Foundry.Activities" xmlns:am="clr-namespace:APIClient.Models;assembly=APIClient" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="GetLLMExtractionResultsForEachDoc" this:GetLLMExtractionResultsForEachDoc.in_UserPromptTextFile="C:\Users\raluca.ilinca.AzureAI-Jump2\Documents\AZApplicationReview\Prompts\CZI_Prompt.txt" this:GetLLMExtractionResultsForEachDoc.in_ImagePath="[New List(Of String) From {&quot;C:\Users\raluca.ilinca.AzureAI-Jump2\Documents\AZApplicationReview\PDFs\Unit 2132\Unit 2132_Upload1Page26.jpg&quot;,&quot;C:\Users\raluca.ilinca.AzureAI-Jump2\Documents\AZApplicationReview\PDFs\Unit 2132\Unit 2132_Upload1Page27.jpg&quot;}]" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:afa="clr-namespace:AshlingPartners.Foundry.Activities;assembly=AshlingPartners.Foundry.Activities" xmlns:am="clr-namespace:APIClient.Models;assembly=APIClient" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_UserPromptTextFile" Type="InArgument(x:String)" />
     <x:Property Name="in_ImagePath" Type="InArgument(scg:List(x:String))" />
@@ -9,7 +9,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1353,2393</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1353,2413</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GetLLMExtractionResultsForEachDoc_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -127,7 +127,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="GetLLMExtractionResultsForEachDoc" sap:VirtualizedContainerService.HintSize="738,2328" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="GetLLMExtractionResultsForEachDoc" sap:VirtualizedContainerService.HintSize="738,2268" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="str_Imagepath" />
       <Variable x:TypeArguments="x:String" Name="str_UserPrompt" />
@@ -146,7 +146,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch-GetLLMExtractionResults" sap:VirtualizedContainerService.HintSize="676,2240" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+    <TryCatch DisplayName="Try Catch-GetLLMExtractionResults" sap:VirtualizedContainerService.HintSize="676,2180" sap2010:WorkflowViewState.IdRef="TryCatch_2">
       <TryCatch.Variables>
         <Variable x:TypeArguments="x:Boolean" Default="False" Name="bool_LLMSuccess" />
       </TryCatch.Variables>
@@ -157,17 +157,17 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="638,1989" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="3" RetryInterval="00:00:05">
+        <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="638,1925" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="3" RetryInterval="00:00:05">
           <ui:RetryScope.ActivityBody>
             <ActivityAction>
-              <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="596,1620" sap2010:WorkflowViewState.IdRef="Sequence_27">
+              <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="596,1635" sap2010:WorkflowViewState.IdRef="Sequence_27">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <TryCatch DisplayName="Try Catch-GetLLExtractionResults" sap:VirtualizedContainerService.HintSize="534,1532" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                <TryCatch DisplayName="Try Catch-GetLLExtractionResults" sap:VirtualizedContainerService.HintSize="534,1547" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -175,29 +175,29 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <TryCatch.Try>
-                    <Sequence DisplayName="GetLLExtractionResults" sap:VirtualizedContainerService.HintSize="496,1281" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                    <Sequence DisplayName="GetLLExtractionResults" sap:VirtualizedContainerService.HintSize="496,1292" sap2010:WorkflowViewState.IdRef="Sequence_28">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="434,57" sap2010:WorkflowViewState.IdRef="CommentOut_25">
+                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="434,57" sap2010:WorkflowViewState.IdRef="CommentOut_26">
                         <ui:CommentOut.Body>
-                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="512,136" sap2010:WorkflowViewState.IdRef="Sequence_44">
+                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="512,397" sap2010:WorkflowViewState.IdRef="Sequence_46">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <Sequence DisplayName="TestingPurpose" sap:VirtualizedContainerService.HintSize="450,48" sap2010:WorkflowViewState.IdRef="Sequence_43">
+                            <Sequence DisplayName="TestingPurpose" sap:VirtualizedContainerService.HintSize="450,309" sap2010:WorkflowViewState.IdRef="Sequence_45">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke InitAllSettings workflow" sap:VirtualizedContainerService.HintSize="388,195" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Framework\InitAllSettings.xaml">
+                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke InitAllSettings workflow" sap:VirtualizedContainerService.HintSize="388,198" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Framework\InitAllSettings.xaml">
                                 <ui:InvokeWorkflowFile.Arguments>
                                   <InArgument x:TypeArguments="x:String" x:Key="in_ConfigFile">Data\Config.xlsx</InArgument>
                                   <InArgument x:TypeArguments="s:String[]" x:Key="in_ConfigSheets">[{"Settings", "Constants","Findings"}]</InArgument>
@@ -216,13 +216,13 @@
                       </ui:CommentOut>
                       <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="434,57" sap2010:WorkflowViewState.IdRef="CommentOut_24">
                         <ui:CommentOut.Body>
-                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="541,351" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="541,352" sap2010:WorkflowViewState.IdRef="Sequence_41">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ui:MultipleAssign DisplayName="Multiple Assign-GptMini" sap:VirtualizedContainerService.HintSize="479,263" sap2010:WorkflowViewState.IdRef="MultipleAssign_8">
+                            <ui:MultipleAssign DisplayName="Multiple Assign-GptMini" sap:VirtualizedContainerService.HintSize="479,264" sap2010:WorkflowViewState.IdRef="MultipleAssign_8">
                               <ui:MultipleAssign.AssignOperations>
                                 <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
                                   <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
@@ -357,7 +357,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </Assign>
-                      <afa:SendImages Temperature="{x:Null}" APIKey="[str_APIKey]" APIVersion="[str_APIVersion]" DeploymentName="[str_DeploymentName]" DisplayName="Send Images" EndPoint="[str_EndPoint]" sap:VirtualizedContainerService.HintSize="434,632" sap2010:WorkflowViewState.IdRef="SendImages_6" ImagePath="[in_ImagePath]" MaxReturnTokens="[CInt(in_Config(&quot;LLM_Extraction_MaxTokens&quot;).ToString)]" Result="[llm_Result]" RetryCount="3" SystemPrompt="[str_SystemPrompt]" Timeout="[CInt(in_Config(&quot;LLM_Extraction_Timeout&quot;).ToString)]" UserPrompt="[str_UserPrompt]">
+                      <afa:SendImages Temperature="{x:Null}" APIKey="[str_APIKey]" APIVersion="[str_APIVersion]" DeploymentName="[str_DeploymentName]" DisplayName="Send Images" EndPoint="[str_EndPoint]" sap:VirtualizedContainerService.HintSize="434,643" sap2010:WorkflowViewState.IdRef="SendImages_6" ImagePath="[in_ImagePath]" MaxReturnTokens="[CInt(in_Config(&quot;LLM_Extraction_MaxTokens&quot;).ToString)]" Result="[llm_Result]" RetryCount="3" SystemPrompt="[str_SystemPrompt]" Timeout="[CInt(in_Config(&quot;LLM_Extraction_Timeout&quot;).ToString)]" UserPrompt="[str_UserPrompt]">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
