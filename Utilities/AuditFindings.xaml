@@ -8,7 +8,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1353,150380</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1353,150624</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>AuditFindings_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -145,7 +145,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="AuditFindings" sap:VirtualizedContainerService.HintSize="1300,150315" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="AuditFindings" sap:VirtualizedContainerService.HintSize="1300,150559" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:String[]" Name="arr_AS_MemNames" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_TaxRefund" />
@@ -8519,7 +8519,7 @@
         </TryCatch.Catches>
       </TryCatch>
     </Sequence>
-    <Sequence DisplayName="IncomeVerification" sap:VirtualizedContainerService.HintSize="1238,62810" sap2010:WorkflowViewState.IdRef="Sequence_2820">
+    <Sequence DisplayName="IncomeVerification" sap:VirtualizedContainerService.HintSize="1238,63094" sap2010:WorkflowViewState.IdRef="Sequence_2820">
       <Sequence.Variables>
         <Variable x:TypeArguments="njl:JArray" Name="jarr_COLACalculations" />
         <Variable x:TypeArguments="x:String" Name="str_HowOftenPaid" />
@@ -25012,7 +25012,7 @@
           </Catch>
         </TryCatch.Catches>
       </TryCatch>
-      <TryCatch DisplayName="Try Catch-VRCC" sap:VirtualizedContainerService.HintSize="1176,6316" sap2010:WorkflowViewState.IdRef="TryCatch_27">
+      <TryCatch DisplayName="Try Catch-VRCC" sap:VirtualizedContainerService.HintSize="1176,6600" sap2010:WorkflowViewState.IdRef="TryCatch_27">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -25020,14 +25020,14 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <TryCatch.Try>
-          <Sequence DisplayName="VerificationOfReoccurringCashContributionsCheck" sap:VirtualizedContainerService.HintSize="992,5439" sap2010:WorkflowViewState.IdRef="Sequence_1001">
+          <Sequence DisplayName="VerificationOfReoccurringCashContributionsCheck" sap:VirtualizedContainerService.HintSize="992,5717" sap2010:WorkflowViewState.IdRef="Sequence_1001">
             <Sequence.Variables>
               <Variable x:TypeArguments="sd:DataTable" Name="dt_FilteredDocTypeData" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <ui:FilterDataTable DataTable="[in_ClassificationResultsData]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="930,57" sap2010:WorkflowViewState.IdRef="FilterDataTable_38" OutputDataTable="[dt_FilteredDocTypeData]" SelectColumnsMode="Remove">
@@ -25049,15 +25049,15 @@
                 </scg:List>
               </ui:FilterDataTable.SelectColumns>
             </ui:FilterDataTable>
-            <If Condition="[dt_FilteredDocTypeData.RowCount&gt;0]" DisplayName="If-VRCCExists" sap:VirtualizedContainerService.HintSize="930,5246" sap2010:WorkflowViewState.IdRef="If_397">
+            <If Condition="[dt_FilteredDocTypeData.RowCount&gt;0]" DisplayName="If-VRCCExists" sap:VirtualizedContainerService.HintSize="930,5406" sap2010:WorkflowViewState.IdRef="If_397">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <If.Then>
-                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="896,5051" sap2010:WorkflowViewState.IdRef="Sequence_1030">
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="896,5131" sap2010:WorkflowViewState.IdRef="Sequence_1030">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="njl:JArray" Name="jArr_ExtResults" />
                     <Variable x:TypeArguments="sd:DataTable" Name="dt_GiftAmounts" />
@@ -25066,7 +25066,7 @@
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <Sequence DisplayName="GetLLMJSONResults" sap:VirtualizedContainerService.HintSize="834,57" sap2010:WorkflowViewState.IdRef="Sequence_1003">
@@ -25398,10 +25398,10 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:ForEach>
-                  <If Condition="[dt_GiftAmounts.RowCount&gt;0]" DisplayName="If-GiftAmountExists" sap:VirtualizedContainerService.HintSize="834,3781" sap2010:WorkflowViewState.IdRef="If_533">
+                  <If Condition="[dt_GiftAmounts.RowCount&gt;0]" DisplayName="If-GiftAmountExists" sap:VirtualizedContainerService.HintSize="834,3861" sap2010:WorkflowViewState.IdRef="If_533">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
@@ -25410,7 +25410,7 @@
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                         <Assign DisplayName="Assign-dt_ICWIncomeTableCopy" sap:VirtualizedContainerService.HintSize="738,114" sap2010:WorkflowViewState.IdRef="Assign_371">
@@ -25689,7 +25689,7 @@
                       </Sequence>
                     </If.Then>
                     <If.Else>
-                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,25" sap2010:WorkflowViewState.IdRef="Sequence_1813">
+                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104" sap2010:WorkflowViewState.IdRef="Sequence_1813">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -25701,7 +25701,7 @@
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,25" sap2010:WorkflowViewState.IdRef="Sequence_1031">
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104" sap2010:WorkflowViewState.IdRef="Sequence_1031">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -25710,39 +25710,39 @@
                 </Sequence>
               </If.Else>
             </If>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="930,48" sap2010:WorkflowViewState.IdRef="LogMessage_30" Message="[&quot;Finished findings for &quot;+in_Config(&quot;VRCC&quot;).ToString]" />
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="930,166" sap2010:WorkflowViewState.IdRef="LogMessage_30" Message="[&quot;Finished findings for &quot;+in_Config(&quot;VRCC&quot;).ToString]" />
           </Sequence>
         </TryCatch.Try>
         <TryCatch.Catches>
-          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="422,540" sap2010:WorkflowViewState.IdRef="Catch`1_27">
+          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="996,546" sap2010:WorkflowViewState.IdRef="Catch`1_27">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <ActivityAction x:TypeArguments="s:Exception">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="VRCCError" sap:VirtualizedContainerService.HintSize="416,470" sap2010:WorkflowViewState.IdRef="Sequence_1597">
+              <Sequence DisplayName="VRCCError" sap:VirtualizedContainerService.HintSize="416,475" sap2010:WorkflowViewState.IdRef="Sequence_1597">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,173" sap2010:WorkflowViewState.IdRef="LogMessage_76" Message="[&quot;Failed at VRCC: &quot;+exception.Message]">
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,175" sap2010:WorkflowViewState.IdRef="LogMessage_76" Message="[&quot;Failed at VRCC: &quot;+exception.Message]">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:LogMessage>
-                <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;VRCC&quot;,&quot;PageNum&quot;,in_Config(&quot;VRCC_FindingError&quot;).ToString,exception.Message}]" DataTable="[out_DTAuditFindings]" DisplayName="Add Data Row-VRCCError7" sap:VirtualizedContainerService.HintSize="354,209" sap2010:WorkflowViewState.IdRef="AddDataRow_450">
+                <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;VRCC&quot;,&quot;PageNum&quot;,in_Config(&quot;VRCC_FindingError&quot;).ToString,exception.Message}]" DataTable="[out_DTAuditFindings]" DisplayName="Add Data Row-VRCCError7" sap:VirtualizedContainerService.HintSize="354,212" sap2010:WorkflowViewState.IdRef="AddDataRow_450">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
@@ -25808,7 +25808,7 @@
         </Sequence>
       </If.Else>
     </If>
-    <TryCatch DisplayName="Try Catch-WriteFindingsToExcelforTestingPurpose" sap:VirtualizedContainerService.HintSize="1238,707" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+    <TryCatch DisplayName="Try Catch-WriteFindingsToExcelforTestingPurpose" sap:VirtualizedContainerService.HintSize="1238,667" sap2010:WorkflowViewState.IdRef="TryCatch_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -25825,7 +25825,7 @@
         </ui:WriteRange>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,254" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,214" sap2010:WorkflowViewState.IdRef="Catch`1_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
