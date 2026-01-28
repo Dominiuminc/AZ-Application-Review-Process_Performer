@@ -7,8 +7,9 @@
     <x:Property Name="out_DoSameIncomeDocsExists" Type="OutArgument(x:Boolean)" />
     <x:Property Name="in_DocumentType1" Type="InArgument(x:String)" />
     <x:Property Name="in_DocumentType2" Type="InArgument(x:String)" />
+    <x:Property Name="in_IgnoreVS" Type="InArgument(x:Boolean)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>1079,2703</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1079,2381</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -133,19 +134,19 @@
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="784,2638" sap2010:WorkflowViewState.IdRef="Sequence_2915">
+  <Sequence sap:VirtualizedContainerService.HintSize="784,2316" sap2010:WorkflowViewState.IdRef="Sequence_2915">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[in_DtIncomeDocDetails1]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="722,2550" sap2010:WorkflowViewState.IdRef="ForEachRow_15">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[in_DtIncomeDocDetails1]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="722,2228" sap2010:WorkflowViewState.IdRef="ForEachRow_15">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="688,2363" sap2010:WorkflowViewState.IdRef="Sequence_2916">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="688,2041" sap2010:WorkflowViewState.IdRef="Sequence_2916">
             <Sequence.Variables>
               <Variable x:TypeArguments="s:String[]" Name="arr_Employees" />
               <Variable x:TypeArguments="scg:List(ausam:NameMatchResult)" Name="list_Matchedresults" />
@@ -195,7 +196,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ausas:FindAllMatches>
-            <If Condition="[list_Matchedresults.Count&gt;0]" DisplayName="If-Employeematch&gt;0" sap:VirtualizedContainerService.HintSize="626,1770" sap2010:WorkflowViewState.IdRef="If_874">
+            <If Condition="[list_Matchedresults.Count&gt;0]" DisplayName="If-Employeematch&gt;0" sap:VirtualizedContainerService.HintSize="626,1448" sap2010:WorkflowViewState.IdRef="If_874">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -203,7 +204,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <If.Then>
-                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="592,1506" sap2010:WorkflowViewState.IdRef="Sequence_2919">
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="592,1184" sap2010:WorkflowViewState.IdRef="Sequence_2919">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -211,14 +212,14 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <ausas:FindAllCompanyMatches Candidates="[arr_Employers]" DisplayName="Find All Company Matches" sap:VirtualizedContainerService.HintSize="530,275" sap2010:WorkflowViewState.IdRef="FindAllCompanyMatches_4" MinThreshold="[CDec(in_Config(&quot;FindAllMatches_Threshold&quot;).ToString)]" Query="[CurrentRow(&quot;Employer&quot;).ToString]" Result="[list_MatchedCompanyResults]" />
-                  <If Condition="[list_MatchedCompanyResults.Count&gt;0]" DisplayName="If-EmployerMatch" sap:VirtualizedContainerService.HintSize="530,1143" sap2010:WorkflowViewState.IdRef="If_875">
+                  <If Condition="[list_MatchedCompanyResults.Count&gt;0]" DisplayName="If-EmployerMatch" sap:VirtualizedContainerService.HintSize="530,821" sap2010:WorkflowViewState.IdRef="If_875">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <If.Then>
-                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,879" sap2010:WorkflowViewState.IdRef="Sequence_2917">
+                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,557" sap2010:WorkflowViewState.IdRef="Sequence_2917">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -265,20 +266,72 @@
                             <InArgument x:TypeArguments="x:Boolean">True</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{in_DocumentType1,&quot;PageNum&quot;,in_Config(in_DocumentType1+&quot;_MultipleIncomeDocsExists&quot;).ToString,&quot;&quot;}]" DataTable="[io_DTAuditFindings]" DisplayName="Add Data Row-Doctype1_MultipleIncomeDocsExists" sap:VirtualizedContainerService.HintSize="434,218" sap2010:WorkflowViewState.IdRef="AddDataRow_4">
+                        <If Condition="[in_IgnoreVS]" DisplayName="If-IgnoreVS" sap:VirtualizedContainerService.HintSize="434,57" sap2010:WorkflowViewState.IdRef="If_877">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                        </ui:AddDataRow>
-                        <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{in_DocumentType2,&quot;PageNum&quot;,in_Config(in_DocumentType2+&quot;_MultipleIncomeDocsExists&quot;).ToString,&quot;&quot;}]" DataTable="[io_DTAuditFindings]" DisplayName="Add Data Row-Doctype_MultipleIncomeDocsExists" sap:VirtualizedContainerService.HintSize="434,218" sap2010:WorkflowViewState.IdRef="AddDataRow_5">
+                          <If.Then>
+                            <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,103" sap2010:WorkflowViewState.IdRef="Sequence_2923">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </Sequence>
+                          </If.Then>
+                          <If.Else>
+                            <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="Sequence_2924">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{in_DocumentType1,&quot;PageNum&quot;,in_Config(in_DocumentType1+&quot;_MultipleIncomeDocsExists&quot;).ToString,&quot;&quot;}]" DataTable="[io_DTAuditFindings]" DisplayName="Add Data Row-Doctype1_MultipleIncomeDocsExists" sap:VirtualizedContainerService.HintSize="354,209" sap2010:WorkflowViewState.IdRef="AddDataRow_4">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ui:AddDataRow>
+                            </Sequence>
+                          </If.Else>
+                        </If>
+                        <If Condition="[in_IgnoreVS]" DisplayName="If-IgnoreVS" sap:VirtualizedContainerService.HintSize="434,57" sap2010:WorkflowViewState.IdRef="If_876">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                        </ui:AddDataRow>
+                          <If.Then>
+                            <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,103" sap2010:WorkflowViewState.IdRef="Sequence_2921">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </Sequence>
+                          </If.Then>
+                          <If.Else>
+                            <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="Sequence_2922">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{in_DocumentType2,&quot;PageNum&quot;,in_Config(in_DocumentType2+&quot;_MultipleIncomeDocsExists&quot;).ToString,&quot;&quot;}]" DataTable="[io_DTAuditFindings]" DisplayName="Add Data Row-Doctype_MultipleIncomeDocsExists" sap:VirtualizedContainerService.HintSize="354,209" sap2010:WorkflowViewState.IdRef="AddDataRow_5">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ui:AddDataRow>
+                            </Sequence>
+                          </If.Else>
+                        </If>
                         <ui:Break sap:VirtualizedContainerService.HintSize="434,48" sap2010:WorkflowViewState.IdRef="Break_11" />
                       </Sequence>
                     </If.Then>
