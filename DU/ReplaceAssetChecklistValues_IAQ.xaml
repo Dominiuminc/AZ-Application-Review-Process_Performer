@@ -3,6 +3,7 @@
     <x:Property Name="assetTypeCheckList" Type="InArgument(uisad:IDocumentData(uisasedb:DUIAQASASCAssetChecklistV4))" />
     <x:Property Name="arr_AssetTypes" Type="InArgument(s:String[])" />
     <x:Property Name="io_JSONObject" Type="InOutArgument(njl:JObject)" />
+    <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
   </x:Members>
   <sap:VirtualizedContainerService.HintSize>997,1102</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
@@ -51,6 +52,7 @@
       <x:String>GlobalVariablesNamespace</x:String>
       <x:String>GlobalConstantsNamespace</x:String>
       <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Numerics</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -131,6 +133,7 @@
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
       <AssemblyReference>ExtendedExtractionRe.qR2iV1b39XM1H6YK92xH9m12</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence sap:VirtualizedContainerService.HintSize="592,1037" sap2010:WorkflowViewState.IdRef="Sequence_18">
@@ -149,7 +152,7 @@
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="str_AssetType" />
               <Variable x:TypeArguments="x:String" Name="str_SelectedValue" />
-              <Variable x:TypeArguments="ausam:NameMatchResult" Name="matchedAssetType" />
+              <Variable x:TypeArguments="ausam:IncomeAssetTypeMatchResult" Name="matchedAssetType" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -173,8 +176,8 @@
                 <InArgument x:TypeArguments="x:String">[currentPropertyInfo.GetValue(assetTypeCheckList.Data, Nothing).ToString()]</InArgument>
               </Assign.Value>
             </Assign>
-            <ausas:FindBestMatch Candidates="[arr_AssetTypes]" DisplayName="Find Best Match" sap:VirtualizedContainerService.HintSize="434,275" sap2010:WorkflowViewState.IdRef="FindBestMatch_2" MinThreshold="0.92" Query="[str_AssetType]" Result="[matchedAssetType]" />
-            <If Condition="[matchedAssetType IsNot Nothing]" sap:VirtualizedContainerService.HintSize="434,57" sap2010:WorkflowViewState.IdRef="If_5">
+            <ausas:FindBestIncomeAssetTypeMatch Candidates="[arr_AssetTypes]" DisplayName="Find Best Income/Asset Type Match" sap:VirtualizedContainerService.HintSize="434,275" sap2010:WorkflowViewState.IdRef="FindBestIncomeAssetTypeMatch_1" MinThreshold="[CDbl(in_Config(&quot;FindAllMatches_Threshold&quot;).ToString)]" Query="[str_AssetType]" Result="[matchedAssetType]" />
+            <If Condition="[matchedAssetType IsNot Nothing]" DisplayName="If-matchedAssetType" sap:VirtualizedContainerService.HintSize="434,57" sap2010:WorkflowViewState.IdRef="If_5">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
