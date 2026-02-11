@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>997,2568</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>633,2568</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>DU_Extraction_IAQ_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -206,7 +206,6 @@
             <Sequence.Variables>
               <Variable x:TypeArguments="upr:ILocalResource" Name="lRes_File" />
               <Variable x:TypeArguments="uisad1:DocumentData" Name="classifiedDocument" />
-              <Variable x:TypeArguments="uisad:IDocumentData(uisasedb:DUIAQASASCAssetChecklistV4)" Name="assetTypeCheckList" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -271,7 +270,7 @@
                     </ui:LogMessage>
                     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ReplaceAssetChecklistValues_IAQ - Invoke Workflow File (ReplaceAssetChecklistValues_IAQ.xaml)" sap:VirtualizedContainerService.HintSize="388,195" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="DU\ReplaceAssetChecklistValues_IAQ.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
-                        <InArgument x:TypeArguments="uisad:IDocumentData(uisasedb:DUIAQASASCAssetChecklistV4)" x:Key="assetTypeCheckList">[assetTypeCheckList]</InArgument>
+                        <InArgument x:TypeArguments="uisad:IDocumentData(uisasedb:DUIAQASASCAssetChecklistV4)" x:Key="assetTypeCheckList">[assetChecklistDocumentData]</InArgument>
                         <InArgument x:TypeArguments="s:String[]" x:Key="arr_AssetTypes">[arr_AssetTypes]</InArgument>
                         <InOutArgument x:TypeArguments="njl:JObject" x:Key="io_JSONObject">[io_JSONObject]</InOutArgument>
                         <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
