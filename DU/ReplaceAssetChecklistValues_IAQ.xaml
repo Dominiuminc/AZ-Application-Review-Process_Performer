@@ -5,7 +5,7 @@
     <x:Property Name="io_JSONObject" Type="InOutArgument(njl:JObject)" />
     <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>997,1102</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>997,1765</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -136,19 +136,19 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="592,1037" sap2010:WorkflowViewState.IdRef="Sequence_18">
+  <Sequence sap:VirtualizedContainerService.HintSize="608,1700" sap2010:WorkflowViewState.IdRef="Sequence_18">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ForEach x:TypeArguments="sr:PropertyInfo" CurrentIndex="{x:Null}" DisplayName="For Each currentPropertyInfo" sap:VirtualizedContainerService.HintSize="530,949" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[GetType(DUIAQASASCAssetChecklistV4).GetProperties()]">
+    <ui:ForEach x:TypeArguments="sr:PropertyInfo" CurrentIndex="{x:Null}" DisplayName="For Each currentPropertyInfo" sap:VirtualizedContainerService.HintSize="546,1612" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[GetType(DUIAQASASCAssetChecklistV4).GetProperties()]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="sr:PropertyInfo">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sr:PropertyInfo" Name="currentPropertyInfo" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,812" sap2010:WorkflowViewState.IdRef="Sequence_11">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="512,1475" sap2010:WorkflowViewState.IdRef="Sequence_11">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="str_AssetType" />
               <Variable x:TypeArguments="x:String" Name="str_SelectedValue" />
@@ -160,7 +160,7 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_5">
+            <Assign sap:VirtualizedContainerService.HintSize="450,113" sap2010:WorkflowViewState.IdRef="Assign_5">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[str_AssetType]</OutArgument>
               </Assign.To>
@@ -168,7 +168,7 @@
                 <InArgument x:TypeArguments="x:String">[currentPropertyInfo.Name]</InArgument>
               </Assign.Value>
             </Assign>
-            <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_6">
+            <Assign sap:VirtualizedContainerService.HintSize="450,113" sap2010:WorkflowViewState.IdRef="Assign_6">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[str_SelectedValue]</OutArgument>
               </Assign.To>
@@ -176,11 +176,11 @@
                 <InArgument x:TypeArguments="x:String">[currentPropertyInfo.GetValue(assetTypeCheckList.Data, Nothing).ToString()]</InArgument>
               </Assign.Value>
             </Assign>
-            <ausas:FindBestIncomeAssetTypeMatch Candidates="[arr_AssetTypes]" DisplayName="Find Best Income/Asset Type Match" sap:VirtualizedContainerService.HintSize="434,275" sap2010:WorkflowViewState.IdRef="FindBestIncomeAssetTypeMatch_1" MinThreshold="[CDbl(in_Config(&quot;FindAllMatches_Threshold&quot;).ToString)]" Query="[str_AssetType]" Result="[matchedAssetType]" />
-            <If Condition="[matchedAssetType IsNot Nothing]" DisplayName="If-matchedAssetType" sap:VirtualizedContainerService.HintSize="434,57" sap2010:WorkflowViewState.IdRef="If_5">
+            <ausas:FindBestIncomeAssetTypeMatch Candidates="[arr_AssetTypes]" DisplayName="Find Best Income/Asset Type Match" sap:VirtualizedContainerService.HintSize="450,275" sap2010:WorkflowViewState.IdRef="FindBestIncomeAssetTypeMatch_1" MinThreshold="[CDbl(in_Config(&quot;FindAllMatches_Threshold&quot;).ToString)]" Query="[str_AssetType]" Result="[matchedAssetType]" />
+            <If Condition="[matchedAssetType IsNot Nothing]" DisplayName="If-matchedAssetType" sap:VirtualizedContainerService.HintSize="450,722" sap2010:WorkflowViewState.IdRef="If_5">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
@@ -191,7 +191,7 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:InvokeCode ContinueOnError="{x:Null}" Code="If jsonObj(&quot;asset_checklist&quot;) IsNot Nothing Then&#xA;    For Each item In jsonObj(&quot;asset_checklist&quot;) _&#xA;                        .Where(Function(x) x(&quot;asset_type&quot;) IsNot Nothing _&#xA;                            AndAlso x(&quot;asset_type&quot;).ToString() = assetTypeToMatch)&#xA;&#xA;        item(&quot;selected&quot;) = JValue.CreateString(selectedValue)&#xA;    Next&#xA;End If" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="354,188" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+                  <ui:InvokeCode ContinueOnError="{x:Null}" Code="If jsonObj(&quot;asset_checklist&quot;) IsNot Nothing Then&#xD;&#xA;    For Each item In jsonObj(&quot;asset_checklist&quot;) _&#xD;&#xA;                        .Where(Function(x) x(&quot;asset_type&quot;) IsNot Nothing _&#xD;&#xA;                            AndAlso x(&quot;asset_type&quot;).ToString() = assetTypeToMatch)&#xD;&#xA;&#xD;&#xA;        item(&quot;selected&quot;) = JValue.CreateString(selectedValue).ToString.Replace(&quot;☒&quot;,&quot;&quot;).Trim&#xD;&#xA;    Next&#xD;&#xA;End If" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="354,188" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
                     <ui:InvokeCode.Arguments>
                       <InOutArgument x:TypeArguments="njl:JObject" x:Key="jsonObj">[io_JSONObject]</InOutArgument>
                       <InArgument x:TypeArguments="x:String" x:Key="assetTypeToMatch">[str_AssetType]</InArgument>
@@ -217,7 +217,7 @@
                 </Sequence>
               </If.Else>
             </If>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,164" sap2010:WorkflowViewState.IdRef="LogMessage_5" Message="[&quot;Check JSON: &quot;+io_JSONObject.ToString]" />
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,164" sap2010:WorkflowViewState.IdRef="LogMessage_5" Message="[&quot;Check JSON: &quot;+io_JSONObject.ToString]" />
           </Sequence>
         </ActivityAction>
       </ui:ForEach.Body>
