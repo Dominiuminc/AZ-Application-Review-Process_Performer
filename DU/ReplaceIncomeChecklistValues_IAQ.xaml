@@ -5,7 +5,7 @@
     <x:Property Name="io_JSONObject" Type="InOutArgument(njl:JObject)" />
     <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>997,1549</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>997,1625</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -53,6 +53,7 @@
       <x:String>GlobalConstantsNamespace</x:String>
       <x:String>System.Linq.Expressions</x:String>
       <x:String>System.Numerics</x:String>
+      <x:String>AshlingPartners.UiPath.StringMatching.Activities</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -136,20 +137,20 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="608,1484" sap2010:WorkflowViewState.IdRef="Sequence_21">
+  <Sequence sap:VirtualizedContainerService.HintSize="608,1560" sap2010:WorkflowViewState.IdRef="Sequence_21">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ForEach x:TypeArguments="sr:PropertyInfo" CurrentIndex="{x:Null}" DisplayName="For Each currentPropertyInfo" sap:VirtualizedContainerService.HintSize="546,1396" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[GetType(DUIAQASASCIncomeChecklistV4).GetProperties()]">
+    <ui:ForEach x:TypeArguments="sr:PropertyInfo" CurrentIndex="{x:Null}" DisplayName="For Each currentPropertyInfo" sap:VirtualizedContainerService.HintSize="546,1308" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[GetType(DUIAQASASCIncomeChecklistV4).GetProperties()]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="sr:PropertyInfo">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sr:PropertyInfo" Name="currentPropertyInfo" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body-IncomeTypecheclist" sap:VirtualizedContainerService.HintSize="512,1259" sap2010:WorkflowViewState.IdRef="Sequence_18">
+          <Sequence DisplayName="Body-IncomeTypecheclist" sap:VirtualizedContainerService.HintSize="512,1162" sap2010:WorkflowViewState.IdRef="Sequence_18">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="str_SelectedValue" />
               <Variable x:TypeArguments="x:String" Name="str_IncomeType" />
@@ -161,7 +162,7 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Assign sap:VirtualizedContainerService.HintSize="450,114" sap2010:WorkflowViewState.IdRef="Assign_10">
+            <Assign sap:VirtualizedContainerService.HintSize="450,113" sap2010:WorkflowViewState.IdRef="Assign_10">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[str_IncomeType]</OutArgument>
               </Assign.To>
@@ -169,7 +170,7 @@
                 <InArgument x:TypeArguments="x:String">[currentPropertyInfo.Name]</InArgument>
               </Assign.Value>
             </Assign>
-            <Assign sap:VirtualizedContainerService.HintSize="450,114" sap2010:WorkflowViewState.IdRef="Assign_11">
+            <Assign sap:VirtualizedContainerService.HintSize="450,113" sap2010:WorkflowViewState.IdRef="Assign_11">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[str_SelectedValue]</OutArgument>
               </Assign.To>
@@ -177,15 +178,15 @@
                 <InArgument x:TypeArguments="x:String">[currentPropertyInfo.GetValue(incomeChecklistDocumentData.Data, Nothing).ToString()]</InArgument>
               </Assign.Value>
             </Assign>
-            <ausas:FindBestIncomeAssetTypeMatch Candidates="[arr_IncomeTypes]" DisplayName="Find Best Income/Asset Type Match" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="FindBestIncomeAssetTypeMatch_1" MinThreshold="[CDbl(in_Config(&quot;FindAllMatches_Threshold&quot;).ToString)]" Query="[str_IncomeType]" Result="[matchedIncomeType]">
+            <ausas:FindBestIncomeAssetTypeMatch Candidates="[arr_IncomeTypes]" DisplayName="Find Best Income/Asset Type Match" sap:VirtualizedContainerService.HintSize="450,275" sap2010:WorkflowViewState.IdRef="FindBestIncomeAssetTypeMatch_1" MinThreshold="[CDbl(in_Config(&quot;FindAllMatches_Threshold&quot;).ToString)]" Query="[str_IncomeType]" Result="[matchedIncomeType]">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ausas:FindBestIncomeAssetTypeMatch>
-            <If Condition="[matchedIncomeType IsNot Nothing]" DisplayName="IfIncomeTypeNamematch" sap:VirtualizedContainerService.HintSize="450,722" sap2010:WorkflowViewState.IdRef="If_6">
+            <If Condition="[matchedIncomeType IsNot Nothing]" DisplayName="IfIncomeTypeNamematch" sap:VirtualizedContainerService.HintSize="450,573" sap2010:WorkflowViewState.IdRef="If_6">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -199,33 +200,55 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:InvokeCode ContinueOnError="{x:Null}" Code="If jsonObj(&quot;income_checklist&quot;) IsNot Nothing Then&#xD;&#xA;    For Each item In jsonObj(&quot;income_checklist&quot;) _&#xD;&#xA;                        .Where(Function(x) x(&quot;income_type&quot;) IsNot Nothing _&#xD;&#xA;                            AndAlso x(&quot;income_type&quot;).ToString() = incomeTypeToMatch)&#xD;&#xA;&#xD;&#xA;        item(&quot;selected&quot;) = JValue.CreateString(selectedValue).ToString.Replace(&quot;☒&quot;,&quot;&quot;).Trim&#xD;&#xA;    Next&#xD;&#xA;End If" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="354,188" sap2010:WorkflowViewState.IdRef="InvokeCode_3">
+                  <ui:InvokeCode ContinueOnError="{x:Null}" Code="If jsonObj(&quot;income_checklist&quot;) IsNot Nothing Then&#xA;    For Each item In jsonObj(&quot;income_checklist&quot;) _&#xA;                        .Where(Function(x) x(&quot;income_type&quot;) IsNot Nothing _&#xA;                            AndAlso x(&quot;income_type&quot;).ToString() = incomeTypeToMatch)&#xA;&#xA;        item(&quot;selected&quot;) = JValue.CreateString(selectedValue).ToString.Replace(&quot;☒&quot;,&quot;&quot;).Trim&#xA;    Next&#xA;End If" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="354,188" sap2010:WorkflowViewState.IdRef="InvokeCode_3">
                     <ui:InvokeCode.Arguments>
-                      <InOutArgument x:TypeArguments="njl:JObject" x:Key="jsonObj">[io_JSONObject]</InOutArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="incomeTypeToMatch">[str_IncomeType]</InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="selectedValue">[str_SelectedValue]</InArgument>
+                      <InOutArgument x:TypeArguments="njl:JObject" x:Key="jsonObj">
+                        <VisualBasicReference x:TypeArguments="njl:JObject" ExpressionText="io_JSONObject" />
+                      </InOutArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="incomeTypeToMatch">
+                        <VisualBasicValue x:TypeArguments="x:String" ExpressionText="matchedIncomeType.Original" />
+                      </InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="selectedValue">
+                        <VisualBasicValue x:TypeArguments="x:String" ExpressionText="str_SelectedValue" />
+                      </InArgument>
                     </ui:InvokeCode.Arguments>
                   </ui:InvokeCode>
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,276" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,136" sap2010:WorkflowViewState.IdRef="Sequence_20">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:InvokeCode ContinueOnError="{x:Null}" Code="If jsonObj(&quot;income_checklist&quot;) IsNot Nothing Then&#xA;    For Each item In jsonObj(&quot;income_checklist&quot;) _&#xA;                        .Where(Function(x) x(&quot;income_type&quot;) IsNot Nothing _&#xA;                            AndAlso x(&quot;income_type&quot;).ToString() = incomeTypeToMatch)&#xA;&#xA;        item(&quot;selected&quot;) = JValue.CreateString(selectedValue)&#xA;    Next&#xA;End If" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="354,188" sap2010:WorkflowViewState.IdRef="InvokeCode_5">
-                    <ui:InvokeCode.Arguments>
-                      <InOutArgument x:TypeArguments="njl:JObject" x:Key="jsonObj">[io_JSONObject]</InOutArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="incomeTypeToMatch">[str_IncomeType]</InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="selectedValue">[str_SelectedValue]</InArgument>
-                    </ui:InvokeCode.Arguments>
-                  </ui:InvokeCode>
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                    <ui:CommentOut.Body>
+                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,276" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:InvokeCode ContinueOnError="{x:Null}" Code="If jsonObj(&quot;income_checklist&quot;) IsNot Nothing Then&#xA;    For Each item In jsonObj(&quot;income_checklist&quot;) _&#xA;                        .Where(Function(x) x(&quot;income_type&quot;) IsNot Nothing _&#xA;                            AndAlso x(&quot;income_type&quot;).ToString() = incomeTypeToMatch)&#xA;&#xA;        item(&quot;selected&quot;) = JValue.CreateString(selectedValue)&#xA;    Next&#xA;End If" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="354,188" sap2010:WorkflowViewState.IdRef="InvokeCode_5">
+                          <ui:InvokeCode.Arguments>
+                            <InOutArgument x:TypeArguments="njl:JObject" x:Key="jsonObj">[io_JSONObject]</InOutArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="incomeTypeToMatch">[str_IncomeType]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="selectedValue">[str_SelectedValue]</InArgument>
+                          </ui:InvokeCode.Arguments>
+                        </ui:InvokeCode>
+                      </Sequence>
+                    </ui:CommentOut.Body>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:CommentOut>
                 </Sequence>
               </If.Else>
             </If>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,164" sap2010:WorkflowViewState.IdRef="LogMessage_6" Message="[&quot;Check JSON: &quot;+io_JSONObject.ToString]" />
           </Sequence>
         </ActivityAction>
       </ui:ForEach.Body>
@@ -236,5 +259,6 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEach>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="546,164" sap2010:WorkflowViewState.IdRef="LogMessage_6" Message="[&quot;LLM JSON is updated in Income Checklist&quot;]" />
   </Sequence>
 </Activity>
