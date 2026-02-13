@@ -3,7 +3,7 @@
     <x:Property Name="classifiedDocument" Type="InArgument(uisad:DocumentData)" />
     <x:Property Name="io_JSONObject" Type="InOutArgument(njl:JObject)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>997,820</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>974,2017</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -43,6 +43,10 @@
       <x:String>UiPath.Core</x:String>
       <x:String>GlobalVariablesNamespace</x:String>
       <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>System.Dynamic</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -136,13 +140,13 @@
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="512,715" sap2010:WorkflowViewState.IdRef="Sequence_14">
+  <Sequence sap:VirtualizedContainerService.HintSize="858,1952" sap2010:WorkflowViewState.IdRef="Sequence_14">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Asset Selft Certification" sap:VirtualizedContainerService.HintSize="450,627" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence DisplayName="Asset Selft Certification" sap:VirtualizedContainerService.HintSize="796,1864" sap2010:WorkflowViewState.IdRef="Sequence_3">
       <Sequence.Variables>
         <Variable x:TypeArguments="uisad1:IDocumentData(uisasedb:DUIAQASASCAssetSelfCertificationV4)" Name="ASCDocumentData" />
       </Sequence.Variables>
@@ -152,7 +156,7 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <p:ExtractDocumentDataWithDocumentData x:TypeArguments="uisasedb:DUIAQASASCAssetSelfCertificationV4" DocumentBounds="{x:Null}" DocumentObjectModel="{x:Null}" DocumentPath="{x:Null}" DocumentText="{x:Null}" ExtractorDocumentType="{x:Null}" ExtractorResult="{x:Null}" PersistenceId="{x:Null}" PredictionId="{x:Null}" Prompt="{x:Null}" ApplyAutoValidation="False" DisplayName="Extract Document Data" DocType="b3300c2a-f201-f111-832e-6045bdd9cce1" ExtractionResults="[ASCDocumentData]" FileInput="[classifiedDocument]" sap:VirtualizedContainerService.HintSize="388,295" sap2010:WorkflowViewState.IdRef="ExtractDocumentDataWithDocumentData`1_1" ProjectId="93ac0424-edf6-f011-8d4d-7c1e5269e216" TimeoutInSeconds="3600">
+      <p:ExtractDocumentDataWithDocumentData x:TypeArguments="uisasedb:DUIAQASASCAssetSelfCertificationV4" DocumentBounds="{x:Null}" DocumentObjectModel="{x:Null}" DocumentPath="{x:Null}" DocumentText="{x:Null}" ExtractorDocumentType="{x:Null}" ExtractorResult="{x:Null}" PersistenceId="{x:Null}" PredictionId="{x:Null}" ProjectTag="{x:Null}" Prompt="{x:Null}" RuntimeAssetPath="{x:Null}" RuntimeTenantUrl="{x:Null}" ApplyAutoValidation="False" DisplayName="Extract Document Data" DocType="b3300c2a-f201-f111-832e-6045bdd9cce1" ExtractionResults="[ASCDocumentData]" FileInput="[classifiedDocument]" GenerateData="True" sap:VirtualizedContainerService.HintSize="734,344" sap2010:WorkflowViewState.IdRef="ExtractDocumentDataWithDocumentData`1_1" ModernDocumentTypeId="9080959f-6100-f111-832e-002248237fb3" ModernDocumentTypeName="Asset Self Certification" ProjectId="93ac0424-edf6-f011-8d4d-7c1e5269e216" ProjectVersionName="DU_IAQ_AS_ASC" ProjectVersionNumber="4" TimeoutInSeconds="3600">
         <p:ExtractDocumentDataWithDocumentData.AutoValidationConfidenceThreshold>
           <InArgument x:TypeArguments="s:Nullable(x:Int32)">
             <Literal x:TypeArguments="s:Nullable(x:Int32)" Value="0" />
@@ -162,7 +166,7 @@
           <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
         </p:ExtractDocumentDataWithDocumentData.GptPromptWithVariables>
       </p:ExtractDocumentDataWithDocumentData>
-      <ui:LogMessage DisplayName="Write extracted data (Asset Self Certification)" sap:VirtualizedContainerService.HintSize="388,173" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[&quot;The following data has been extracted (excluding table data): {for each fields, except tables, display as key-value pairs: field name - field value}.&quot; &amp; vbCrLf &amp; ASCDocumentData.ToString]">
+      <ui:LogMessage DisplayName="Write extracted data (Asset Self Certification)" sap:VirtualizedContainerService.HintSize="734,173" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[&quot;The following data has been extracted (excluding table data): {for each fields, except tables, display as key-value pairs: field name - field value}.&quot; &amp; vbCrLf &amp; ASCDocumentData.ToString]">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -170,13 +174,13 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:LogMessage>
-      <ui:ForEach x:TypeArguments="sr:PropertyInfo" CurrentIndex="{x:Null}" DisplayName="For Each currentPropertyInfo" sap:VirtualizedContainerService.HintSize="388,48" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[GetType(DUIAQASASCAssetSelfCertificationV4).GetProperties()]">
+      <ui:ForEach x:TypeArguments="sr:PropertyInfo" CurrentIndex="{x:Null}" DisplayName="For Each currentPropertyInfo" sap:VirtualizedContainerService.HintSize="734,1236" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[GetType(DUIAQASASCAssetSelfCertificationV4).GetProperties()]">
         <ui:ForEach.Body>
           <ActivityAction x:TypeArguments="sr:PropertyInfo">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="sr:PropertyInfo" Name="currentPropertyInfo" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,364" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="700,1099" sap2010:WorkflowViewState.IdRef="Sequence_4">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:String" Name="str_FieldName" />
                 <Variable x:TypeArguments="x:String" Name="str_SelectedValue" />
@@ -189,7 +193,7 @@
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_2">
+              <Assign sap:VirtualizedContainerService.HintSize="638,114" sap2010:WorkflowViewState.IdRef="Assign_2">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:String">[str_FieldName]</OutArgument>
                 </Assign.To>
@@ -197,7 +201,7 @@
                   <InArgument x:TypeArguments="x:String">[currentPropertyInfo.Name]</InArgument>
                 </Assign.Value>
               </Assign>
-              <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_3">
+              <Assign sap:VirtualizedContainerService.HintSize="638,114" sap2010:WorkflowViewState.IdRef="Assign_3">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:String">[str_SelectedValue]</OutArgument>
                 </Assign.To>
@@ -205,17 +209,27 @@
                   <InArgument x:TypeArguments="x:String">[currentPropertyInfo.GetValue(ASCDocumentData.Data, Nothing).ToString()]</InArgument>
                 </Assign.Value>
               </Assign>
-              <Switch x:TypeArguments="x:String" DisplayName="Switch-Fields" Expression="[str_FieldName]" sap:VirtualizedContainerService.HintSize="434,48" sap2010:WorkflowViewState.IdRef="Switch`1_6">
+              <Switch x:TypeArguments="x:String" DisplayName="Switch-Fields" Expression="[str_FieldName]" sap:VirtualizedContainerService.HintSize="638,783" sap2010:WorkflowViewState.IdRef="Switch`1_6">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Switch x:TypeArguments="x:String" x:Key="HaveNonNecessaryPersonalProperty" DisplayName="SwitchHaveNonNecessaryPersonalProperty" Expression="[str_SelectedValue.Replace(&quot;☒&quot;,&quot;&quot;).Replace(&quot; &quot;,&quot;&quot;).ToLower]" sap:VirtualizedContainerService.HintSize="536,399" sap2010:WorkflowViewState.IdRef="Switch`1_2">
+                <Switch x:TypeArguments="x:String" x:Key="HaveNonNecessaryPersonalProperty" DisplayName="SwitchHaveNonNecessaryPersonalProperty" Expression="[str_SelectedValue.Replace(&quot;☒&quot;,&quot;&quot;).Replace(&quot; &quot;,&quot;&quot;).ToLower]" sap:VirtualizedContainerService.HintSize="319,25" sap2010:WorkflowViewState.IdRef="Switch`1_2">
+                  <Switch.Default>
+                    <Assign DisplayName="Assign-HasNNPP" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_24">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="njl:JToken">[io_JSONObject("AssetSelfCertification")(0)("PartIIINonNecessaryPersonalProperty")("HasNNPP")]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="njl:JToken">["Unanswered"]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                  </Switch.Default>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
@@ -225,7 +239,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_4">
+                    <Assign DisplayName="Assign-HasNNPP1" sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_4">
                       <Assign.To>
                         <OutArgument x:TypeArguments="njl:JToken">[io_JSONObject("AssetSelfCertification")(0)("PartIIINonNecessaryPersonalProperty")("HasNNPP")]</OutArgument>
                       </Assign.To>
@@ -234,7 +248,7 @@
                       </Assign.Value>
                     </Assign>
                   </Sequence>
-                  <Assign x:Key="no" sap:VirtualizedContainerService.HintSize="434,81" sap2010:WorkflowViewState.IdRef="Assign_18">
+                  <Assign x:Key="no" DisplayName="Assign-HasNNPP2" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_18">
                     <Assign.To>
                       <OutArgument x:TypeArguments="njl:JToken">[io_JSONObject("AssetSelfCertification")(0)("PartIIINonNecessaryPersonalProperty")("HasNNPP")]</OutArgument>
                     </Assign.To>
@@ -243,13 +257,23 @@
                     </Assign.Value>
                   </Assign>
                 </Switch>
-                <Sequence x:Key="HaveRealProperty" sap:VirtualizedContainerService.HintSize="559,267" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                <Sequence x:Key="HaveRealProperty" sap:VirtualizedContainerService.HintSize="598,510" sap2010:WorkflowViewState.IdRef="Sequence_9">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Switch x:TypeArguments="x:String" DisplayName="SwitchTempAbsentHouseholder" Expression="[str_SelectedValue.Replace(&quot;☒&quot;,&quot;&quot;).Replace(&quot; &quot;,&quot;&quot;).ToLower]" sap:VirtualizedContainerService.HintSize="536,183" sap2010:WorkflowViewState.IdRef="Switch`1_3">
+                  <Switch x:TypeArguments="x:String" DisplayName="SwitchTempAbsentHouseholder" Expression="[str_SelectedValue.Replace(&quot;☒&quot;,&quot;&quot;).Replace(&quot; &quot;,&quot;&quot;).ToLower]" sap:VirtualizedContainerService.HintSize="536,422" sap2010:WorkflowViewState.IdRef="Switch`1_3">
+                    <Switch.Default>
+                      <Assign DisplayName="Assign-TempAbsentHouseholder" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_25">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="njl:JToken">[io_JSONObject("AssetSelfCertification")(0)("PartIVRealProperty")("HasRealProperty")]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="njl:JToken">["Unanswered"]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                    </Switch.Default>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -263,7 +287,7 @@
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_22">
+                      <Assign DisplayName="Assign-TempAbsentHouseholder1" sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_22">
                         <Assign.To>
                           <OutArgument x:TypeArguments="njl:JToken">[io_JSONObject("AssetSelfCertification")(0)("PartIVRealProperty")("HasRealProperty")]</OutArgument>
                         </Assign.To>
@@ -279,7 +303,7 @@
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_23">
+                      <Assign DisplayName="Assign-TempAbsentHouseholder2" sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_23">
                         <Assign.To>
                           <OutArgument x:TypeArguments="njl:JToken">[io_JSONObject("AssetSelfCertification")(0)("PartIVRealProperty")("HasRealProperty")]</OutArgument>
                         </Assign.To>
@@ -290,7 +314,7 @@
                     </Sequence>
                   </Switch>
                 </Sequence>
-                <Switch x:TypeArguments="x:String" x:Key="ReceivedFederalTaxRefund" DisplayName="SwitchReceivedFederalTaxRefund" Expression="[str_SelectedValue.Replace(&quot;☒&quot;,&quot;&quot;).Replace(&quot; &quot;,&quot;&quot;).ToLower]" sap:VirtualizedContainerService.HintSize="202,25" sap2010:WorkflowViewState.IdRef="Switch`1_4">
+                <Switch x:TypeArguments="x:String" x:Key="ReceivedFederalTaxRefund" DisplayName="SwitchReceivedFederalTaxRefund" Expression="[str_SelectedValue.Replace(&quot;☒&quot;,&quot;&quot;).Replace(&quot; &quot;,&quot;&quot;).ToLower]" sap:VirtualizedContainerService.HintSize="202,40" sap2010:WorkflowViewState.IdRef="Switch`1_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -330,7 +354,7 @@
                     </Assign>
                   </Sequence>
                 </Switch>
-                <Switch x:TypeArguments="x:String" x:Key="SoldAssetsOver1000" DisplayName="SwitchSoldAssetsOver1000" Expression="[str_SelectedValue.Replace(&quot;☒&quot;,&quot;&quot;).Replace(&quot; &quot;,&quot;&quot;).ToLower]" sap:VirtualizedContainerService.HintSize="202,25" sap2010:WorkflowViewState.IdRef="Switch`1_5">
+                <Switch x:TypeArguments="x:String" x:Key="SoldAssetsOver1000" DisplayName="SwitchSoldAssetsOver1000" Expression="[str_SelectedValue.Replace(&quot;☒&quot;,&quot;&quot;).Replace(&quot; &quot;,&quot;&quot;).ToLower]" sap:VirtualizedContainerService.HintSize="202,40" sap2010:WorkflowViewState.IdRef="Switch`1_5">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -376,7 +400,7 @@
         </ui:ForEach.Body>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>

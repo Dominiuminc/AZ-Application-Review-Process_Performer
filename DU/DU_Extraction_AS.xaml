@@ -3,7 +3,7 @@
     <x:Property Name="classifiedDocument" Type="InArgument(uisad:DocumentData)" />
     <x:Property Name="io_JSONObject" Type="InOutArgument(njl:JObject)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>997,1511</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>974,1057</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -48,6 +48,8 @@
       <x:String>GlobalConstantsNamespace</x:String>
       <x:String>System.Linq.Expressions</x:String>
       <x:String>UiPath.Platform</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.ExtendedExtractionResultsForDocumentData.DUSCStudentCertificationV5.Bundle</x:String>
+      <x:String>System.Xml.Serialization</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -133,9 +135,10 @@
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
       <AssemblyReference>ExtendedExtractionRe.SY5IK4rjT0B1OMEAB3q8r8C1</AssemblyReference>
+      <AssemblyReference>ExtendedExtractionRe.lndbW3jFfuC1Qvg7d191QkS3</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Application_Summary" sap:VirtualizedContainerService.HintSize="655,1446" sap2010:WorkflowViewState.IdRef="Sequence_38">
+  <Sequence DisplayName="Application_Summary" sap:VirtualizedContainerService.HintSize="592,992" sap2010:WorkflowViewState.IdRef="Sequence_38">
     <Sequence.Variables>
       <Variable x:TypeArguments="uisad1:IDocumentData(uisasedb:DUIAQASASCApplicationSummaryV4)" Name="applicationSummaryDocumentData" />
     </Sequence.Variables>
@@ -144,7 +147,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <p:ExtractDocumentDataWithDocumentData x:TypeArguments="uisasedb:DUIAQASASCApplicationSummaryV4" DocumentBounds="{x:Null}" DocumentObjectModel="{x:Null}" DocumentPath="{x:Null}" DocumentText="{x:Null}" ExtractorDocumentType="{x:Null}" ExtractorResult="{x:Null}" PersistenceId="{x:Null}" PredictionId="{x:Null}" Prompt="{x:Null}" ApplyAutoValidation="False" DisplayName="Extract Document Data" DocType="af300c2a-f201-f111-832e-6045bdd9cce1" ExtractionResults="[applicationSummaryDocumentData]" FileInput="[classifiedDocument]" sap:VirtualizedContainerService.HintSize="593,310" sap2010:WorkflowViewState.IdRef="ExtractDocumentDataWithDocumentData`1_1" ProjectId="93ac0424-edf6-f011-8d4d-7c1e5269e216" TimeoutInSeconds="3600">
+    <p:ExtractDocumentDataWithDocumentData x:TypeArguments="uisasedb:DUIAQASASCApplicationSummaryV4" DocumentBounds="{x:Null}" DocumentObjectModel="{x:Null}" DocumentPath="{x:Null}" DocumentText="{x:Null}" ExtractorDocumentType="{x:Null}" ExtractorResult="{x:Null}" PersistenceId="{x:Null}" PredictionId="{x:Null}" Prompt="{x:Null}" RuntimeAssetPath="{x:Null}" RuntimeTenantUrl="{x:Null}" ApplyAutoValidation="False" DisplayName="Extract Document Data" DocType="af300c2a-f201-f111-832e-6045bdd9cce1" ExtractionResults="[applicationSummaryDocumentData]" ExtractorName="DU_IAQ_AS_ASC_Application Summary_v4" FileInput="[classifiedDocument]" GenerateData="True" sap:VirtualizedContainerService.HintSize="530,57" sap2010:WorkflowViewState.IdRef="ExtractDocumentDataWithDocumentData`1_1" ModernDocumentTypeId="559d2ffc-5afc-f011-832e-002248237fb3" ModernDocumentTypeName="Application Summary" ProjectId="93ac0424-edf6-f011-8d4d-7c1e5269e216" ProjectTag="[Nothing]" ProjectVersionName="DU_IAQ_AS_ASC" ProjectVersionNumber="4" TimeoutInSeconds="3600">
       <p:ExtractDocumentDataWithDocumentData.AutoValidationConfidenceThreshold>
         <InArgument x:TypeArguments="s:Nullable(x:Int32)">
           <Literal x:TypeArguments="s:Nullable(x:Int32)" Value="0" />
@@ -153,8 +156,14 @@
       <p:ExtractDocumentDataWithDocumentData.GptPromptWithVariables>
         <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
       </p:ExtractDocumentDataWithDocumentData.GptPromptWithVariables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </p:ExtractDocumentDataWithDocumentData>
-    <ui:LogMessage DisplayName="Write extracted data (Application Summary)" sap:VirtualizedContainerService.HintSize="593,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;The following data has been extracted (excluding table data): {for each fields, except tables, display as key-value pairs: field name - field value}.&quot; &amp; vbCrLf &amp; applicationSummaryDocumentData.ToString]">
+    <ui:LogMessage DisplayName="Write extracted data (Application Summary)" sap:VirtualizedContainerService.HintSize="530,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;The following data has been extracted (excluding table data): {for each fields, except tables, display as key-value pairs: field name - field value}.&quot; &amp; vbCrLf &amp; applicationSummaryDocumentData.ToString]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -162,13 +171,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ui:ForEach x:TypeArguments="sr:PropertyInfo" CurrentIndex="{x:Null}" DisplayName="For Each currentPropertyInfo" sap:VirtualizedContainerService.HintSize="593,875" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[GetType(DUIAQASASCApplicationSummaryV4).GetProperties()]">
+    <ui:ForEach x:TypeArguments="sr:PropertyInfo" CurrentIndex="{x:Null}" DisplayName="For Each currentPropertyInfo" sap:VirtualizedContainerService.HintSize="530,674" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[GetType(DUIAQASASCApplicationSummaryV4).GetProperties()]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="sr:PropertyInfo">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sr:PropertyInfo" Name="currentPropertyInfo" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="559,738" sap2010:WorkflowViewState.IdRef="Sequence_39">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,537" sap2010:WorkflowViewState.IdRef="Sequence_39">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="str_FieldName" />
               <Variable x:TypeArguments="x:String" Name="str_SelectedValue" />
@@ -181,7 +190,7 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Assign DisplayName="Assign-str_FieldName" sap:VirtualizedContainerService.HintSize="497,114" sap2010:WorkflowViewState.IdRef="Assign_1">
+            <Assign DisplayName="Assign-str_FieldName" sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_1">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[str_FieldName]</OutArgument>
               </Assign.To>
@@ -189,7 +198,7 @@
                 <InArgument x:TypeArguments="x:String">[currentPropertyInfo.Name]</InArgument>
               </Assign.Value>
             </Assign>
-            <Assign DisplayName="Assign-str_SelectedValue" sap:VirtualizedContainerService.HintSize="497,114" sap2010:WorkflowViewState.IdRef="Assign_2">
+            <Assign DisplayName="Assign-str_SelectedValue" sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_2">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[str_SelectedValue]</OutArgument>
               </Assign.To>
@@ -197,21 +206,21 @@
                 <InArgument x:TypeArguments="x:String">[currentPropertyInfo.GetValue(applicationSummaryDocumentData.Data, Nothing).ToString()]</InArgument>
               </Assign.Value>
             </Assign>
-            <Switch x:TypeArguments="x:String" DisplayName="Switch-Fields" Expression="[str_FieldName]" sap:VirtualizedContainerService.HintSize="497,258" sap2010:WorkflowViewState.IdRef="Switch`1_5">
+            <Switch x:TypeArguments="x:String" DisplayName="Switch-Fields" Expression="[str_FieldName]" sap:VirtualizedContainerService.HintSize="434,57" sap2010:WorkflowViewState.IdRef="Switch`1_5">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Switch x:TypeArguments="x:String" x:Key="FederalTaxRefundReceived" DisplayName="SwitchFedraltaxRefund" Expression="[str_SelectedValue.Replace(&quot;☒&quot;,&quot;&quot;).Replace(&quot; &quot;,&quot;&quot;).ToLower]" sap:VirtualizedContainerService.HintSize="536,579" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+              <Switch x:TypeArguments="x:String" x:Key="FederalTaxRefundReceived" DisplayName="SwitchFedraltaxRefund" Expression="[str_SelectedValue.Replace(&quot;☒&quot;,&quot;&quot;).Replace(&quot; &quot;,&quot;&quot;).ToLower]" sap:VirtualizedContainerService.HintSize="212,25" sap2010:WorkflowViewState.IdRef="Switch`1_1">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Sequence x:Key="yes" sap:VirtualizedContainerService.HintSize="496,307" sap2010:WorkflowViewState.IdRef="Sequence_40">
+                <Sequence x:Key="yes" sap:VirtualizedContainerService.HintSize="496,305" sap2010:WorkflowViewState.IdRef="Sequence_40">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -234,10 +243,10 @@
                     </Assign.Value>
                   </Assign>
                 </Sequence>
-                <Sequence x:Key="no" sap:VirtualizedContainerService.HintSize="416,25" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                <Sequence x:Key="no" sap:VirtualizedContainerService.HintSize="496,307" sap2010:WorkflowViewState.IdRef="Sequence_41">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
@@ -260,23 +269,23 @@
                 </Sequence>
               </Switch>
               <x:Null x:Key="RentAssistanceReceived" />
-              <Sequence x:Key="TemporaryAbsentHouseholdMember" sap:VirtualizedContainerService.HintSize="416,151" sap2010:WorkflowViewState.IdRef="Sequence_44">
+              <Sequence x:Key="TemporaryAbsentHouseholdMember" sap:VirtualizedContainerService.HintSize="598,624" sap2010:WorkflowViewState.IdRef="Sequence_44">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Switch x:TypeArguments="x:String" DisplayName="SwitchTempAbsentHouseholder" Expression="[str_SelectedValue.Replace(&quot;☒&quot;,&quot;&quot;).Replace(&quot; &quot;,&quot;&quot;).ToLower]" sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="Switch`1_2">
+                <Switch x:TypeArguments="x:String" DisplayName="SwitchTempAbsentHouseholder" Expression="[str_SelectedValue.Replace(&quot;☒&quot;,&quot;&quot;).Replace(&quot; &quot;,&quot;&quot;).ToLower]" sap:VirtualizedContainerService.HintSize="536,536" sap2010:WorkflowViewState.IdRef="Switch`1_2">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Sequence x:Key="yes" sap:VirtualizedContainerService.HintSize="416,25" sap2010:WorkflowViewState.IdRef="Sequence_42">
+                  <Sequence x:Key="yes" sap:VirtualizedContainerService.HintSize="496,307" sap2010:WorkflowViewState.IdRef="Sequence_42">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
@@ -297,7 +306,7 @@
                       </Assign.Value>
                     </Assign>
                   </Sequence>
-                  <Sequence x:Key="no" sap:VirtualizedContainerService.HintSize="496,307" sap2010:WorkflowViewState.IdRef="Sequence_43">
+                  <Sequence x:Key="no" sap:VirtualizedContainerService.HintSize="496,305" sap2010:WorkflowViewState.IdRef="Sequence_43">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -379,14 +388,14 @@
                   </Assign>
                 </Sequence>
               </Switch>
-              <Switch x:TypeArguments="x:String" x:Key="SpecialNeedsAccommodation" DisplayName="SwitchSpecialNeeds" Expression="[str_SelectedValue.Replace(&quot;☒&quot;,&quot;&quot;).Replace(&quot; &quot;,&quot;&quot;).ToLower]" sap:VirtualizedContainerService.HintSize="536,357" sap2010:WorkflowViewState.IdRef="Switch`1_4">
+              <Switch x:TypeArguments="x:String" x:Key="SpecialNeedsAccommodation" DisplayName="SwitchSpecialNeeds" Expression="[str_SelectedValue.Replace(&quot;☒&quot;,&quot;&quot;).Replace(&quot; &quot;,&quot;&quot;).ToLower]" sap:VirtualizedContainerService.HintSize="536,556" sap2010:WorkflowViewState.IdRef="Switch`1_4">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Sequence x:Key="yes" sap:VirtualizedContainerService.HintSize="496,191" sap2010:WorkflowViewState.IdRef="Sequence_47">
+                <Sequence x:Key="yes" sap:VirtualizedContainerService.HintSize="496,193" sap2010:WorkflowViewState.IdRef="Sequence_47">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -420,7 +429,7 @@
                 </Sequence>
               </Switch>
             </Switch>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="497,164" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;JSON is updated with DU results&quot;]" />
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,164" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;JSON is updated with DU results&quot;]" />
           </Sequence>
         </ActivityAction>
       </ui:ForEach.Body>
