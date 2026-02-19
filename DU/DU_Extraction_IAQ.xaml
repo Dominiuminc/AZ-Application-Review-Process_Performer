@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="DU_Extraction_IAQ" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:p="http://schemas.uipath.com/workflow/activities/intelligentocr" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uisad="clr-namespace:UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction;assembly=UiPath.IntelligentOCR.StudioWeb.Activities" xmlns:uisad1="clr-namespace:UiPath.IntelligentOCR.StudioWeb.Activities.DocumentClassification;assembly=UiPath.IntelligentOCR.StudioWeb.Activities" xmlns:uisasedb="clr-namespace:UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.ExtendedExtractionResultsForDocumentData.DUIAQASASCAssetChecklistV4.Bundle;assembly=ExtendedExtractionRe.qR2iV1b39XM1H6YK92xH9m12" xmlns:uisasedb1="clr-namespace:UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.ExtendedExtractionResultsForDocumentData.DUIAQASASCIncomeChecklistV4.Bundle;assembly=ExtendedExtractionRe.dtYTA4OoKcJ1b5UY64TLZVC" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="DU_Extraction_IAQ" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:p="http://schemas.uipath.com/workflow/activities/intelligentocr" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uisad="clr-namespace:UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction;assembly=UiPath.IntelligentOCR.StudioWeb.Activities" xmlns:uisad1="clr-namespace:UiPath.IntelligentOCR.StudioWeb.Activities.DocumentClassification;assembly=UiPath.IntelligentOCR.StudioWeb.Activities" xmlns:uisasedb="clr-namespace:UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.ExtendedExtractionResultsForDocumentData.DUExtraction10ASIAQASCSCHHSMIDVOEAssetChecklistV7.Bundle;assembly=ExtendedExtractionRe.eGBKjj6F8C1FvSj02yItBa" xmlns:uisasedb1="clr-namespace:UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.ExtendedExtractionResultsForDocumentData.DUExtraction10ASIAQASCSCHHSMIDVOEIncomeChecklistV7.Bundle;assembly=ExtendedExtractionRe.TfZT34F3RJD1b0iEd2LfU2w" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_ArrImages" Type="InArgument(s:String[])" />
     <x:Property Name="io_JSONObject" Type="InOutArgument(njl:JObject)" />
@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>974,3962</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1439,3962</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>DU_Extraction_IAQ_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -65,6 +65,9 @@
       <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.ExtendedExtractionResultsForDocumentData.DUIAQASASCIncomeChecklistV4.Bundle</x:String>
       <x:String>AshlingPartners.UiPath.StringMatching.Activities</x:String>
       <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.ExtendedExtractionResultsForDocumentData.DUExtraction10ASIAQASCSCHHSMIDVOEMemberInformationDocumentV7.Bundle</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.ExtendedExtractionResultsForDocumentData.DUExtraction10ASIAQASCSCHHSMIDVOEAssetChecklistV7.Bundle</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.ExtendedExtractionResultsForDocumentData.DUExtraction10ASIAQASCSCHHSMIDVOEIncomeChecklistV7.Bundle</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -143,6 +146,9 @@
       <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
       <AssemblyReference>ExtendedExtractionRe.qR2iV1b39XM1H6YK92xH9m12</AssemblyReference>
       <AssemblyReference>ExtendedExtractionRe.dtYTA4OoKcJ1b5UY64TLZVC</AssemblyReference>
+      <AssemblyReference>ExtendedExtractionRe.w96ku2SkQqQ1Ks8st32ffXY</AssemblyReference>
+      <AssemblyReference>ExtendedExtractionRe.eGBKjj6F8C1FvSj02yItBa</AssemblyReference>
+      <AssemblyReference>ExtendedExtractionRe.TfZT34F3RJD1b0iEd2LfU2w</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="DU_Extraction_IAQ" sap:VirtualizedContainerService.HintSize="704,3897" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -242,7 +248,7 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <Sequence DisplayName="AssetChecklistExtraction" sap:VirtualizedContainerService.HintSize="450,868" sap2010:WorkflowViewState.IdRef="Sequence_15">
                     <Sequence.Variables>
-                      <Variable x:TypeArguments="uisad:IDocumentData(uisasedb:DUIAQASASCAssetChecklistV4)" Name="assetChecklistDocumentData" />
+                      <Variable x:TypeArguments="uisad:IDocumentData(uisasedb:DUExtraction10ASIAQASCSCHHSMIDVOEAssetChecklistV7)" Name="assetChecklistDocumentData" />
                     </Sequence.Variables>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -250,7 +256,7 @@
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <p:ExtractDocumentDataWithDocumentData x:TypeArguments="uisasedb:DUIAQASASCAssetChecklistV4" DocumentBounds="{x:Null}" DocumentObjectModel="{x:Null}" DocumentPath="{x:Null}" DocumentText="{x:Null}" ExtractorDocumentType="{x:Null}" ExtractorResult="{x:Null}" PersistenceId="{x:Null}" PredictionId="{x:Null}" ProjectTag="{x:Null}" Prompt="{x:Null}" RuntimeAssetPath="{x:Null}" RuntimeTenantUrl="{x:Null}" ApplyAutoValidation="False" DisplayName="Extract Document Data" DocType="b0300c2a-f201-f111-832e-6045bdd9cce1" ExtractionResults="[assetChecklistDocumentData]" FileInput="[classifiedDocument]" GenerateData="True" sap:VirtualizedContainerService.HintSize="388,389" sap2010:WorkflowViewState.IdRef="ExtractDocumentDataWithDocumentData`1_5" ModernDocumentTypeId="0b8d2d9b-04f7-f011-8d4d-002248237b97" ModernDocumentTypeName="Asset Checklist" ProjectId="93ac0424-edf6-f011-8d4d-7c1e5269e216" ProjectVersionName="DU_IAQ_AS_ASC" ProjectVersionNumber="4" TimeoutInSeconds="3600">
+                    <p:ExtractDocumentDataWithDocumentData x:TypeArguments="uisasedb:DUExtraction10ASIAQASCSCHHSMIDVOEAssetChecklistV7" DocumentBounds="{x:Null}" DocumentObjectModel="{x:Null}" DocumentPath="{x:Null}" DocumentText="{x:Null}" ExtractorDocumentType="{x:Null}" ExtractorResult="{x:Null}" PersistenceId="{x:Null}" PredictionId="{x:Null}" Prompt="{x:Null}" RuntimeAssetPath="{x:Null}" RuntimeTenantUrl="{x:Null}" ApplyAutoValidation="False" DisplayName="Extract Document Data" DocType="d47a49f3-160c-f111-a69a-7c1e5216ce8b" ExtractionResults="[assetChecklistDocumentData]" ExtractorName="DU_Extraction1-0_AS_IAQ_ASC_SC_HHS_MID_VOE_Asset Checklist_v7" FileInput="[classifiedDocument]" GenerateData="True" sap:VirtualizedContainerService.HintSize="388,389" sap2010:WorkflowViewState.IdRef="ExtractDocumentDataWithDocumentData`1_5" ModernDocumentTypeId="0b8d2d9b-04f7-f011-8d4d-002248237b97" ModernDocumentTypeName="Asset Checklist" ProjectId="93ac0424-edf6-f011-8d4d-7c1e5269e216" ProjectTag="[Nothing]" ProjectVersionName="DU_Extraction1-0_AS_IAQ_ASC_SC_HHS_MID_VOE" ProjectVersionNumber="7" TimeoutInSeconds="3600">
                       <p:ExtractDocumentDataWithDocumentData.AutoValidationConfidenceThreshold>
                         <InArgument x:TypeArguments="s:Nullable(x:Int32)">
                           <Literal x:TypeArguments="s:Nullable(x:Int32)" Value="0" />
@@ -270,7 +276,7 @@
                     </ui:LogMessage>
                     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ReplaceAssetChecklistValues_IAQ - Invoke Workflow File (ReplaceAssetChecklistValues_IAQ.xaml)" sap:VirtualizedContainerService.HintSize="388,195" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="DU\ReplaceAssetChecklistValues_IAQ.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
-                        <InArgument x:TypeArguments="uisad:IDocumentData(uisasedb:DUIAQASASCAssetChecklistV4)" x:Key="assetTypeCheckList">[assetChecklistDocumentData]</InArgument>
+                        <InArgument x:TypeArguments="uisad:IDocumentData(uisasedb:DUExtraction10ASIAQASCSCHHSMIDVOEAssetChecklistV7)" x:Key="assetTypeCheckList">[assetChecklistDocumentData]</InArgument>
                         <InArgument x:TypeArguments="s:String[]" x:Key="arr_AssetTypes">[arr_AssetTypes]</InArgument>
                         <InOutArgument x:TypeArguments="njl:JObject" x:Key="io_JSONObject">[io_JSONObject]</InOutArgument>
                         <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
@@ -299,14 +305,14 @@
               <If.Then>
                 <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,845" sap2010:WorkflowViewState.IdRef="Sequence_18">
                   <Sequence.Variables>
-                    <Variable x:TypeArguments="uisad:IDocumentData(uisasedb1:DUIAQASASCIncomeChecklistV4)" Name="incomeChecklistDocumentData" />
+                    <Variable x:TypeArguments="uisad:IDocumentData(uisasedb1:DUExtraction10ASIAQASCSCHHSMIDVOEIncomeChecklistV7)" Name="incomeChecklistDocumentData" />
                   </Sequence.Variables>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <p:ExtractDocumentDataWithDocumentData x:TypeArguments="uisasedb1:DUIAQASASCIncomeChecklistV4" DocumentBounds="{x:Null}" DocumentObjectModel="{x:Null}" DocumentPath="{x:Null}" DocumentText="{x:Null}" ExtractorDocumentType="{x:Null}" ExtractorResult="{x:Null}" PersistenceId="{x:Null}" PredictionId="{x:Null}" ProjectTag="{x:Null}" Prompt="{x:Null}" RuntimeAssetPath="{x:Null}" RuntimeTenantUrl="{x:Null}" ApplyAutoValidation="False" DisplayName="Extract Document Data" DocType="b1300c2a-f201-f111-832e-6045bdd9cce1" ExtractionResults="[incomeChecklistDocumentData]" FileInput="[classifiedDocument]" GenerateData="True" sap:VirtualizedContainerService.HintSize="354,389" sap2010:WorkflowViewState.IdRef="ExtractDocumentDataWithDocumentData`1_6" ModernDocumentTypeId="7214baa1-04f7-f011-8d4d-002248237b97" ModernDocumentTypeName="Income Checklist" ProjectId="93ac0424-edf6-f011-8d4d-7c1e5269e216" ProjectVersionName="DU_IAQ_AS_ASC" ProjectVersionNumber="4" TimeoutInSeconds="3600">
+                  <p:ExtractDocumentDataWithDocumentData x:TypeArguments="uisasedb1:DUExtraction10ASIAQASCSCHHSMIDVOEIncomeChecklistV7" DocumentBounds="{x:Null}" DocumentObjectModel="{x:Null}" DocumentPath="{x:Null}" DocumentText="{x:Null}" ExtractorDocumentType="{x:Null}" ExtractorResult="{x:Null}" PersistenceId="{x:Null}" PredictionId="{x:Null}" Prompt="{x:Null}" RuntimeAssetPath="{x:Null}" RuntimeTenantUrl="{x:Null}" ApplyAutoValidation="False" DisplayName="Extract Document Data" DocType="d87a49f3-160c-f111-a69a-7c1e5216ce8b" ExtractionResults="[incomeChecklistDocumentData]" ExtractorName="DU_Extraction1-0_AS_IAQ_ASC_SC_HHS_MID_VOE_Income Checklist_v7" FileInput="[classifiedDocument]" GenerateData="True" sap:VirtualizedContainerService.HintSize="354,389" sap2010:WorkflowViewState.IdRef="ExtractDocumentDataWithDocumentData`1_6" ModernDocumentTypeId="7214baa1-04f7-f011-8d4d-002248237b97" ModernDocumentTypeName="Income Checklist" ProjectId="93ac0424-edf6-f011-8d4d-7c1e5269e216" ProjectTag="[Nothing]" ProjectVersionName="DU_Extraction1-0_AS_IAQ_ASC_SC_HHS_MID_VOE" ProjectVersionNumber="7" TimeoutInSeconds="3600">
                     <p:ExtractDocumentDataWithDocumentData.AutoValidationConfidenceThreshold>
                       <InArgument x:TypeArguments="s:Nullable(x:Int32)">
                         <Literal x:TypeArguments="s:Nullable(x:Int32)" Value="0" />
@@ -319,7 +325,7 @@
                   <ui:LogMessage DisplayName="Write extracted data (Income Checklist)" sap:VirtualizedContainerService.HintSize="354,173" sap2010:WorkflowViewState.IdRef="LogMessage_6" Message="[&quot;The following data has been extracted (excluding table data): {for each fields, except tables, display as key-value pairs: field name - field value}.&quot; &amp; vbCrLf &amp; incomeChecklistDocumentData.ToString]" />
                   <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ReplaceIncomeChecklistValues_IAQ - Invoke Workflow File (ReplaceIncomeChecklistValues_IAQ.xaml)" sap:VirtualizedContainerService.HintSize="354,195" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="DU\ReplaceIncomeChecklistValues_IAQ.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
-                      <InArgument x:TypeArguments="uisad:IDocumentData(uisasedb1:DUIAQASASCIncomeChecklistV4)" x:Key="incomeChecklistDocumentData">[incomeChecklistDocumentData]</InArgument>
+                      <InArgument x:TypeArguments="uisad:IDocumentData(uisasedb1:DUExtraction10ASIAQASCSCHHSMIDVOEIncomeChecklistV7)" x:Key="incomeChecklistDocumentData">[incomeChecklistDocumentData]</InArgument>
                       <InArgument x:TypeArguments="s:String[]" x:Key="arr_IncomeTypes">[arr_IncomeTypes]</InArgument>
                       <InOutArgument x:TypeArguments="njl:JObject" x:Key="io_JSONObject">[io_JSONObject]</InOutArgument>
                       <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
@@ -347,6 +353,6 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEach>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="546,164" sap2010:WorkflowViewState.IdRef="LogMessage_7" Message="[&quot;LLM JSON updated as: &quot;+io_JSONObject.ToString]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="642,164" sap2010:WorkflowViewState.IdRef="LogMessage_7" Message="[&quot;LLM JSON updated as: &quot;+io_JSONObject.ToString]" />
   </Sequence>
 </Activity>

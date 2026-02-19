@@ -3,7 +3,7 @@
     <x:Property Name="classifiedDocument" Type="InArgument(uisad:DocumentData)" />
     <x:Property Name="io_JSONObject" Type="InOutArgument(njl:JObject)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>997,694</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1439,3405</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -157,9 +157,18 @@
       <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
       <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
+      <AssemblyReference>ExtendedExtractionRe.w96ku2SkQqQ1Ks8st32ffXY</AssemblyReference>
+      <AssemblyReference>ExtendedExtractionRe.P4OwH2eLr3D12tYAc3Paokj3</AssemblyReference>
+      <AssemblyReference>ExtendedExtractionRe.eGBKjj6F8C1FvSj02yItBa</AssemblyReference>
+      <AssemblyReference>ExtendedExtractionRe.TfZT34F3RJD1b0iEd2LfU2w</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Part A1/A2/A3 will only one of these will checked, and if PartA3 is checked then only other PartB fields will be answered that means checked yes/no" DisplayName="Student Certification" sap:VirtualizedContainerService.HintSize="416,421" sap2010:WorkflowViewState.IdRef="Sequence_31">
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence sap2010:Annotation.AnnotationText="Part A1/A2/A3 will only one of these will checked, and if PartA3 is checked then only other PartB fields will be answered that means checked yes/no" DisplayName="Student Certification" sap:VirtualizedContainerService.HintSize="751,3340" sap2010:WorkflowViewState.IdRef="Sequence_31">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="testData" />
       <Variable x:TypeArguments="p1:ExtractionResult" Name="extractionData" />
@@ -172,7 +181,7 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <p:ExtractDocumentDataWithDocumentData x:TypeArguments="uisasedb:DUSCStudentCertificationV5" DocumentBounds="{x:Null}" DocumentObjectModel="{x:Null}" DocumentPath="{x:Null}" DocumentText="{x:Null}" ExtractorDocumentType="{x:Null}" ExtractorResult="{x:Null}" PersistenceId="{x:Null}" PredictionId="{x:Null}" Prompt="{x:Null}" RuntimeAssetPath="{x:Null}" RuntimeTenantUrl="{x:Null}" ApplyAutoValidation="False" DisplayName="Extract Document Data" DocType="4b880d04-c302-f111-832e-6045bdd9cce1" ExtractionResults="[SCDocumentData]" ExtractorName="DU_SC_Student Certification_v5" FileInput="[classifiedDocument]" GenerateData="True" sap:VirtualizedContainerService.HintSize="354,57" sap2010:WorkflowViewState.IdRef="ExtractDocumentDataWithDocumentData`1_3" ModernDocumentTypeId="c7683170-6e00-f111-832e-002248237fb3" ModernDocumentTypeName="Student Certification" ProjectId="93ac0424-edf6-f011-8d4d-7c1e5269e216" ProjectTag="[Nothing]" ProjectVersionName="DU_SC" ProjectVersionNumber="5" TimeoutInSeconds="3600">
+    <p:ExtractDocumentDataWithDocumentData x:TypeArguments="uisasedb:DUSCStudentCertificationV5" DocumentBounds="{x:Null}" DocumentObjectModel="{x:Null}" DocumentPath="{x:Null}" DocumentText="{x:Null}" ExtractorDocumentType="{x:Null}" ExtractorResult="{x:Null}" PersistenceId="{x:Null}" PredictionId="{x:Null}" Prompt="{x:Null}" RuntimeAssetPath="{x:Null}" RuntimeTenantUrl="{x:Null}" ApplyAutoValidation="False" DisplayName="Extract Document Data" DocType="d77a49f3-160c-f111-a69a-7c1e5216ce8b" ExtractionResults="[SCDocumentData]" ExtractorName="DU_Extraction1-0_AS_IAQ_ASC_SC_HHS_MID_VOE_Student Certification_v7" FileInput="[classifiedDocument]" GenerateData="True" sap:VirtualizedContainerService.HintSize="689,359" sap2010:WorkflowViewState.IdRef="ExtractDocumentDataWithDocumentData`1_3" ModernDocumentTypeId="c7683170-6e00-f111-832e-002248237fb3" ModernDocumentTypeName="Student Certification" ProjectId="93ac0424-edf6-f011-8d4d-7c1e5269e216" ProjectTag="[Nothing]" ProjectVersionName="DU_Extraction1-0_AS_IAQ_ASC_SC_HHS_MID_VOE" ProjectVersionNumber="7" TimeoutInSeconds="3600">
       <p:ExtractDocumentDataWithDocumentData.AutoValidationConfidenceThreshold>
         <InArgument x:TypeArguments="s:Nullable(x:Int32)">
           <Literal x:TypeArguments="s:Nullable(x:Int32)" Value="0" />
@@ -188,7 +197,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </p:ExtractDocumentDataWithDocumentData>
-    <ui:LogMessage DisplayName="Write extracted data (Student Certification)" sap:VirtualizedContainerService.HintSize="354,57" sap2010:WorkflowViewState.IdRef="LogMessage_7" Message="[&quot;The following data has been extracted (excluding table data): {for each fields, except tables, display as key-value pairs: field name - field value}.&quot; &amp; vbCrLf &amp; SCDocumentData.ToString]">
+    <ui:LogMessage DisplayName="Write extracted data (Student Certification)" sap:VirtualizedContainerService.HintSize="689,173" sap2010:WorkflowViewState.IdRef="LogMessage_7" Message="[&quot;The following data has been extracted (excluding table data): {for each fields, except tables, display as key-value pairs: field name - field value}.&quot; &amp; vbCrLf &amp; SCDocumentData.ToString]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -196,7 +205,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <If Condition="[SCDocumentData.Data.PartA1NotAStudent.Value.Contains(&quot;☒&quot;)]" DisplayName="If-PartAOption1Checked" sap:VirtualizedContainerService.HintSize="354,57" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[SCDocumentData.Data.PartA1NotAStudent.Value.Contains(&quot;☒&quot;)]" DisplayName="If-PartAOption1Checked" sap:VirtualizedContainerService.HintSize="689,556" sap2010:WorkflowViewState.IdRef="If_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -238,7 +247,7 @@
         </Sequence>
       </If.Else>
     </If>
-    <If Condition="[SCDocumentData.Data.PartA2ParttimeStudent.Value.Contains(&quot;☒&quot;)]" DisplayName="If-PartAOption2Checked" sap:VirtualizedContainerService.HintSize="354,57" sap2010:WorkflowViewState.IdRef="If_2">
+    <If Condition="[SCDocumentData.Data.PartA2ParttimeStudent.Value.Contains(&quot;☒&quot;)]" DisplayName="If-PartAOption2Checked" sap:VirtualizedContainerService.HintSize="689,556" sap2010:WorkflowViewState.IdRef="If_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -280,7 +289,7 @@
         </Sequence>
       </If.Else>
     </If>
-    <If Condition="[SCDocumentData.Data.PartA3FulltimeStudent.Value.Contains(&quot;☒&quot;)]" DisplayName="If-PartAOption3Checked" sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="If_3">
+    <If Condition="[SCDocumentData.Data.PartA3FulltimeStudent.Value.Contains(&quot;☒&quot;)]" DisplayName="If-PartAOption3Checked" sap:VirtualizedContainerService.HintSize="689,1566" sap2010:WorkflowViewState.IdRef="If_3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -288,13 +297,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,535" sap2010:WorkflowViewState.IdRef="Sequence_36">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="655,1212" sap2010:WorkflowViewState.IdRef="Sequence_36">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Assign DisplayName="Assign-PartAOption3" sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_46">
+          <Assign DisplayName="Assign-PartAOption3" sap:VirtualizedContainerService.HintSize="593,114" sap2010:WorkflowViewState.IdRef="Assign_46">
             <Assign.To>
               <OutArgument x:TypeArguments="njl:JToken">[io_JSONObject("part_a")("option_3_full_time_students")]</OutArgument>
             </Assign.To>
@@ -302,7 +311,7 @@
               <InArgument x:TypeArguments="njl:JToken">["checked"]</InArgument>
             </Assign.Value>
           </Assign>
-          <If Condition="[SCDocumentData.Data.PartB1.Value.ToLower.Contains(&quot;yes&quot;) Or SCDocumentData.Data.PartB1.Value.ToLower.Contains(&quot;no&quot;)]" DisplayName="If-PartB1Checked" sap:VirtualizedContainerService.HintSize="434,57" sap2010:WorkflowViewState.IdRef="If_4">
+          <If Condition="[SCDocumentData.Data.PartB1.Value.ToLower.Contains(&quot;yes&quot;) Or SCDocumentData.Data.PartB1.Value.ToLower.Contains(&quot;no&quot;)]" DisplayName="If-PartB1Checked" sap:VirtualizedContainerService.HintSize="593,734" sap2010:WorkflowViewState.IdRef="If_4">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -310,14 +319,14 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <If.Then>
-              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,25" sap2010:WorkflowViewState.IdRef="Sequence_38">
+              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="559,371" sap2010:WorkflowViewState.IdRef="Sequence_38">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Switch x:TypeArguments="x:String" DisplayName="Switch-PartB1" Expression="[SCDocumentData.Data.PartB1.Value.ToLower.Replace(&quot;☒&quot;,&quot;&quot;)]" sap:VirtualizedContainerService.HintSize="497,311" sap2010:WorkflowViewState.IdRef="Switch`1_17">
+                <Switch x:TypeArguments="x:String" DisplayName="Switch-PartB1" Expression="[SCDocumentData.Data.PartB1.Value.ToLower.Replace(&quot;☒&quot;,&quot;&quot;)]" sap:VirtualizedContainerService.HintSize="497,283" sap2010:WorkflowViewState.IdRef="Switch`1_17">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>

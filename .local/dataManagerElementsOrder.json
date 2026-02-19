@@ -401,6 +401,8 @@
       "Path": "Utilities/AuditFindings.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "list_ImageFiles&Sequence_217",
+        "list_ImageFiles&Sequence_280",
         "int_ICWNoOfAdults&Sequence_3387",
         "arr_ICWAdultHouseholders&Sequence_3387",
         "bool_RealEstateIsChecked&Sequence_3387",
@@ -537,7 +539,6 @@
         "dt_FilteredMIDData&Sequence_1081",
         "jArr_ExtResults&Sequence_217",
         "int_MIDCount&Sequence_217",
-        "list_ImageFiles&Sequence_371",
         "jObj_ExtractionResults&Sequence_371",
         "jObj_Validation&Sequence_34",
         "jObj_JSON&Sequence_34",
@@ -584,7 +585,6 @@
         "jObj_JSON&Sequence_461",
         "dt_FilteredDocTypeData&Sequence_282",
         "jArr_ExtResults&Sequence_280",
-        "list_ImageFiles&Sequence_479",
         "jObj_ExtractionResults&Sequence_479",
         "jObj_Validation&Sequence_119",
         "jObj_JSON&Sequence_119",
@@ -1412,15 +1412,15 @@
       "Path": "DU/DU_Extraction_IAQ.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "jarr_Incomechecklist&Sequence_1",
-        "incomeChecklistDocumentData&Sequence_18",
-        "assetChecklistDocumentData&Sequence_15",
         "arr_Files&Sequence_1",
         "arr_AssetTypes&Sequence_1",
         "jarr_AssetChecklist&Sequence_1",
         "arr_IncomeTypes&Sequence_1",
+        "jarr_Incomechecklist&Sequence_1",
         "lRes_File&Sequence_2",
-        "classifiedDocument&Sequence_2"
+        "classifiedDocument&Sequence_2",
+        "assetChecklistDocumentData&Sequence_15",
+        "incomeChecklistDocumentData&Sequence_18"
       ],
       "ArgumentsSectionElementsOrder": [
         "in_Config",
@@ -1502,11 +1502,31 @@
       "Path": "DU/DU_Extraction_SC.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "testData&Sequence_31",
+        "extractionData&Sequence_31",
         "SCDocumentData&Sequence_31"
       ],
       "ArgumentsSectionElementsOrder": [
         "classifiedDocument",
         "io_JSONObject"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "DU/DU_Extraction_MID.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "jObj_JSON&Sequence_2",
+        "i&Sequence_1",
+        "MIDDocumentData&Sequence_2",
+        "classifiedDocument&Sequence_2",
+        "lRes_File&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "io_jArrDUResults",
+        "in_ArrImages",
+        "in_Config"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
