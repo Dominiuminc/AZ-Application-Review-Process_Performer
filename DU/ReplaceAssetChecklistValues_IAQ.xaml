@@ -1,11 +1,11 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="ReplaceAssetChecklistValues_IAQ" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:ausam="clr-namespace:AshlingPartners.UiPath.StringMatching.Activities.Models;assembly=AshlingPartners.UiPath.StringMatching.Activities" xmlns:ausas="clr-namespace:AshlingPartners.UiPath.StringMatching.Activities.StringMatching;assembly=AshlingPartners.UiPath.StringMatching.Activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sr="clr-namespace:System.Reflection;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uisad="clr-namespace:UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction;assembly=UiPath.IntelligentOCR.StudioWeb.Activities" xmlns:uisasedb="clr-namespace:UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.ExtendedExtractionResultsForDocumentData.DUIAQASASCAssetChecklistV4.Bundle;assembly=ExtendedExtractionRe.qR2iV1b39XM1H6YK92xH9m12" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="ReplaceAssetChecklistValues_IAQ" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:ausam="clr-namespace:AshlingPartners.UiPath.StringMatching.Activities.Models;assembly=AshlingPartners.UiPath.StringMatching.Activities" xmlns:ausas="clr-namespace:AshlingPartners.UiPath.StringMatching.Activities.StringMatching;assembly=AshlingPartners.UiPath.StringMatching.Activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sr="clr-namespace:System.Reflection;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uisad="clr-namespace:UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction;assembly=UiPath.IntelligentOCR.StudioWeb.Activities" xmlns:uisasedb="clr-namespace:UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.ExtendedExtractionResultsForDocumentData.DUExtraction10ASIAQASCSCHHSMIDVOEAssetChecklistV7.Bundle;assembly=ExtendedExtractionRe.eGBKjj6F8C1FvSj02yItBa" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="assetTypeCheckList" Type="InArgument(uisad:IDocumentData(uisasedb:DUIAQASASCAssetChecklistV4))" />
+    <x:Property Name="assetTypeCheckList" Type="InArgument(uisad:IDocumentData(uisasedb:DUExtraction10ASIAQASCSCHHSMIDVOEAssetChecklistV7))" />
     <x:Property Name="arr_AssetTypes" Type="InArgument(s:String[])" />
     <x:Property Name="io_JSONObject" Type="InOutArgument(njl:JObject)" />
     <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>997,1739</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1439,1741</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -54,6 +54,7 @@
       <x:String>System.Linq.Expressions</x:String>
       <x:String>System.Numerics</x:String>
       <x:String>AshlingPartners.UiPath.StringMatching.Activities</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.ExtendedExtractionResultsForDocumentData.DUExtraction10ASIAQASCSCHHSMIDVOEAssetChecklistV7.Bundle</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -135,9 +136,10 @@
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
       <AssemblyReference>ExtendedExtractionRe.qR2iV1b39XM1H6YK92xH9m12</AssemblyReference>
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>ExtendedExtractionRe.eGBKjj6F8C1FvSj02yItBa</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="608,1674" sap2010:WorkflowViewState.IdRef="Sequence_18">
+  <Sequence sap:VirtualizedContainerService.HintSize="608,1676" sap2010:WorkflowViewState.IdRef="Sequence_18">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -151,13 +153,13 @@
         <InArgument x:TypeArguments="njl:JToken">[assetTypeCheckList.Data.AssetsDisposed.Value.Replace("☒","").Trim]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:ForEach x:TypeArguments="sr:PropertyInfo" CurrentIndex="{x:Null}" DisplayName="For Each currentPropertyInfo" sap:VirtualizedContainerService.HintSize="546,1308" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[GetType(DUIAQASASCAssetChecklistV4).GetProperties()]">
+    <ui:ForEach x:TypeArguments="sr:PropertyInfo" CurrentIndex="{x:Null}" DisplayName="For Each currentPropertyInfo" sap:VirtualizedContainerService.HintSize="546,1310" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[GetType(DUExtraction10ASIAQASCSCHHSMIDVOEAssetChecklistV7).GetProperties()]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="sr:PropertyInfo">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sr:PropertyInfo" Name="currentPropertyInfo" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="512,1162" sap2010:WorkflowViewState.IdRef="Sequence_11">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="512,1164" sap2010:WorkflowViewState.IdRef="Sequence_11">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="str_AssetType" />
               <Variable x:TypeArguments="x:String" Name="str_SelectedValue" />
@@ -169,7 +171,7 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Assign sap:VirtualizedContainerService.HintSize="450,113" sap2010:WorkflowViewState.IdRef="Assign_5">
+            <Assign sap:VirtualizedContainerService.HintSize="450,114" sap2010:WorkflowViewState.IdRef="Assign_5">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[str_AssetType]</OutArgument>
               </Assign.To>
@@ -177,7 +179,7 @@
                 <InArgument x:TypeArguments="x:String">[currentPropertyInfo.Name]</InArgument>
               </Assign.Value>
             </Assign>
-            <Assign sap:VirtualizedContainerService.HintSize="450,113" sap2010:WorkflowViewState.IdRef="Assign_6">
+            <Assign sap:VirtualizedContainerService.HintSize="450,114" sap2010:WorkflowViewState.IdRef="Assign_6">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[str_SelectedValue]</OutArgument>
               </Assign.To>
@@ -203,15 +205,9 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <ui:InvokeCode ContinueOnError="{x:Null}" Code="If jsonObj(&quot;asset_checklist&quot;) IsNot Nothing Then&#xA;    For Each item In jsonObj(&quot;asset_checklist&quot;) _&#xA;                        .Where(Function(x) x(&quot;asset_type&quot;) IsNot Nothing _&#xA;                            AndAlso x(&quot;asset_type&quot;).ToString() = assetTypeToMatch)&#xA;&#xA;        item(&quot;selected&quot;) = JValue.CreateString(selectedValue).ToString.Replace(&quot;☒&quot;,&quot;&quot;).Trim&#xA;    Next&#xA;End If" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="354,188" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
                     <ui:InvokeCode.Arguments>
-                      <InOutArgument x:TypeArguments="njl:JObject" x:Key="jsonObj">
-                        <VisualBasicReference x:TypeArguments="njl:JObject" ExpressionText="io_JSONObject" />
-                      </InOutArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="assetTypeToMatch">
-                        <VisualBasicValue x:TypeArguments="x:String" ExpressionText="matchedAssetType.Original" />
-                      </InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="selectedValue">
-                        <VisualBasicValue x:TypeArguments="x:String" ExpressionText="str_SelectedValue" />
-                      </InArgument>
+                      <InOutArgument x:TypeArguments="njl:JObject" x:Key="jsonObj">[io_JSONObject]</InOutArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="assetTypeToMatch">[matchedAssetType.Original]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="selectedValue">[str_SelectedValue]</InArgument>
                     </ui:InvokeCode.Arguments>
                   </ui:InvokeCode>
                 </Sequence>
