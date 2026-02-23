@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>2079,8101</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1020,7972</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>DU_Extraction_HHD_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -131,7 +131,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="DU_Extraction_HHD" sap:VirtualizedContainerService.HintSize="943,8036" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="DU_Extraction_HHD" sap:VirtualizedContainerService.HintSize="943,7907" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="int_Iterator" />
     </Sequence.Variables>
@@ -148,13 +148,13 @@
         <InArgument x:TypeArguments="x:Int32">0</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each currentFile" sap:VirtualizedContainerService.HintSize="881,7670" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[in_ArrImages]">
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each currentFile" sap:VirtualizedContainerService.HintSize="881,7541" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[in_ArrImages]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="x:String">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:String" Name="currentFile" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="847,7524" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="847,7395" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="upr:ILocalResource" Name="lRes_File" />
               <Variable x:TypeArguments="uisad:DocumentData" Name="classifiedDocument" />
@@ -166,9 +166,9 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <If Condition="[int_Iterator &lt;= io_jArrDUResults.Count - 1]" DisplayName="If int_Iterator is in range" sap:VirtualizedContainerService.HintSize="785,7436" sap2010:WorkflowViewState.IdRef="If_7">
+            <If Condition="[int_Iterator &lt;= io_jArrDUResults.Count - 1]" DisplayName="If int_Iterator is in range" sap:VirtualizedContainerService.HintSize="785,7307" sap2010:WorkflowViewState.IdRef="If_7">
               <If.Then>
-                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="751,7172" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="751,7043" sap2010:WorkflowViewState.IdRef="Sequence_15">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="njl:JObject" Name="jObj_JSON" />
                   </Sequence.Variables>
@@ -207,7 +207,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:PathExists>
-                  <p:ClassifyDocument ApiKey="{x:Null}" ClassifierResult="{x:Null}" DocumentObjectModel="{x:Null}" DocumentPath="{x:Null}" DocumentText="{x:Null}" DocumentTypes="{x:Null}" PersistenceId="{x:Null}" PredictionId="{x:Null}" Prompt="{x:Null}" RuntimeAssetPath="{x:Null}" RuntimeTenantUrl="{x:Null}" ClassificationResults="[classifiedDocument]" ClassifierId="db7a49f3-160c-f111-a69a-7c1e5216ce8b" ClassifierName="DU_Extraction1-0_AS_IAQ_ASC_SC_HHS_MID_VOE_classifier_v7" DisplayName="Classify Document" Endpoint="https://cloud.uipath.com/a6e81ae5-13a7-4d1d-9b35-86ac86d911ce/4af39ed3-b30e-48f2-b551-f1e60b4acb75/du_/api/framework/projects/93ac0424-edf6-f011-8d4d-7c1e5269e216/classifiers/db7a49f3-160c-f111-a69a-7c1e5216ce8b/classification/start?api-version=1.1" FileInput="[lRes_File]" sap:VirtualizedContainerService.HintSize="689,345" sap2010:WorkflowViewState.IdRef="ClassifyDocument_1" MinimumConfidence="50" ProjectId="93ac0424-edf6-f011-8d4d-7c1e5269e216" ProjectName="Arizona Document Understanding" ProjectVersionName="DU_Extraction1-0_AS_IAQ_ASC_SC_HHS_MID_VOE" ProjectVersionNumber="7" TimeoutInSeconds="3600">
+                  <p:ClassifyDocument ApiKey="{x:Null}" ClassifierResult="{x:Null}" DocumentObjectModel="{x:Null}" DocumentPath="{x:Null}" DocumentText="{x:Null}" DocumentTypes="{x:Null}" PersistenceId="{x:Null}" PredictionId="{x:Null}" Prompt="{x:Null}" RuntimeAssetPath="{x:Null}" RuntimeTenantUrl="{x:Null}" ClassificationResults="[classifiedDocument]" ClassifierId="db7a49f3-160c-f111-a69a-7c1e5216ce8b" ClassifierName="DU_Extraction1-0_AS_IAQ_ASC_SC_HHS_MID_VOE_classifier_v7" DisplayName="Classify Document" Endpoint="https://cloud.uipath.com/a6e81ae5-13a7-4d1d-9b35-86ac86d911ce/4af39ed3-b30e-48f2-b551-f1e60b4acb75/du_/api/framework/projects/93ac0424-edf6-f011-8d4d-7c1e5269e216/classifiers/db7a49f3-160c-f111-a69a-7c1e5216ce8b/classification/start?api-version=1.1" FileInput="[lRes_File]" sap:VirtualizedContainerService.HintSize="689,339" sap2010:WorkflowViewState.IdRef="ClassifyDocument_1" MinimumConfidence="50" ProjectId="93ac0424-edf6-f011-8d4d-7c1e5269e216" ProjectName="Arizona Document Understanding" ProjectVersionName="DU_Extraction1-0_AS_IAQ_ASC_SC_HHS_MID_VOE" ProjectVersionNumber="7" TimeoutInSeconds="3600">
                     <p:ClassifyDocument.GptPromptWithVariables>
                       <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
                     </p:ClassifyDocument.GptPromptWithVariables>
@@ -231,7 +231,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:LogMessage>
-                  <p:ExtractDocumentDataWithDocumentData x:TypeArguments="uisasedb:DUExtraction10ASIAQASCSCHHSMIDVOEHistoryHousingDisclosureV7" DocumentBounds="{x:Null}" DocumentObjectModel="{x:Null}" DocumentPath="{x:Null}" DocumentText="{x:Null}" ExtractorDocumentType="{x:Null}" ExtractorResult="{x:Null}" PersistenceId="{x:Null}" PredictionId="{x:Null}" Prompt="{x:Null}" RuntimeAssetPath="{x:Null}" RuntimeTenantUrl="{x:Null}" ApplyAutoValidation="False" DisplayName="Extract Document Data" DocType="da7a49f3-160c-f111-a69a-7c1e5216ce8b" ExtractionResults="[HHDDocumentData]" ExtractorName="DU_Extraction1-0_AS_IAQ_ASC_SC_HHS_MID_VOE_History Housing Disclosure_v7" FileInput="[classifiedDocument]" GenerateData="True" sap:VirtualizedContainerService.HintSize="689,347" sap2010:WorkflowViewState.IdRef="ExtractDocumentDataWithDocumentData`1_1" ModernDocumentTypeId="4f7d6cda-fb01-f111-832e-002248237fb3" ModernDocumentTypeName="History Housing Disclosure" ProjectId="93ac0424-edf6-f011-8d4d-7c1e5269e216" ProjectName="Arizona Document Understanding" ProjectTag="[Nothing]" ProjectVersionName="DU_Extraction1-0_AS_IAQ_ASC_SC_HHS_MID_VOE" ProjectVersionNumber="7" TimeoutInSeconds="3600">
+                  <p:ExtractDocumentDataWithDocumentData x:TypeArguments="uisasedb:DUExtraction10ASIAQASCSCHHSMIDVOEHistoryHousingDisclosureV7" DocumentBounds="{x:Null}" DocumentObjectModel="{x:Null}" DocumentPath="{x:Null}" DocumentText="{x:Null}" ExtractorDocumentType="{x:Null}" ExtractorResult="{x:Null}" PersistenceId="{x:Null}" PredictionId="{x:Null}" Prompt="{x:Null}" RuntimeAssetPath="{x:Null}" RuntimeTenantUrl="{x:Null}" ApplyAutoValidation="False" DisplayName="Extract Document Data" DocType="da7a49f3-160c-f111-a69a-7c1e5216ce8b" ExtractionResults="[HHDDocumentData]" ExtractorName="DU_Extraction1-0_AS_IAQ_ASC_SC_HHS_MID_VOE_History Housing Disclosure_v7" FileInput="[classifiedDocument]" GenerateData="True" sap:VirtualizedContainerService.HintSize="689,344" sap2010:WorkflowViewState.IdRef="ExtractDocumentDataWithDocumentData`1_1" ModernDocumentTypeId="4f7d6cda-fb01-f111-832e-002248237fb3" ModernDocumentTypeName="History Housing Disclosure" ProjectId="93ac0424-edf6-f011-8d4d-7c1e5269e216" ProjectName="Arizona Document Understanding" ProjectTag="[Nothing]" ProjectVersionName="DU_Extraction1-0_AS_IAQ_ASC_SC_HHS_MID_VOE" ProjectVersionNumber="7" TimeoutInSeconds="3600">
                     <p:ExtractDocumentDataWithDocumentData.AutoValidationConfidenceThreshold>
                       <InArgument x:TypeArguments="s:Nullable(x:Int32)">
                         <Literal x:TypeArguments="s:Nullable(x:Int32)" Value="0" />
@@ -354,7 +354,7 @@
                       </Sequence>
                     </If.Else>
                   </If>
-                  <If Condition="[String.IsNullOrEmpty(HHDDocumentData.Data.PreviousAddress2Checkbox.Value.ToString)]" DisplayName="If - Previous Address Checkbox 2 is unanswered" sap:VirtualizedContainerService.HintSize="689,1820" sap2010:WorkflowViewState.IdRef="If_3">
+                  <If Condition="[String.IsNullOrEmpty(HHDDocumentData.Data.PreviousAddress2Checkbox.Value.ToString)]" DisplayName="If - Previous Address Checkbox 2 is unanswered" sap:VirtualizedContainerService.HintSize="689,1700" sap2010:WorkflowViewState.IdRef="If_3">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -379,7 +379,7 @@
                       </Sequence>
                     </If.Then>
                     <If.Else>
-                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="655,1457" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="655,1337" sap2010:WorkflowViewState.IdRef="Sequence_12">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="x:String" Name="str_prevAddress2" />
                         </Sequence.Variables>
@@ -388,9 +388,9 @@
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <If Condition="[HHDDocumentData.Data.PreviousAddress2Checkbox.Value.Contains(&quot;☒&quot;)]" DisplayName="If Previous Address Checkbox 2 is checked" sap:VirtualizedContainerService.HintSize="593,1369" sap2010:WorkflowViewState.IdRef="If_4">
+                        <If Condition="[HHDDocumentData.Data.PreviousAddress2Checkbox.Value.Contains(&quot;☒&quot;)]" DisplayName="If Previous Address Checkbox 2 is checked" sap:VirtualizedContainerService.HintSize="593,1249" sap2010:WorkflowViewState.IdRef="If_4">
                           <If.Then>
-                            <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="559,1015" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                            <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="559,895" sap2010:WorkflowViewState.IdRef="Sequence_10">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -404,7 +404,7 @@
                                   <InArgument x:TypeArguments="x:String">[HHDDocumentData.Data.PreviousAddress2Checkbox.Value.Replace("☒", "").Trim]</InArgument>
                                 </Assign.Value>
                               </Assign>
-                              <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[str_prevAddress2.ToLower]" sap:VirtualizedContainerService.HintSize="497,813" sap2010:WorkflowViewState.IdRef="Switch`1_3">
+                              <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[str_prevAddress2.ToLower]" sap:VirtualizedContainerService.HintSize="497,693" sap2010:WorkflowViewState.IdRef="Switch`1_3">
                                 <Assign x:Key="own" DisplayName="Assign Current Address OWN" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_19">
                                   <Assign.To>
                                     <OutArgument x:TypeArguments="njl:JToken">[jObj_JSON("PreviousAddress2")("PreviousAddress2Checkbox")]</OutArgument>

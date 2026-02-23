@@ -1,10 +1,10 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="DU_Extraction_SC" this:DU_Extraction_SC.in_ArrImages="[Directory.GetFiles(&quot;C:\Users\harika.malyala\Documents\AZApplicationReview\PDFs\Unit 538\DU_SC&quot;)]" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:p="http://schemas.uipath.com/workflow/activities/intelligentocr" xmlns:p1="http://schemas.uipath.com/workflow/activities/document-processing-contracts/results" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uisad="clr-namespace:UiPath.IntelligentOCR.StudioWeb.Activities.DocumentClassification;assembly=UiPath.IntelligentOCR.StudioWeb.Activities" xmlns:uisad1="clr-namespace:UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction;assembly=UiPath.IntelligentOCR.StudioWeb.Activities" xmlns:uisasedb="clr-namespace:UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.ExtendedExtractionResultsForDocumentData.DUSCStudentCertificationV5.Bundle;assembly=ExtendedExtractionRe.lndbW3jFfuC1Qvg7d191QkS3" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="DU_Extraction_SC" this:DU_Extraction_SC.in_ArrImages="[Directory.GetFiles(&quot;C:\Users\harika.malyala\Documents\AZApplicationReview\PDFs\Unit 538\DU_SC&quot;)]" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:p="http://schemas.uipath.com/workflow/activities/intelligentocr" xmlns:p1="http://schemas.uipath.com/workflow/activities/document-processing-contracts/results" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uisad="clr-namespace:UiPath.IntelligentOCR.StudioWeb.Activities.DocumentClassification;assembly=UiPath.IntelligentOCR.StudioWeb.Activities" xmlns:uisad1="clr-namespace:UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction;assembly=UiPath.IntelligentOCR.StudioWeb.Activities" xmlns:uisasedb="clr-namespace:UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.ExtendedExtractionResultsForDocumentData.DUExtraction10ASIAQASCSCHHSMIDVOEStudentCertificationV7.Bundle;assembly=ExtendedExtractionRe.P4OwH2eLr3D12tYAc3Paokj3" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="classifiedDocument" Type="InArgument(uisad:DocumentData)" />
     <x:Property Name="io_JSONObject" Type="InOutArgument(njl:JObject)" />
     <x:Property Name="in_ArrImages" Type="InArgument(s:String[])" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>1020,967</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1020,688</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -56,6 +56,7 @@
       <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.ExtendedExtractionResultsForDocumentData.DUSCStudentCertificationV5.Bundle</x:String>
       <x:String>UiPath.Platform.ResourceHandling</x:String>
       <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.ExtendedExtractionResultsForDocumentData.DUExtraction10ASIAQASCSCHHSMIDVOEStudentCertificationV7.Bundle</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -163,11 +164,11 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap2010:Annotation.AnnotationText="Part A1/A2/A3 will only one of these will checked, and if PartA3 is checked then only other PartB fields will be answered that means checked yes/no" DisplayName="Student Certification" sap:VirtualizedContainerService.HintSize="518,902" sap2010:WorkflowViewState.IdRef="Sequence_31">
+  <Sequence sap2010:Annotation.AnnotationText="Part A1/A2/A3 will only one of these will checked, and if PartA3 is checked then only other PartB fields will be answered that means checked yes/no" DisplayName="Student Certification" sap:VirtualizedContainerService.HintSize="416,539" sap2010:WorkflowViewState.IdRef="Sequence_31">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="testData" />
       <Variable x:TypeArguments="p1:ExtractionResult" Name="extractionData" />
-      <Variable x:TypeArguments="uisad1:IDocumentData(uisasedb:DUSCStudentCertificationV5)" Name="SCDocumentData" />
+      <Variable x:TypeArguments="uisad1:IDocumentData(uisasedb:DUExtraction10ASIAQASCSCHHSMIDVOEStudentCertificationV7)" Name="SCDocumentData" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -176,21 +177,22 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="456,772" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <ui:LogMessage DisplayName="Log Message-Started" sap:VirtualizedContainerService.HintSize="354,173" sap2010:WorkflowViewState.IdRef="LogMessage_12" Message="[&quot;DU_Extraction_SC.xaml is Started&quot;]" />
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="354,57" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each currentFile" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[in_ArrImages]">
+        <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each currentFile" sap:VirtualizedContainerService.HintSize="626,2227" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[in_ArrImages]">
           <ui:ForEach.Body>
             <ActivityAction x:TypeArguments="x:String">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="x:String" Name="currentFile" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,1538" sap2010:WorkflowViewState.IdRef="Sequence_50">
+              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="592,2113" sap2010:WorkflowViewState.IdRef="Sequence_50">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="upr:ILocalResource" Name="lRes_File" />
                   <Variable x:TypeArguments="uisad:DocumentData" Name="classifiedDocument" />
@@ -200,9 +202,9 @@
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:LogMessage DisplayName="Log file processing update" sap:VirtualizedContainerService.HintSize="354,173" sap2010:WorkflowViewState.IdRef="LogMessage_8" Message="[string.Format(&quot;Processing file: {0}&quot;, currentFile)]" />
-                <ui:PathExists Exists="{x:Null}" DisplayName="CurrentFile Exists" sap:VirtualizedContainerService.HintSize="354,147" sap2010:WorkflowViewState.IdRef="PathExists_1" Path="[currentFile]" PathType="File" Resource="[lRes_File]" />
-                <p:ClassifyDocument ApiKey="{x:Null}" ClassifierResult="{x:Null}" DocumentObjectModel="{x:Null}" DocumentPath="{x:Null}" DocumentText="{x:Null}" DocumentTypes="{x:Null}" PersistenceId="{x:Null}" PredictionId="{x:Null}" Prompt="{x:Null}" RuntimeAssetPath="{x:Null}" RuntimeTenantUrl="{x:Null}" ClassificationResults="[classifiedDocument]" ClassifierId="db7a49f3-160c-f111-a69a-7c1e5216ce8b" ClassifierName="DU_Extraction1-0_AS_IAQ_ASC_SC_HHS_MID_VOE_classifier_v7" DisplayName="Classify Document" Endpoint="https://cloud.uipath.com/a6e81ae5-13a7-4d1d-9b35-86ac86d911ce/4af39ed3-b30e-48f2-b551-f1e60b4acb75/du_/api/framework/projects/93ac0424-edf6-f011-8d4d-7c1e5269e216/classifiers/db7a49f3-160c-f111-a69a-7c1e5216ce8b/classification/start?api-version=1.1" FileInput="[lRes_File]" sap:VirtualizedContainerService.HintSize="354,263" sap2010:WorkflowViewState.IdRef="ClassifyDocument_1" MinimumConfidence="50" ProjectId="93ac0424-edf6-f011-8d4d-7c1e5269e216" ProjectName="Arizona Document Understanding" ProjectVersionName="DU_Extraction1-0_AS_IAQ_ASC_SC_HHS_MID_VOE" ProjectVersionNumber="7" TimeoutInSeconds="3600">
+                <ui:LogMessage DisplayName="Log file processing update" sap:VirtualizedContainerService.HintSize="530,173" sap2010:WorkflowViewState.IdRef="LogMessage_8" Message="[string.Format(&quot;Processing file: {0}&quot;, currentFile)]" />
+                <ui:PathExists Exists="{x:Null}" DisplayName="CurrentFile Exists" sap:VirtualizedContainerService.HintSize="530,147" sap2010:WorkflowViewState.IdRef="PathExists_1" Path="[currentFile]" PathType="File" Resource="[lRes_File]" />
+                <p:ClassifyDocument ApiKey="{x:Null}" ClassifierResult="{x:Null}" DocumentObjectModel="{x:Null}" DocumentPath="{x:Null}" DocumentText="{x:Null}" DocumentTypes="{x:Null}" PersistenceId="{x:Null}" PredictionId="{x:Null}" Prompt="{x:Null}" RuntimeAssetPath="{x:Null}" RuntimeTenantUrl="{x:Null}" ClassificationResults="[classifiedDocument]" ClassifierId="db7a49f3-160c-f111-a69a-7c1e5216ce8b" ClassifierName="DU_Extraction1-0_AS_IAQ_ASC_SC_HHS_MID_VOE_classifier_v7" DisplayName="Classify Document" Endpoint="https://cloud.uipath.com/a6e81ae5-13a7-4d1d-9b35-86ac86d911ce/4af39ed3-b30e-48f2-b551-f1e60b4acb75/du_/api/framework/projects/93ac0424-edf6-f011-8d4d-7c1e5269e216/classifiers/db7a49f3-160c-f111-a69a-7c1e5216ce8b/classification/start?api-version=1.1" FileInput="[lRes_File]" sap:VirtualizedContainerService.HintSize="530,339" sap2010:WorkflowViewState.IdRef="ClassifyDocument_1" MinimumConfidence="50" ProjectId="93ac0424-edf6-f011-8d4d-7c1e5269e216" ProjectName="Arizona Document Understanding" ProjectVersionName="DU_Extraction1-0_AS_IAQ_ASC_SC_HHS_MID_VOE" ProjectVersionNumber="7" TimeoutInSeconds="3600">
                   <p:ClassifyDocument.GptPromptWithVariables>
                     <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
                   </p:ClassifyDocument.GptPromptWithVariables>
@@ -218,8 +220,8 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </p:ClassifyDocument>
-                <ui:LogMessage DisplayName="Log document type" sap:VirtualizedContainerService.HintSize="354,173" sap2010:WorkflowViewState.IdRef="LogMessage_9" Message="[string.Format(&quot;Classified {0} as {1}&quot;, currentFile, classifiedDocument.DocumentType.DisplayName)]" />
-                <p:ExtractDocumentDataWithDocumentData x:TypeArguments="uisasedb:DUSCStudentCertificationV5" DocumentBounds="{x:Null}" DocumentObjectModel="{x:Null}" DocumentPath="{x:Null}" DocumentText="{x:Null}" ExtractorDocumentType="{x:Null}" ExtractorResult="{x:Null}" PersistenceId="{x:Null}" PredictionId="{x:Null}" Prompt="{x:Null}" RuntimeAssetPath="{x:Null}" RuntimeTenantUrl="{x:Null}" ApplyAutoValidation="False" DisplayName="Extract Document Data" DocType="4b880d04-c302-f111-832e-6045bdd9cce1" ExtractionResults="[SCDocumentData]" ExtractorName="DU_SC_Student Certification_v5" FileInput="[classifiedDocument]" GenerateData="True" sap:VirtualizedContainerService.HintSize="354,359" sap2010:WorkflowViewState.IdRef="ExtractDocumentDataWithDocumentData`1_4" ModernDocumentTypeId="c7683170-6e00-f111-832e-002248237fb3" ModernDocumentTypeName="Student Certification" ProjectId="93ac0424-edf6-f011-8d4d-7c1e5269e216" ProjectTag="[Nothing]" ProjectVersionName="DU_SC" ProjectVersionNumber="5" TimeoutInSeconds="3600">
+                <ui:LogMessage DisplayName="Log document type" sap:VirtualizedContainerService.HintSize="530,173" sap2010:WorkflowViewState.IdRef="LogMessage_9" Message="[string.Format(&quot;Classified {0} as {1}&quot;, currentFile, classifiedDocument.DocumentType.DisplayName)]" />
+                <p:ExtractDocumentDataWithDocumentData x:TypeArguments="uisasedb:DUExtraction10ASIAQASCSCHHSMIDVOEStudentCertificationV7" DocumentBounds="{x:Null}" DocumentObjectModel="{x:Null}" DocumentPath="{x:Null}" DocumentText="{x:Null}" ExtractorDocumentType="{x:Null}" ExtractorResult="{x:Null}" PersistenceId="{x:Null}" PredictionId="{x:Null}" Prompt="{x:Null}" RuntimeAssetPath="{x:Null}" RuntimeTenantUrl="{x:Null}" ApplyAutoValidation="False" DisplayName="Extract Document Data" DocType="d77a49f3-160c-f111-a69a-7c1e5216ce8b" ExtractionResults="[SCDocumentData]" ExtractorName="DU_Extraction1-0_AS_IAQ_ASC_SC_HHS_MID_VOE_Student Certification_v7" FileInput="[classifiedDocument]" GenerateData="True" sap:VirtualizedContainerService.HintSize="530,359" sap2010:WorkflowViewState.IdRef="ExtractDocumentDataWithDocumentData`1_4" ModernDocumentTypeId="c7683170-6e00-f111-832e-002248237fb3" ModernDocumentTypeName="Student Certification" ProjectId="93ac0424-edf6-f011-8d4d-7c1e5269e216" ProjectTag="[Nothing]" ProjectVersionName="DU_Extraction1-0_AS_IAQ_ASC_SC_HHS_MID_VOE" ProjectVersionNumber="7" TimeoutInSeconds="3600">
                   <p:ExtractDocumentDataWithDocumentData.AutoValidationConfidenceThreshold>
                     <InArgument x:TypeArguments="s:Nullable(x:Int32)">
                       <Literal x:TypeArguments="s:Nullable(x:Int32)" Value="0" />
@@ -229,7 +231,7 @@
                     <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
                   </p:ExtractDocumentDataWithDocumentData.GptPromptWithVariables>
                 </p:ExtractDocumentDataWithDocumentData>
-                <ui:LogMessage DisplayName="Write extracted data (Student Certification)" sap:VirtualizedContainerService.HintSize="354,173" sap2010:WorkflowViewState.IdRef="LogMessage_10" Message="[&quot;The following data has been extracted (excluding table data): {for each fields, except tables, display as key-value pairs: field name - field value}.&quot; &amp; vbCrLf &amp; SCDocumentData.ToString]">
+                <ui:LogMessage DisplayName="Write extracted data (Student Certification)" sap:VirtualizedContainerService.HintSize="530,173" sap2010:WorkflowViewState.IdRef="LogMessage_10" Message="[&quot;The following data has been extracted (excluding table data): {for each fields, except tables, display as key-value pairs: field name - field value}.&quot; &amp; vbCrLf &amp; SCDocumentData.ToString]">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -237,7 +239,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:LogMessage>
-                <If Condition="[SCDocumentData.Data.PartA1NotAStudent.Value.Contains(&quot;☒&quot;)]" DisplayName="If-PartAOption1Checked" sap:VirtualizedContainerService.HintSize="354,57" sap2010:WorkflowViewState.IdRef="If_10">
+                <If Condition="[SCDocumentData.Data.PartA1NotAStudent.Value.Contains(&quot;☒&quot;)]" DisplayName="If-PartAOption1Checked" sap:VirtualizedContainerService.HintSize="530,556" sap2010:WorkflowViewState.IdRef="If_10">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -279,7 +281,7 @@
                     </Sequence>
                   </If.Else>
                 </If>
-                <If Condition="[SCDocumentData.Data.PartA2ParttimeStudent.Value.Contains(&quot;☒&quot;)]" DisplayName="If-PartAOption2Checked" sap:VirtualizedContainerService.HintSize="354,57" sap2010:WorkflowViewState.IdRef="If_11">
+                <If Condition="[SCDocumentData.Data.PartA2ParttimeStudent.Value.Contains(&quot;☒&quot;)]" DisplayName="If-PartAOption2Checked" sap:VirtualizedContainerService.HintSize="530,57" sap2010:WorkflowViewState.IdRef="If_11">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -321,7 +323,7 @@
                     </Sequence>
                   </If.Else>
                 </If>
-                <If Condition="[SCDocumentData.Data.PartA3FulltimeStudent.Value.Contains(&quot;☒&quot;)]" DisplayName="If-PartAOption3Checked" sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="If_18">
+                <If Condition="[SCDocumentData.Data.PartA3FulltimeStudent.Value.Contains(&quot;☒&quot;)]" DisplayName="If-PartAOption3Checked" sap:VirtualizedContainerService.HintSize="530,48" sap2010:WorkflowViewState.IdRef="If_18">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -813,10 +815,10 @@
         </ui:ForEach>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="422,379" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="630,379" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
@@ -837,5 +839,6 @@
         </Catch>
       </TryCatch.Catches>
     </TryCatch>
+    <ui:LogMessage DisplayName="Log Message-Ended" sap:VirtualizedContainerService.HintSize="354,164" sap2010:WorkflowViewState.IdRef="LogMessage_13" Message="[&quot;DU_Extraction_SC.xaml is Ended&quot;]" />
   </Sequence>
 </Activity>

@@ -5,7 +5,7 @@
     <x:Property Name="io_JSONObject" Type="InOutArgument(njl:JObject)" />
     <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>486,488</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1020,1741</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -136,13 +136,13 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="496,423" sap2010:WorkflowViewState.IdRef="Sequence_18">
+  <Sequence sap:VirtualizedContainerService.HintSize="608,1676" sap2010:WorkflowViewState.IdRef="Sequence_18">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Assign DisplayName="Assign-assets_disposed" sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_7">
+    <Assign DisplayName="Assign-assets_disposed" sap:VirtualizedContainerService.HintSize="546,114" sap2010:WorkflowViewState.IdRef="Assign_7">
       <Assign.To>
         <OutArgument x:TypeArguments="njl:JToken">[io_JSONObject("assets_disposed")("has_disposed_assets")]</OutArgument>
       </Assign.To>
@@ -150,7 +150,7 @@
         <InArgument x:TypeArguments="njl:JToken">[assetTypeCheckList.Data.AssetsDisposed.Value.Replace("☒","").Trim]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:ForEach x:TypeArguments="sr:PropertyInfo" CurrentIndex="{x:Null}" DisplayName="For Each currentPropertyInfo" sap:VirtualizedContainerService.HintSize="434,57" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[GetType(DUIAQASASCAssetChecklistV4).GetProperties()]">
+    <ui:ForEach x:TypeArguments="sr:PropertyInfo" CurrentIndex="{x:Null}" DisplayName="For Each currentPropertyInfo" sap:VirtualizedContainerService.HintSize="546,1310" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[assetTypeCheckList.Data.GetType().GetProperties()]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="sr:PropertyInfo">
           <ActivityAction.Argument>
@@ -248,11 +248,11 @@
       </ui:ForEach.Body>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEach>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,164" sap2010:WorkflowViewState.IdRef="LogMessage_6" Message="[&quot;LLM JSON is updated in IAQ Asset Checklist&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="546,164" sap2010:WorkflowViewState.IdRef="LogMessage_6" Message="[&quot;LLM JSON is updated in IAQ Asset Checklist&quot;]" />
   </Sequence>
 </Activity>

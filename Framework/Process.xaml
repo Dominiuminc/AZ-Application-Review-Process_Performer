@@ -8,7 +8,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>652,1046</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1020,1046</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="50">
@@ -155,7 +155,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message Process Start" sap:VirtualizedContainerService.HintSize="600,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Started Process&quot;]" />
-    <Flowchart sap:VirtualizedContainerService.HintSize="1098,660" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+    <Flowchart sap:VirtualizedContainerService.HintSize="600,648" sap2010:WorkflowViewState.IdRef="Flowchart_1">
       <Flowchart.Variables>
         <Variable x:TypeArguments="scg:List(x:String)" Name="list_PDFFiles" />
         <Variable x:TypeArguments="sd:DataTable" Name="dt_SortingData" />
@@ -224,7 +224,7 @@
                 <av:PointCollection x:Key="ConnectorLocation">425,339.5 425,369.5 419.5,369.5 419.5,400</av:PointCollection>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="DownloadUploadDocuments - Invoke Workflow File (DownloadUploadDocuments.xaml)" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Yardi\DownloadUploadDocuments.xaml">
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="DownloadUploadDocuments - Invoke Workflow File (DownloadUploadDocuments.xaml)" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="True" WorkflowFileName="Yardi\DownloadUploadDocuments.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <InArgument x:TypeArguments="x:String" x:Key="in_DocumentReviewURL">[str_CaseLink]</InArgument>
                 <InArgument x:TypeArguments="x:String" x:Key="in_CertDownloadURL">[in_Config("YardiCertDownloadURL").ToString]</InArgument>
@@ -262,7 +262,7 @@
                         <av:PointCollection x:Key="ConnectorLocation">420,585 420,615</av:PointCollection>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ConvertPDFsToImages - Invoke Workflow File (ConvertPDFsToImages.xaml)" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="LLM\ConvertPDFsToImages.xaml">
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ConvertPDFsToImages - Invoke Workflow File (ConvertPDFsToImages.xaml)" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="True" WorkflowFileName="LLM\ConvertPDFsToImages.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
                         <InArgument x:TypeArguments="scg:List(x:String)" x:Key="in_PDFFiles">[list_PDFFiles]</InArgument>
                         <InArgument x:TypeArguments="x:String" x:Key="in_EndPoint">[in_Config("LLM_EndPoint").ToString]</InArgument>
@@ -289,7 +289,7 @@
                             <av:PointCollection x:Key="ConnectorLocation">365,650 220,650 220,675</av:PointCollection>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SortPagesIntoBuckets - Invoke Workflow File (SortPagesIntoBuckets.xaml)" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Yardi\SortPagesIntoBuckets.xaml">
+                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SortPagesIntoBuckets - Invoke Workflow File (SortPagesIntoBuckets.xaml)" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="True" WorkflowFileName="Yardi\SortPagesIntoBuckets.xaml">
                           <ui:InvokeWorkflowFile.Arguments>
                             <InArgument x:TypeArguments="x:String" x:Key="in_DocumentReviewURL">[str_CaseLink]</InArgument>
                             <InArgument x:TypeArguments="sd:DataTable" x:Key="in_DTSortingDetails">[dt_SortingData]</InArgument>
@@ -367,7 +367,7 @@
                                     <av:PointCollection x:Key="ConnectorLocation">420,805 420,835 419.5,835 419.5,860</av:PointCollection>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="AuditFindings - Invoke Workflow File (AuditFindings.xaml)" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Utilities\AuditFindings.xaml">
+                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="AuditFindings - Invoke Workflow File (AuditFindings.xaml)" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="True" WorkflowFileName="Utilities\AuditFindings.xaml">
                                   <ui:InvokeWorkflowFile.Arguments>
                                     <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
                                     <InArgument x:TypeArguments="sd:DataTable" x:Key="in_ClassificationResultsData">[dt_SortingData]</InArgument>
@@ -599,7 +599,7 @@
                             <av:PointCollection x:Key="ConnectorLocation">580,265 580,239 579.5,239</av:PointCollection>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <Sequence DisplayName="RetryDownloadingfiles" sap:VirtualizedContainerService.HintSize="496,193" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                        <Sequence DisplayName="RetryDownloadingfiles" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_15">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
