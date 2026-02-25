@@ -401,6 +401,9 @@
       "Path": "Utilities/AuditFindings.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "list_ImageFiles&Sequence_537",
+        "arr_Employees&Sequence_3441",
+        "arr_Companies&Sequence_3441",
         "arr_AS_MemNames&Sequence_1",
         "dt_TaxRefund&Sequence_1",
         "arr_ICWMemberNames&Sequence_1",
@@ -672,7 +675,6 @@
         "dt_FilteredPaystubFindings&Sequence_2800",
         "dt_FilteredDocTypeData&Sequence_523",
         "jArr_ExtResults&Sequence_537",
-        "list_ImageFiles&Sequence_525",
         "jObj_ExtractionResults&Sequence_525",
         "jObj_Validation&Sequence_524",
         "jObj_JSON&Sequence_524",
@@ -1513,7 +1515,6 @@
         "SCDocumentData&Sequence_31"
       ],
       "ArgumentsSectionElementsOrder": [
-        "in_ArrImages",
         "classifiedDocument",
         "io_JSONObject"
       ],
@@ -1524,7 +1525,11 @@
       "Path": "DU/DU_Extraction_MID.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "int_Iterator&Sequence_1",
+        "str_Mem50Percent&Sequence_7",
+        "str_BothParentsInHausehold&Sequence_19",
+        "dateTime_2&Sequence_29",
+        "dateTime_1&Sequence_29",
+        "str_StudentCheck&Sequence_15",
         "jObj_JSON&Sequence_2",
         "MIDDocumentData&Sequence_2",
         "classifiedDocument&Sequence_2",
@@ -1542,9 +1547,12 @@
       "Path": "DU/DU_Extraction_HHD.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "list_matchedHHDNames&Sequence_2",
+        "str_DUName&Sequence_1",
+        "arr_HHDNames&Sequence_1",
+        "str_LLMName&Sequence_17",
+        "jObj_JSON&Sequence_17",
         "str_prevAddress1&Sequence_4",
-        "jObj_JSON&Sequence_15",
-        "int_Iterator&Sequence_1",
         "str_prevAddress2&Sequence_12",
         "str_currentAddress&Sequence_2",
         "lRes_File&Sequence_2",
@@ -1555,6 +1563,33 @@
         "io_jArrDUResults",
         "in_ArrImages",
         "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "DU/DU_Extraction_VOE.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "jObj_JSON&Sequence_18",
+        "str_LLMName&Sequence_18",
+        "str_DUName&Sequence_18",
+        "str_LLMName&Sequence_15",
+        "str_DUName&Sequence_15",
+        "str_DUCompany&Sequence_15",
+        "matchedEmployeeResult&Sequence_15",
+        "matchedCompanyResults&Sequence_15",
+        "str_LLMCompany&Sequence_15",
+        "VOEDocumentData&Sequence_15",
+        "lRes_File&Sequence_15",
+        "classifiedDocument&Sequence_15"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_ArrImages",
+        "in_Config",
+        "io_jArrDUResults",
+        "in_ArrEmployees",
+        "in_ArrCompanies"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
