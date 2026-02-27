@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1020,777</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1020,3842</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>DU_Extraction_IAQ_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -148,7 +148,7 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="DU_Extraction_IAQ" sap:VirtualizedContainerService.HintSize="416,712" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="DU_Extraction_IAQ" sap:VirtualizedContainerService.HintSize="704,3777" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:String[]" Name="arr_Files" />
       <Variable x:TypeArguments="s:String[]" Name="arr_AssetTypes" />
@@ -161,8 +161,8 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message-Started" sap:VirtualizedContainerService.HintSize="354,173" sap2010:WorkflowViewState.IdRef="LogMessage_10" Message="[&quot;DU_Extraction_IAQ.xaml is Started&quot;]" />
-    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="354,57" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+    <ui:LogMessage DisplayName="Log Message-Started" sap:VirtualizedContainerService.HintSize="642,173" sap2010:WorkflowViewState.IdRef="LogMessage_10" Message="[&quot;DU_Extraction_IAQ.xaml is Started&quot;]" />
+    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="642,57" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
@@ -206,7 +206,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:MultipleAssign>
-    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each currentFile" sap:VirtualizedContainerService.HintSize="354,57" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[in_ArrImages]">
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each currentFile" sap:VirtualizedContainerService.HintSize="642,3122" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[in_ArrImages]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="x:String">
           <ActivityAction.Argument>
@@ -357,12 +357,12 @@
       </ui:ForEach.Body>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEach>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,173" sap2010:WorkflowViewState.IdRef="LogMessage_7" Message="[&quot;LLM JSON updated as: &quot;+io_JSONObject.ToString]" />
-    <ui:LogMessage DisplayName="Log Message-Ended" sap:VirtualizedContainerService.HintSize="354,164" sap2010:WorkflowViewState.IdRef="LogMessage_9" Message="[&quot;DU_Extraction_IAQ.xaml is Completed&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="642,173" sap2010:WorkflowViewState.IdRef="LogMessage_7" Message="[&quot;LLM JSON updated as: &quot;+io_JSONObject.ToString]" />
+    <ui:LogMessage DisplayName="Log Message-Ended" sap:VirtualizedContainerService.HintSize="642,164" sap2010:WorkflowViewState.IdRef="LogMessage_9" Message="[&quot;DU_Extraction_IAQ.xaml is Completed&quot;]" />
   </Sequence>
 </Activity>
