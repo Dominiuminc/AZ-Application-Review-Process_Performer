@@ -12,12 +12,6 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "str_SDPDFFolderWithDate&Sequence_38",
-        "str_UnitFolderName&Sequence_40",
-        "str_PDFFolder&Sequence_37",
-        "arr_Subfolders&Sequence_38",
-        "arr_Files&Sequence_40",
-        "DT_ClassificationMatrix&StateMachine_1",
         "TransactionItem&StateMachine_1",
         "SystemException&StateMachine_1",
         "BusinessException&StateMachine_1",
@@ -29,8 +23,14 @@
         "TransactionID&StateMachine_1",
         "dt_TransactionData&StateMachine_1",
         "ConsecutiveSystemExceptions&StateMachine_1",
+        "DT_ClassificationMatrix&StateMachine_1",
         "ShouldStop&Sequence_25",
-        "str_ScreenshotPath&Sequence_34"
+        "str_ScreenshotPath&Sequence_34",
+        "str_PDFFolder&Sequence_37",
+        "arr_Subfolders&Sequence_38",
+        "str_SDPDFFolderWithDate&Sequence_38",
+        "arr_Files&Sequence_40",
+        "str_UnitFolderName&Sequence_40"
       ],
       "ArgumentsSectionElementsOrder": [
         "in_DisableTempFolderDeletion",
@@ -401,10 +401,14 @@
       "Path": "Utilities/AuditFindings.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "int_ICWNoOfAdults&Sequence_3462",
-        "arr_ICWAdultHouseholders&Sequence_3462",
-        "bool_RealEstateIsChecked&Sequence_3462",
-        "int_ICWNoLiveInAid&Sequence_3462",
+        "arr_PrintedNames&Sequence_3479",
+        "list_ImageFiles&Sequence_412",
+        "int_ICWNoOfAdults&Sequence_3476",
+        "arr_ICWAdultHouseholders&Sequence_3476",
+        "bool_RealEstateIsChecked&Sequence_3476",
+        "int_ICWNoLiveInAid&Sequence_3476",
+        "arr_Employees&Sequence_3474",
+        "arr_JobTitles&Sequence_3474",
         "list_ImageFiles&Sequence_812",
         "arr_PrintedNames&Sequence_3463",
         "arr_BusinessNames&Sequence_3463",
@@ -556,7 +560,6 @@
         "str_TaxCredit1&Sequence_142",
         "dt_FilteredDocTypeData&Sequence_395",
         "jArr_ExtResults&Sequence_412",
-        "list_ImageFiles&Sequence_477",
         "jObj_ExtractionResults&Sequence_477",
         "jObj_Validation&Sequence_461",
         "jObj_JSON&Sequence_461",
@@ -678,8 +681,6 @@
         "list_ImageFiles&Sequence_537",
         "bool_VOEDUSuccess&Sequence_537",
         "jObj_ExtractionResults&Sequence_525",
-        "arr_Employees&Sequence_3457",
-        "arr_JobTitles&Sequence_3457",
         "jObj_Validation&Sequence_524",
         "jObj_JSON&Sequence_524",
         "str_CompanyName&Sequence_524",
@@ -1293,6 +1294,7 @@
       "Path": "Tests/FuzzyLogic.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "matchedJobTitleResults&Sequence_1",
         "bool_ColaEffective&Sequence_1",
         "Bestmatch&Sequence_1",
         "matchedresults&Sequence_1"
@@ -1583,8 +1585,6 @@
         "str_DUJobTitle&Sequence_15",
         "str_LLMJobTitle&Sequence_15",
         "jObj_JSON&Sequence_18",
-        "str_LLMName&Sequence_18",
-        "str_DUName&Sequence_18",
         "str_LLMName&Sequence_15",
         "str_DUName&Sequence_15",
         "matchedEmployeeResult&Sequence_15",
@@ -1629,6 +1629,82 @@
         "in_ArrNames",
         "in_ArrBusinessNames",
         "in_ArrPrintedNames"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "DU/DU_Extraction_ASFA.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "ASFA12DocumentData&Sequence_57",
+        "str_DUName&Sequence_57",
+        "str_LLMName&Sequence_57",
+        "matchedNameResults&Sequence_57",
+        "str_DUPrintedName&Sequence_50",
+        "str_LLMPrintedName&Sequence_50",
+        "ASFA34DocumentData&Sequence_50",
+        "lRes_File&Sequence_2",
+        "classifiedDocument&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_ArrPrintedNames",
+        "in_Config",
+        "io_jArrDUResults",
+        "in_ArrImages"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "DU/DU_Extraction_ASFA34.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_DUPrintedName&Sequence_50",
+        "str_LLMPrintedName&Sequence_50",
+        "ASFA34DocumentData&Sequence_50",
+        "matchedPrintedNameResults&Sequence_52",
+        "jObj_JSON&Sequence_53",
+        "jarr_FederalAssistance&Sequence_54",
+        "arr_AssistanceTypes&Sequence_54",
+        "jarr_stateAssistance&Sequence_54",
+        "arr_StateAssistanceTypes&Sequence_54",
+        "str_AssistanceType&Sequence_55",
+        "str_Value&Sequence_55",
+        "matchedAssistanceType&Sequence_56"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_ClassifiedDocument",
+        "io_jArrDUResults",
+        "in_ArrNames",
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "DU/DU_Extraction_ASFA12.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "ASFA12DocumentData&Sequence_37",
+        "str_DUName&Sequence_37",
+        "str_LLMName&Sequence_37",
+        "matchedNameResults&Sequence_37",
+        "jObj_JSON&Sequence_39",
+        "jarr_FederalAssistance&Sequence_40",
+        "arr_AssistanceTypes&Sequence_40",
+        "jarr_stateAssistance&Sequence_40",
+        "arr_StateAssistanceTypes&Sequence_40",
+        "str_AssistanceType&Sequence_41",
+        "str_Value&Sequence_41",
+        "matchedAssistanceType&Sequence_42",
+        "matchedAssistanceType&Sequence_43"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_ClassifiedDocument",
+        "io_jArrDUResults",
+        "in_ArrNames",
+        "in_Config"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
