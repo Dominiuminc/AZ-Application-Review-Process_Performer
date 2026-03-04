@@ -5,7 +5,7 @@
     <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
     <x:Property Name="in_ClassifiedDocument" Type="InArgument(uisad:DocumentData)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>2089,4084</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1020,4741</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -53,6 +53,8 @@
       <x:String>GlobalConstantsNamespace</x:String>
       <x:String>System.Linq.Expressions</x:String>
       <x:String>AshlingPartners.UiPath.StringMatching.Activities</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>System.Numerics</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -125,9 +127,10 @@
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="DU_Extraction_ASFA34" sap:VirtualizedContainerService.HintSize="896,4019" sap2010:WorkflowViewState.IdRef="Sequence_50">
+  <Sequence DisplayName="DU_Extraction_ASFA34" sap:VirtualizedContainerService.HintSize="896,4636" sap2010:WorkflowViewState.IdRef="Sequence_50">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="str_DUPrintedName" />
       <Variable x:TypeArguments="x:String" Name="str_LLMPrintedName">
@@ -142,7 +145,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <p:ExtractDocumentDataWithDocumentData x:TypeArguments="uisasedb:DUExtractor10ASFAAffidavitOfStudentFinancialAssistancePart34V9" DocumentBounds="{x:Null}" DocumentObjectModel="{x:Null}" DocumentPath="{x:Null}" DocumentText="{x:Null}" ExtractorDocumentType="{x:Null}" ExtractorResult="{x:Null}" PersistenceId="{x:Null}" PredictionId="{x:Null}" Prompt="{x:Null}" RuntimeAssetPath="{x:Null}" RuntimeTenantUrl="{x:Null}" ApplyAutoValidation="False" DisplayName="Extract Document Data" DocType="753c7f88-660e-f111-a69a-7c1e5216ce8b" ExtractionResults="[ASFA34DocumentData]" ExtractorName="DU_Extractor1-0_ASFA_Affidavit of Student Financial Assistance Part 3 4_v9" FileInput="[in_ClassifiedDocument]" GenerateData="True" sap:VirtualizedContainerService.HintSize="834,359" sap2010:WorkflowViewState.IdRef="ExtractDocumentDataWithDocumentData`1_3" ModernDocumentTypeId="fdd37111-ff01-f111-832e-002248237fb3" ModernDocumentTypeName="Affidavit of Student Financial Assistance Part 3 4" ProjectId="93ac0424-edf6-f011-8d4d-7c1e5269e216" ProjectTag="[Nothing]" ProjectVersionName="DU_Extractor1-0_ASFA" ProjectVersionNumber="9" TimeoutInSeconds="3600">
+    <p:ExtractDocumentDataWithDocumentData x:TypeArguments="uisasedb:DUExtractor10ASFAAffidavitOfStudentFinancialAssistancePart34V9" DocumentBounds="{x:Null}" DocumentObjectModel="{x:Null}" DocumentPath="{x:Null}" DocumentText="{x:Null}" ExtractorDocumentType="{x:Null}" ExtractorResult="{x:Null}" PersistenceId="{x:Null}" PredictionId="{x:Null}" Prompt="{x:Null}" RuntimeAssetPath="{x:Null}" RuntimeTenantUrl="{x:Null}" ApplyAutoValidation="False" DisplayName="Extract Document Data" DocType="753c7f88-660e-f111-a69a-7c1e5216ce8b" ExtractionResults="[ASFA34DocumentData]" ExtractorName="DU_Extractor1-0_ASFA_Affidavit of Student Financial Assistance Part 3 4_v9" FileInput="[in_ClassifiedDocument]" GenerateData="True" sap:VirtualizedContainerService.HintSize="834,363" sap2010:WorkflowViewState.IdRef="ExtractDocumentDataWithDocumentData`1_3" ModernDocumentTypeId="fdd37111-ff01-f111-832e-002248237fb3" ModernDocumentTypeName="Affidavit of Student Financial Assistance Part 3 4" ProjectId="93ac0424-edf6-f011-8d4d-7c1e5269e216" ProjectTag="[Nothing]" ProjectVersionName="DU_Extractor1-0_ASFA" ProjectVersionNumber="9" TimeoutInSeconds="3600">
       <p:ExtractDocumentDataWithDocumentData.AutoValidationConfidenceThreshold>
         <InArgument x:TypeArguments="s:Nullable(x:Int32)">
           <Literal x:TypeArguments="s:Nullable(x:Int32)" Value="0" />
@@ -186,7 +189,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:MultipleAssign>
-    <TryCatch DisplayName="Try Catch-NamesMappingCheck" sap:VirtualizedContainerService.HintSize="834,671" sap2010:WorkflowViewState.IdRef="TryCatch_5">
+    <TryCatch DisplayName="Try Catch-NamesMappingCheck" sap:VirtualizedContainerService.HintSize="834,1178" sap2010:WorkflowViewState.IdRef="TryCatch_5">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -194,7 +197,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <Sequence DisplayName="NamesMapping" sap:VirtualizedContainerService.HintSize="416,411" sap2010:WorkflowViewState.IdRef="Sequence_52">
+        <Sequence DisplayName="NamesMapping" sap:VirtualizedContainerService.HintSize="592,918" sap2010:WorkflowViewState.IdRef="Sequence_52">
           <Sequence.Variables>
             <Variable x:TypeArguments="ausam:NameMatchResult" Name="matchedPrintedNameResults" />
           </Sequence.Variables>
@@ -204,7 +207,7 @@
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ausas:FindBestMatch Candidates="[in_ArrNames]" DisplayName="Find Best Match" sap:VirtualizedContainerService.HintSize="354,275" sap2010:WorkflowViewState.IdRef="FindBestMatch_6" MinThreshold="[CDbl(in_Config(&quot;FindAllMatches_Threshold&quot;).ToString)]" Query="[str_DUPrintedName]" Result="[matchedPrintedNameResults]">
+          <ausas:FindBestMatch Candidates="[in_ArrNames]" DisplayName="Find Best Match" sap:VirtualizedContainerService.HintSize="530,275" sap2010:WorkflowViewState.IdRef="FindBestMatch_6" MinThreshold="[CDbl(in_Config(&quot;FindAllMatches_Threshold&quot;).ToString)]" Query="[str_DUPrintedName]" Result="[matchedPrintedNameResults]">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -212,10 +215,10 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ausas:FindBestMatch>
-          <If Condition="[matchedPrintedNameResults isNot Nothing]" DisplayName="If-matchedNameResult" sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="If_20">
+          <If Condition="[matchedPrintedNameResults isNot Nothing]" DisplayName="If-matchedNameResult" sap:VirtualizedContainerService.HintSize="530,555" sap2010:WorkflowViewState.IdRef="If_20">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
@@ -250,7 +253,7 @@
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="420,22" sap2010:WorkflowViewState.IdRef="Catch`1_5">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="596,22" sap2010:WorkflowViewState.IdRef="Catch`1_5">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -261,7 +264,7 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <If sap2010:Annotation.AnnotationText="If only 1 array then can directly replcae values without mapping" Condition="[io_jArrDUResults.Count=1]" DisplayName="If-LLMArrayOnly1" sap:VirtualizedContainerService.HintSize="200,56" sap2010:WorkflowViewState.IdRef="If_21">
+            <If sap2010:Annotation.AnnotationText="If only 1 array then can directly replcae values without mapping" Condition="[io_jArrDUResults.Count=1]" DisplayName="If-LLMArrayOnly1" sap:VirtualizedContainerService.HintSize="200,82" sap2010:WorkflowViewState.IdRef="If_21">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -293,13 +296,13 @@
         </Catch>
       </TryCatch.Catches>
     </TryCatch>
-    <ui:ForEach x:TypeArguments="njl:JObject" CurrentIndex="{x:Null}" DisplayName="For Each currentJObjectASFA34" sap:VirtualizedContainerService.HintSize="834,2696" sap2010:WorkflowViewState.IdRef="ForEach`1_7" Values="[io_jArrDUResults]">
+    <ui:ForEach x:TypeArguments="njl:JObject" CurrentIndex="{x:Null}" DisplayName="For Each currentJObjectASFA34" sap:VirtualizedContainerService.HintSize="834,2802" sap2010:WorkflowViewState.IdRef="ForEach`1_7" Values="[io_jArrDUResults]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="njl:JObject">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="njl:JObject" Name="currentJObject" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="CurrentJObjectBodyASFA34" sap:VirtualizedContainerService.HintSize="800,2559" sap2010:WorkflowViewState.IdRef="Sequence_53">
+          <Sequence DisplayName="CurrentJObjectBodyASFA34" sap:VirtualizedContainerService.HintSize="800,2665" sap2010:WorkflowViewState.IdRef="Sequence_53">
             <Sequence.Variables>
               <Variable x:TypeArguments="njl:JObject" Name="jObj_JSON" />
             </Sequence.Variables>
@@ -322,7 +325,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </Assign>
-            <If Condition="[jObj_JSON(&quot;signature_section&quot;)(&quot;printed_name&quot;).ToString.Equals(str_LLMPrintedName)]" DisplayName="If Names are the same-ASFA34" sap:VirtualizedContainerService.HintSize="738,2357" sap2010:WorkflowViewState.IdRef="If_23">
+            <If Condition="[jObj_JSON(&quot;signature_section&quot;)(&quot;printed_name&quot;).ToString.Equals(str_LLMPrintedName) Or io_jArrDUResults.Count=1]" DisplayName="If Names are the same-ASFA34" sap:VirtualizedContainerService.HintSize="738,2463" sap2010:WorkflowViewState.IdRef="If_23">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -330,7 +333,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <If.Then>
-                <Sequence DisplayName="Then-ASFA34" sap:VirtualizedContainerService.HintSize="704,1995" sap2010:WorkflowViewState.IdRef="Sequence_54">
+                <Sequence DisplayName="Then-ASFA34" sap:VirtualizedContainerService.HintSize="704,2101" sap2010:WorkflowViewState.IdRef="Sequence_54">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="njl:JArray" Name="jarr_FederalAssistance" />
                     <Variable x:TypeArguments="s:String[]" Name="arr_AssistanceTypes" />
@@ -343,7 +346,7 @@
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:MultipleAssign DisplayName="Multiple Assign-ASFA34" sap:VirtualizedContainerService.HintSize="642,57" sap2010:WorkflowViewState.IdRef="MultipleAssign_7">
+                  <ui:MultipleAssign DisplayName="Multiple Assign-ASFA34" sap:VirtualizedContainerService.HintSize="642,241" sap2010:WorkflowViewState.IdRef="MultipleAssign_7">
                     <ui:MultipleAssign.AssignOperations>
                       <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                         <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_17">
@@ -382,18 +385,18 @@
                     </ui:MultipleAssign.AssignOperations>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:MultipleAssign>
-                  <ui:ForEach x:TypeArguments="sr:PropertyInfo" CurrentIndex="{x:Null}" DisplayName="For Each currentPropertyInfo-ASFA34" sap:VirtualizedContainerService.HintSize="642,1629" sap2010:WorkflowViewState.IdRef="ForEach`1_8" Values="[ASFA34DocumentData.Data.GetType().GetProperties()]">
+                  <ui:ForEach x:TypeArguments="sr:PropertyInfo" CurrentIndex="{x:Null}" DisplayName="For Each currentPropertyInfo-ASFA34" sap:VirtualizedContainerService.HintSize="642,1551" sap2010:WorkflowViewState.IdRef="ForEach`1_8" Values="[ASFA34DocumentData.Data.GetType().GetProperties()]">
                     <ui:ForEach.Body>
                       <ActivityAction x:TypeArguments="sr:PropertyInfo">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="sr:PropertyInfo" Name="currentPropertyInfo" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Body-ASFA34" sap:VirtualizedContainerService.HintSize="608,1483" sap2010:WorkflowViewState.IdRef="Sequence_55">
+                        <Sequence DisplayName="Body-ASFA34" sap:VirtualizedContainerService.HintSize="608,1405" sap2010:WorkflowViewState.IdRef="Sequence_55">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="x:String" Name="str_AssistanceType" />
                             <Variable x:TypeArguments="x:String" Name="str_Value" />
@@ -419,7 +422,7 @@
                               <InArgument x:TypeArguments="x:String">[currentPropertyInfo.GetValue(ASFA34DocumentData.Data, Nothing).ToString()]</InArgument>
                             </Assign.Value>
                           </Assign>
-                          <If Condition="[str_AssistanceType.StartsWith(&quot;Part3&quot;)]" DisplayName="If-str_AssistanceType.StartsWith(&quot;Part3&quot;)" sap:VirtualizedContainerService.HintSize="546,1167" sap2010:WorkflowViewState.IdRef="If_22">
+                          <If Condition="[str_AssistanceType.StartsWith(&quot;Part3&quot;)]" DisplayName="If-str_AssistanceType.StartsWith(&quot;Part3&quot;)" sap:VirtualizedContainerService.HintSize="546,1089" sap2010:WorkflowViewState.IdRef="If_22">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -427,17 +430,46 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                             <If.Then>
-                              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="512,903" sap2010:WorkflowViewState.IdRef="Sequence_56">
+                              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="512,825" sap2010:WorkflowViewState.IdRef="Sequence_56">
                                 <Sequence.Variables>
-                                  <Variable x:TypeArguments="ausam:IncomeAssetTypeMatchResult" Name="matchedAssistanceType" />
+                                  <Variable x:TypeArguments="x:Boolean" Name="bool_MatchedAssistanceType" />
+                                  <Variable x:TypeArguments="x:String" Name="str_LLMAssistanceTypeName" />
+                                  <Variable x:TypeArguments="x:Double" Name="dbl_BestScore" />
                                 </Sequence.Variables>
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <ausas:FindBestIncomeAssetTypeMatch Candidates="[arr_AssistanceTypes]" DisplayName="Find Best Assistance Type Match" sap:VirtualizedContainerService.HintSize="450,275" sap2010:WorkflowViewState.IdRef="FindBestIncomeAssetTypeMatch_4" MinThreshold="[CDbl(in_Config(&quot;FindAllMatches_Threshold&quot;).ToString)]" Query="[str_AssistanceType]" Result="[matchedAssistanceType]" />
-                                <If Condition="[matchedAssistanceType IsNot Nothing]" DisplayName="If - matched assistancetype is not nothing" sap:VirtualizedContainerService.HintSize="450,540" sap2010:WorkflowViewState.IdRef="If_24">
+                                <ui:InvokeCode ContinueOnError="{x:Null}" Code="Dim highestScore As Double = 0.0&#xD;&#xA;Dim closestMatch As String = &quot;&quot;&#xD;&#xA;&#xD;&#xA;' Insert spaces in camel case&#xD;&#xA;searchText = System.Text.RegularExpressions.Regex.Replace(searchText, &quot;([A-Z]+)([A-Z][a-z])&quot;, &quot;$1 $2&quot;)&#xD;&#xA;searchText = System.Text.RegularExpressions.Regex.Replace(searchText, &quot;([a-z\d])([A-Z])&quot;, &quot;$1 $2&quot;)&#xD;&#xA;&#xD;&#xA;' Remove Part1, Part2, Part3 etc&#xD;&#xA;searchText = System.Text.RegularExpressions.Regex.Replace(searchText, &quot;^part\d+&quot;, &quot;&quot;, System.Text.RegularExpressions.RegexOptions.IgnoreCase)&#xD;&#xA;&#xD;&#xA;' Normalize&#xD;&#xA;Dim normalizedSearch As String = searchText.ToLower()&#xD;&#xA;normalizedSearch = System.Text.RegularExpressions.Regex.Replace(normalizedSearch, &quot;[^a-z0-9 ]&quot;, &quot;&quot;)&#xD;&#xA;normalizedSearch = System.Text.RegularExpressions.Regex.Replace(normalizedSearch, &quot;\s+&quot;, &quot; &quot;).Trim()&#xD;&#xA;&#xD;&#xA;Dim searchWords = normalizedSearch.Split(&quot; &quot;c)&#xD;&#xA;&#xD;&#xA;For Each item As String In items&#xD;&#xA;&#xD;&#xA;    ' Normalize item&#xD;&#xA;    Dim normalizedItem As String = item.ToLower()&#xD;&#xA;    normalizedItem = System.Text.RegularExpressions.Regex.Replace(normalizedItem, &quot;[^a-z0-9 ]&quot;, &quot;&quot;)&#xD;&#xA;    normalizedItem = System.Text.RegularExpressions.Regex.Replace(normalizedItem, &quot;\s+&quot;, &quot; &quot;).Trim()&#xD;&#xA;&#xD;&#xA;    Dim matchCount As Integer = 0&#xD;&#xA;&#xD;&#xA;    For Each word In searchWords&#xD;&#xA;&#xD;&#xA;        If normalizedItem.Contains(word) Then&#xD;&#xA;            matchCount += 1&#xD;&#xA;        End If&#xD;&#xA;&#xD;&#xA;    Next&#xD;&#xA;&#xD;&#xA;    Dim similarity As Double = 0.0&#xD;&#xA;    If searchWords.Length &gt; 0 Then&#xD;&#xA;        similarity = matchCount / searchWords.Length&#xD;&#xA;    End If&#xD;&#xA;&#xD;&#xA;    If similarity &gt; highestScore Then&#xD;&#xA;        highestScore = similarity&#xD;&#xA;        closestMatch = item&#xD;&#xA;    End If&#xD;&#xA;&#xD;&#xA;Next&#xD;&#xA;&#xD;&#xA;bestMatch = closestMatch&#xD;&#xA;bestScore = highestScore&#xD;&#xA;isMatchFound = (highestScore &gt;= minScore)" DisplayName="Invoke Code-Find Best Assistance Type Match1" sap:VirtualizedContainerService.HintSize="450,197" sap2010:WorkflowViewState.IdRef="InvokeCode_5">
+                                  <ui:InvokeCode.Arguments>
+                                    <InArgument x:TypeArguments="x:String" x:Key="searchText">
+                                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="System.Text.RegularExpressions.Regex.Replace(str_AssistanceType, &quot;^Part3&quot;, &quot;&quot;)" />
+                                    </InArgument>
+                                    <InArgument x:TypeArguments="s:String[]" x:Key="items">
+                                      <VisualBasicValue x:TypeArguments="s:String[]" ExpressionText="arr_AssistanceTypes" />
+                                    </InArgument>
+                                    <InArgument x:TypeArguments="x:Double" x:Key="minScore">
+                                      <VisualBasicValue x:TypeArguments="x:Double" ExpressionText="CDbl(in_Config(&quot;FindAllASFAAssistance_Threshold&quot;).ToString)" />
+                                    </InArgument>
+                                    <OutArgument x:TypeArguments="x:String" x:Key="bestMatch">
+                                      <VisualBasicReference x:TypeArguments="x:String" ExpressionText="str_LLMAssistanceTypeName" />
+                                    </OutArgument>
+                                    <OutArgument x:TypeArguments="x:Double" x:Key="bestScore">
+                                      <VisualBasicReference x:TypeArguments="x:Double" ExpressionText="dbl_BestScore" />
+                                    </OutArgument>
+                                    <OutArgument x:TypeArguments="x:Boolean" x:Key="isMatchFound">
+                                      <VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="bool_MatchedAssistanceType" />
+                                    </OutArgument>
+                                  </ui:InvokeCode.Arguments>
+                                </ui:InvokeCode>
+                                <If Condition="[bool_MatchedAssistanceType]" DisplayName="If - matched assistancetype is not nothing" sap:VirtualizedContainerService.HintSize="450,540" sap2010:WorkflowViewState.IdRef="If_24">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
                                   <If.Then>
                                     <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,276" sap2010:WorkflowViewState.IdRef="Sequence_63">
                                       <sap:WorkflowViewStateService.ViewState>
@@ -447,9 +479,15 @@
                                       </sap:WorkflowViewStateService.ViewState>
                                       <ui:InvokeCode ContinueOnError="{x:Null}" Code="If jsonObj(&quot;part_3_other_assistance&quot;) IsNot Nothing Then&#xA;    For Each item In jsonObj(&quot;part_3_other_assistance&quot;) _&#xA;                        .Where(Function(x) x(&quot;assistance_type&quot;) IsNot Nothing _&#xA;                            AndAlso x(&quot;assistance_type&quot;).ToString() = assistanceTypeToMatch)&#xA;&#xA;        item(&quot;yes_no_answer&quot;) = JValue.CreateString(selectedValue).ToString.Replace(&quot;☒&quot;,&quot;&quot;).Trim&#xA;    Next&#xA;End If" DisplayName="Invoke Code-ASFA34" sap:VirtualizedContainerService.HintSize="354,188" sap2010:WorkflowViewState.IdRef="InvokeCode_4">
                                         <ui:InvokeCode.Arguments>
-                                          <InOutArgument x:TypeArguments="njl:JObject" x:Key="jsonObj">[jObj_JSON]</InOutArgument>
-                                          <InArgument x:TypeArguments="x:String" x:Key="assistanceTypeToMatch">[matchedAssistanceType.Original]</InArgument>
-                                          <InArgument x:TypeArguments="x:String" x:Key="selectedValue">[str_Value]</InArgument>
+                                          <InOutArgument x:TypeArguments="njl:JObject" x:Key="jsonObj">
+                                            <VisualBasicReference x:TypeArguments="njl:JObject" ExpressionText="jObj_JSON" />
+                                          </InOutArgument>
+                                          <InArgument x:TypeArguments="x:String" x:Key="assistanceTypeToMatch">
+                                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="str_LLMAssistanceTypeName" />
+                                          </InArgument>
+                                          <InArgument x:TypeArguments="x:String" x:Key="selectedValue">
+                                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="str_Value" />
+                                          </InArgument>
                                         </ui:InvokeCode.Arguments>
                                       </ui:InvokeCode>
                                     </Sequence>
@@ -487,7 +525,7 @@
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:ForEach>
                   <ui:Break sap:VirtualizedContainerService.HintSize="642,57" sap2010:WorkflowViewState.IdRef="Break_4" />
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="642,164" sap2010:WorkflowViewState.IdRef="LogMessage_14" Level="Info" Message="[&quot;DU for ASFA12 replaced LLM values&quot;]" />
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="642,164" sap2010:WorkflowViewState.IdRef="LogMessage_14" Level="Info" Message="[&quot;DU for ASFA34 replaced LLM values&quot;]" />
                 </Sequence>
               </If.Then>
               <If.Else>

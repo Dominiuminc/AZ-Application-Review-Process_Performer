@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1020,981</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1020,1573</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>FuzzyLogic_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -115,18 +115,45 @@
       <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="FuzzyLogic" sap:VirtualizedContainerService.HintSize="416,916" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="FuzzyLogic" sap:VirtualizedContainerService.HintSize="416,1388" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:List(ausam:NameMatchResult)" Name="matchedresults" />
       <Variable x:TypeArguments="ausam:NameMatchResult" Name="Bestmatch" />
       <Variable x:TypeArguments="x:Boolean" Name="bool_ColaEffective" />
       <Variable x:TypeArguments="ausam:CompanyMatchResult" Name="matchedJobTitleResults" />
+      <Variable x:TypeArguments="ausam:IncomeAssetTypeMatchResult" Name="matchedAssistanceType" />
+      <Variable x:TypeArguments="x:String" Name="str_BestMatch" />
+      <Variable x:TypeArguments="x:Double" Name="dbl_BestScore" />
+      <Variable x:TypeArguments="x:Boolean" Name="bool_MatchFound" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="Dim highestScore As Double = 0.0&#xD;&#xA;Dim closestMatch As String = &quot;&quot;&#xD;&#xA;&#xD;&#xA;' Insert spaces in camel case&#xD;&#xA;searchText = System.Text.RegularExpressions.Regex.Replace(searchText, &quot;([a-z])([A-Z])&quot;, &quot;$1 $2&quot;)&#xD;&#xA;&#xD;&#xA;' Remove Part1, Part2 etc&#xD;&#xA;searchText = System.Text.RegularExpressions.Regex.Replace(searchText, &quot;^part\d+&quot;, &quot;&quot;, System.Text.RegularExpressions.RegexOptions.IgnoreCase)&#xD;&#xA;&#xD;&#xA;' Normalize&#xD;&#xA;Dim normalizedSearch As String = searchText.ToLower()&#xD;&#xA;normalizedSearch = System.Text.RegularExpressions.Regex.Replace(normalizedSearch, &quot;[^a-z0-9 ]&quot;, &quot;&quot;)&#xD;&#xA;normalizedSearch = System.Text.RegularExpressions.Regex.Replace(normalizedSearch, &quot;\s+&quot;, &quot; &quot;).Trim()&#xD;&#xA;&#xD;&#xA;Dim searchWords = normalizedSearch.Split(&quot; &quot;c)&#xD;&#xA;&#xD;&#xA;For Each item As String In items&#xD;&#xA;&#xD;&#xA;    ' Normalize item&#xD;&#xA;    Dim normalizedItem As String = item.ToLower()&#xD;&#xA;    normalizedItem = System.Text.RegularExpressions.Regex.Replace(normalizedItem, &quot;[^a-z0-9 ]&quot;, &quot;&quot;)&#xD;&#xA;    normalizedItem = System.Text.RegularExpressions.Regex.Replace(normalizedItem, &quot;\s+&quot;, &quot; &quot;).Trim()&#xD;&#xA;&#xD;&#xA;    Dim matchCount As Integer = 0&#xD;&#xA;&#xD;&#xA;    For Each word In searchWords&#xD;&#xA;&#xD;&#xA;        If normalizedItem.Contains(word) Then&#xD;&#xA;            matchCount += 1&#xD;&#xA;        End If&#xD;&#xA;&#xD;&#xA;    Next&#xD;&#xA;&#xD;&#xA;    Dim similarity As Double = 0.0&#xD;&#xA;    If searchWords.Length &gt; 0 Then&#xD;&#xA;        similarity = matchCount / searchWords.Length&#xD;&#xA;    End If&#xD;&#xA;&#xD;&#xA;    If similarity &gt; highestScore Then&#xD;&#xA;        highestScore = similarity&#xD;&#xA;        closestMatch = item&#xD;&#xA;    End If&#xD;&#xA;&#xD;&#xA;Next&#xD;&#xA;&#xD;&#xA;bestMatch = closestMatch&#xD;&#xA;bestScore = highestScore&#xD;&#xA;isMatchFound = (highestScore &gt;= minScore)" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="354,197" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+      <ui:InvokeCode.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="searchText">
+          <Literal x:TypeArguments="x:String">Part1 Tribally Controlled Colleges Or Universities Grant Program</Literal>
+        </InArgument>
+        <InArgument x:TypeArguments="s:String[]" x:Key="items">
+          <VisualBasicValue x:TypeArguments="s:String[]" ExpressionText="{}{&quot;Military Assistance (state or federal, e.g. G.I. Bill)&quot;,&quot;A private foundation registered as a nonprofit under 26 U.S.C. 501(c)(3)&quot;,&quot;A state (including U.S. territories), Tribe, or local government&quot;,&quot;A business entity (such as a corporation, general partnership, limited liability company, limited partnership, joint venture, business trust, public benefit corporation, or nonprofit entity)&quot;,&quot;Employment training program under section 134 of the Workforce Innovation and Opportunity Act (WIOA)&quot;,&quot;A business entity (such as a corporation, general partnership, limited liability company, limited partnership, joint venture, business trust, public benefit corporation, or nonprofit entity)&quot;,&quot;Tribally Controlled Colleges or Universities Grant Program&quot;}" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:Double" x:Key="minScore">
+          <Literal x:TypeArguments="x:Double" Value="0.85" />
+        </InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="bestMatch">
+          <VisualBasicReference x:TypeArguments="x:String" ExpressionText="str_BestMatch" />
+        </OutArgument>
+        <OutArgument x:TypeArguments="x:Double" x:Key="bestScore">
+          <VisualBasicReference x:TypeArguments="x:Double" ExpressionText="dbl_BestScore" />
+        </OutArgument>
+        <OutArgument x:TypeArguments="x:Boolean" x:Key="isMatchFound">
+          <VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="bool_MatchFound" />
+        </OutArgument>
+      </ui:InvokeCode.Arguments>
+    </ui:InvokeCode>
+    <ausas:FindBestIncomeAssetTypeMatch Candidates="[{&quot;Military Assistance (state or federal, e.g. G.I. Bill)&quot;}]" DisplayName="Find Best Assistance Type Match" sap:VirtualizedContainerService.HintSize="354,275" sap2010:WorkflowViewState.IdRef="FindBestIncomeAssetTypeMatch_1" MinThreshold="0.5" Query="Military Assistance State Or Federal eg GI Bill" Result="[matchedAssistanceType]" />
     <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="354,57" sap2010:WorkflowViewState.IdRef="CommentOut_1">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,136" sap2010:WorkflowViewState.IdRef="Sequence_4">
