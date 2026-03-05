@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1223,3024</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1863,3024</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>DU_Extraction_MID_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -345,7 +345,7 @@
                                     <OutArgument x:TypeArguments="s:DateTime">[dateTime_2]</OutArgument>
                                   </ui:AssignOperation.To>
                                   <ui:AssignOperation.Value>
-                                    <InArgument x:TypeArguments="s:DateTime">[DateTime.ParseExact(MIDDocumentData.Data.DateOfBirth.Value.ToString.Replace(" ", "").Replace("/ /", "/").Replace("//", "/"), {"MM/dd/yyyy","M/d/yyyy","M/dd/yyyy","MM/d/yyyy"}, System.Globalization.CultureInfo.InvariantCulture, Globalization.DateTimeStyles.None)]</InArgument>
+                                    <InArgument x:TypeArguments="s:DateTime">[DateTime.ParseExact(MIDDocumentData.Data.DateOfBirth.Value.ToString.Replace(" ", "").Replace("/ /", "/").Replace("//", "/").Replace("'",""), {"MM/dd/yyyy","M/d/yyyy","M/dd/yyyy","MM/d/yyyy"}, System.Globalization.CultureInfo.InvariantCulture, Globalization.DateTimeStyles.None)]</InArgument>
                                   </ui:AssignOperation.Value>
                                 </ui:AssignOperation>
                                 <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_21">
