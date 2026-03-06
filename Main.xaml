@@ -8,7 +8,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1020,879</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>954,919</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Main2_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -719,9 +719,9 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <Transition.To>
-                            <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="End process and close all applications used." DisplayName="End Process" sap:VirtualizedContainerService.HintSize="144,120" sap2010:WorkflowViewState.IdRef="State_1" IsFinal="True">
+                            <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="End process and close all applications used." DisplayName="End Process" sap:VirtualizedContainerService.HintSize="872,1569" sap2010:WorkflowViewState.IdRef="State_1" IsFinal="True">
                               <State.Entry>
-                                <TryCatch DisplayName="Try to close all aplications" sap:VirtualizedContainerService.HintSize="826,1947" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+                                <TryCatch DisplayName="Try to close all aplications" sap:VirtualizedContainerService.HintSize="826,1424" sap2010:WorkflowViewState.IdRef="TryCatch_4">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -729,7 +729,7 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                   <TryCatch.Try>
-                                    <Sequence sap:VirtualizedContainerService.HintSize="692,1719" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                                    <Sequence sap:VirtualizedContainerService.HintSize="692,1196" sap2010:WorkflowViewState.IdRef="Sequence_34">
                                       <Sequence.Variables>
                                         <Variable x:TypeArguments="x:String" Name="str_ScreenshotPath" />
                                       </Sequence.Variables>
@@ -798,7 +798,7 @@
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                       </ui:InvokeWorkflowFile>
-                                      <TryCatch DisplayName="Try Catch-SaveAllLLMExtractions" sap:VirtualizedContainerService.HintSize="630,1370" sap2010:WorkflowViewState.IdRef="TryCatch_14">
+                                      <TryCatch DisplayName="Try Catch-SaveAllLLMExtractions" sap:VirtualizedContainerService.HintSize="630,847" sap2010:WorkflowViewState.IdRef="TryCatch_14">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -806,7 +806,7 @@
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                         <TryCatch.Try>
-                                          <Sequence DisplayName="SaveAllLLMExtractions" sap:VirtualizedContainerService.HintSize="592,1119" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                                          <Sequence DisplayName="SaveAllLLMExtractions" sap:VirtualizedContainerService.HintSize="496,596" sap2010:WorkflowViewState.IdRef="Sequence_37">
                                             <Sequence.Variables>
                                               <Variable x:TypeArguments="x:String" Name="str_PDFFolder" />
                                             </Sequence.Variables>
@@ -816,8 +816,8 @@
                                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="530,173" sap2010:WorkflowViewState.IdRef="LogMessage_38" Message="[&quot;LLM JSON Files uploading to Sharepoint started&quot;]" />
-                                            <Assign sap:VirtualizedContainerService.HintSize="530,114" sap2010:WorkflowViewState.IdRef="Assign_29">
+                                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,173" sap2010:WorkflowViewState.IdRef="LogMessage_38" Message="[&quot;LLM JSON Files uploading to SharedDrive started&quot;]" />
+                                            <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_29">
                                               <Assign.To>
                                                 <OutArgument x:TypeArguments="x:String">[str_PDFFolder]</OutArgument>
                                               </Assign.To>
@@ -831,15 +831,15 @@
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
                                             </Assign>
-                                            <If Condition="[Path.Exists(str_PDFFolder)]" DisplayName="If-PDFFolderExists" sap:VirtualizedContainerService.HintSize="530,580" sap2010:WorkflowViewState.IdRef="If_16">
+                                            <If Condition="[Path.Exists(str_PDFFolder)]" DisplayName="If-PDFFolderExists" sap:VirtualizedContainerService.HintSize="434,57" sap2010:WorkflowViewState.IdRef="If_16">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
                                               <If.Then>
-                                                <Sequence DisplayName="Then-MoveFilesToSD" sap:VirtualizedContainerService.HintSize="496,307" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                                                <Sequence DisplayName="Then-MoveFilesToSD" sap:VirtualizedContainerService.HintSize="592,907" sap2010:WorkflowViewState.IdRef="Sequence_38">
                                                   <Sequence.Variables>
                                                     <Variable x:TypeArguments="s:String[]" Name="arr_Subfolders" />
                                                     <Variable x:TypeArguments="x:String" Name="str_SDPDFFolderWithDate" />
@@ -849,7 +849,7 @@
                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
-                                                  <Assign DisplayName="Assign-SubFolders" sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_30">
+                                                  <Assign DisplayName="Assign-SubFolders" sap:VirtualizedContainerService.HintSize="530,114" sap2010:WorkflowViewState.IdRef="Assign_30">
                                                     <Assign.To>
                                                       <OutArgument x:TypeArguments="s:String[]">[arr_Subfolders]</OutArgument>
                                                     </Assign.To>
@@ -857,7 +857,7 @@
                                                       <InArgument x:TypeArguments="s:String[]">[Directory.GetDirectories(str_PDFFolder)]</InArgument>
                                                     </Assign.Value>
                                                   </Assign>
-                                                  <If Condition="[arr_Subfolders.Count&gt;0]" DisplayName="If-UnitfolderExists" sap:VirtualizedContainerService.HintSize="434,57" sap2010:WorkflowViewState.IdRef="If_17">
+                                                  <If Condition="[arr_Subfolders.Count&gt;0]" DisplayName="If-UnitfolderExists" sap:VirtualizedContainerService.HintSize="530,57" sap2010:WorkflowViewState.IdRef="If_17">
                                                     <sap:WorkflowViewStateService.ViewState>
                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -912,7 +912,7 @@
                                                       </Sequence>
                                                     </If.Else>
                                                   </If>
-                                                  <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each currentFolder" sap:VirtualizedContainerService.HintSize="434,48" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[arr_Subfolders]">
+                                                  <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each currentFolder" sap:VirtualizedContainerService.HintSize="530,648" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[arr_Subfolders]">
                                                     <ui:ForEach.Body>
                                                       <ActivityAction x:TypeArguments="x:String">
                                                         <ActivityAction.Argument>
@@ -956,7 +956,7 @@
                                                     </ui:ForEach.Body>
                                                     <sap:WorkflowViewStateService.ViewState>
                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
@@ -973,7 +973,7 @@
                                                 </Sequence>
                                               </If.Else>
                                             </If>
-                                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="530,164" sap2010:WorkflowViewState.IdRef="LogMessage_40" Message="[&quot;LLM JSON Files uploading to SharedDrive ended&quot;]">
+                                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,164" sap2010:WorkflowViewState.IdRef="LogMessage_40" Message="[&quot;LLM JSON Files uploading to SharedDrive ended&quot;]">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
