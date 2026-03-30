@@ -16,7 +16,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1747,2105</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>2385,7759</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ConvertPDFsToImages_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -138,7 +138,7 @@
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ConvertPDFsToImages" sap:VirtualizedContainerService.HintSize="701,2040" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ConvertPDFsToImages" sap:VirtualizedContainerService.HintSize="1038,7694" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="int_Index" />
       <Variable x:TypeArguments="x:String" Name="str_RequiredDocPrompt" />
@@ -153,8 +153,8 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="639,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;ConvertPDFsToImages.xaml is Started&quot;]" />
-    <ui:MultipleAssign DisplayName="Multiple Assign-Prompts" sap:VirtualizedContainerService.HintSize="639,57" sap2010:WorkflowViewState.IdRef="MultipleAssign_82">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="976,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;ConvertPDFsToImages.xaml is Started&quot;]" />
+    <ui:MultipleAssign DisplayName="Multiple Assign-Prompts" sap:VirtualizedContainerService.HintSize="976,57" sap2010:WorkflowViewState.IdRef="MultipleAssign_82">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_15">
@@ -190,7 +190,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:MultipleAssign>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="639,1073" sap2010:WorkflowViewState.IdRef="CommentOut_161">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="976,1073" sap2010:WorkflowViewState.IdRef="CommentOut_161">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="603,962" sap2010:WorkflowViewState.IdRef="Sequence_275">
           <sap:WorkflowViewStateService.ViewState>
@@ -300,23 +300,23 @@
         </Sequence>
       </ui:CommentOut.Body>
     </ui:CommentOut>
-    <ui:ReadTextFile File="{x:Null}" Content="[str_RequiredDocPrompt]" DisplayName="Read Text File_Prompts" FileName="[str_RequiredDocPromptFile]" sap:VirtualizedContainerService.HintSize="639,112" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
-    <ui:ReadTextFile File="{x:Null}" Content="[str_SortingUserPrompt]" DisplayName="Read Text File_Prompts" FileName="[str_SortingUserPromptFile]" sap:VirtualizedContainerService.HintSize="639,112" sap2010:WorkflowViewState.IdRef="ReadTextFile_2" />
-    <ui:BuildDataTable DataTable="[out_DtSortingDetails]" DisplayName="Build Data Table_SortingDetals" sap:VirtualizedContainerService.HintSize="639,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;PDFFile&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;ImageFullPath&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;PageNumber&quot; msdata:Caption=&quot;&quot; type=&quot;xs:int&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;RequiredClassificationResult&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BucketName&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
-    <Sequence DisplayName="ConversionWithAshlingActivity" sap:VirtualizedContainerService.HintSize="639,57" sap2010:WorkflowViewState.IdRef="Sequence_68">
+    <ui:ReadTextFile File="{x:Null}" Content="[str_RequiredDocPrompt]" DisplayName="Read Text File_Prompts" FileName="[str_RequiredDocPromptFile]" sap:VirtualizedContainerService.HintSize="976,112" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
+    <ui:ReadTextFile File="{x:Null}" Content="[str_SortingUserPrompt]" DisplayName="Read Text File_Prompts" FileName="[str_SortingUserPromptFile]" sap:VirtualizedContainerService.HintSize="976,112" sap2010:WorkflowViewState.IdRef="ReadTextFile_2" />
+    <ui:BuildDataTable DataTable="[out_DtSortingDetails]" DisplayName="Build Data Table_SortingDetals" sap:VirtualizedContainerService.HintSize="976,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;PDFFile&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;ImageFullPath&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;PageNumber&quot; msdata:Caption=&quot;&quot; type=&quot;xs:int&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;RequiredClassificationResult&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BucketName&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+    <Sequence DisplayName="ConversionWithAshlingActivity" sap:VirtualizedContainerService.HintSize="976,5152" sap2010:WorkflowViewState.IdRef="Sequence_68">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ForEach x:TypeArguments="x:String" CurrentIndex="[int_index]" DisplayName="For Each PDF File" sap:VirtualizedContainerService.HintSize="914,5052" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[in_PDFFiles]">
+      <ui:ForEach x:TypeArguments="x:String" CurrentIndex="[int_index]" DisplayName="For Each PDF File" sap:VirtualizedContainerService.HintSize="914,5032" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[in_PDFFiles]">
         <ui:ForEach.Body>
           <ActivityAction x:TypeArguments="x:String">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:String" Name="currentText" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="880,4914" sap2010:WorkflowViewState.IdRef="Sequence_69">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="880,4895" sap2010:WorkflowViewState.IdRef="Sequence_69">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:Int32" Name="int_TotalPageCount" />
                 <Variable x:TypeArguments="x:Int32" Name="int_PageCount" />
@@ -327,14 +327,14 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <aupap:ExtractPages Password="{x:Null}" DisplayName="Extract Pages" sap:VirtualizedContainerService.HintSize="818,331" sap2010:WorkflowViewState.IdRef="ExtractPages_1" ImgExt="jpg" PdfPath="[currentText]" Quality="[CInt(in_Config(&quot;LLM_ImageQuality&quot;).ToString)]" Result="[ExtractedImageFiles]" TargetDir="[in_PDFFolder]" />
-              <ui:ForEach x:TypeArguments="s:ValueTuple(x:String, x:Int32)" CurrentIndex="{x:Null}" DisplayName="For Each currentValueTupleOfTextAndNumber" sap:VirtualizedContainerService.HintSize="818,4495" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[ExtractedImageFiles]">
+              <aupap:ExtractPages Password="{x:Null}" DisplayName="Extract Pages" sap:VirtualizedContainerService.HintSize="818,326" sap2010:WorkflowViewState.IdRef="ExtractPages_1" ImgExt="jpg" PdfPath="[currentText]" Quality="[CInt(in_Config(&quot;LLM_ImageQuality&quot;).ToString)]" Result="[ExtractedImageFiles]" TargetDir="[in_PDFFolder]" />
+              <ui:ForEach x:TypeArguments="s:ValueTuple(x:String, x:Int32)" CurrentIndex="{x:Null}" DisplayName="For Each currentValueTupleOfTextAndNumber" sap:VirtualizedContainerService.HintSize="818,4481" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[ExtractedImageFiles]">
                 <ui:ForEach.Body>
                   <ActivityAction x:TypeArguments="s:ValueTuple(x:String, x:Int32)">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="s:ValueTuple(x:String, x:Int32)" Name="currentValueTupleOfTextAndNumber" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="LoopingThroughEachImage" sap:VirtualizedContainerService.HintSize="784,4357" sap2010:WorkflowViewState.IdRef="Sequence_93">
+                    <Sequence DisplayName="LoopingThroughEachImage" sap:VirtualizedContainerService.HintSize="784,4344" sap2010:WorkflowViewState.IdRef="Sequence_93">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="x:String" Name="str_ImagePath" />
                         <Variable x:TypeArguments="am:LlmResult" Name="llm_Result" />
@@ -346,7 +346,7 @@
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Assign DisplayName="Assign-Imagepath" sap:VirtualizedContainerService.HintSize="722,115" sap2010:WorkflowViewState.IdRef="Assign_8">
+                      <Assign DisplayName="Assign-Imagepath" sap:VirtualizedContainerService.HintSize="722,114" sap2010:WorkflowViewState.IdRef="Assign_8">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:String">[str_Imagepath]</OutArgument>
                         </Assign.To>
@@ -354,7 +354,7 @@
                           <InArgument x:TypeArguments="x:String">[currentValueTupleOfTextAndNumber.Item1]</InArgument>
                         </Assign.Value>
                       </Assign>
-                      <Assign DisplayName="Assign-int_PageCount" sap:VirtualizedContainerService.HintSize="722,115" sap2010:WorkflowViewState.IdRef="Assign_11">
+                      <Assign DisplayName="Assign-int_PageCount" sap:VirtualizedContainerService.HintSize="722,114" sap2010:WorkflowViewState.IdRef="Assign_11">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:Int32">[int_PageCount]</OutArgument>
                         </Assign.To>
@@ -362,7 +362,7 @@
                           <InArgument x:TypeArguments="x:Int32">[currentValueTupleOfTextAndNumber.Item2+1]</InArgument>
                         </Assign.Value>
                       </Assign>
-                      <afa:SendImage APIKey="[in_APIKey]" APIVersion="[in_APIVersion]" DeploymentName="[in_DeploymentName]" DisplayName="Send Image-ReqDocLLMCall" EndPoint="[in_EndPoint]" sap:VirtualizedContainerService.HintSize="722,643" sap2010:WorkflowViewState.IdRef="SendImage_7" ImagePath="[str_Imagepath]" MaxReturnTokens="[CInt(in_Config(&quot;LLM_Classification_MaxTokens&quot;).ToString)]" Result="[llm_Result]" RetryCount="3" SystemPrompt="[str_SystemPrompt]" Temperature="[CInt(in_Config(&quot;LLM_Classification_Temperature&quot;).ToString)]" Timeout="[CInt(in_Config(&quot;LLM_Classification_Timeout&quot;).ToString)]" UserPrompt="[str_RequiredDocPrompt]">
+                      <afa:SendImage APIKey="[in_APIKey]" APIVersion="[in_APIVersion]" DeploymentName="[in_DeploymentName]" DisplayName="Send Image-ReqDocLLMCall" EndPoint="[in_EndPoint]" sap:VirtualizedContainerService.HintSize="722,632" sap2010:WorkflowViewState.IdRef="SendImage_7" ImagePath="[str_Imagepath]" MaxReturnTokens="[CInt(in_Config(&quot;LLM_Classification_MaxTokens&quot;).ToString)]" Result="[llm_Result]" RetryCount="3" SystemPrompt="[str_SystemPrompt]" Temperature="[CInt(in_Config(&quot;LLM_Classification_Temperature&quot;).ToString)]" Timeout="[CInt(in_Config(&quot;LLM_Classification_Timeout&quot;).ToString)]" UserPrompt="[str_RequiredDocPrompt]">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -559,7 +559,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:ForEach>
     </Sequence>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="639,57" sap2010:WorkflowViewState.IdRef="CommentOut_40">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="976,57" sap2010:WorkflowViewState.IdRef="CommentOut_40">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,136" sap2010:WorkflowViewState.IdRef="Sequence_81">
           <sap:WorkflowViewStateService.ViewState>
@@ -827,34 +827,41 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <ui:PathExists Exists="{x:Null}" DisplayName="ClassificationResultsPath Exists" sap:VirtualizedContainerService.HintSize="639,57" sap2010:WorkflowViewState.IdRef="PathExists_2" Path="[in_PDFFolder+&quot;\Classificationresults.xlsx&quot;]" PathType="File" Resource="[str_ClassificationResultsRe]">
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="io_DtSortingDetails.AsEnumerable().ToList().ForEach(Sub(row)&#xD;&#xA;    If row(&quot;RequiredClassificationResult&quot;).ToString = &quot;Asset Self Certification Worksheet&quot; Then&#xD;&#xA;        row(&quot;RequiredClassificationResult&quot;) = &quot;Asset Self Certification&quot;&#xD;&#xA;    End If&#xD;&#xA;End Sub)&#xD;&#xA;" DisplayName="Invoke Code - Replace ASCW with ASC if needed" sap:VirtualizedContainerService.HintSize="976,197" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+      <ui:InvokeCode.Arguments>
+        <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_DtSortingDetails">
+          <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="out_DtSortingDetails" />
+        </InOutArgument>
+      </ui:InvokeCode.Arguments>
+    </ui:InvokeCode>
+    <ui:PathExists Exists="{x:Null}" DisplayName="ClassificationResultsPath Exists" sap:VirtualizedContainerService.HintSize="976,147" sap2010:WorkflowViewState.IdRef="PathExists_2" Path="[in_PDFFolder+&quot;\Classificationresults.xlsx&quot;]" PathType="File" Resource="[str_ClassificationResultsRe]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:PathExists>
-    <ui:Delete Path="{x:Null}" ContinueOnError="True" DisplayName="Delete ClassificationResultsFile" sap:VirtualizedContainerService.HintSize="639,57" sap2010:WorkflowViewState.IdRef="Delete_2" ResourceFile="[str_ClassificationResultsRe]">
+    <ui:Delete Path="{x:Null}" ContinueOnError="True" DisplayName="Delete ClassificationResultsFile" sap:VirtualizedContainerService.HintSize="976,122" sap2010:WorkflowViewState.IdRef="Delete_2" ResourceFile="[str_ClassificationResultsRe]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:Delete>
-    <ui:WriteRange StartingCell="{x:Null}" WorkbookPathResource="{x:Null}" DataTable="[out_DtSortingDetails]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="639,57" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" WorkbookPath="[in_PDFFolder+&quot;\Classificationresults.xlsx&quot;]">
+    <ui:WriteRange StartingCell="{x:Null}" WorkbookPathResource="{x:Null}" DataTable="[out_DtSortingDetails]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="976,148" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" WorkbookPath="[in_PDFFolder+&quot;\Classificationresults.xlsx&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:WriteRange>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="639,48" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;ConvertPDFsToImages.xaml is Complete&quot;]">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="976,164" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;ConvertPDFsToImages.xaml is Complete&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
