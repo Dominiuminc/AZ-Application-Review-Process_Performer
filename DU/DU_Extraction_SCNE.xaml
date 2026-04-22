@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="DU_Extraction_SCNE" this:DU_Extraction_SCNE.in_ArrImages="[{&quot;C:\Users\harika.malyala\Documents\AZApplicationReview\PDFs\Unit 3031-old\Unit 3031_Upload7Page4.jpg&quot;}]" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:ausam="clr-namespace:AshlingPartners.UiPath.StringMatching.Activities.Models;assembly=AshlingPartners.UiPath.StringMatching.Activities" xmlns:ausas="clr-namespace:AshlingPartners.UiPath.StringMatching.Activities.StringMatching;assembly=AshlingPartners.UiPath.StringMatching.Activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:p="http://schemas.uipath.com/workflow/activities/intelligentocr" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uisad="clr-namespace:UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction;assembly=UiPath.IntelligentOCR.StudioWeb.Activities" xmlns:uisad1="clr-namespace:UiPath.IntelligentOCR.StudioWeb.Activities.DocumentClassification;assembly=UiPath.IntelligentOCR.StudioWeb.Activities" xmlns:uisasedb="clr-namespace:UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.ExtendedExtractionResultsForDocumentData.DUExtractor10SCNESelfCertificationOfNonEmploymentV15.Bundle;assembly=ExtendedExtractionRe.hQoOeKHwMO11XRma4U7gP21" xmlns:uisasedb1="clr-namespace:UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.ExtendedExtractionResultsForDocumentData.DUExtractor10SECSelfEmploymentCertificationV11.Bundle;assembly=ExtendedExtractionRe.rO5Qc4l572E1Kkf222vo2mj3" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="DU_Extraction_SCNE" this:DU_Extraction_SCNE.in_ArrImages="[{&quot;C:\Users\harika.malyala\Documents\AZApplicationReview\PDFs\Unit 3031-old\Unit 3031_Upload7Page4.jpg&quot;}]" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:ausam="clr-namespace:AshlingPartners.UiPath.StringMatching.Activities.Models;assembly=AshlingPartners.UiPath.StringMatching.Activities" xmlns:ausas="clr-namespace:AshlingPartners.UiPath.StringMatching.Activities.StringMatching;assembly=AshlingPartners.UiPath.StringMatching.Activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:p="http://schemas.uipath.com/workflow/activities/intelligentocr" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uisad="clr-namespace:UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction;assembly=UiPath.IntelligentOCR.StudioWeb.Activities" xmlns:uisad1="clr-namespace:UiPath.IntelligentOCR.StudioWeb.Activities.DocumentClassification;assembly=UiPath.IntelligentOCR.StudioWeb.Activities" xmlns:uisasedb="clr-namespace:UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.ExtendedExtractionResultsForDocumentData.DUExtractor10SCNESelfCertificationOfNonEmploymentV15.Bundle;assembly=ExtendedExtractionRe.hQoOeKHwMO11XRma4U7gP21" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_ArrImages" Type="InArgument(s:String[])" />
     <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
@@ -8,7 +8,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1587,10206</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1192,10206</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>DU_Extraction_SCNE_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -167,13 +167,6 @@
                   </Variable>
                   <Variable x:TypeArguments="x:String" Name="str_DUName" />
                   <Variable x:TypeArguments="ausam:NameMatchResult" Name="matchedNameResults" />
-                  <Variable x:TypeArguments="ausam:CompanyMatchResult" Name="matchedBusinessNamesResults" />
-                  <Variable x:TypeArguments="x:String" Name="str_LLMBusinessName">
-                    <Variable.Default>
-                      <Literal x:TypeArguments="x:String" Value="" />
-                    </Variable.Default>
-                  </Variable>
-                  <Variable x:TypeArguments="uisad:IDocumentData(uisasedb1:DUExtractor10SECSelfEmploymentCertificationV11)" Name="VOEDocumentData" />
                 </Sequence.Variables>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -182,7 +175,7 @@
                 </sap:WorkflowViewStateService.ViewState>
                 <ui:LogMessage DisplayName="Log file processing update" sap:VirtualizedContainerService.HintSize="1006,173" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[string.Format(&quot;Processing file: {0}&quot;, currentFile)]" />
                 <ui:PathExists Exists="{x:Null}" DisplayName="CurrentFile Exists" sap:VirtualizedContainerService.HintSize="1006,172" sap2010:WorkflowViewState.IdRef="PathExists_1" Path="[currentFile]" PathType="File" Resource="[lRes_File]" />
-                <p:ClassifyDocument ApiKey="{x:Null}" ClassifierResult="{x:Null}" DocumentObjectModel="{x:Null}" DocumentPath="{x:Null}" DocumentText="{x:Null}" DocumentTypes="{x:Null}" PersistenceId="{x:Null}" PredictionId="{x:Null}" Prompt="{x:Null}" ClassificationResults="[classifiedDocument]" ClassifierId="241b01ba-c61b-f111-9a49-6045bdd66358" ClassifierName="DU_Extractor1-0_SCNE_classifier_v15" DisplayName="Classify Document" Endpoint="https://cloud.uipath.com/a6e81ae5-13a7-4d1d-9b35-86ac86d911ce/576ebc73-38e9-49e4-a7a2-a36fee4a5d83/du_/api/framework/projects/6dd2dfe2-df17-f111-a69b-000d3a8ebe57/classifiers/241b01ba-c61b-f111-9a49-6045bdd66358/classification/start?api-version=1.1" FileInput="[lRes_File]" sap:VirtualizedContainerService.HintSize="1006,339" sap2010:WorkflowViewState.IdRef="ClassifyDocument_2" MinimumConfidence="50" ProjectId="6dd2dfe2-df17-f111-a69b-000d3a8ebe57" ProjectName="Arizona Document Understanding" ProjectVersionName="DU_Extractor1-0_SCNE" ProjectVersionNumber="15" RuntimeAssetPath="Compliance/Application Review Process_AZ/DU_AppCredentials" RuntimeTenantUrl="[in_Config(&quot;DU_TenantURL&quot;).ToString]" TimeoutInSeconds="3600">
+                <p:ClassifyDocument ApiKey="{x:Null}" ClassifierResult="{x:Null}" DocumentObjectModel="{x:Null}" DocumentPath="{x:Null}" DocumentText="{x:Null}" DocumentTypes="{x:Null}" PersistenceId="{x:Null}" PredictionId="{x:Null}" Prompt="{x:Null}" ClassificationResults="[classifiedDocument]" ClassifierId="d82b73f7-fb37-f111-8ef3-000d3a1cf261" ClassifierName="DU_Extractor1-0_SCNE_classifier_v15" DisplayName="Classify Document" Endpoint="https://cloud.uipath.com/a6e81ae5-13a7-4d1d-9b35-86ac86d911ce/4af39ed3-b30e-48f2-b551-f1e60b4acb75/du_/api/framework/projects/93ac0424-edf6-f011-8d4d-7c1e5269e216/classifiers/d82b73f7-fb37-f111-8ef3-000d3a1cf261/classification/start?api-version=1.1" FileInput="[lRes_File]" sap:VirtualizedContainerService.HintSize="1006,339" sap2010:WorkflowViewState.IdRef="ClassifyDocument_2" MinimumConfidence="50" ProjectId="93ac0424-edf6-f011-8d4d-7c1e5269e216" ProjectName="Arizona Document Understanding" ProjectVersionName="DU_Extractor1-0_SCNE" ProjectVersionNumber="15" RuntimeAssetPath="Compliance/Application Review Process_AZ/DU_AppCredentials" RuntimeTenantUrl="[in_Config(&quot;DU_TenantURL&quot;).ToString]" TimeoutInSeconds="3600">
                   <p:ClassifyDocument.GptPromptWithVariables>
                     <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
                   </p:ClassifyDocument.GptPromptWithVariables>
@@ -197,15 +190,6 @@
                   <If.Then>
                     <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="972,7491" sap2010:WorkflowViewState.IdRef="Sequence_3">
                       <Sequence.Variables>
-                        <Variable x:TypeArguments="x:String" Name="str_DUPrintedName" />
-                        <Variable x:TypeArguments="x:String" Name="str_DUBusinessName" />
-                        <Variable x:TypeArguments="x:String" Name="matchedPrintNameResults" />
-                        <Variable x:TypeArguments="ausam:NameMatchResult" Name="matchedPrintedNameResults" />
-                        <Variable x:TypeArguments="x:String" Name="str_LLMPrintedName">
-                          <Variable.Default>
-                            <Literal x:TypeArguments="x:String" Value="" />
-                          </Variable.Default>
-                        </Variable>
                         <Variable x:TypeArguments="uisad:IDocumentData(uisasedb:DUExtractor10SCNESelfCertificationOfNonEmploymentV15)" Name="SCNEDocumentData" />
                       </Sequence.Variables>
                       <sap:WorkflowViewStateService.ViewState>
@@ -213,7 +197,7 @@
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <p:ExtractDocumentDataWithDocumentData x:TypeArguments="uisasedb:DUExtractor10SCNESelfCertificationOfNonEmploymentV15" DocumentBounds="{x:Null}" DocumentObjectModel="{x:Null}" DocumentPath="{x:Null}" DocumentText="{x:Null}" ExtractorDocumentType="{x:Null}" ExtractorResult="{x:Null}" PersistenceId="{x:Null}" PredictionId="{x:Null}" Prompt="{x:Null}" ApplyAutoValidation="False" DisplayName="Extract Document Data" DocType="251b01ba-c61b-f111-9a49-6045bdd66358" ExtractionResults="[SCNEDocumentData]" ExtractorName="DU_Extractor1-0_SCNE_SelfCertification of NonEmployment_v15" FileInput="[classifiedDocument]" GenerateData="True" sap:VirtualizedContainerService.HintSize="910,389" sap2010:WorkflowViewState.IdRef="ExtractDocumentDataWithDocumentData`1_3" ModernDocumentTypeId="426d41ae-e117-f111-a69a-0022482373f0" ModernDocumentTypeName="SelfCertification of NonEmployment" ProjectId="6dd2dfe2-df17-f111-a69b-000d3a8ebe57" ProjectName="Arizona Document Understanding" ProjectTag="[Nothing]" ProjectVersionName="DU_Extractor1-0_SCNE" ProjectVersionNumber="15" RuntimeAssetPath="Compliance/Application Review Process_AZ/DU_AppCredentials" RuntimeTenantUrl="[in_Config(&quot;DU_TenantURL&quot;).ToString]" TimeoutInSeconds="3600">
+                      <p:ExtractDocumentDataWithDocumentData x:TypeArguments="uisasedb:DUExtractor10SCNESelfCertificationOfNonEmploymentV15" DocumentBounds="{x:Null}" DocumentObjectModel="{x:Null}" DocumentPath="{x:Null}" DocumentText="{x:Null}" ExtractorDocumentType="{x:Null}" ExtractorResult="{x:Null}" PersistenceId="{x:Null}" PredictionId="{x:Null}" Prompt="{x:Null}" ApplyAutoValidation="False" DisplayName="Extract Document Data" DocType="d72b73f7-fb37-f111-8ef3-000d3a1cf261" ExtractionResults="[SCNEDocumentData]" ExtractorName="DU_Extractor1-0_SCNE_SelfCertification of NonEmployment_v15" FileInput="[classifiedDocument]" GenerateData="True" sap:VirtualizedContainerService.HintSize="910,389" sap2010:WorkflowViewState.IdRef="ExtractDocumentDataWithDocumentData`1_3" ModernDocumentTypeId="30ac77ce-440c-f111-a69b-0022482370c6" ModernDocumentTypeName="SelfCertification of NonEmployment" ProjectId="93ac0424-edf6-f011-8d4d-7c1e5269e216" ProjectName="Arizona Document Understanding" ProjectVersionName="DU_Extractor1-0_SCNE" ProjectVersionNumber="15" RuntimeAssetPath="Compliance/Application Review Process_AZ/DU_AppCredentials" RuntimeTenantUrl="[in_Config(&quot;DU_TenantURL&quot;).ToString]" TimeoutInSeconds="3600">
                         <p:ExtractDocumentDataWithDocumentData.AutoValidationConfidenceThreshold>
                           <InArgument x:TypeArguments="s:Nullable(x:Int32)">
                             <Literal x:TypeArguments="s:Nullable(x:Int32)" Value="0" />
@@ -222,6 +206,11 @@
                         <p:ExtractDocumentDataWithDocumentData.GptPromptWithVariables>
                           <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
                         </p:ExtractDocumentDataWithDocumentData.GptPromptWithVariables>
+                        <p:ExtractDocumentDataWithDocumentData.ProjectTag>
+                          <InArgument x:TypeArguments="x:String">
+                            <Literal x:TypeArguments="x:String" Value="" />
+                          </InArgument>
+                        </p:ExtractDocumentDataWithDocumentData.ProjectTag>
                       </p:ExtractDocumentDataWithDocumentData>
                       <ui:LogMessage DisplayName="Write extracted data (SelfCertification of NonEmployment)" sap:VirtualizedContainerService.HintSize="910,173" sap2010:WorkflowViewState.IdRef="LogMessage_5" Message="[&quot;The following data has been extracted (excluding table data): {for each fields, except tables, display as key-value pairs: field name - field value}.&quot; &amp; vbCrLf &amp; SCNEDocumentData.ToString]">
                         <sap:WorkflowViewStateService.ViewState>
