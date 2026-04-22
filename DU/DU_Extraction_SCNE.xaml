@@ -8,7 +8,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>2089,10206</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1587,10206</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>DU_Extraction_SCNE_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -213,7 +213,7 @@
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <p:ExtractDocumentDataWithDocumentData x:TypeArguments="uisasedb:DUExtractor10SCNESelfCertificationOfNonEmploymentV15" DocumentBounds="{x:Null}" DocumentObjectModel="{x:Null}" DocumentPath="{x:Null}" DocumentText="{x:Null}" ExtractorDocumentType="{x:Null}" ExtractorResult="{x:Null}" PersistenceId="{x:Null}" PredictionId="{x:Null}" Prompt="{x:Null}" ApplyAutoValidation="False" DisplayName="Extract Document Data" DocType="251b01ba-c61b-f111-9a49-6045bdd66358" ExtractionResults="[SCNEDocumentData]" ExtractorName="DU_Extractor1-0_SCNE_SelfCertification of NonEmployment_v15" FileInput="[classifiedDocument]" GenerateData="True" sap:VirtualizedContainerService.HintSize="910,389" sap2010:WorkflowViewState.IdRef="ExtractDocumentDataWithDocumentData`1_3" ModernDocumentTypeId="426d41ae-e117-f111-a69a-0022482373f0" ModernDocumentTypeName="SelfCertification of NonEmployment" ProjectId="6dd2dfe2-df17-f111-a69b-000d3a8ebe57" ProjectName="Arizona Document Understanding" ProjectVersionName="DU_Extractor1-0_SCNE" ProjectVersionNumber="15" RuntimeAssetPath="Compliance/Application Review Process_AZ/DU_AppCredentials" RuntimeTenantUrl="[in_Config(&quot;DU_TenantURL&quot;).ToString]" TimeoutInSeconds="3600">
+                      <p:ExtractDocumentDataWithDocumentData x:TypeArguments="uisasedb:DUExtractor10SCNESelfCertificationOfNonEmploymentV15" DocumentBounds="{x:Null}" DocumentObjectModel="{x:Null}" DocumentPath="{x:Null}" DocumentText="{x:Null}" ExtractorDocumentType="{x:Null}" ExtractorResult="{x:Null}" PersistenceId="{x:Null}" PredictionId="{x:Null}" Prompt="{x:Null}" ApplyAutoValidation="False" DisplayName="Extract Document Data" DocType="251b01ba-c61b-f111-9a49-6045bdd66358" ExtractionResults="[SCNEDocumentData]" ExtractorName="DU_Extractor1-0_SCNE_SelfCertification of NonEmployment_v15" FileInput="[classifiedDocument]" GenerateData="True" sap:VirtualizedContainerService.HintSize="910,389" sap2010:WorkflowViewState.IdRef="ExtractDocumentDataWithDocumentData`1_3" ModernDocumentTypeId="426d41ae-e117-f111-a69a-0022482373f0" ModernDocumentTypeName="SelfCertification of NonEmployment" ProjectId="6dd2dfe2-df17-f111-a69b-000d3a8ebe57" ProjectName="Arizona Document Understanding" ProjectTag="[Nothing]" ProjectVersionName="DU_Extractor1-0_SCNE" ProjectVersionNumber="15" RuntimeAssetPath="Compliance/Application Review Process_AZ/DU_AppCredentials" RuntimeTenantUrl="[in_Config(&quot;DU_TenantURL&quot;).ToString]" TimeoutInSeconds="3600">
                         <p:ExtractDocumentDataWithDocumentData.AutoValidationConfidenceThreshold>
                           <InArgument x:TypeArguments="s:Nullable(x:Int32)">
                             <Literal x:TypeArguments="s:Nullable(x:Int32)" Value="0" />
@@ -222,11 +222,6 @@
                         <p:ExtractDocumentDataWithDocumentData.GptPromptWithVariables>
                           <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
                         </p:ExtractDocumentDataWithDocumentData.GptPromptWithVariables>
-                        <p:ExtractDocumentDataWithDocumentData.ProjectTag>
-                          <InArgument x:TypeArguments="x:String">
-                            <Literal x:TypeArguments="x:String" Value="" />
-                          </InArgument>
-                        </p:ExtractDocumentDataWithDocumentData.ProjectTag>
                       </p:ExtractDocumentDataWithDocumentData>
                       <ui:LogMessage DisplayName="Write extracted data (SelfCertification of NonEmployment)" sap:VirtualizedContainerService.HintSize="910,173" sap2010:WorkflowViewState.IdRef="LogMessage_5" Message="[&quot;The following data has been extracted (excluding table data): {for each fields, except tables, display as key-value pairs: field name - field value}.&quot; &amp; vbCrLf &amp; SCNEDocumentData.ToString]">
                         <sap:WorkflowViewStateService.ViewState>
