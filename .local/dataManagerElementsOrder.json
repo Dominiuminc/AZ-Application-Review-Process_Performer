@@ -45,6 +45,7 @@
       "Path": "Framework/Process.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "IsLeaseUpProperty&Flowchart_1",
         "DoFindingsHaveManualReview&Flowchart_1",
         "str_PDFFolder&Flowchart_1",
         "str_PropertyName&Sequence_1",
@@ -404,6 +405,7 @@
       "Path": "Utilities/AuditFindings.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "list_LeaseUpProperties&Sequence_1",
         "arr_AS_MemNames&Sequence_1",
         "dt_TaxRefund&Sequence_1",
         "arr_ICWMemberNames&Sequence_1",
@@ -947,6 +949,8 @@
         "arr_IncomeSourcesFromICW&Sequence_1814"
       ],
       "ArgumentsSectionElementsOrder": [
+        "str_PropertyName",
+        "out_IsLeaseUpProperty",
         "out_FindingsHaveManualReview",
         "in_ClassificationResultsData",
         "out_DTAuditFindings",
@@ -1849,6 +1853,22 @@
       "ArgumentsSectionElementsOrder": [
         "in_Folder",
         "io_FilePath"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/GetTransactionData.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_TransactionNumber",
+        "in_Config",
+        "out_TransactionItem",
+        "out_TransactionField1",
+        "out_TransactionField2",
+        "out_TransactionID",
+        "io_dt_TransactionData"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
