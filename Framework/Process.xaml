@@ -8,7 +8,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>954,1046</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>2089,1046</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="50">
@@ -155,7 +155,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message Process Start" sap:VirtualizedContainerService.HintSize="600,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Started Process&quot;]" />
-    <Flowchart sap:VirtualizedContainerService.HintSize="1014,654" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+    <Flowchart sap:VirtualizedContainerService.HintSize="1987,988" sap2010:WorkflowViewState.IdRef="Flowchart_1">
       <Flowchart.Variables>
         <Variable x:TypeArguments="scg:List(x:String)" Name="list_PDFFiles" />
         <Variable x:TypeArguments="sd:DataTable" Name="dt_SortingData" />
@@ -166,6 +166,7 @@
         <Variable x:TypeArguments="x:String" Name="str_DownloadFolder" />
         <Variable x:TypeArguments="x:String" Name="str_PDFFolder" />
         <Variable x:TypeArguments="x:Boolean" Name="DoFindingsHaveManualReview" />
+        <Variable x:TypeArguments="x:Boolean" Name="IsLeaseUpProperty" />
       </Flowchart.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -375,6 +376,8 @@
                                     <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_DTAuditFindings">[dt_AuditFindings]</OutArgument>
                                     <InArgument x:TypeArguments="x:String" x:Key="in_PDFFolder">[str_PDFFolder]</InArgument>
                                     <OutArgument x:TypeArguments="x:Boolean" x:Key="out_FindingsHaveManualReview">[DoFindingsHaveManualReview]</OutArgument>
+                                    <OutArgument x:TypeArguments="x:Boolean" x:Key="out_IsLeaseUpProperty" />
+                                    <InArgument x:TypeArguments="x:String" x:Key="str_PropertyName">[str_PropertyName]</InArgument>
                                   </ui:InvokeWorkflowFile.Arguments>
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -383,13 +386,16 @@
                                   </sap:WorkflowViewStateService.ViewState>
                                 </ui:InvokeWorkflowFile>
                                 <FlowStep.Next>
-                                  <FlowDecision x:Name="__ReferenceID15" Condition="[dt_AuditFindings.RowCount&gt;0]" DisplayName="FindingsFound" sap:VirtualizedContainerService.HintSize="59,59" sap2010:WorkflowViewState.IdRef="FlowDecision_6">
+                                  <FlowDecision x:Name="__ReferenceID15" DisplayName="FindingsFound" sap:VirtualizedContainerService.HintSize="59,59" sap2010:WorkflowViewState.IdRef="FlowDecision_6">
+                                    <FlowDecision.Condition>
+                                      <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="dt_AuditFindings.RowCount&gt;0 Or IsLeaseUpProperty" />
+                                    </FlowDecision.Condition>
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         <av:Point x:Key="ShapeLocation">390,860</av:Point>
                                         <av:Size x:Key="ShapeSize">59,59</av:Size>
-                                        <av:PointCollection x:Key="TrueConnector">449,889.5 479,889.5 479,890 505,890</av:PointCollection>
+                                        <av:PointCollection x:Key="TrueConnector">449,889.5 479,889.5 479,890 595,890</av:PointCollection>
                                         <av:PointCollection x:Key="FalseConnector">390,889.5 305,889.5 305,1130 335,1130</av:PointCollection>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
@@ -397,9 +403,9 @@
                                       <FlowStep x:Name="__ReferenceID16" sap2010:WorkflowViewState.IdRef="FlowStep_8">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <av:Point x:Key="ShapeLocation">505,855</av:Point>
+                                            <av:Point x:Key="ShapeLocation">595,855</av:Point>
                                             <av:Size x:Key="ShapeSize">110,70</av:Size>
-                                            <av:PointCollection x:Key="ConnectorLocation">615,890 645,890 645,889.5 890,889.5</av:PointCollection>
+                                            <av:PointCollection x:Key="ConnectorLocation">705,890 735,890 735,889.5 890,889.5</av:PointCollection>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                         <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="PerformAudit - Invoke Workflow File (PerformAudit.xaml)" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Yardi\PerformAudit.xaml">
@@ -420,7 +426,10 @@
                                           </sap:WorkflowViewStateService.ViewState>
                                         </ui:InvokeWorkflowFile>
                                         <FlowStep.Next>
-                                          <FlowDecision x:Name="__ReferenceID18" Condition="[in_IsTesting Or DoFindingsHaveManualReview]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="59,59" sap2010:WorkflowViewState.IdRef="FlowDecision_7">
+                                          <FlowDecision x:Name="__ReferenceID18" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="59,59" sap2010:WorkflowViewState.IdRef="FlowDecision_7">
+                                            <FlowDecision.Condition>
+                                              <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="in_IsTesting Or DoFindingsHaveManualReview Or IsLeaseUpProperty" />
+                                            </FlowDecision.Condition>
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -493,7 +502,7 @@
                                             <av:PointCollection x:Key="ConnectorLocation">445,1130 505,1130</av:PointCollection>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="UpdateStatus - Invoke Workflow File (UpdateStatus.xaml)" sap:VirtualizedContainerService.HintSize="338,145" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="Yardi\UpdateStatus.xaml">
+                                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="UpdateStatus - Invoke Workflow File (UpdateStatus.xaml)" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="Yardi\UpdateStatus.xaml">
                                           <ui:InvokeWorkflowFile.Arguments>
                                             <InArgument x:TypeArguments="x:String" x:Key="in_YardiURL">[str_CaseLink]</InArgument>
                                             <InArgument x:TypeArguments="ui:QueueItem" x:Key="in_TransactionItem">[in_TransactionItem]</InArgument>
