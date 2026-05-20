@@ -8,7 +8,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1192,10206</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1393,10058</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>DU_Extraction_SCNE_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -135,14 +135,14 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="DU_Extraction_SCNE" sap:VirtualizedContainerService.HintSize="1202,10141" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="DU_Extraction_SCNE" sap:VirtualizedContainerService.HintSize="1202,9993" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message-Started" sap:VirtualizedContainerService.HintSize="1140,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;DU_Extraction_SCNE.xaml is Started&quot;]" />
-    <TryCatch DisplayName="Try Catch-DU-SCNE" sap:VirtualizedContainerService.HintSize="1140,9714" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+    <TryCatch DisplayName="Try Catch-DU-SCNE" sap:VirtualizedContainerService.HintSize="1140,9566" sap2010:WorkflowViewState.IdRef="TryCatch_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -150,13 +150,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each currentFile" sap:VirtualizedContainerService.HintSize="1102,8990" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[in_ArrImages]">
+        <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each currentFile" sap:VirtualizedContainerService.HintSize="1076,8842" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[in_ArrImages]">
           <ui:ForEach.Body>
             <ActivityAction x:TypeArguments="x:String">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="x:String" Name="currentFile" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1068,8876" sap2010:WorkflowViewState.IdRef="Sequence_2">
+              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1042,8728" sap2010:WorkflowViewState.IdRef="Sequence_2">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="upr:ILocalResource" Name="lRes_File" />
                   <Variable x:TypeArguments="uisad1:DocumentData" Name="classifiedDocument" />
@@ -173,9 +173,9 @@
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:LogMessage DisplayName="Log file processing update" sap:VirtualizedContainerService.HintSize="1006,173" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[string.Format(&quot;Processing file: {0}&quot;, currentFile)]" />
-                <ui:PathExists Exists="{x:Null}" DisplayName="CurrentFile Exists" sap:VirtualizedContainerService.HintSize="1006,172" sap2010:WorkflowViewState.IdRef="PathExists_1" Path="[currentFile]" PathType="File" Resource="[lRes_File]" />
-                <p:ClassifyDocument ApiKey="{x:Null}" ClassifierResult="{x:Null}" DocumentObjectModel="{x:Null}" DocumentPath="{x:Null}" DocumentText="{x:Null}" DocumentTypes="{x:Null}" PersistenceId="{x:Null}" PredictionId="{x:Null}" Prompt="{x:Null}" ClassificationResults="[classifiedDocument]" ClassifierId="d82b73f7-fb37-f111-8ef3-000d3a1cf261" ClassifierName="DU_Extractor1-0_SCNE_classifier_v15" DisplayName="Classify Document" Endpoint="https://cloud.uipath.com/a6e81ae5-13a7-4d1d-9b35-86ac86d911ce/4af39ed3-b30e-48f2-b551-f1e60b4acb75/du_/api/framework/projects/93ac0424-edf6-f011-8d4d-7c1e5269e216/classifiers/d82b73f7-fb37-f111-8ef3-000d3a1cf261/classification/start?api-version=1.1" FileInput="[lRes_File]" sap:VirtualizedContainerService.HintSize="1006,339" sap2010:WorkflowViewState.IdRef="ClassifyDocument_2" MinimumConfidence="50" ProjectId="93ac0424-edf6-f011-8d4d-7c1e5269e216" ProjectName="Arizona Document Understanding" ProjectVersionName="DU_Extractor1-0_SCNE" ProjectVersionNumber="15" RuntimeAssetPath="Compliance/Application Review Process_AZ/DU_AppCredentials" RuntimeTenantUrl="[in_Config(&quot;DU_TenantURL&quot;).ToString]" TimeoutInSeconds="3600">
+                <ui:LogMessage DisplayName="Log file processing update" sap:VirtualizedContainerService.HintSize="980,173" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[string.Format(&quot;Processing file: {0}&quot;, currentFile)]" />
+                <ui:PathExists Exists="{x:Null}" DisplayName="CurrentFile Exists" sap:VirtualizedContainerService.HintSize="980,172" sap2010:WorkflowViewState.IdRef="PathExists_1" Path="[currentFile]" PathType="File" Resource="[lRes_File]" />
+                <p:ClassifyDocument ApiKey="{x:Null}" ClassifierResult="{x:Null}" DocumentObjectModel="{x:Null}" DocumentPath="{x:Null}" DocumentText="{x:Null}" DocumentTypes="{x:Null}" PersistenceId="{x:Null}" PredictionId="{x:Null}" Prompt="{x:Null}" ClassificationResults="[classifiedDocument]" ClassifierId="d82b73f7-fb37-f111-8ef3-000d3a1cf261" ClassifierName="DU_Extractor1-0_SCNE_classifier_v15" DisplayName="Classify Document" Endpoint="https://cloud.uipath.com/a6e81ae5-13a7-4d1d-9b35-86ac86d911ce/4af39ed3-b30e-48f2-b551-f1e60b4acb75/du_/api/framework/projects/93ac0424-edf6-f011-8d4d-7c1e5269e216/classifiers/d82b73f7-fb37-f111-8ef3-000d3a1cf261/classification/start?api-version=1.1" FileInput="[lRes_File]" sap:VirtualizedContainerService.HintSize="980,339" sap2010:WorkflowViewState.IdRef="ClassifyDocument_2" MinimumConfidence="50" ProjectId="93ac0424-edf6-f011-8d4d-7c1e5269e216" ProjectName="Arizona Document Understanding" ProjectVersionName="DU_Extractor1-0_SCNE" ProjectVersionNumber="15" RuntimeAssetPath="Compliance/Application Review Process_AZ/DU_AppCredentials" RuntimeTenantUrl="[in_Config(&quot;DU_TenantURL&quot;).ToString]" TimeoutInSeconds="3600">
                   <p:ClassifyDocument.GptPromptWithVariables>
                     <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
                   </p:ClassifyDocument.GptPromptWithVariables>
@@ -185,10 +185,10 @@
                     </InArgument>
                   </p:ClassifyDocument.ProjectTag>
                 </p:ClassifyDocument>
-                <ui:LogMessage DisplayName="Log document type" sap:VirtualizedContainerService.HintSize="1006,173" sap2010:WorkflowViewState.IdRef="LogMessage_4" Message="[string.Format(&quot;Classified {0} as {1}&quot;, currentFile, classifiedDocument.DocumentType.DisplayName)]" />
-                <If Condition="[classifiedDocument.DocumentType.DisplayName.Equals(&quot;SelfCertification of NonEmployment&quot;)]" DisplayName="If-ClassifiedAsSCNE" sap:VirtualizedContainerService.HintSize="1006,7765" sap2010:WorkflowViewState.IdRef="If_6">
+                <ui:LogMessage DisplayName="Log document type" sap:VirtualizedContainerService.HintSize="980,173" sap2010:WorkflowViewState.IdRef="LogMessage_4" Message="[string.Format(&quot;Classified {0} as {1}&quot;, currentFile, classifiedDocument.DocumentType.DisplayName)]" />
+                <If Condition="[classifiedDocument.DocumentType.DisplayName.Equals(&quot;SelfCertification of NonEmployment&quot;)]" DisplayName="If-ClassifiedAsSCNE" sap:VirtualizedContainerService.HintSize="980,7619" sap2010:WorkflowViewState.IdRef="If_6">
                   <If.Then>
-                    <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="972,7491" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="946,7346" sap2010:WorkflowViewState.IdRef="Sequence_3">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="uisad:IDocumentData(uisasedb:DUExtractor10SCNESelfCertificationOfNonEmploymentV15)" Name="SCNEDocumentData" />
                       </Sequence.Variables>
@@ -197,7 +197,7 @@
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <p:ExtractDocumentDataWithDocumentData x:TypeArguments="uisasedb:DUExtractor10SCNESelfCertificationOfNonEmploymentV15" DocumentBounds="{x:Null}" DocumentObjectModel="{x:Null}" DocumentPath="{x:Null}" DocumentText="{x:Null}" ExtractorDocumentType="{x:Null}" ExtractorResult="{x:Null}" PersistenceId="{x:Null}" PredictionId="{x:Null}" Prompt="{x:Null}" ApplyAutoValidation="False" DisplayName="Extract Document Data" DocType="d72b73f7-fb37-f111-8ef3-000d3a1cf261" ExtractionResults="[SCNEDocumentData]" ExtractorName="DU_Extractor1-0_SCNE_SelfCertification of NonEmployment_v15" FileInput="[classifiedDocument]" GenerateData="True" sap:VirtualizedContainerService.HintSize="910,389" sap2010:WorkflowViewState.IdRef="ExtractDocumentDataWithDocumentData`1_3" ModernDocumentTypeId="30ac77ce-440c-f111-a69b-0022482370c6" ModernDocumentTypeName="SelfCertification of NonEmployment" ProjectId="93ac0424-edf6-f011-8d4d-7c1e5269e216" ProjectName="Arizona Document Understanding" ProjectVersionName="DU_Extractor1-0_SCNE" ProjectVersionNumber="15" RuntimeAssetPath="Compliance/Application Review Process_AZ/DU_AppCredentials" RuntimeTenantUrl="[in_Config(&quot;DU_TenantURL&quot;).ToString]" TimeoutInSeconds="3600">
+                      <p:ExtractDocumentDataWithDocumentData x:TypeArguments="uisasedb:DUExtractor10SCNESelfCertificationOfNonEmploymentV15" DocumentBounds="{x:Null}" DocumentObjectModel="{x:Null}" DocumentPath="{x:Null}" DocumentText="{x:Null}" ExtractorDocumentType="{x:Null}" ExtractorResult="{x:Null}" PersistenceId="{x:Null}" PredictionId="{x:Null}" Prompt="{x:Null}" ApplyAutoValidation="False" DisplayName="Extract Document Data" DocType="d72b73f7-fb37-f111-8ef3-000d3a1cf261" ExtractionResults="[SCNEDocumentData]" ExtractorName="DU_Extractor1-0_SCNE_SelfCertification of NonEmployment_v15" FileInput="[classifiedDocument]" GenerateData="True" sap:VirtualizedContainerService.HintSize="884,389" sap2010:WorkflowViewState.IdRef="ExtractDocumentDataWithDocumentData`1_3" ModernDocumentTypeId="30ac77ce-440c-f111-a69b-0022482370c6" ModernDocumentTypeName="SelfCertification of NonEmployment" ProjectId="93ac0424-edf6-f011-8d4d-7c1e5269e216" ProjectName="Arizona Document Understanding" ProjectTag="[Nothing]" ProjectVersionName="DU_Extractor1-0_SCNE" ProjectVersionNumber="15" RuntimeAssetPath="Compliance/Application Review Process_AZ/DU_AppCredentials" RuntimeTenantUrl="[in_Config(&quot;DU_TenantURL&quot;).ToString]" TimeoutInSeconds="3600">
                         <p:ExtractDocumentDataWithDocumentData.AutoValidationConfidenceThreshold>
                           <InArgument x:TypeArguments="s:Nullable(x:Int32)">
                             <Literal x:TypeArguments="s:Nullable(x:Int32)" Value="0" />
@@ -206,13 +206,8 @@
                         <p:ExtractDocumentDataWithDocumentData.GptPromptWithVariables>
                           <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
                         </p:ExtractDocumentDataWithDocumentData.GptPromptWithVariables>
-                        <p:ExtractDocumentDataWithDocumentData.ProjectTag>
-                          <InArgument x:TypeArguments="x:String">
-                            <Literal x:TypeArguments="x:String" Value="" />
-                          </InArgument>
-                        </p:ExtractDocumentDataWithDocumentData.ProjectTag>
                       </p:ExtractDocumentDataWithDocumentData>
-                      <ui:LogMessage DisplayName="Write extracted data (SelfCertification of NonEmployment)" sap:VirtualizedContainerService.HintSize="910,173" sap2010:WorkflowViewState.IdRef="LogMessage_5" Message="[&quot;The following data has been extracted (excluding table data): {for each fields, except tables, display as key-value pairs: field name - field value}.&quot; &amp; vbCrLf &amp; SCNEDocumentData.ToString]">
+                      <ui:LogMessage DisplayName="Write extracted data (SelfCertification of NonEmployment)" sap:VirtualizedContainerService.HintSize="884,173" sap2010:WorkflowViewState.IdRef="LogMessage_5" Message="[&quot;The following data has been extracted (excluding table data): {for each fields, except tables, display as key-value pairs: field name - field value}.&quot; &amp; vbCrLf &amp; SCNEDocumentData.ToString]">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -220,7 +215,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:LogMessage>
-                      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="910,148" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="884,148" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
                         <ui:MultipleAssign.AssignOperations>
                           <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -240,7 +235,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:MultipleAssign>
-                      <TryCatch DisplayName="Try Catch-NamesMappingCheck" sap:VirtualizedContainerService.HintSize="910,1744" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                      <TryCatch DisplayName="Try Catch-NamesMappingCheck" sap:VirtualizedContainerService.HintSize="884,1738" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -248,7 +243,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                         <TryCatch.Try>
-                          <Sequence DisplayName="NamesMapping" sap:VirtualizedContainerService.HintSize="592,921" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                          <Sequence DisplayName="NamesMapping" sap:VirtualizedContainerService.HintSize="592,918" sap2010:WorkflowViewState.IdRef="Sequence_11">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -263,7 +258,7 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </ausas:FindBestMatch>
-                            <If Condition="[matchedNameResults isNot Nothing]" DisplayName="If-matchedNameResult" sap:VirtualizedContainerService.HintSize="530,558" sap2010:WorkflowViewState.IdRef="If_1">
+                            <If Condition="[matchedNameResults isNot Nothing]" DisplayName="If-matchedNameResult" sap:VirtualizedContainerService.HintSize="530,555" sap2010:WorkflowViewState.IdRef="If_1">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -271,13 +266,13 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                               <If.Then>
-                                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,194" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,193" sap2010:WorkflowViewState.IdRef="Sequence_5">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <Assign DisplayName="Assign-str_LLMName" sap:VirtualizedContainerService.HintSize="434,106" sap2010:WorkflowViewState.IdRef="Assign_1">
+                                  <Assign DisplayName="Assign-str_LLMName" sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_1">
                                     <Assign.To>
                                       <OutArgument x:TypeArguments="x:String">[str_LLMName]</OutArgument>
                                     </Assign.To>
@@ -288,20 +283,20 @@
                                 </Sequence>
                               </If.Then>
                               <If.Else>
-                                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,202" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,201" sap2010:WorkflowViewState.IdRef="Sequence_6">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <Throw Exception="[new BusinessRuleException(&quot;Names do not match in DU with LLM to match results&quot;)]" sap:VirtualizedContainerService.HintSize="354,114" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                                  <Throw Exception="[new BusinessRuleException(&quot;Names do not match in DU with LLM to match results&quot;)]" sap:VirtualizedContainerService.HintSize="354,113" sap2010:WorkflowViewState.IdRef="Throw_1" />
                                 </Sequence>
                               </If.Else>
                             </If>
                           </Sequence>
                         </TryCatch.Try>
                         <TryCatch.Catches>
-                          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="596,481" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="596,478" sap2010:WorkflowViewState.IdRef="Catch`1_1">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -312,7 +307,7 @@
                               <ActivityAction.Argument>
                                 <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                               </ActivityAction.Argument>
-                              <If sap2010:Annotation.AnnotationText="If only 1 array then can directly replcae values without mapping" Condition="[io_jArrDUResults.Count=1]" DisplayName="If-LLMArrayOnly1" sap:VirtualizedContainerService.HintSize="450,410" sap2010:WorkflowViewState.IdRef="If_4">
+                              <If sap2010:Annotation.AnnotationText="If only 1 array then can directly replcae values without mapping" Condition="[io_jArrDUResults.Count=1]" DisplayName="If-LLMArrayOnly1" sap:VirtualizedContainerService.HintSize="450,408" sap2010:WorkflowViewState.IdRef="If_4">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -321,7 +316,7 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                                 <If.Then>
-                                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,104" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,103" sap2010:WorkflowViewState.IdRef="Sequence_12">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -344,13 +339,13 @@
                           </Catch>
                         </TryCatch.Catches>
                       </TryCatch>
-                      <ui:ForEach x:TypeArguments="njl:JObject" CurrentIndex="{x:Null}" DisplayName="For Each currentJObject" sap:VirtualizedContainerService.HintSize="910,4949" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[io_jArrDUResults]">
+                      <ui:ForEach x:TypeArguments="njl:JObject" CurrentIndex="{x:Null}" DisplayName="For Each currentJObject" sap:VirtualizedContainerService.HintSize="884,4810" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[io_jArrDUResults]">
                         <ui:ForEach.Body>
                           <ActivityAction x:TypeArguments="njl:JObject">
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="njl:JObject" Name="currentJObject" />
                             </ActivityAction.Argument>
-                            <Sequence DisplayName="CurrentJObjectBody" sap:VirtualizedContainerService.HintSize="876,4811" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                            <Sequence DisplayName="CurrentJObjectBody" sap:VirtualizedContainerService.HintSize="850,4673" sap2010:WorkflowViewState.IdRef="Sequence_4">
                               <Sequence.Variables>
                                 <Variable x:TypeArguments="njl:JObject" Name="jObj_JSON" />
                               </Sequence.Variables>
@@ -359,7 +354,7 @@
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <Assign DisplayName="Assign - jObj_JSON for the current page" sap:VirtualizedContainerService.HintSize="814,115" sap2010:WorkflowViewState.IdRef="Assign_4">
+                              <Assign DisplayName="Assign - jObj_JSON for the current page" sap:VirtualizedContainerService.HintSize="788,114" sap2010:WorkflowViewState.IdRef="Assign_4">
                                 <Assign.To>
                                   <OutArgument x:TypeArguments="njl:JObject">[jObj_JSON]</OutArgument>
                                 </Assign.To>
@@ -373,7 +368,7 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </Assign>
-                              <If Condition="[jObj_JSON(&quot;applicant_information&quot;)(&quot;MemberName&quot;).ToString.Equals(str_LLMName) Or io_jArrDUResults.count=1]" DisplayName="If Names are the same" sap:VirtualizedContainerService.HintSize="814,4608" sap2010:WorkflowViewState.IdRef="If_5">
+                              <If Condition="[jObj_JSON(&quot;applicant_information&quot;)(&quot;MemberName&quot;).ToString.Equals(str_LLMName) Or io_jArrDUResults.count=1]" DisplayName="If Names are the same" sap:VirtualizedContainerService.HintSize="788,4471" sap2010:WorkflowViewState.IdRef="If_5">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -381,14 +376,14 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                                 <If.Then>
-                                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="780,4245" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="754,4207" sap2010:WorkflowViewState.IdRef="Sequence_14">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <Switch x:TypeArguments="x:String" DisplayName="Switch-CurrentlyEmployed" Expression="[SCNEDocumentData.Data.CurrentlyEmployed.Value.Replace(&quot;☒&quot;,&quot;&quot;).ToLower.Trim]" sap:VirtualizedContainerService.HintSize="718,57" sap2010:WorkflowViewState.IdRef="Switch`1_2">
+                                    <Switch x:TypeArguments="x:String" DisplayName="Switch-CurrentlyEmployed" Expression="[SCNEDocumentData.Data.CurrentlyEmployed.Value.Replace(&quot;☒&quot;,&quot;&quot;).ToLower.Trim]" sap:VirtualizedContainerService.HintSize="692,57" sap2010:WorkflowViewState.IdRef="Switch`1_2">
                                       <Switch.Default>
                                         <Assign DisplayName="Assign-CurrentlyEmployed" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_7">
                                           <Assign.To>
@@ -422,7 +417,7 @@
                                         </Assign.Value>
                                       </Assign>
                                     </Switch>
-                                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="718,57" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="692,57" sap2010:WorkflowViewState.IdRef="CommentOut_1">
                                       <ui:CommentOut.Body>
                                         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,136" sap2010:WorkflowViewState.IdRef="Sequence_18">
                                           <sap:WorkflowViewStateService.ViewState>
@@ -473,7 +468,7 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:CommentOut>
-                                    <Switch x:TypeArguments="x:String" DisplayName="Switch-NotReceivingUnemployment" Expression="[SCNEDocumentData.Data.NotReceivingUnemployment.Value.Trim]" sap:VirtualizedContainerService.HintSize="718,57" sap2010:WorkflowViewState.IdRef="Switch`1_4">
+                                    <Switch x:TypeArguments="x:String" DisplayName="Switch-NotReceivingUnemployment" Expression="[SCNEDocumentData.Data.NotReceivingUnemployment.Value.Trim]" sap:VirtualizedContainerService.HintSize="692,57" sap2010:WorkflowViewState.IdRef="Switch`1_4">
                                       <Switch.Default>
                                         <Assign DisplayName="Assign-NotReceivingUnemployment" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_15">
                                           <Assign.To>
@@ -507,7 +502,7 @@
                                         </Assign.Value>
                                       </Assign>
                                     </Switch>
-                                    <Switch x:TypeArguments="x:String" DisplayName="Switch-ReceivingUnemployment" Expression="[SCNEDocumentData.Data.ReceivingUnemployment.Value.Trim]" sap:VirtualizedContainerService.HintSize="718,57" sap2010:WorkflowViewState.IdRef="Switch`1_5">
+                                    <Switch x:TypeArguments="x:String" DisplayName="Switch-ReceivingUnemployment" Expression="[SCNEDocumentData.Data.ReceivingUnemployment.Value.Trim]" sap:VirtualizedContainerService.HintSize="692,57" sap2010:WorkflowViewState.IdRef="Switch`1_5">
                                       <Switch.Default>
                                         <Assign DisplayName="Assign-ReceivingUnemployment" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_18">
                                           <Assign.To>
@@ -541,7 +536,7 @@
                                         </Assign.Value>
                                       </Assign>
                                     </Switch>
-                                    <Switch x:TypeArguments="x:String" DisplayName="Switch-ExpectingToReceiveUnemployment" Expression="[SCNEDocumentData.Data.ExpectingToReceiveUnemployment.Value.Trim]" sap:VirtualizedContainerService.HintSize="718,57" sap2010:WorkflowViewState.IdRef="Switch`1_6">
+                                    <Switch x:TypeArguments="x:String" DisplayName="Switch-ExpectingToReceiveUnemployment" Expression="[SCNEDocumentData.Data.ExpectingToReceiveUnemployment.Value.Trim]" sap:VirtualizedContainerService.HintSize="692,57" sap2010:WorkflowViewState.IdRef="Switch`1_6">
                                       <Switch.Default>
                                         <Assign DisplayName="Assign-ExpectingToReceiveUnemployment" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_21">
                                           <Assign.To>
@@ -575,7 +570,7 @@
                                         </Assign.Value>
                                       </Assign>
                                     </Switch>
-                                    <Switch x:TypeArguments="x:String" DisplayName="Switch-ExpectingEmploymentIn12Months" Expression="[SCNEDocumentData.Data.ExpectingEmploymentIn12Months.Value.Replace(&quot;☒&quot;,&quot;&quot;).ToLower.Trim]" sap:VirtualizedContainerService.HintSize="718,57" sap2010:WorkflowViewState.IdRef="Switch`1_7">
+                                    <Switch x:TypeArguments="x:String" DisplayName="Switch-ExpectingEmploymentIn12Months" Expression="[SCNEDocumentData.Data.ExpectingEmploymentIn12Months.Value.Replace(&quot;☒&quot;,&quot;&quot;).ToLower.Trim]" sap:VirtualizedContainerService.HintSize="692,57" sap2010:WorkflowViewState.IdRef="Switch`1_7">
                                       <Switch.Default>
                                         <Assign DisplayName="Assign-ExpectingEmploymentIn12Months" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_24">
                                           <Assign.To>
@@ -609,7 +604,7 @@
                                         </Assign.Value>
                                       </Assign>
                                     </Switch>
-                                    <Switch x:TypeArguments="x:String" DisplayName="Switch-HasOfferedPosition" Expression="[SCNEDocumentData.Data.BeenOfferedAPosition.Value.Replace(&quot;☒&quot;,&quot;&quot;).ToLower.Trim]" sap:VirtualizedContainerService.HintSize="718,57" sap2010:WorkflowViewState.IdRef="Switch`1_9">
+                                    <Switch x:TypeArguments="x:String" DisplayName="Switch-HasOfferedPosition" Expression="[SCNEDocumentData.Data.BeenOfferedAPosition.Value.Replace(&quot;☒&quot;,&quot;&quot;).ToLower.Trim]" sap:VirtualizedContainerService.HintSize="692,57" sap2010:WorkflowViewState.IdRef="Switch`1_9">
                                       <Switch.Default>
                                         <Assign DisplayName="Assign-HasOfferedPosition" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_30">
                                           <Assign.To>
@@ -643,7 +638,7 @@
                                         </Assign.Value>
                                       </Assign>
                                     </Switch>
-                                    <Switch x:TypeArguments="x:String" DisplayName="Switch-WrittenConfirmationFromTheEmployer" Expression="[SCNEDocumentData.Data.WrittenConfirmationFromTheEmployer.Value.Trim]" sap:VirtualizedContainerService.HintSize="718,57" sap2010:WorkflowViewState.IdRef="Switch`1_8">
+                                    <Switch x:TypeArguments="x:String" DisplayName="Switch-WrittenConfirmationFromTheEmployer" Expression="[SCNEDocumentData.Data.WrittenConfirmationFromTheEmployer.Value.Trim]" sap:VirtualizedContainerService.HintSize="692,57" sap2010:WorkflowViewState.IdRef="Switch`1_8">
                                       <Switch.Default>
                                         <Assign DisplayName="Assign-WrittenConfirmationFromTheEmployer" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_27">
                                           <Assign.To>
@@ -677,7 +672,7 @@
                                         </Assign.Value>
                                       </Assign>
                                     </Switch>
-                                    <Switch x:TypeArguments="x:String" DisplayName="Switch-PreviousYearsTaxReturn" Expression="[SCNEDocumentData.Data.PreviousYearsTaxReturn.Value.Trim]" sap:VirtualizedContainerService.HintSize="718,57" sap2010:WorkflowViewState.IdRef="Switch`1_10">
+                                    <Switch x:TypeArguments="x:String" DisplayName="Switch-PreviousYearsTaxReturn" Expression="[SCNEDocumentData.Data.PreviousYearsTaxReturn.Value.Trim]" sap:VirtualizedContainerService.HintSize="692,57" sap2010:WorkflowViewState.IdRef="Switch`1_10">
                                       <Switch.Default>
                                         <Assign DisplayName="Assign-PreviousYearsTaxReturn" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_33">
                                           <Assign.To>
@@ -711,7 +706,7 @@
                                         </Assign.Value>
                                       </Assign>
                                     </Switch>
-                                    <Switch x:TypeArguments="x:String" DisplayName="Switch-PaystubOrSalaryHistoryFromPreviousJob" Expression="[SCNEDocumentData.Data.PaystubOrSalaryHistoryFromPreviousJob.Value.Trim]" sap:VirtualizedContainerService.HintSize="718,57" sap2010:WorkflowViewState.IdRef="Switch`1_11">
+                                    <Switch x:TypeArguments="x:String" DisplayName="Switch-PaystubOrSalaryHistoryFromPreviousJob" Expression="[SCNEDocumentData.Data.PaystubOrSalaryHistoryFromPreviousJob.Value.Trim]" sap:VirtualizedContainerService.HintSize="692,57" sap2010:WorkflowViewState.IdRef="Switch`1_11">
                                       <Switch.Default>
                                         <Assign DisplayName="Assign-PaystubOrSalaryHistoryFromPreviousJob" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_36">
                                           <Assign.To>
@@ -745,7 +740,7 @@
                                         </Assign.Value>
                                       </Assign>
                                     </Switch>
-                                    <Switch x:TypeArguments="x:String" DisplayName="Switch-CurrentEmploymentAdvertismentShowingAverageCompensation" Expression="[SCNEDocumentData.Data.CurrentEmploymentAdvertisementShowingAverageCompensation.Value.Trim]" sap:VirtualizedContainerService.HintSize="718,57" sap2010:WorkflowViewState.IdRef="Switch`1_12">
+                                    <Switch x:TypeArguments="x:String" DisplayName="Switch-CurrentEmploymentAdvertismentShowingAverageCompensation" Expression="[SCNEDocumentData.Data.CurrentEmploymentAdvertisementShowingAverageCompensation.Value.Trim]" sap:VirtualizedContainerService.HintSize="692,57" sap2010:WorkflowViewState.IdRef="Switch`1_12">
                                       <Switch.Default>
                                         <Assign DisplayName="Assign-CurrentEmploymentAdvertismentShowingAverageCompensation" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_39">
                                           <Assign.To>
@@ -779,9 +774,9 @@
                                         </Assign.Value>
                                       </Assign>
                                     </Switch>
-                                    <Switch x:TypeArguments="x:String" DisplayName="Switch-OtherRelevantDocument" Expression="[SCNEDocumentData.Data.OtherRelevantDocument.Value.Trim]" sap:VirtualizedContainerService.HintSize="718,581" sap2010:WorkflowViewState.IdRef="Switch`1_13">
+                                    <Switch x:TypeArguments="x:String" DisplayName="Switch-OtherRelevantDocument" Expression="[SCNEDocumentData.Data.OtherRelevantDocument.Value.Trim]" sap:VirtualizedContainerService.HintSize="692,574" sap2010:WorkflowViewState.IdRef="Switch`1_13">
                                       <Switch.Default>
-                                        <Assign DisplayName="Assign-OtherRelevantDocument" sap:VirtualizedContainerService.HintSize="434,83" sap2010:WorkflowViewState.IdRef="Assign_42">
+                                        <Assign DisplayName="Assign-OtherRelevantDocument" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_42">
                                           <Assign.To>
                                             <OutArgument x:TypeArguments="njl:JToken">[jObj_JSON("EmploymentInformation")("IsExpectingEmploymentIn12Months")("OtherRelevantDocument")]</OutArgument>
                                           </Assign.To>
@@ -796,7 +791,7 @@
                                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <Assign x:Key="☒" DisplayName="Assign-OtherRelevantDocument-Yes" sap:VirtualizedContainerService.HintSize="434,83" sap2010:WorkflowViewState.IdRef="Assign_40">
+                                      <Assign x:Key="☒" DisplayName="Assign-OtherRelevantDocument-Yes" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_40">
                                         <Assign.To>
                                           <OutArgument x:TypeArguments="njl:JToken">[jObj_JSON("EmploymentInformation")("IsExpectingEmploymentIn12Months")("OtherRelevantDocument")]</OutArgument>
                                         </Assign.To>
@@ -804,7 +799,7 @@
                                           <InArgument x:TypeArguments="njl:JToken">["Checked"]</InArgument>
                                         </Assign.Value>
                                       </Assign>
-                                      <Assign x:Key="☐" DisplayName="Assign-OtherRelevantDocument-No" sap:VirtualizedContainerService.HintSize="434,83" sap2010:WorkflowViewState.IdRef="Assign_41">
+                                      <Assign x:Key="☐" DisplayName="Assign-OtherRelevantDocument-No" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_41">
                                         <Assign.To>
                                           <OutArgument x:TypeArguments="njl:JToken">[jObj_JSON("EmploymentInformation")("IsExpectingEmploymentIn12Months")("OtherRelevantDocument")]</OutArgument>
                                         </Assign.To>
@@ -813,9 +808,9 @@
                                         </Assign.Value>
                                       </Assign>
                                     </Switch>
-                                    <Switch x:TypeArguments="x:String" DisplayName="Switch-UnableToProvideSupportiveDocumentation" Expression="[SCNEDocumentData.Data.UnableToProvideSupportiveDocumentation.Value.Trim]" sap:VirtualizedContainerService.HintSize="718,581" sap2010:WorkflowViewState.IdRef="Switch`1_14">
+                                    <Switch x:TypeArguments="x:String" DisplayName="Switch-UnableToProvideSupportiveDocumentation" Expression="[SCNEDocumentData.Data.UnableToProvideSupportiveDocumentation.Value.Trim]" sap:VirtualizedContainerService.HintSize="692,574" sap2010:WorkflowViewState.IdRef="Switch`1_14">
                                       <Switch.Default>
-                                        <Assign DisplayName="Assign-UnableToProvideSupportiveDocumentation" sap:VirtualizedContainerService.HintSize="434,83" sap2010:WorkflowViewState.IdRef="Assign_45">
+                                        <Assign DisplayName="Assign-UnableToProvideSupportiveDocumentation" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_45">
                                           <Assign.To>
                                             <OutArgument x:TypeArguments="njl:JToken">[jObj_JSON("EmploymentInformation")("IsExpectingEmploymentIn12Months")("UnableToProvideSupportiveDocumentation")]</OutArgument>
                                           </Assign.To>
@@ -830,7 +825,7 @@
                                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <Assign x:Key="☒" DisplayName="Assign-UnableToProvideSupportiveDocumentation-Yes" sap:VirtualizedContainerService.HintSize="434,83" sap2010:WorkflowViewState.IdRef="Assign_43">
+                                      <Assign x:Key="☒" DisplayName="Assign-UnableToProvideSupportiveDocumentation-Yes" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_43">
                                         <Assign.To>
                                           <OutArgument x:TypeArguments="njl:JToken">[jObj_JSON("EmploymentInformation")("IsExpectingEmploymentIn12Months")("UnableToProvideSupportiveDocumentation")]</OutArgument>
                                         </Assign.To>
@@ -838,7 +833,7 @@
                                           <InArgument x:TypeArguments="njl:JToken">["Checked"]</InArgument>
                                         </Assign.Value>
                                       </Assign>
-                                      <Assign x:Key="☐" DisplayName="Assign-UnableToProvideSupportiveDocumentation-No" sap:VirtualizedContainerService.HintSize="434,83" sap2010:WorkflowViewState.IdRef="Assign_44">
+                                      <Assign x:Key="☐" DisplayName="Assign-UnableToProvideSupportiveDocumentation-No" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_44">
                                         <Assign.To>
                                           <OutArgument x:TypeArguments="njl:JToken">[jObj_JSON("EmploymentInformation")("IsExpectingEmploymentIn12Months")("UnableToProvideSupportiveDocumentation")]</OutArgument>
                                         </Assign.To>
@@ -847,9 +842,9 @@
                                         </Assign.Value>
                                       </Assign>
                                     </Switch>
-                                    <Switch x:TypeArguments="x:String" DisplayName="Switch-IAmNotSeekingEmployment" Expression="[SCNEDocumentData.Data.IAmNotSeekingEmployment.Value.Trim]" sap:VirtualizedContainerService.HintSize="718,580" sap2010:WorkflowViewState.IdRef="Switch`1_15">
+                                    <Switch x:TypeArguments="x:String" DisplayName="Switch-IAmNotSeekingEmployment" Expression="[SCNEDocumentData.Data.IAmNotSeekingEmployment.Value.Trim]" sap:VirtualizedContainerService.HintSize="692,574" sap2010:WorkflowViewState.IdRef="Switch`1_15">
                                       <Switch.Default>
-                                        <Assign DisplayName="Assign-IAmNotSeekingEmployment" sap:VirtualizedContainerService.HintSize="434,83" sap2010:WorkflowViewState.IdRef="Assign_48">
+                                        <Assign DisplayName="Assign-IAmNotSeekingEmployment" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_48">
                                           <Assign.To>
                                             <OutArgument x:TypeArguments="njl:JToken">[jObj_JSON("EmploymentInformation")("IsNotExpectingEmploymentIn12Months")("IAmNotSeekingEmployment")]</OutArgument>
                                           </Assign.To>
@@ -864,7 +859,7 @@
                                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <Assign x:Key="☒" DisplayName="Assign-IAmNotSeekingEmployment-Yes" sap:VirtualizedContainerService.HintSize="434,83" sap2010:WorkflowViewState.IdRef="Assign_46">
+                                      <Assign x:Key="☒" DisplayName="Assign-IAmNotSeekingEmployment-Yes" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_46">
                                         <Assign.To>
                                           <OutArgument x:TypeArguments="njl:JToken">[jObj_JSON("EmploymentInformation")("IsNotExpectingEmploymentIn12Months")("IAmNotSeekingEmployment")]</OutArgument>
                                         </Assign.To>
@@ -881,9 +876,9 @@
                                         </Assign.Value>
                                       </Assign>
                                     </Switch>
-                                    <Switch x:TypeArguments="x:String" DisplayName="Switch-IHaveNotRecentlyAppliedForEmployment" Expression="[SCNEDocumentData.Data.IHaveNotRecentlyAppliedForEmployment.Value.Trim]" sap:VirtualizedContainerService.HintSize="718,581" sap2010:WorkflowViewState.IdRef="Switch`1_16">
+                                    <Switch x:TypeArguments="x:String" DisplayName="Switch-IHaveNotRecentlyAppliedForEmployment" Expression="[SCNEDocumentData.Data.IHaveNotRecentlyAppliedForEmployment.Value.Trim]" sap:VirtualizedContainerService.HintSize="692,574" sap2010:WorkflowViewState.IdRef="Switch`1_16">
                                       <Switch.Default>
-                                        <Assign DisplayName="Assign-IHaveNotRecentlyAppliedForEmployment" sap:VirtualizedContainerService.HintSize="434,83" sap2010:WorkflowViewState.IdRef="Assign_51">
+                                        <Assign DisplayName="Assign-IHaveNotRecentlyAppliedForEmployment" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_51">
                                           <Assign.To>
                                             <OutArgument x:TypeArguments="njl:JToken">[jObj_JSON("EmploymentInformation")("IsNotExpectingEmploymentIn12Months")("IHaveNotRecentlyAppliedForEmployment")]</OutArgument>
                                           </Assign.To>
@@ -898,7 +893,7 @@
                                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <Assign x:Key="☒" DisplayName="Assign-IHaveNotRecentlyAppliedForEmployment-Yes" sap:VirtualizedContainerService.HintSize="434,83" sap2010:WorkflowViewState.IdRef="Assign_49">
+                                      <Assign x:Key="☒" DisplayName="Assign-IHaveNotRecentlyAppliedForEmployment-Yes" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_49">
                                         <Assign.To>
                                           <OutArgument x:TypeArguments="njl:JToken">[jObj_JSON("EmploymentInformation")("IsNotExpectingEmploymentIn12Months")("IHaveNotRecentlyAppliedForEmployment")]</OutArgument>
                                         </Assign.To>
@@ -906,7 +901,7 @@
                                           <InArgument x:TypeArguments="njl:JToken">["Checked"]</InArgument>
                                         </Assign.Value>
                                       </Assign>
-                                      <Assign x:Key="☐" DisplayName="Assign-IHaveNotRecentlyAppliedForEmployment-No" sap:VirtualizedContainerService.HintSize="434,83" sap2010:WorkflowViewState.IdRef="Assign_50">
+                                      <Assign x:Key="☐" DisplayName="Assign-IHaveNotRecentlyAppliedForEmployment-No" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_50">
                                         <Assign.To>
                                           <OutArgument x:TypeArguments="njl:JToken">[jObj_JSON("EmploymentInformation")("IsNotExpectingEmploymentIn12Months")("IHaveNotRecentlyAppliedForEmployment")]</OutArgument>
                                         </Assign.To>
@@ -915,9 +910,9 @@
                                         </Assign.Value>
                                       </Assign>
                                     </Switch>
-                                    <Switch x:TypeArguments="x:String" DisplayName="Switch-IHaveNotBeenOfferedEmployment" Expression="[SCNEDocumentData.Data.IHaveNotBeenOfferedEmployment.Value.Trim]" sap:VirtualizedContainerService.HintSize="718,580" sap2010:WorkflowViewState.IdRef="Switch`1_17">
+                                    <Switch x:TypeArguments="x:String" DisplayName="Switch-IHaveNotBeenOfferedEmployment" Expression="[SCNEDocumentData.Data.IHaveNotBeenOfferedEmployment.Value.Trim]" sap:VirtualizedContainerService.HintSize="692,574" sap2010:WorkflowViewState.IdRef="Switch`1_17">
                                       <Switch.Default>
-                                        <Assign DisplayName="Assign-IHaveNotBeenOfferedEmployment" sap:VirtualizedContainerService.HintSize="434,83" sap2010:WorkflowViewState.IdRef="Assign_54">
+                                        <Assign DisplayName="Assign-IHaveNotBeenOfferedEmployment" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_54">
                                           <Assign.To>
                                             <OutArgument x:TypeArguments="njl:JToken">[jObj_JSON("EmploymentInformation")("IsNotExpectingEmploymentIn12Months")("IHaveNotBeenOfferedEmployment")]</OutArgument>
                                           </Assign.To>
@@ -932,7 +927,7 @@
                                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <Assign x:Key="☒" DisplayName="Assign-IHaveNotBeenOfferedEmployment-Yes" sap:VirtualizedContainerService.HintSize="434,83" sap2010:WorkflowViewState.IdRef="Assign_52">
+                                      <Assign x:Key="☒" DisplayName="Assign-IHaveNotBeenOfferedEmployment-Yes" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_52">
                                         <Assign.To>
                                           <OutArgument x:TypeArguments="njl:JToken">[jObj_JSON("EmploymentInformation")("IsNotExpectingEmploymentIn12Months")("IHaveNotBeenOfferedEmployment")]</OutArgument>
                                         </Assign.To>
@@ -949,9 +944,9 @@
                                         </Assign.Value>
                                       </Assign>
                                     </Switch>
-                                    <Switch x:TypeArguments="x:String" DisplayName="Switch-IAmNotUnderAnAffirmativeObligationToObtainEmployment" Expression="[SCNEDocumentData.Data.IAmNotUnderAnyAffirmativeObligationToObtainEmployment.Value.Trim]" sap:VirtualizedContainerService.HintSize="718,579" sap2010:WorkflowViewState.IdRef="Switch`1_18">
+                                    <Switch x:TypeArguments="x:String" DisplayName="Switch-IAmNotUnderAnAffirmativeObligationToObtainEmployment" Expression="[SCNEDocumentData.Data.IAmNotUnderAnyAffirmativeObligationToObtainEmployment.Value.Trim]" sap:VirtualizedContainerService.HintSize="692,574" sap2010:WorkflowViewState.IdRef="Switch`1_18">
                                       <Switch.Default>
-                                        <Assign DisplayName="Assign-IAmNotUnderAnAffirmativeObligationToObtainEmployment" sap:VirtualizedContainerService.HintSize="434,83" sap2010:WorkflowViewState.IdRef="Assign_57">
+                                        <Assign DisplayName="Assign-IAmNotUnderAnAffirmativeObligationToObtainEmployment" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_57">
                                           <Assign.To>
                                             <OutArgument x:TypeArguments="njl:JToken">[jObj_JSON("EmploymentInformation")("IsNotExpectingEmploymentIn12Months")("IAmNotUnderAnAffirmativeObligationToObtainEmployment")]</OutArgument>
                                           </Assign.To>
@@ -983,17 +978,16 @@
                                         </Assign.Value>
                                       </Assign>
                                     </Switch>
-                                    <ui:Break sap:VirtualizedContainerService.HintSize="718,48" sap2010:WorkflowViewState.IdRef="Break_1" />
+                                    <ui:Break sap:VirtualizedContainerService.HintSize="692,48" sap2010:WorkflowViewState.IdRef="Break_1" />
                                   </Sequence>
                                 </If.Then>
                                 <If.Else>
-                                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,201" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,103" sap2010:WorkflowViewState.IdRef="Sequence_15">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <Throw Exception="[new BusinessRuleException(&quot;Names do not match in DU with LLM to match results&quot;)]" sap:VirtualizedContainerService.HintSize="354,113" sap2010:WorkflowViewState.IdRef="Throw_4" />
                                   </Sequence>
                                 </If.Else>
                               </If>
@@ -1010,7 +1004,7 @@
                     </Sequence>
                   </If.Then>
                   <If.Else>
-                    <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                    <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,103" sap2010:WorkflowViewState.IdRef="Sequence_16">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1019,7 +1013,7 @@
                     </Sequence>
                   </If.Else>
                 </If>
-                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1006,166" sap2010:WorkflowViewState.IdRef="LogMessage_7" Message="[&quot;Replaced values for SCNE: &quot; + vbCrLf + io_jArrDUResults.ToString]" />
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="980,164" sap2010:WorkflowViewState.IdRef="LogMessage_7" Message="[&quot;Replaced values for SCNE: &quot; + vbCrLf + io_jArrDUResults.ToString]" />
               </Sequence>
             </ActivityAction>
           </ui:ForEach.Body>
