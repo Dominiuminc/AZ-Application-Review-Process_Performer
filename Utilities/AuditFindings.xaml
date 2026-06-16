@@ -11,7 +11,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1446,100824.99999999999</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1745,100104</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>AuditFindings_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -161,7 +161,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="AuditFindings" sap:VirtualizedContainerService.HintSize="1456,100760" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="AuditFindings" sap:VirtualizedContainerService.HintSize="1456,100039" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:String[]" Name="arr_AS_MemNames" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_TaxRefund" />
@@ -245,8 +245,8 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message-Started" sap:VirtualizedContainerService.HintSize="1394,175" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[&quot;AuditFindings.xaml is Started&quot;]" />
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1394,598" sap2010:WorkflowViewState.IdRef="CommentOut_359">
+    <ui:LogMessage DisplayName="Log Message-Started" sap:VirtualizedContainerService.HintSize="1394,173" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[&quot;AuditFindings.xaml is Started&quot;]" />
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1394,57" sap2010:WorkflowViewState.IdRef="CommentOut_359">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="512,487" sap2010:WorkflowViewState.IdRef="Sequence_4014">
           <sap:WorkflowViewStateService.ViewState>
@@ -284,8 +284,14 @@
           </Sequence>
         </Sequence>
       </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <Assign DisplayName="Assign-strPromptsFolder" sap:VirtualizedContainerService.HintSize="1394,115" sap2010:WorkflowViewState.IdRef="Assign_80">
+    <Assign DisplayName="Assign-strPromptsFolder" sap:VirtualizedContainerService.HintSize="1394,114" sap2010:WorkflowViewState.IdRef="Assign_80">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[str_PromptsFolder]</OutArgument>
       </Assign.To>
@@ -323,7 +329,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:BuildDataTable>
-    <Sequence DisplayName="NonIncomeVerification" sap:VirtualizedContainerService.HintSize="1394,1086" sap2010:WorkflowViewState.IdRef="Sequence_3924">
+    <Sequence DisplayName="NonIncomeVerification" sap:VirtualizedContainerService.HintSize="1394,909" sap2010:WorkflowViewState.IdRef="Sequence_3924">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:Int32" Name="int_ICWNoOfAdults" />
         <Variable x:TypeArguments="s:String[]" Name="arr_ICWAdultHouseholders" />
@@ -2882,21 +2888,6 @@
           </Catch>
         </TryCatch.Catches>
       </TryCatch>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="Member Information Document - Invoke Workflow File (AuditFindings\Member Information Document.xaml)" sap:VirtualizedContainerService.HintSize="388,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_132" UnSafe="False" WorkflowFileName="AuditFindings\Member Information Document.xaml">
-        <ui:InvokeWorkflowFile.Arguments>
-          <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
-          <InArgument x:TypeArguments="sd:DataTable" x:Key="in_ClassificationResultsData">[in_ClassificationResultsData]</InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="str_PromptsFolder">[str_PromptsFolder]</InArgument>
-          <InOutArgument x:TypeArguments="s:String[]" x:Key="arr_MIDDOBs">[arr_MIDDOBs]</InOutArgument>
-          <InOutArgument x:TypeArguments="s:String[]" x:Key="arr_MIDSSNs">[arr_MIDSSNs]</InOutArgument>
-          <InArgument x:TypeArguments="x:Int32" x:Key="int_ICWNoLiveInAid">[int_ICWNoLiveInAid]</InArgument>
-          <InArgument x:TypeArguments="s:String[]" x:Key="arr_ICWMemberNames">[arr_ICWMemberNames]</InArgument>
-          <InArgument x:TypeArguments="x:Int32" x:Key="int_ICWUnbornChildCount">[int_ICWUnbornChildCount]</InArgument>
-          <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_DTAuditFindings">[out_DTAuditFindings]</OutArgument>
-          <InOutArgument x:TypeArguments="x:String" x:Key="str_MIDSSN">[str_MIDSSN]</InOutArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="str_MoveIndate">[str_MoveIndate]</InArgument>
-        </ui:InvokeWorkflowFile.Arguments>
-      </ui:InvokeWorkflowFile>
       <TryCatch DisplayName="Try Catch-MID" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="TryCatch_231">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -2905,7 +2896,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <TryCatch.Try>
-          <Sequence DisplayName="MemberInformationDocumentCheck" sap:VirtualizedContainerService.HintSize="924,10562" sap2010:WorkflowViewState.IdRef="Sequence_4015">
+          <Sequence DisplayName="MemberInformationDocumentCheck" sap:VirtualizedContainerService.HintSize="924,10559" sap2010:WorkflowViewState.IdRef="Sequence_4015">
             <Sequence.Variables>
               <Variable x:TypeArguments="sd:DataTable" Name="dt_FilteredMIDData" />
             </Sequence.Variables>
@@ -2915,7 +2906,7 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:FilterDataTable DataTable="[in_ClassificationResultsData]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="862,195" sap2010:WorkflowViewState.IdRef="FilterDataTable_71" OutputDataTable="[dt_FilteredMIDData]" SelectColumnsMode="Remove">
+            <ui:FilterDataTable DataTable="[in_ClassificationResultsData]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="862,193" sap2010:WorkflowViewState.IdRef="FilterDataTable_71" OutputDataTable="[dt_FilteredMIDData]" SelectColumnsMode="Remove">
               <ui:FilterDataTable.Filters>
                 <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
                   <ui:FilterOperationArgument BooleanOperator="And" Operator="CONTAINS">
@@ -2934,7 +2925,7 @@
                 </scg:List>
               </ui:FilterDataTable.SelectColumns>
             </ui:FilterDataTable>
-            <If Condition="[dt_FilteredMIDData.RowCount&gt;0]" DisplayName="If-MIDExists" sap:VirtualizedContainerService.HintSize="862,10113" sap2010:WorkflowViewState.IdRef="If_1218">
+            <If Condition="[dt_FilteredMIDData.RowCount&gt;0]" DisplayName="If-MIDExists" sap:VirtualizedContainerService.HintSize="862,10112" sap2010:WorkflowViewState.IdRef="If_1218">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
