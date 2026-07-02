@@ -5,7 +5,7 @@
     <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
     <x:Property Name="in_ClassifiedDocument" Type="InArgument(uisad:DocumentData)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>954,968</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1131,968</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -150,7 +150,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <p:ExtractDocumentDataWithDocumentData x:TypeArguments="uisasedb:DUExtractor10ASFAAffidavitOfStudentFinancialAssistancePart12V9" DocumentBounds="{x:Null}" DocumentObjectModel="{x:Null}" DocumentPath="{x:Null}" DocumentText="{x:Null}" ExtractorDocumentType="{x:Null}" ExtractorResult="{x:Null}" PersistenceId="{x:Null}" PredictionId="{x:Null}" Prompt="{x:Null}" ApplyAutoValidation="False" DisplayName="Extract Document Data" DocType="773c7f88-660e-f111-a69a-7c1e5216ce8b" ExtractionResults="[ASFA12DocumentData]" ExtractorName="DU_Extractor1-0_ASFA_Affidavit of Student Financial Assistance Part 1 2_v9" FileInput="[in_ClassifiedDocument]" GenerateData="True" sap:VirtualizedContainerService.HintSize="479,389" sap2010:WorkflowViewState.IdRef="ExtractDocumentDataWithDocumentData`1_3" ModernDocumentTypeId="53cacc0a-ff01-f111-832e-002248237fb3" ModernDocumentTypeName="Affidavit of Student Financial Assistance Part 1 2" ProjectId="93ac0424-edf6-f011-8d4d-7c1e5269e216" ProjectName="Arizona Document Understanding" ProjectTag="[Nothing]" ProjectVersionName="DU_Extractor1-0_ASFA" ProjectVersionNumber="9" RuntimeAssetPath="Compliance/Application Review Process_AZ/DU_AppCredentials" RuntimeTenantUrl="[in_Config(&quot;DU_TenantURL&quot;).ToString]" TimeoutInSeconds="3600">
+    <p:ExtractDocumentDataWithDocumentData x:TypeArguments="uisasedb:DUExtractor10ASFAAffidavitOfStudentFinancialAssistancePart12V9" DocumentBounds="{x:Null}" DocumentObjectModel="{x:Null}" DocumentPath="{x:Null}" DocumentText="{x:Null}" ExtractorDocumentType="{x:Null}" ExtractorResult="{x:Null}" PersistenceId="{x:Null}" PredictionId="{x:Null}" Prompt="{x:Null}" ApplyAutoValidation="False" DisplayName="Extract Document Data" DocType="773c7f88-660e-f111-a69a-7c1e5216ce8b" ExtractionResults="[ASFA12DocumentData]" ExtractorName="DU_Extractor1-0_ASFA_Affidavit of Student Financial Assistance Part 1 2_v9" FileInput="[in_ClassifiedDocument]" GenerateData="True" sap:VirtualizedContainerService.HintSize="479,389" sap2010:WorkflowViewState.IdRef="ExtractDocumentDataWithDocumentData`1_3" ModernDocumentTypeId="53cacc0a-ff01-f111-832e-002248237fb3" ModernDocumentTypeName="Affidavit of Student Financial Assistance Part 1 2" ProjectId="93ac0424-edf6-f011-8d4d-7c1e5269e216" ProjectName="Arizona Document Understanding" ProjectVersionName="DU_Extractor1-0_ASFA" ProjectVersionNumber="9" RuntimeAssetPath="Compliance/Application Review Process_AZ/DU_AppCredentials" RuntimeTenantUrl="[in_Config(&quot;DU_TenantURL&quot;).ToString]" TimeoutInSeconds="[CInt(in_config(&quot;DU_TimeOut&quot;).ToString)]">
       <p:ExtractDocumentDataWithDocumentData.AutoValidationConfidenceThreshold>
         <InArgument x:TypeArguments="s:Nullable(x:Int32)">
           <Literal x:TypeArguments="s:Nullable(x:Int32)" Value="0" />
@@ -159,6 +159,11 @@
       <p:ExtractDocumentDataWithDocumentData.GptPromptWithVariables>
         <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
       </p:ExtractDocumentDataWithDocumentData.GptPromptWithVariables>
+      <p:ExtractDocumentDataWithDocumentData.ProjectTag>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" Value="" />
+        </InArgument>
+      </p:ExtractDocumentDataWithDocumentData.ProjectTag>
     </p:ExtractDocumentDataWithDocumentData>
     <ui:LogMessage DisplayName="Write extracted data (Self Employment Certification)" sap:VirtualizedContainerService.HintSize="479,173" sap2010:WorkflowViewState.IdRef="LogMessage_6" Message="[&quot;The following data has been extracted (excluding table data): {for each fields, except tables, display as key-value pairs: field name - field value}.&quot; &amp; vbCrLf &amp; ASFA12DocumentData.ToString]">
       <sap:WorkflowViewStateService.ViewState>
